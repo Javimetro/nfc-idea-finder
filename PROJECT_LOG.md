@@ -316,6 +316,18 @@ the user's feedback on version 2: all cards open at once felt overwhelming. Chan
 - [ ] Build the site; decide hosting
 - [ ] Add more sources (the database is home-heavy; few business and workplace ideas yet)
 
+## Before going public (checklist)
+
+Visitor suggestions flow: pending → the user gets notified (n8n) → review on a password-protected admin page → approved ideas cleaned up like NotebookLM ones → published with "Suggested by …" credit if allowed.
+
+- [ ] Lock `/api/suggestions` (currently readable by anyone who can reach the site, including emails)
+- [ ] Admin review page behind a password (approve / reject / duplicate)
+- [ ] Notification of new suggestions via n8n (already running on the Pi)
+- [ ] Cloudflare Turnstile + rate limit per visitor on the suggestion form
+- [ ] Privacy note next to the form (what is stored, why, for how long); delete emails after replying
+- [ ] Daily backup of `nfc.db` off the Pi's SD card (submissions exist only there)
+- [ ] HTTPS + a domain (or another host); decide who pays for AI usage (rules engine needs none)
+
 ## Screenshot checklist (for the README)
 
 Save in `docs/img/` with these names:
