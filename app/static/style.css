@@ -298,3 +298,5 @@ dialog label.check input { width: auto; }
 .hero-art img { width: 100%; height: auto; display: block; }
 @media (prefers-color-scheme: dark) { .hero-art img { filter: brightness(.92); } }
 @media (max-width: 800px) { .hero-art { order: 1; max-width: 340px; margin-top: .5rem; } }
+.hero-art img.pixel { image-rendering: pixelated; }
+.hero-art img.pixel { width: 468px; max-width: 100%; margin: 0 auto; }

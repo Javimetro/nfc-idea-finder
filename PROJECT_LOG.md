@@ -335,6 +335,10 @@ the user wrote an image prompt (with Claude's help): an isometric apartment and 
 
 On phones the picture moves below the "Find my NFC ideas" button, so the button stays visible without scrolling.
 
+the user then asked for **pixel art**. `scripts/draw_hero_pixel.py` draws the same scene on a tiny 234×187-pixel canvas with hard edges (2:1 isometric lines, like classic pixel-art games), with 9×9-pixel icons designed by hand, and enlarges it 4× without blurring. The website uses the pixel version; the smooth SVG stays in the repo as an alternative.
+
+![Home page, pixel art](docs/img/23-home-pixel-art.png)
+
 ![Home page with illustration](docs/img/22-home-with-illustration.png)
 
 ---
