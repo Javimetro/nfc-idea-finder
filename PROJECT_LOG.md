@@ -329,6 +329,14 @@ A pet owner who drives now sees 7 short screens; a café owner sees a business s
 
 ![Branching quiz: hobbies screen](docs/img/21-v4-branching-hobbies.png)
 
+#### 15. A home-page illustration, drawn with code
+
+the user wrote an image prompt (with Claude's help): an isometric apartment and car with orange NFC stickers on everyday objects, each showing what a tap does. Claude can't generate images in this chat, but the prompt asked for a **flat vector illustration**, so Claude drew it as an **SVG** with a small Python script (`scripts/draw_hero.py`). Everything is built from simple boxes in an isometric projection. Benefits: it's sharp at any size, only 12 KB, and easy to change (move a sticker, add a new object).
+
+On phones the picture moves below the "Find my NFC ideas" button, so the button stays visible without scrolling.
+
+![Home page with illustration](docs/img/22-home-with-illustration.png)
+
 ---
 
 ## Open to-do list

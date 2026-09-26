@@ -292,3 +292,9 @@ dialog label.check input { width: auto; }
 }
 .idea > summary { color: var(--text); }
 .results-head { align-items: center; }
+
+/* hero illustration (drawn by scripts/draw_hero.py) */
+.hero-art { aspect-ratio: auto; max-width: 560px; display: block; }
+.hero-art img { width: 100%; height: auto; display: block; }
+@media (prefers-color-scheme: dark) { .hero-art img { filter: brightness(.92); } }
+@media (max-width: 800px) { .hero-art { order: 1; max-width: 340px; margin-top: .5rem; } }
