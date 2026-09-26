@@ -21,6 +21,7 @@ INTRO = {
         {"icon": "🏷️", "title": "A tiny sticker", "text": "NFC tags are stickers (or cards, keychains) that cost less than €1. No battery, they last for years."},
         {"icon": "📱", "title": "Your phone reads it", "text": "Almost every phone can. Hold it near the sticker, like paying with your card."},
         {"icon": "✨", "title": "Something happens", "text": "Open a page, start a timer, send a message, switch the lights off, share your wifi… you decide."},
+        {"icon": "🧠", "title": "The tag is just a trigger", "text": "The sticker itself can't record, beep or light up. It only tells your phone what to do, and your phone does the work with its own screen, speaker, microphone and apps."},
     ],
     "outro": "Now tell us a bit about your day, and we'll find the taps worth trying.",
 }
