@@ -311,7 +311,7 @@ What happened to them (`scripts/batch_reddit.py`):
 - **Credit goes to the right person.** On Reddit the idea often comes from a commenter, not whoever started the thread, so each link stores the commenter's name and the site shows "u/name". Deleted accounts are shown as "a member of r/…".
 - **Popular ideas are now clearly popular**: "did I take my pills?" is explained by 9 people, which is useful for ranking.
 
-Database now: **106 ideas (99 shown), 41 sources, 384 idea–source links, 73 everyday problems ("needs")**.
+Database now: **108 ideas (101 shown), 45 sources, 436 idea–source links, 74 everyday problems ("needs")**. The last 4 threads came in a second run (55 entries): 2 new ideas (check the pet cam as you leave; pay with a ring or keychain) and 3 more left out (copying game figures, a cider dispenser, cloning a work access card).
 
 **The quiz became branching**, as planned in step 12's follow-up: screen 1 asks about your life, and each "world" only appears if it's relevant:
 
@@ -333,8 +333,7 @@ A pet owner who drives now sees 7 short screens; a café owner sees a business s
 
 ## Open to-do list
 
-- [ ] the user reviews the 42 flagged ideas
-- [ ] Reddit threads 19–22: ideas not extracted yet
+- [ ] the user reviews the 43 flagged ideas
 - [ ] Prototype matching: Jev vs. a small general AI model, on the same test personas
 - [ ] Find the URL of each source (title + channel search), the user confirms
 - [ ] Find timestamps using the anchor quotes (YouTube transcripts)
