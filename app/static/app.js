@@ -201,11 +201,11 @@ function renderResults(d) {
 
   if (d.shopping_list.length) {
     $("#shopping").innerHTML = `<h3>🛒 Your tag shopping list</h3>
-      <p class="muted" style="margin:0">Copy the search term into any online shop.</p>
+      <p class="muted" style="margin:0">Shops use technical names, so copy the search term and paste it into any online shop.</p>
       <div class="shop-items">${d.shopping_list.map((t) => `
         <div class="shop-item"><b>${esc(t.name)}</b>
           <small>${esc(t.price_hint)} · for: ${esc(t.ideas.slice(0, 3).join(", "))}${t.ideas.length > 3 ? "…" : ""}</small>
-          <div class="search-term"><code>${esc(t.search_term)}</code>
+          <div class="search-term"><span class="muted" style="font-size:.8rem">Type this in the shop:</span><code>${esc(t.search_term)}</code>
             <button class="mini-btn" data-copy="${esc(t.search_term)}">Copy</button>
             <a class="mini-btn" target="_blank" rel="noopener" href="https://www.google.com/search?tbm=shop&q=${encodeURIComponent(t.search_term)}">Search</a>
           </div></div>`).join("")}</div>`;

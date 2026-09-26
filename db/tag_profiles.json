@@ -1,7 +1,7 @@
 [
   {
     "id": "t_ntag213_sticker",
-    "name": "NTAG213 sticker",
+    "name": "Basic NFC sticker",
     "chip": "NTAG213",
     "memory_bytes": 144,
     "form_factor": "sticker",
@@ -15,7 +15,7 @@
   },
   {
     "id": "t_ntag215_sticker",
-    "name": "NTAG215 sticker",
+    "name": "NFC sticker with extra memory",
     "chip": "NTAG215",
     "memory_bytes": 504,
     "form_factor": "sticker",
@@ -29,7 +29,7 @@
   },
   {
     "id": "t_antimetal",
-    "name": "Anti-metal NFC sticker",
+    "name": "NFC sticker for metal surfaces",
     "chip": "NTAG215",
     "memory_bytes": 504,
     "form_factor": "sticker",
@@ -43,7 +43,7 @@
   },
   {
     "id": "t_epoxy",
-    "name": "Waterproof epoxy tag",
+    "name": "Tough waterproof NFC tag",
     "chip": "NTAG215",
     "memory_bytes": 504,
     "form_factor": "epoxy_disc",
@@ -57,7 +57,7 @@
   },
   {
     "id": "t_card",
-    "name": "Blank PVC NFC card",
+    "name": "NFC card (credit-card size)",
     "chip": "NTAG216",
     "memory_bytes": 888,
     "form_factor": "card",
@@ -71,7 +71,7 @@
   },
   {
     "id": "t_keyfob",
-    "name": "NFC keyfob",
+    "name": "NFC keychain",
     "chip": "NTAG215",
     "memory_bytes": 504,
     "form_factor": "keyfob",
@@ -113,7 +113,7 @@
   },
   {
     "id": "t_ntag424",
-    "name": "Secure NTAG 424 DNA tag",
+    "name": "Copy-proof NFC tag",
     "chip": "NTAG 424 DNA",
     "memory_bytes": 416,
     "form_factor": "sticker",
@@ -127,7 +127,7 @@
   },
   {
     "id": "t_reader_kit",
-    "name": "PN532 reader + NFC cards (maker kit)",
+    "name": "DIY NFC reader kit (Raspberry Pi / Arduino)",
     "chip": "PN532 reader + MIFARE Classic 1K / NTAG cards",
     "memory_bytes": null,
     "form_factor": "reader",
