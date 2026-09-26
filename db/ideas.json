@@ -1097,10 +1097,10 @@
   },
   {
     "id": "i033",
-    "title": "Capture an idea by voice",
+    "title": "Save an idea by talking to your phone",
     "kind": "diy",
-    "summary": "Tap a keychain or a tag on your desk and start dictating; the text lands in your notes.",
-    "how_it_works": "Tag starts dictation / voice memo and saves the result to a note.",
+    "summary": "Tap your phone on a keychain tag and your phone starts listening. Say your idea and your phone types it into your notes. The tag has no microphone: it just tells your phone to start dictation.",
+    "how_it_works": "The tag holds nothing but a trigger. Your phone recognises it and runs an automation that starts dictation (your phone's microphone) and saves the text to a note.",
     "audience": [
       "personal"
     ],
