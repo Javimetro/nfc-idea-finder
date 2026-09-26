@@ -147,73 +147,74 @@ async function submit() {
   renderResults(data);
 }
 
-const sourceIcon = (s) => (s.type === "book" ? "📖" : s.platform === "YouTube" ? "▶" : "🔗");
+// Source icon: the site's own favicon (YouTube, Reddit…), a book for books, a link icon otherwise
+function sourceIcon(s) {
+  if (s.type === "book") return `<span class="src-ico">📖</span>`;
+  if (s.domain) return `<img class="src-ico" src="https://www.google.com/s2/favicons?domain=${s.domain}&sz=64" alt="${esc(s.platform)}" loading="lazy" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'src-ico',textContent:'▶'}))">`;
+  return `<span class="src-ico">🔗</span>`;
+}
 
-function renderCard(idea, i) {
-  const badges = [
-    `<span class="badge">Setup: ${esc(idea.setup_time)}</span>`,
-    idea.cost_level ? `<span class="badge">${LABELS.cost[idea.cost_level]}</span>` : "",
-    idea.phone_support && !idea.warnings.some((w) => w.startsWith("Only works")) ? `<span class="badge">${LABELS.phone[idea.phone_support]}</span>` : "",
-    LABELS.kind[idea.kind] ? `<span class="badge">${LABELS.kind[idea.kind]}</span>` : "",
-    ...idea.warnings.map((w) => `<span class="badge warn">${esc(w)}</span>`),
-    idea.needs_review ? `<span class="badge review" title="${esc(idea.review_flags.join(" · "))}">unverified</span>` : "",
-  ].join("");
+function renderIdea(idea, open) {
+  const meta = [
+    idea.setup_time ? `⏱ ${esc(idea.setup_time)}` : "",
+    idea.tag ? `🏷️ ${esc(idea.tag.price_hint.replace(/^about /, ""))}` : "",
+    idea.why.length ? `<span class="for-you">For you</span>` : "",
+  ].filter(Boolean).join(`<span class="dot-sep">·</span>`);
 
-  const why = idea.why.length ? `<div class="why">${idea.why.map((w) => `
-      <div class="why-item"><span class="said">Why it's worth trying</span>
-        <span class="said-text">${esc(w.you_said)}</span><p>${esc(w.pitch)}</p></div>`).join("")}</div>`
-    : `<p>${esc(idea.summary)}</p>`;
+  const why = idea.why.map((w) => `
+      <div class="why-item"><span class="said-text">${esc(w.you_said)}</span><p>${esc(w.pitch)}</p></div>`).join("");
 
-  const sources = idea.sources.map((s) => `
-    <li><span class="icon">${sourceIcon(s)}</span>
-      <a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.creator || "Unknown")}</a>
-      <span class="quote">“${esc(s.title)}”${s.quotes.length ? ` · listen for: “${esc(s.quotes[0])}”` : ""}${s.is_search ? " · (search link)" : ""}</span></li>`).join("");
+  const steps = idea.steps.length ? `<div class="steps">${idea.steps.map((st, n) => `
+      <div class="step"><div class="step-ico">${st.icon}<span class="step-n">${n + 1}</span></div>
+        <b>${esc(st.title)}</b><p>${esc(st.text)}</p></div>`).join("")}</div>` : "";
+
+  const warn = idea.warnings.length || idea.needs_review ? `<div class="badges">${idea.warnings.map((w) => `<span class="badge warn">${esc(w)}</span>`).join("")}
+      ${idea.needs_review ? `<span class="badge review" title="${esc(idea.review_flags.join(" · "))}">unverified</span>` : ""}</div>` : "";
 
   const business = idea.business ? `<div class="business"><b>Business angle</b><br>
       ${esc(LABELS.model[idea.business.model] || idea.business.model)} · customers: ${esc(idea.business.who_pays)} · startup cost: ${esc(idea.business.startup_cost)}</div>` : "";
 
-  const tag = idea.tag ? `<div class="card-tag"><span class="dot"></span><div><b>You need: ${esc(idea.tag.name)}</b><br>
-      <span class="muted">${esc(idea.tag.price_hint)} · ${esc(idea.tag.why.join(", "))}</span></div></div>` : "";
+  const sources = idea.sources.map((s) => `
+    <li>${sourceIcon(s)}<div><a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.creator || "Unknown")}</a>
+      <span class="quote">${esc(s.title)}${s.quotes.length ? ` · listen for: “${esc(s.quotes[0])}”` : ""}${s.is_search ? " · (search link)" : ""}</span></div></li>`).join("");
 
-  return `<article class="card">
-    ${i !== null ? `<span class="rank">#${i + 1}</span>` : ""}
-    <h3>${esc(idea.title)}</h3>
-    ${why}
-    <div class="badges">${badges}</div>
-    ${business}${tag}
-    <details><summary>How to set it up</summary><div class="body">
-      <p>${esc(idea.how_it_works)}</p>${idea.setup ? `<p><b>Apps:</b> ${esc(idea.setup)}</p>` : ""}</div></details>
-    <details><summary>See it explained by ${idea.sources.length} creator${idea.sources.length > 1 ? "s" : ""}</summary>
-      <div class="body"><ul class="sources">${sources}</ul></div></details>
-  </article>`;
+  return `<details class="idea" ${open ? "open" : ""}>
+    <summary><div class="idea-head"><span class="hook">${esc(idea.hook || idea.title)}</span>
+      <span class="meta">${meta}</span></div><span class="chev" aria-hidden="true"></span></summary>
+    <div class="idea-body">
+      ${why ? `<div class="why">${why}</div>` : `<p>${esc(idea.summary)}</p>`}
+      ${warn}${business}
+      <h4>How to set it up</h4>${steps}
+      <details class="more"><summary>More details</summary><p>${esc(idea.how_it_works)}</p>${idea.setup ? `<p><b>Apps:</b> ${esc(idea.setup)}</p>` : ""}</details>
+      <h4>See it explained by ${idea.sources.length} creator${idea.sources.length > 1 ? "s" : ""}</h4>
+      <ul class="sources">${sources}</ul>
+    </div></details>`;
 }
 
 function renderResults(d) {
   const n = d.results.length;
-  $("#results-title").textContent = n ? "Taps worth trying in your day" : "Ideas for people like you";
+  const list = n ? d.results : d.also;
+  $("#results-title").textContent = n ? "See how NFC tags can help you" : "Ideas for people like you";
   $("#results-sub").textContent = n
-    ? `${n} idea${n > 1 ? "s" : ""} based on what you told us · ranked by ${d.engine_label}`
-    : `You didn't pick any annoyances, so here are popular ideas that fit your life · ranked by ${d.engine_label}`;
+    ? `${n} idea${n > 1 ? "s" : ""} based on what you told us. Open the ones that make you curious.`
+    : "You didn't pick any annoyances, so here are popular ideas that fit your life.";
 
-  $("#results").innerHTML = n ? d.results.map((x, i) => renderCard(x, i)).join("")
-    : d.also.length ? d.also.map((x, i) => renderCard(x, i)).join("")
+  $("#results").innerHTML = list.length ? list.map((x) => renderIdea(x, false)).join("")
     : `<div class="empty">Nothing fits yet. Try ticking a few everyday annoyances, or suggest an idea below.</div>`;
 
-  if (d.shopping_list.length) {
-    $("#shopping").innerHTML = `<h3>🛒 Your tag shopping list</h3>
-      <p class="muted" style="margin:0">Shops use technical names, so copy the search term and paste it into any online shop.</p>
+  $("#shopping").innerHTML = d.shopping_list.length ? `<details class="shopping-box"><summary>🛒 Your tag shopping list <span class="muted">(${d.shopping_list.length} type${d.shopping_list.length > 1 ? "s" : ""} of tag)</span></summary>
+      <p class="muted">Shops use technical names, so copy the search term and paste it into any online shop.</p>
       <div class="shop-items">${d.shopping_list.map((t) => `
         <div class="shop-item"><b>${esc(t.name)}</b>
           <small>${esc(t.price_hint)} · for: ${esc(t.ideas.slice(0, 3).join(", "))}${t.ideas.length > 3 ? "…" : ""}</small>
           <div class="search-term"><span class="muted" style="font-size:.8rem">Type this in the shop:</span><code>${esc(t.search_term)}</code>
             <button class="mini-btn" data-copy="${esc(t.search_term)}">Copy</button>
             <a class="mini-btn" target="_blank" rel="noopener" href="https://www.google.com/search?tbm=shop&q=${encodeURIComponent(t.search_term)}">Search</a>
-          </div></div>`).join("")}</div>`;
-  }
-  $("#tips").innerHTML = d.tips.length ? `<h3>Good to know</h3>${d.tips.map((t) => `<div class="tip">${esc(t)}</div>`).join("")}` : "";
-  $("#also").innerHTML = n && d.also.length ? `<div class="section-head"><h3>Also popular with people like you</h3>
-      <span class="muted">You didn't mention these, but they fit your life.</span></div>
-      <div class="cards">${d.also.map((x) => renderCard(x, null)).join("")}</div>` : "";
+          </div></div>`).join("")}</div></details>` : "";
+  $("#tips").innerHTML = d.tips.length ? `<details class="tips-box"><summary>💡 Good to know before you start</summary>${d.tips.map((t) => `<div class="tip">${esc(t)}</div>`).join("")}</details>` : "";
+  $("#also").innerHTML = n && d.also.length ? `<h3>Also popular with people like you</h3>
+      <p class="muted">You didn't mention these, but they fit your life.</p>
+      ${d.also.map((x) => renderIdea(x, false)).join("")}` : "";
 }
 
 document.addEventListener("click", async (e) => {

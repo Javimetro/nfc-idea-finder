@@ -289,6 +289,19 @@ Future Jev idea: turning someone's free text into needs ("which of these 40 anno
 ![Mornings question](docs/img/16-v2-mornings.png)
 ![Results with explanations](docs/img/17-v2-results.png)
 
+#### 13. Less text, more curiosity
+
+the user's feedback on version 2: all cards open at once felt overwhelming. Changes:
+
+- **One column, everything closed.** Each idea shows only a curiosity line ("Never wonder *did I take my pills?* again", "Movie night in one tap") plus setup time and price. Visitors open only what interests them.
+- **"How to set it up" as a 4-step picture strip:** 🏷️ Get the tag → 📱 Set it up → 📍 Stick it → ✨ Tap. Step 2 changes with the visitor's phone: the Shortcuts app on iPhone, NFC Tools Pro or MacroDroid on Android, and NFC Tools for simple links.
+- **Source icons:** each site's own favicon (YouTube, Reddit…) and 📖 for books.
+- **Plain tag names** ("Basic NFC sticker" instead of "NTAG213"). The technical name only appears in the shop search term.
+- **Clearer wording:** a keyfob can't record your voice; the phone does. A new intro card says "The tag is just a trigger".
+
+![Results, closed](docs/img/19-v3-results-closed.png)
+![One idea, opened](docs/img/20-v3-idea-open.png)
+
 ---
 
 ## Open to-do list

@@ -30,6 +30,10 @@
     "who_pays": null,
     "startup_cost_level": null,
     "review_flags": [],
+    "hook": "Send your music to any room with a tap",
+    "place": "next to a speaker",
+    "result": "the song playing on your phone moves to that speaker",
+    "setup_type": "smarthome",
     "status": "ok"
   },
   {
@@ -63,6 +67,10 @@
     "who_pays": null,
     "startup_cost_level": null,
     "review_flags": [],
+    "hook": "Stop the lights switching off while you work",
+    "place": "on your workbench",
+    "result": "motion lights stay on until you tap again",
+    "setup_type": "smarthome",
     "status": "ok"
   },
   {
@@ -102,6 +110,10 @@
     "review_flags": [
       "Same concept as the user's 'peek behind' seed idea: link these together."
     ],
+    "hook": "Know what's inside a box without opening it",
+    "place": "on each box or bin",
+    "result": "you see a list or photos of what's inside",
+    "setup_type": "link",
     "status": "needs_review"
   },
   {
@@ -139,6 +151,10 @@
     "review_flags": [
       "Tags on metal appliances need anti-metal (on-metal) tags."
     ],
+    "hook": "Chore reminders that reset themselves",
+    "place": "on the appliance",
+    "result": "the reminder resets for next time",
+    "setup_type": "smarthome",
     "status": "needs_review"
   },
   {
@@ -172,6 +188,10 @@
     "who_pays": null,
     "startup_cost_level": null,
     "review_flags": [],
+    "hook": "Silence the doorbell while you work outside",
+    "place": "by the front door",
+    "result": "doorbell alerts pause until you tap again",
+    "setup_type": "smarthome",
     "status": "ok"
   },
   {
@@ -207,6 +227,10 @@
     "who_pays": null,
     "startup_cost_level": null,
     "review_flags": [],
+    "hook": "The right timer, exactly where you need it",
+    "place": "on the kettle, washing machine or car dashboard",
+    "result": "a timer of the right length starts",
+    "setup_type": "automation",
     "status": "ok"
   },
   {
@@ -244,6 +268,10 @@
     "review_flags": [
       "Security: never write an unlock URL onto the tag itself (anyone could scan it). Use a phone automation that reacts to the tag, and keep the phone locked-screen protection on. See i030."
     ],
+    "hook": "Unlock the door with a tap",
+    "place": "next to your smart lock",
+    "result": "the smart lock opens",
+    "setup_type": "smarthome",
     "status": "needs_review"
   },
   {
@@ -278,6 +306,10 @@
     "who_pays": null,
     "startup_cost_level": null,
     "review_flags": [],
+    "hook": "A one-tap “I'm leaving” routine",
+    "place": "by the front door",
+    "result": "lights and heating switch off and your bus app opens",
+    "setup_type": "automation",
     "status": "ok"
   },
   {
@@ -312,6 +344,10 @@
     "who_pays": null,
     "startup_cost_level": null,
     "review_flags": [],
+    "hook": "Walk in and your home wakes up",
+    "place": "at the entrance or in the car",
+    "result": "lights on, wifi on, phone on quiet",
+    "setup_type": "automation",
     "status": "ok"
   },
   {
@@ -347,6 +383,10 @@
     "review_flags": [
       "Charger version: check the tag does not interfere with wireless charging."
     ],
+    "hook": "Say goodnight to your whole home in one tap",
+    "place": "on your nightstand or phone charger",
+    "result": "all lights go off and sleep mode turns on",
+    "setup_type": "automation",
     "status": "needs_review"
   },
   {
@@ -380,6 +420,10 @@
     "who_pays": null,
     "startup_cost_level": null,
     "review_flags": [],
+    "hook": "One tag, a different job at 7 AM and at 1 AM",
+    "place": "on your nightstand",
+    "result": "the right routine for the time of day runs",
+    "setup_type": "smarthome",
     "status": "ok"
   },
   {
@@ -413,6 +457,10 @@
     "who_pays": null,
     "startup_cost_level": null,
     "review_flags": [],
+    "hook": "Make the kids' bedtime one tap",
+    "place": "by the kids' light switch",
+    "result": "lights dim and sleep music starts",
+    "setup_type": "smarthome",
     "status": "ok"
   },
   {
@@ -447,6 +495,10 @@
     "who_pays": null,
     "startup_cost_level": null,
     "review_flags": [],
+    "hook": "A light switch anywhere, no wiring",
+    "place": "wherever you wish there was a switch",
+    "result": "your smart lights turn on or off",
+    "setup_type": "automation",
     "status": "ok"
   },
   {
@@ -480,6 +532,10 @@
     "who_pays": null,
     "startup_cost_level": null,
     "review_flags": [],
+    "hook": "Movie night in one tap",
+    "place": "behind a painting or by the TV",
+    "result": "lights dim and Netflix opens",
+    "setup_type": "automation",
     "status": "ok"
   },
   {
@@ -513,6 +569,10 @@
     "who_pays": null,
     "startup_cost_level": null,
     "review_flags": [],
+    "hook": "Tap a record cover to play the album",
+    "place": "inside each album sleeve",
+    "result": "that album starts playing",
+    "setup_type": "smarthome",
     "status": "ok"
   },
   {
@@ -546,6 +606,10 @@
     "who_pays": null,
     "startup_cost_level": null,
     "review_flags": [],
+    "hook": "Your favourite playlist, one tap away",
+    "place": "next to your speaker",
+    "result": "your playlist starts on the speaker",
+    "setup_type": "automation",
     "status": "ok"
   },
   {
@@ -582,6 +646,10 @@
     "who_pays": null,
     "startup_cost_level": null,
     "review_flags": [],
+    "hook": "Every plant tells you how to care for it",
+    "place": "on each pot or on the watering can",
+    "result": "the plant's care card opens, or watering gets logged",
+    "setup_type": "link",
     "status": "ok"
   },
   {
@@ -617,6 +685,10 @@
     "who_pays": null,
     "startup_cost_level": null,
     "review_flags": [],
+    "hook": "Never miss bin day again",
+    "place": "on the bin",
+    "result": "the bin-day reminder stops until next week",
+    "setup_type": "smarthome",
     "status": "ok"
   },
   {
@@ -650,6 +722,10 @@
     "who_pays": null,
     "startup_cost_level": null,
     "review_flags": [],
+    "hook": "Call for help from the bathroom",
+    "place": "in the bathroom",
+    "result": "every smart speaker announces you need help",
+    "setup_type": "smarthome",
     "status": "ok"
   },
   {
@@ -685,6 +761,10 @@
     "who_pays": null,
     "startup_cost_level": null,
     "review_flags": [],
+    "hook": "A hidden manual for your home",
+    "place": "behind a switch plate or on a device",
+    "result": "the instructions for that room or device open",
+    "setup_type": "link",
     "status": "ok"
   },
   {
@@ -719,6 +799,10 @@
     "who_pays": null,
     "startup_cost_level": null,
     "review_flags": [],
+    "hook": "Water the garden with one tap",
+    "place": "by the garden door",
+    "result": "watering starts, or the shutters close",
+    "setup_type": "smarthome",
     "status": "ok"
   },
   {
@@ -753,6 +837,10 @@
     "who_pays": null,
     "startup_cost_level": null,
     "review_flags": [],
+    "hook": "Never run out of the basics",
+    "place": "on jars, packs or the fridge",
+    "result": "the item lands on your shopping list",
+    "setup_type": "automation",
     "status": "ok"
   },
   {
@@ -787,6 +875,10 @@
     "who_pays": null,
     "startup_cost_level": null,
     "review_flags": [],
+    "hook": "Pack without forgetting anything",
+    "place": "inside your suitcase",
+    "result": "your packing checklist opens",
+    "setup_type": "automation",
     "status": "ok"
   },
   {
@@ -822,6 +914,10 @@
     "review_flags": [
       "Verify current iPhone app support before publishing."
     ],
+    "hook": "An alarm you can't snooze from bed",
+    "place": "in the bathroom or kitchen",
+    "result": "the alarm stops only when you tap",
+    "setup_type": "app",
     "status": "needs_review"
   },
   {
@@ -856,6 +952,10 @@
     "who_pays": null,
     "startup_cost_level": null,
     "review_flags": [],
+    "hook": "Hear your day's plan while you get ready",
+    "place": "by the coffee machine",
+    "result": "your phone reads today's calendar out loud",
+    "setup_type": "automation",
     "status": "ok"
   },
   {
@@ -891,6 +991,10 @@
     "review_flags": [
       "Framing tip for the results page, not a standalone idea. Consider an 'accessibility' interview answer."
     ],
+    "hook": "Pick up and take the next step (ADHD-friendly routines)",
+    "place": null,
+    "result": null,
+    "setup_type": null,
     "status": "hidden"
   },
   {
@@ -925,6 +1029,10 @@
     "who_pays": null,
     "startup_cost_level": null,
     "review_flags": [],
+    "hook": "Track water or coffee in one second",
+    "place": "on your bottle or coffee machine",
+    "result": "one drink is logged in your health app",
+    "setup_type": "automation",
     "status": "ok"
   },
   {
@@ -959,6 +1067,10 @@
     "who_pays": null,
     "startup_cost_level": null,
     "review_flags": [],
+    "hook": "Never wonder “did I take my pills?” again",
+    "place": "on the pill bottle",
+    "result": "your phone records that you took them",
+    "setup_type": "automation",
     "status": "ok"
   },
   {
@@ -992,6 +1104,10 @@
     "who_pays": null,
     "startup_cost_level": null,
     "review_flags": [],
+    "hook": "Reorder medicine before you run out",
+    "place": "under the pill bottle",
+    "result": "the pharmacy's reorder page opens",
+    "setup_type": "link",
     "status": "ok"
   },
   {
@@ -1025,6 +1141,10 @@
     "who_pays": null,
     "startup_cost_level": null,
     "review_flags": [],
+    "hook": "Start your workout without the excuses",
+    "place": "on your mat or bike",
+    "result": "lights, music and your workout video start",
+    "setup_type": "automation",
     "status": "ok"
   },
   {
@@ -1060,6 +1180,10 @@
     "who_pays": null,
     "startup_cost_level": null,
     "review_flags": [],
+    "hook": "Focus mode in one tap",
+    "place": "on your desk or inside a drawer",
+    "result": "notifications go quiet, a focus timer starts, work music plays",
+    "setup_type": "automation",
     "status": "ok"
   },
   {
@@ -1093,6 +1217,10 @@
     "who_pays": null,
     "startup_cost_level": null,
     "review_flags": [],
+    "hook": "Lock distracting apps behind a short walk",
+    "place": "across the room",
+    "result": "social apps lock until you tap again",
+    "setup_type": "app",
     "status": "ok"
   },
   {
@@ -1129,6 +1257,10 @@
     "who_pays": null,
     "startup_cost_level": null,
     "review_flags": [],
+    "hook": "Save an idea before it disappears",
+    "place": "on your keychain or desk",
+    "result": "your phone starts dictation and saves the note",
+    "setup_type": "automation",
     "status": "ok"
   },
   {
@@ -1163,6 +1295,10 @@
     "who_pays": null,
     "startup_cost_level": null,
     "review_flags": [],
+    "hook": "A tap that starts your journaling habit",
+    "place": "inside your notebook or planner",
+    "result": "your journal page and calm music open",
+    "setup_type": "automation",
     "status": "ok"
   },
   {
@@ -1196,6 +1332,10 @@
     "who_pays": null,
     "startup_cost_level": null,
     "review_flags": [],
+    "hook": "The right app, exactly where you use it",
+    "place": "on the scale, toothbrush case or notebook",
+    "result": "the matching app opens",
+    "setup_type": "automation",
     "status": "ok"
   },
   {
@@ -1231,6 +1371,10 @@
     "who_pays": null,
     "startup_cost_level": null,
     "review_flags": [],
+    "hook": "Start your desk with one tap",
+    "place": "on your desk",
+    "result": "your computer and desk lights switch on",
+    "setup_type": "smarthome",
     "status": "ok"
   },
   {
@@ -1269,6 +1413,10 @@
     "review_flags": [
       "iPhone cannot switch the hotspot on from an automation; confirm before listing as Android-only."
     ],
+    "hook": "Share your phone's internet in one tap",
+    "place": "on your laptop",
+    "result": "your phone's hotspot turns on",
+    "setup_type": "automation",
     "status": "needs_review"
   },
   {
@@ -1302,6 +1450,10 @@
     "who_pays": null,
     "startup_cost_level": null,
     "review_flags": [],
+    "hook": "Switch wifi and Bluetooth off to save battery",
+    "place": "on your desk",
+    "result": "wifi or Bluetooth switches on or off",
+    "setup_type": "automation",
     "status": "ok"
   },
   {
@@ -1337,6 +1489,10 @@
     "review_flags": [
       "Only works with banks that offer SMS balance; niche."
     ],
+    "hook": "Check your bank balance with a tap",
+    "place": "somewhere handy",
+    "result": "your bank's balance text message is sent",
+    "setup_type": "automation",
     "status": "needs_review"
   },
   {
@@ -1370,6 +1526,10 @@
     "who_pays": null,
     "startup_cost_level": null,
     "review_flags": [],
+    "hook": "Your car setup, done before you start the engine",
+    "place": "in your phone holder",
+    "result": "maps, music and Bluetooth start",
+    "setup_type": "automation",
     "status": "ok"
   },
   {
@@ -1406,6 +1566,10 @@
     "who_pays": null,
     "startup_cost_level": null,
     "review_flags": [],
+    "hook": "“On my way” messages that send themselves",
+    "place": "on the dashboard or front door",
+    "result": "a message with your arrival time is sent",
+    "setup_type": "automation",
     "status": "ok"
   },
   {
@@ -1444,6 +1608,10 @@
     "review_flags": [
       "Security pattern (from PLUYU): tag holds nothing; only YOUR phone's automation reacts to it."
     ],
+    "hook": "Open the garage from the car, no remote",
+    "place": "behind the sun visor",
+    "result": "the garage door or gate opens",
+    "setup_type": "smarthome",
     "status": "needs_review"
   },
   {
@@ -1484,6 +1652,10 @@
     "review_flags": [
       "Android joins automatically; iPhones generally don't join wifi from a tag record. Verify current iOS behaviour and suggest a QR code fallback."
     ],
+    "hook": "Guest wifi without spelling out the password",
+    "place": "on a coaster or next to the router",
+    "result": "the phone joins your wifi",
+    "setup_type": "link",
     "status": "needs_review"
   },
   {
@@ -1523,6 +1695,10 @@
     "review_flags": [
       "A link is more flexible than a vCard: you can change it later without rewriting the card."
     ],
+    "hook": "Share your contact with a tap",
+    "place": "on a card or keychain",
+    "result": "your contact or portfolio opens on their phone",
+    "setup_type": "link",
     "status": "needs_review"
   },
   {
@@ -1557,6 +1733,10 @@
     "who_pays": null,
     "startup_cost_level": null,
     "review_flags": [],
+    "hook": "All your links, hidden behind a picture",
+    "place": "behind a small painting",
+    "result": "a note with all your links opens",
+    "setup_type": "automation",
     "status": "ok"
   },
   {
@@ -1595,6 +1775,10 @@
     "review_flags": [
       "Privacy: link to a page you control and can edit, not your raw phone number. Examples in the book are from 2016."
     ],
+    "hook": "Help lost things find their way home",
+    "place": "on a collar, bag or keys",
+    "result": "the finder sees how to contact you",
+    "setup_type": "link",
     "status": "needs_review"
   },
   {
@@ -1630,6 +1814,10 @@
     "who_pays": "gift buyers",
     "startup_cost_level": "medium",
     "review_flags": [],
+    "hook": "A gift that plays your voice",
+    "place": "inside the gift",
+    "result": "your voice message, photo or video opens",
+    "setup_type": "link",
     "status": "ok"
   },
   {
@@ -1666,6 +1854,10 @@
     "review_flags": [
       "DO NOT recommend for passwords or crypto keys: any phone with a free NFC app can read the tag. Rephrase as a hidden message / fun secret, or drop."
     ],
+    "hook": "Hidden secret note in an object",
+    "place": null,
+    "result": null,
+    "setup_type": null,
     "status": "hidden"
   },
   {
@@ -1703,6 +1895,10 @@
     "review_flags": [
       "Directly related to the user's NFC review-cards leasing idea."
     ],
+    "hook": "Get more reviews without asking twice",
+    "place": "on the counter or table",
+    "result": "your review page opens",
+    "setup_type": "link",
     "status": "needs_review"
   },
   {
@@ -1737,6 +1933,10 @@
     "who_pays": "restaurants and cafes",
     "startup_cost_level": "low",
     "review_flags": [],
+    "hook": "A menu that's always up to date",
+    "place": "on each table",
+    "result": "your menu opens",
+    "setup_type": "link",
     "status": "ok"
   },
   {
@@ -1773,6 +1973,10 @@
     "review_flags": [
       "Matches the 'product ingredients' application of the user's 'peek behind' seed idea."
     ],
+    "hook": "Products that explain themselves",
+    "place": "on the packaging",
+    "result": "instructions or ingredients open",
+    "setup_type": "link",
     "status": "needs_review"
   },
   {
@@ -1808,6 +2012,10 @@
     "who_pays": "market vendors, small shops",
     "startup_cost_level": "low",
     "review_flags": [],
+    "hook": "Turn visitors into followers",
+    "place": "on a sign by the till or stand",
+    "result": "your social page or website opens",
+    "setup_type": "link",
     "status": "ok"
   },
   {
@@ -1846,6 +2054,10 @@
     "review_flags": [
       "2016 examples; look for a recent source too."
     ],
+    "hook": "Posters people can tap",
+    "place": "behind the poster or flyer",
+    "result": "a video, coupon or event page opens",
+    "setup_type": "link",
     "status": "needs_review"
   },
   {
@@ -1884,6 +2096,10 @@
     "review_flags": [
       "Source is a seller of NFC pens: commercial bias."
     ],
+    "hook": "Merch that keeps working after the fair",
+    "place": "inside a pen or keychain",
+    "result": "your demo or booking page opens",
+    "setup_type": "link",
     "status": "needs_review"
   },
   {
@@ -1919,6 +2135,10 @@
     "review_flags": [
       "Needs a custom app; 2016 example."
     ],
+    "hook": "Tables that entertain kids while they wait",
+    "place": "under the table",
+    "result": "a game reacts to each tap",
+    "setup_type": "maker",
     "status": "needs_review"
   },
   {
@@ -1954,6 +2174,10 @@
     "who_pays": null,
     "startup_cost_level": null,
     "review_flags": [],
+    "hook": "A sign that shows the whole listing",
+    "place": "on the for-sale sign",
+    "result": "the property page opens",
+    "setup_type": "link",
     "status": "ok"
   },
   {
@@ -1990,6 +2214,10 @@
     "who_pays": "security companies, facility managers",
     "startup_cost_level": "medium",
     "review_flags": [],
+    "hook": "Proof that every round was done",
+    "place": "at each checkpoint",
+    "result": "the visit is logged with the time",
+    "setup_type": "app",
     "status": "ok"
   },
   {
@@ -2026,6 +2254,10 @@
     "who_pays": "cleaning companies, facility managers",
     "startup_cost_level": "medium",
     "review_flags": [],
+    "hook": "Cleaning checks without paper lists",
+    "place": "in each room",
+    "result": "the room is logged as done",
+    "setup_type": "app",
     "status": "ok"
   },
   {
@@ -2061,6 +2293,10 @@
     "who_pays": null,
     "startup_cost_level": null,
     "review_flags": [],
+    "hook": "Inspections that can't be skipped",
+    "place": "around the vehicle",
+    "result": "each checked part is logged",
+    "setup_type": "app",
     "status": "ok"
   },
   {
@@ -2097,6 +2333,10 @@
     "review_flags": [
       "Not DIY. Show only as 'NFC in the real world' inspiration. 2016 examples."
     ],
+    "hook": "Hospital patient wristbands",
+    "place": null,
+    "result": null,
+    "setup_type": null,
     "status": "needs_review"
   },
   {
@@ -2133,6 +2373,10 @@
     "review_flags": [
       "Not DIY. Show only as 'NFC in the real world' inspiration. 2016 examples."
     ],
+    "hook": "Medication verification in hospitals",
+    "place": null,
+    "result": null,
+    "setup_type": null,
     "status": "needs_review"
   },
   {
@@ -2170,6 +2414,10 @@
     "review_flags": [
       "Not DIY. Show only as 'NFC in the real world' inspiration. 2016 examples."
     ],
+    "hook": "Anti-counterfeit medicine packaging",
+    "place": null,
+    "result": null,
+    "setup_type": null,
     "status": "needs_review"
   },
   {
@@ -2205,6 +2453,10 @@
     "review_flags": [
       "Not DIY. Show only as 'NFC in the real world' inspiration. 2016 examples."
     ],
+    "hook": "Cold-chain temperature logger",
+    "place": null,
+    "result": null,
+    "setup_type": null,
     "status": "needs_review"
   },
   {
@@ -2241,6 +2493,10 @@
     "review_flags": [
       "Not DIY. Show only as 'NFC in the real world' inspiration. 2016 examples."
     ],
+    "hook": "Transit cards",
+    "place": null,
+    "result": null,
+    "setup_type": null,
     "status": "needs_review"
   },
   {
@@ -2277,6 +2533,10 @@
     "review_flags": [
       "Not DIY. Show only as 'NFC in the real world' inspiration. 2016 examples."
     ],
+    "hook": "Campus ID on the phone",
+    "place": null,
+    "result": null,
+    "setup_type": null,
     "status": "needs_review"
   },
   {
@@ -2312,6 +2572,10 @@
     "review_flags": [
       "Not DIY. Show only as 'NFC in the real world' inspiration. 2016 examples."
     ],
+    "hook": "Hotel room key on the phone",
+    "place": null,
+    "result": null,
+    "setup_type": null,
     "status": "needs_review"
   },
   {
@@ -2347,6 +2611,10 @@
     "review_flags": [
       "Not DIY. Show only as 'NFC in the real world' inspiration. 2016 examples."
     ],
+    "hook": "Phone as car key",
+    "place": null,
+    "result": null,
+    "setup_type": null,
     "status": "needs_review"
   },
   {
@@ -2383,6 +2651,10 @@
     "review_flags": [
       "Not DIY. Show only as 'NFC in the real world' inspiration. 2016 examples."
     ],
+    "hook": "NFC driving licence",
+    "place": null,
+    "result": null,
+    "setup_type": null,
     "status": "needs_review"
   },
   {
@@ -2413,6 +2685,10 @@
       "No tag needed; results page should say 'check if your device supports this'.",
       "2016 source; check current devices."
     ],
+    "hook": "Tap to pair a Bluetooth speaker",
+    "place": null,
+    "result": null,
+    "setup_type": null,
     "status": "needs_review"
   },
   {
@@ -2443,6 +2719,10 @@
       "No tag needed; results page should say 'check if your device supports this'.",
       "2016 source; check current devices."
     ],
+    "hook": "Tap to mirror your phone on a TV",
+    "place": null,
+    "result": null,
+    "setup_type": null,
     "status": "needs_review"
   },
   {
@@ -2473,6 +2753,10 @@
       "No tag needed; results page should say 'check if your device supports this'.",
       "2016 source; check current devices."
     ],
+    "hook": "Tap to print",
+    "place": null,
+    "result": null,
+    "setup_type": null,
     "status": "needs_review"
   },
   {
@@ -2503,6 +2787,10 @@
       "No tag needed; results page should say 'check if your device supports this'.",
       "2016 source; check current devices."
     ],
+    "hook": "Accessible appliances",
+    "place": null,
+    "result": null,
+    "setup_type": null,
     "status": "needs_review"
   },
   {
@@ -2533,6 +2821,10 @@
       "No tag needed; results page should say 'check if your device supports this'.",
       "Phone-to-phone (Android Beam) was removed from Android in 2019."
     ],
+    "hook": "Phone-to-phone sharing",
+    "place": null,
+    "result": null,
+    "setup_type": null,
     "status": "needs_review"
   },
   {
@@ -2571,6 +2863,10 @@
       "NotebookLM listed PN532 as the tag chip; it is the reader module. Cards: MIFARE Classic or NTAG.",
       "Card IDs can be copied: fine for attendance, not for security."
     ],
+    "hook": "Check-ins without a paper list",
+    "place": "on a reader at the door",
+    "result": "the member is logged in",
+    "setup_type": "maker",
     "status": "needs_review"
   },
   {
@@ -2611,6 +2907,10 @@
       "Security: a plain card ID can be cloned. Keep balances on the server and use secure cards (e.g. NTAG 424 DNA / MIFARE DESFire) for anything beyond small closed-loop amounts.",
       "Handling real money may bring legal/payment rules: describe as closed-loop tokens/credit."
     ],
+    "hook": "Your own tap-to-pay credit system",
+    "place": "on a reader at the kiosk",
+    "result": "credit is taken off the card",
+    "setup_type": "maker",
     "status": "needs_review"
   },
   {
@@ -2647,6 +2947,10 @@
     "review_flags": [
       "LIKELY MISLEADING: do not publish without verifying. Apple Wallet keys only work with supported systems."
     ],
+    "hook": "Door access card copied to iPhone",
+    "place": null,
+    "result": null,
+    "setup_type": null,
     "status": "hidden"
   },
   {
@@ -2682,6 +2986,10 @@
     "review_flags": [
       "Belongs in tag profiles (form factor), not ideas."
     ],
+    "hook": "NFC rings and other wearables",
+    "place": null,
+    "result": null,
+    "setup_type": null,
     "status": "hidden"
   },
   {
@@ -2710,6 +3018,10 @@
     "review_flags": [
       "Exclude from ideas; maybe an FAQ 'is NFC safe?' item."
     ],
+    "hook": "RFID-blocking wallet card",
+    "place": null,
+    "result": null,
+    "setup_type": null,
     "status": "hidden"
   },
   {
@@ -2745,6 +3057,10 @@
     "review_flags": [
       "Use as a tip on results pages."
     ],
+    "hook": "Hide tags in decor",
+    "place": null,
+    "result": null,
+    "setup_type": null,
     "status": "hidden"
   },
   {
@@ -2778,6 +3094,10 @@
     "who_pays": null,
     "startup_cost_level": null,
     "review_flags": [],
+    "hook": "Home Assistant as the power-up",
+    "place": null,
+    "result": null,
+    "setup_type": null,
     "status": "hidden"
   }
 ]

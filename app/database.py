@@ -25,7 +25,8 @@ CREATE TABLE IF NOT EXISTS ideas (
     difficulty TEXT, cost_level TEXT,
     audience TEXT, settings TEXT, goals TEXT,        -- JSON arrays
     tag_needs TEXT, review_flags TEXT,              -- JSON
-    business_model TEXT, who_pays TEXT, startup_cost_level TEXT
+    business_model TEXT, who_pays TEXT, startup_cost_level TEXT,
+    hook TEXT, place TEXT, result TEXT, setup_type TEXT
 );
 CREATE TABLE IF NOT EXISTS idea_sources (
     idea_id TEXT, source_id TEXT, start_seconds INTEGER, end_seconds INTEGER, anchor_quote TEXT
@@ -55,9 +56,10 @@ def load_content():
     """Replace all curated tables with the current JSON files (submissions untouched)."""
     load = lambda name: json.loads((JSON_DIR / f"{name}.json").read_text(encoding="utf-8"))
     con = connect()
-    con.executescript(SCHEMA)
+    # curated tables are rebuilt from scratch (so new columns just work); submissions are kept
     for table in ("sources", "ideas", "idea_sources", "tag_profiles"):
-        con.execute(f"DELETE FROM {table}")
+        con.execute(f"DROP TABLE IF EXISTS {table}")
+    con.executescript(SCHEMA)
 
     con.executemany(
         "INSERT INTO sources VALUES (:id,:title,:url,:type,:platform,:creator_name,:creator_url,:language,:notes)",
@@ -69,7 +71,7 @@ def load_content():
         con.execute(
             "INSERT INTO ideas VALUES (:id,:title,:kind,:status,:summary,:how_it_works,:setup_by_platform,"
             ":phone_support,:difficulty,:cost_level,:audience,:settings,:goals,:tag_needs,:review_flags,"
-            ":business_model,:who_pays,:startup_cost_level)", row)
+            ":business_model,:who_pays,:startup_cost_level,:hook,:place,:result,:setup_type)", row)
     con.executemany(
         "INSERT INTO idea_sources VALUES (:idea_id,:source_id,:start_seconds,:end_seconds,:anchor_quote)",
         load("idea_sources"))

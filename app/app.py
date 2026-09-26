@@ -40,6 +40,35 @@ def source_link(link):
 SETUP_TIME = {"easy": "about 5 minutes", "medium": "about 20 minutes", "advanced": "an afternoon project"}
 
 
+PLATFORM_DOMAIN = {"YouTube": "youtube.com", "TikTok": "tiktok.com", "Instagram": "instagram.com",
+                   "Reddit": "reddit.com", "blog": None}
+
+
+def setup_steps(idea, tag, phone):
+    """Four simple steps: get the tag, set it up on YOUR phone, stick it, tap."""
+    t, result = idea["setup_type"], idea["result"] or "your chosen action runs"
+    if t == "link":
+        how = "Open the free NFC Tools app (iPhone and Android) \u2192 Write \u2192 add the link, wifi, contact or text \u2192 hold the tag to your phone."
+    elif t == "smarthome":
+        how = "In the Home Assistant app: Settings \u2192 Tags \u2192 Add tag, scan it, then make an automation for what should happen."
+    elif t == "app":
+        how = "Install an app that supports NFC tags for this (see the creators below) and scan the tag once inside the app."
+    elif t == "maker":
+        how = "Connect a PN532 reader to a Raspberry Pi or Arduino and run a small program that reacts to each card."
+    elif phone == "iphone":
+        how = "Open the Shortcuts app \u2192 Automation \u2192 New \u2192 NFC \u2192 scan the tag, then choose what should happen."
+    elif phone == "android":
+        how = "Install NFC Tools Pro or MacroDroid, create a task (what should happen) and link it to the tag."
+    else:
+        how = "iPhone: Shortcuts app \u2192 Automation \u2192 NFC. Android: NFC Tools Pro or MacroDroid. Scan the tag and choose what should happen."
+    return [
+        {"icon": "\U0001F3F7\uFE0F", "title": "Get the tag", "text": (tag["name"] + " \u00b7 " + tag["price_hint"]) if tag else "See the creators below"},
+        {"icon": "\U0001F4F1", "title": "Set it up", "text": how},
+        {"icon": "\U0001F4CD", "title": "Stick it", "text": (idea["place"] or "where you need it").capitalize()},
+        {"icon": "\u2728", "title": "Tap", "text": result[0].upper() + result[1:] + "."},
+    ]
+
+
 def present(idea, score, why, warnings, answers):
     facts = set(answers.get("about") or [])
     # strangers tap business tags -> recommend a tougher tag
@@ -53,11 +82,13 @@ def present(idea, score, why, warnings, answers):
         g = grouped.setdefault(src["id"], {
             "creator": src["creator_name"], "title": src["title"], "type": src["type"],
             "platform": src["platform"], "url": url, "is_search": is_search, "quotes": [],
+            "domain": PLATFORM_DOMAIN.get(src["platform"]),
             "start_seconds": link["start_seconds"]})
         if link["anchor_quote"]:
             g["quotes"].append(link["anchor_quote"])
     return {
-        "id": idea["id"], "title": idea["title"], "kind": idea["kind"], "summary": idea["summary"],
+        "id": idea["id"], "title": idea["title"], "hook": idea["hook"], "kind": idea["kind"], "summary": idea["summary"],
+        "steps": setup_steps(idea, tag, answers.get("phone")) if idea["kind"] in MAIN_KINDS else [],
         "how_it_works": idea["how_it_works"], "setup": idea["setup_by_platform"],
         "difficulty": idea["difficulty"], "setup_time": SETUP_TIME.get(idea["difficulty"]),
         "cost_level": idea["cost_level"], "phone_support": idea["phone_support"],

@@ -590,6 +590,77 @@ idea("i078", "Home Assistant as the power-up",
      "General tip.", [(14, "use home assistant you can get extremely creative... opening and closing garage doors")],
      kind="tip", setup=HA, difficulty="medium")
 
+# ---------------------------------------------------------------- display text
+# hook   = curiosity line shown on the closed card (benefit, no tech words)
+# place  = where the tag goes
+# result = what happens when you tap
+# setup  = link (write it with NFC Tools) | automation (phone automation app)
+#          | smarthome (Home Assistant) | app (a dedicated app) | maker (own reader)
+DISPLAY = {
+ "i001": ("Send your music to any room with a tap", "next to a speaker", "the song playing on your phone moves to that speaker", "smarthome"),
+ "i002": ("Stop the lights switching off while you work", "on your workbench", "motion lights stay on until you tap again", "smarthome"),
+ "i003": ("Know what's inside a box without opening it", "on each box or bin", "you see a list or photos of what's inside", "link"),
+ "i004": ("Chore reminders that reset themselves", "on the appliance", "the reminder resets for next time", "smarthome"),
+ "i005": ("Silence the doorbell while you work outside", "by the front door", "doorbell alerts pause until you tap again", "smarthome"),
+ "i006": ("The right timer, exactly where you need it", "on the kettle, washing machine or car dashboard", "a timer of the right length starts", "automation"),
+ "i007": ("Unlock the door with a tap", "next to your smart lock", "the smart lock opens", "smarthome"),
+ "i008": ("A one-tap “I'm leaving” routine", "by the front door", "lights and heating switch off and your bus app opens", "automation"),
+ "i009": ("Walk in and your home wakes up", "at the entrance or in the car", "lights on, wifi on, phone on quiet", "automation"),
+ "i010": ("Say goodnight to your whole home in one tap", "on your nightstand or phone charger", "all lights go off and sleep mode turns on", "automation"),
+ "i011": ("One tag, a different job at 7 AM and at 1 AM", "on your nightstand", "the right routine for the time of day runs", "smarthome"),
+ "i012": ("Make the kids' bedtime one tap", "by the kids' light switch", "lights dim and sleep music starts", "smarthome"),
+ "i013": ("A light switch anywhere, no wiring", "wherever you wish there was a switch", "your smart lights turn on or off", "automation"),
+ "i014": ("Movie night in one tap", "behind a painting or by the TV", "lights dim and Netflix opens", "automation"),
+ "i015": ("Tap a record cover to play the album", "inside each album sleeve", "that album starts playing", "smarthome"),
+ "i016": ("Your favourite playlist, one tap away", "next to your speaker", "your playlist starts on the speaker", "automation"),
+ "i017": ("Every plant tells you how to care for it", "on each pot or on the watering can", "the plant's care card opens, or watering gets logged", "link"),
+ "i018": ("Never miss bin day again", "on the bin", "the bin-day reminder stops until next week", "smarthome"),
+ "i019": ("Call for help from the bathroom", "in the bathroom", "every smart speaker announces you need help", "smarthome"),
+ "i020": ("A hidden manual for your home", "behind a switch plate or on a device", "the instructions for that room or device open", "link"),
+ "i021": ("Water the garden with one tap", "by the garden door", "watering starts, or the shutters close", "smarthome"),
+ "i022": ("Never run out of the basics", "on jars, packs or the fridge", "the item lands on your shopping list", "automation"),
+ "i023": ("Pack without forgetting anything", "inside your suitcase", "your packing checklist opens", "automation"),
+ "i024": ("An alarm you can't snooze from bed", "in the bathroom or kitchen", "the alarm stops only when you tap", "app"),
+ "i025": ("Hear your day's plan while you get ready", "by the coffee machine", "your phone reads today's calendar out loud", "automation"),
+ "i027": ("Track water or coffee in one second", "on your bottle or coffee machine", "one drink is logged in your health app", "automation"),
+ "i028": ("Never wonder “did I take my pills?” again", "on the pill bottle", "your phone records that you took them", "automation"),
+ "i029": ("Reorder medicine before you run out", "under the pill bottle", "the pharmacy's reorder page opens", "link"),
+ "i030": ("Start your workout without the excuses", "on your mat or bike", "lights, music and your workout video start", "automation"),
+ "i031": ("Focus mode in one tap", "on your desk or inside a drawer", "notifications go quiet, a focus timer starts, work music plays", "automation"),
+ "i032": ("Lock distracting apps behind a short walk", "across the room", "social apps lock until you tap again", "app"),
+ "i033": ("Save an idea before it disappears", "on your keychain or desk", "your phone starts dictation and saves the note", "automation"),
+ "i034": ("A tap that starts your journaling habit", "inside your notebook or planner", "your journal page and calm music open", "automation"),
+ "i035": ("The right app, exactly where you use it", "on the scale, toothbrush case or notebook", "the matching app opens", "automation"),
+ "i036": ("Start your desk with one tap", "on your desk", "your computer and desk lights switch on", "smarthome"),
+ "i037": ("Share your phone's internet in one tap", "on your laptop", "your phone's hotspot turns on", "automation"),
+ "i038": ("Switch wifi and Bluetooth off to save battery", "on your desk", "wifi or Bluetooth switches on or off", "automation"),
+ "i039": ("Check your bank balance with a tap", "somewhere handy", "your bank's balance text message is sent", "automation"),
+ "i040": ("Your car setup, done before you start the engine", "in your phone holder", "maps, music and Bluetooth start", "automation"),
+ "i041": ("“On my way” messages that send themselves", "on the dashboard or front door", "a message with your arrival time is sent", "automation"),
+ "i042": ("Open the garage from the car, no remote", "behind the sun visor", "the garage door or gate opens", "smarthome"),
+ "i043": ("Guest wifi without spelling out the password", "on a coaster or next to the router", "the phone joins your wifi", "link"),
+ "i044": ("Share your contact with a tap", "on a card or keychain", "your contact or portfolio opens on their phone", "link"),
+ "i045": ("All your links, hidden behind a picture", "behind a small painting", "a note with all your links opens", "automation"),
+ "i046": ("Help lost things find their way home", "on a collar, bag or keys", "the finder sees how to contact you", "link"),
+ "i047": ("A gift that plays your voice", "inside the gift", "your voice message, photo or video opens", "link"),
+ "i049": ("Get more reviews without asking twice", "on the counter or table", "your review page opens", "link"),
+ "i050": ("A menu that's always up to date", "on each table", "your menu opens", "link"),
+ "i051": ("Products that explain themselves", "on the packaging", "instructions or ingredients open", "link"),
+ "i052": ("Turn visitors into followers", "on a sign by the till or stand", "your social page or website opens", "link"),
+ "i053": ("Posters people can tap", "behind the poster or flyer", "a video, coupon or event page opens", "link"),
+ "i054": ("Merch that keeps working after the fair", "inside a pen or keychain", "your demo or booking page opens", "link"),
+ "i055": ("Tables that entertain kids while they wait", "under the table", "a game reacts to each tap", "maker"),
+ "i056": ("A sign that shows the whole listing", "on the for-sale sign", "the property page opens", "link"),
+ "i057": ("Proof that every round was done", "at each checkpoint", "the visit is logged with the time", "app"),
+ "i058": ("Cleaning checks without paper lists", "in each room", "the room is logged as done", "app"),
+ "i059": ("Inspections that can't be skipped", "around the vehicle", "each checked part is logged", "app"),
+ "i079": ("Check-ins without a paper list", "on a reader at the door", "the member is logged in", "maker"),
+ "i080": ("Your own tap-to-pay credit system", "on a reader at the kiosk", "credit is taken off the card", "maker"),
+}
+for i in ideas:
+    hook, place, result, setup = DISPLAY.get(i["id"], (i["title"], None, None, None))
+    i.update(hook=hook, place=place, result=result, setup_type=setup)
+
 # ---------------------------------------------------------------- status
 # hidden       = never shown (tips, unsafe or misleading entries)
 # needs_review = shown, but the user still has to check a flag
