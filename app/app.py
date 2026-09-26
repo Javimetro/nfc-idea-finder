@@ -4,7 +4,7 @@ Run locally:   python app/app.py            -> http://localhost:8000
 On the Pi:     see README (Docker)."""
 import os
 import sys
-from urllib.parse import quote_plus
+from urllib.parse import quote, quote_plus
 
 from flask import Flask, jsonify, request, send_from_directory
 
@@ -31,6 +31,12 @@ def source_link(link):
         url = src["url"]
         if link["start_seconds"] and "youtu" in url:
             url += ("&" if "?" in url else "?") + f"t={link['start_seconds']}s"
+        elif link.get("anchor_quote") and "youtu" not in url:
+            # "#:~:text=" makes the browser scroll to and highlight this exact text (Chrome, Edge, Safari)
+            snippet = link["anchor_quote"].split("...")[0].split("\u2026")[0].strip(" .,\"'\u201c\u201d")
+            snippet = " ".join(snippet.split()[:8])
+            if len(snippet) > 12:
+                url += "#:~:text=" + quote(snippet, safe="")
         return url, False
     if src["type"] == "book":
         return "https://www.google.com/search?tbm=bks&q=" + quote_plus(src["title"]), True
@@ -44,28 +50,55 @@ PLATFORM_DOMAIN = {"YouTube": "youtube.com", "TikTok": "tiktok.com", "Instagram"
                    "Reddit": "reddit.com", "blog": None}
 
 
+APPS = {
+    "nfc_tools_ios": ("NFC Tools (App Store)", "https://apps.apple.com/app/nfc-tools/id1252962749"),
+    "nfc_tools_android": ("NFC Tools (Google Play)", "https://play.google.com/store/apps/details?id=com.wakdev.wdnfc"),
+    "nfc_tools_pro": ("NFC Tools Pro (Google Play)", "https://play.google.com/store/apps/details?id=com.wakdev.nfctools.pro"),
+    "macrodroid": ("MacroDroid (Google Play)", "https://play.google.com/store/apps/details?id=com.arlosoft.macrodroid"),
+    "shortcuts": ("Shortcuts (App Store)", "https://apps.apple.com/app/shortcuts/id915249334"),
+    "ha_ios": ("Home Assistant (App Store)", "https://apps.apple.com/app/home-assistant/id1099568401"),
+    "ha_android": ("Home Assistant (Google Play)", "https://play.google.com/store/apps/details?id=io.homeassistant.companion.android"),
+}
+
+
+def _apps(keys):
+    return [{"label": APPS[k][0], "url": APPS[k][1]} for k in keys]
+
+
+def shop_url(tag):
+    return "https://www.google.com/search?tbm=shop&q=" + quote_plus(tag["search_term"]) if tag else None
+
+
 def setup_steps(idea, tag, phone):
-    """Four simple steps: get the tag, set it up on YOUR phone, stick it, tap."""
+    """Four simple steps: get the tag, set it up on YOUR phone, stick it, tap. Each can carry links."""
     t, result = idea["setup_type"], idea["result"] or "your chosen action runs"
+    ios, android = phone in ("iphone", "both", None), phone in ("android", "both", None)
+    links = []
     if t == "link":
-        how = "Open the free NFC Tools app (iPhone and Android) \u2192 Write \u2192 add the link, wifi, contact or text \u2192 hold the tag to your phone."
+        how = "Open the free NFC Tools app \u2192 Write \u2192 add the link, wifi, contact or text \u2192 hold the tag to your phone."
+        links = _apps((["nfc_tools_ios"] if ios else []) + (["nfc_tools_android"] if android else []))
     elif t == "smarthome":
         how = "In the Home Assistant app: Settings \u2192 Tags \u2192 Add tag, scan it, then make an automation for what should happen."
+        links = _apps((["ha_ios"] if ios else []) + (["ha_android"] if android else []))
     elif t == "app":
         how = "Install an app that supports NFC tags for this (see the creators below) and scan the tag once inside the app."
     elif t == "maker":
         how = "Connect a PN532 reader to a Raspberry Pi or Arduino and run a small program that reacts to each card."
     elif phone == "iphone":
-        how = "Open the Shortcuts app \u2192 Automation \u2192 New \u2192 NFC \u2192 scan the tag, then choose what should happen."
+        how = "Open the Shortcuts app (already on your iPhone) \u2192 Automation \u2192 New \u2192 NFC \u2192 scan the tag, then choose what should happen."
+        links = _apps(["shortcuts"])
     elif phone == "android":
         how = "Install NFC Tools Pro or MacroDroid, create a task (what should happen) and link it to the tag."
+        links = _apps(["nfc_tools_pro", "macrodroid"])
     else:
         how = "iPhone: Shortcuts app \u2192 Automation \u2192 NFC. Android: NFC Tools Pro or MacroDroid. Scan the tag and choose what should happen."
+        links = _apps(["shortcuts", "nfc_tools_pro", "macrodroid"])
     return [
-        {"icon": "\U0001F3F7\uFE0F", "title": "Get the tag", "text": (tag["name"] + " \u00b7 " + tag["price_hint"]) if tag else "See the creators below"},
-        {"icon": "\U0001F4F1", "title": "Set it up", "text": how},
-        {"icon": "\U0001F4CD", "title": "Stick it", "text": (idea["place"] or "where you need it").capitalize()},
-        {"icon": "\u2728", "title": "Tap", "text": result[0].upper() + result[1:] + "."},
+        {"icon": "\U0001F3F7\uFE0F", "title": "Get the tag", "text": (tag["name"] + " \u00b7 " + tag["price_hint"]) if tag else "See the creators below",
+         "links": [{"label": "See it in shops", "url": shop_url(tag)}] if tag else []},
+        {"icon": "\U0001F4F1", "title": "Set it up", "text": how, "links": links},
+        {"icon": "\U0001F4CD", "title": "Stick it", "text": (idea["place"] or "where you need it").capitalize(), "links": []},
+        {"icon": "\u2728", "title": "Tap", "text": result[0].upper() + result[1:] + ".", "links": []},
     ]
 
 
@@ -99,7 +132,7 @@ def present(idea, score, why, warnings, answers):
                      "startup_cost": idea["startup_cost_level"]} if idea["business_model"] else None,
         "needs_review": idea["status"] == "needs_review", "review_flags": idea["review_flags"],
         "score": round(score, 1), "why": why, "warnings": warnings,
-        "tag": {"id": tag["id"], "name": tag["name"], "search_term": tag["search_term"],
+        "tag": {"id": tag["id"], "name": tag["name"], "search_term": tag["search_term"], "shop_url": shop_url(tag),
                 "price_hint": tag["price_hint"], "why": tag_why} if tag else None,
         "sources": list(grouped.values()),
     }

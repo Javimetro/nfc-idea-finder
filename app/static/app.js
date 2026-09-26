@@ -155,6 +155,14 @@ function sourceIcon(s) {
   return `<span class="src-ico">🔗</span>`;
 }
 
+// Turn the first mention of "a sticker" / "an NFC tag" in a pitch into a link to that tag in shops
+function linkTag(text, tag) {
+  const safe = esc(text);
+  if (!tag || !tag.shop_url) return safe;
+  const re = /\b((?:an?|the|each|your|one) (?:NFC )?(?:stickers?|tags?)|NFC (?:stickers?|tags?))\b/i;
+  return safe.replace(re, (m) => `<a class="tag-link" href="${esc(tag.shop_url)}" target="_blank" rel="noopener" title="${esc(tag.name)}: see it in shops">${m}</a>`);
+}
+
 function renderIdea(idea, open) {
   const meta = [
     idea.setup_time ? `⏱ ${esc(idea.setup_time)}` : "",
@@ -163,11 +171,11 @@ function renderIdea(idea, open) {
   ].filter(Boolean).join(`<span class="dot-sep">·</span>`);
 
   const why = idea.why.map((w) => `
-      <div class="why-item"><span class="said-text">${esc(w.you_said)}</span><p>${esc(w.pitch)}</p></div>`).join("");
+      <div class="why-item"><span class="said-text">${esc(w.you_said)}</span><p>${linkTag(w.pitch, idea.tag)}</p></div>`).join("");
 
   const steps = idea.steps.length ? `<div class="steps">${idea.steps.map((st, n) => `
       <div class="step"><div class="step-ico">${st.icon}<span class="step-n">${n + 1}</span></div>
-        <b>${esc(st.title)}</b><p>${esc(st.text)}</p></div>`).join("")}</div>` : "";
+        <b>${esc(st.title)}</b><p>${esc(st.text)}</p>${(st.links || []).map((l) => `<a class="step-link" href="${esc(l.url)}" target="_blank" rel="noopener">${esc(l.label)} ↗</a>`).join("")}</div>`).join("")}</div>` : "";
 
   const warn = idea.warnings.length || idea.needs_review ? `<div class="badges">${idea.warnings.map((w) => `<span class="badge warn">${esc(w)}</span>`).join("")}
       ${idea.needs_review ? `<span class="badge review" title="${esc(idea.review_flags.join(" · "))}">unverified</span>` : ""}</div>` : "";

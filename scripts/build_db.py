@@ -741,6 +741,14 @@ for i in ideas:
     i["status"] = "hidden" if (i["kind"] == "tip" or unsafe) else ("needs_review" if i["review_flags"] else "ok")
 
 # ---------------------------------------------------------------- write
+# real URLs found later for sources NotebookLM couldn't see (db/source_urls.json)
+_urls = json.load(open("db/source_urls.json", encoding="utf-8"))
+for x in sources:
+    if x["id"] in _urls and not x["url"]:
+        x["url"] = _urls[x["id"]]["url"]
+        if _urls[x["id"]].get("check"):
+            x["notes"] = ((x["notes"] or "") + " URL check: " + _urls[x["id"]]["check"]).strip()
+
 # threads whose ideas haven't been extracted yet stay out until they have ideas
 _used = {l["source_id"] for l in links}
 sources = [x for x in sources if x["id"] in _used]

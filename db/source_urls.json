@@ -1,0 +1,22 @@
+{
+  "_note": "Real URLs for sources NotebookLM couldn't see. Found by searching title + channel on 2026-09-26. 'check' = title differs slightly, confirm by opening.",
+  "s01": {"url": "https://www.youtube.com/watch?v=L7IrdB2AD0c"},
+  "s02": {"url": "https://www.youtube.com/watch?v=GpG4uTWFf9g"},
+  "s04": {"url": "https://www.youtube.com/watch?v=wTcsukYddfY"},
+  "s06": {"url": "https://www.youtube.com/watch?v=X-Fm_lqMPnE"},
+  "s07": {"url": "https://www.youtube.com/watch?v=4U6BJMm6zao"},
+  "s08": {"url": "https://www.youtube.com/watch?v=b7rrM82tkco"},
+  "s09": {"url": "https://www.youtube.com/watch?v=fwc07iXgo6M"},
+  "s11": {"url": "https://www.youtube.com/watch?v=CzlVmOTlg-g"},
+  "s12": {"url": "https://www.youtube.com/watch?v=-oALA3SGlhc", "check": "YouTube title now says 'How to Program NFC Tags…' instead of 'How to Set Up…'"},
+  "s13": {"url": "https://www.youtube.com/watch?v=kc2MM8z6X7k"},
+  "s14": {"url": "https://www.youtube.com/watch?v=5XW_wE43y54"},
+  "s15": {"url": "https://www.youtube.com/watch?v=yHKkYcqo2gU"},
+  "s16": {"url": "https://www.youtube.com/watch?v=f9cLzdFwq5k"},
+  "s17": {"url": "https://www.youtube.com/shorts/_BXjzzsxVnQ"},
+  "s19": {"url": "https://www.youtube.com/watch?v=zmA2Znhg1a4"},
+  "s21": {"url": "https://www.youtube.com/watch?v=AmznV3v83Gk"},
+  "s22": {"url": "https://www.youtube.com/watch?v=6YSAeVLANaw"},
+  "s24": {"url": "https://www.youtube.com/watch?v=NGE8cM7CG94"},
+  "s25": {"url": "https://www.youtube.com/watch?v=74T-cp8BC-Q"}
+}

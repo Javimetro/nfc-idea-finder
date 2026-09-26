@@ -319,3 +319,11 @@ dialog label.check input { width: auto; }
   background: var(--accent); color: #fff; font-weight: 800; font-size: .8rem; display: grid; place-items: center; }
 .options.chips .option.selected { box-shadow: inset 0 0 0 1px var(--accent); }
 @media (max-width: 520px) { .options.tiles { grid-template-columns: 1fr 1fr; } .options.tiles .option { min-height: 120px; } }
+
+/* v6: full hints, shop + app links */
+.options.tiles .hint { -webkit-line-clamp: unset; display: block; overflow: visible; }
+.options.tiles .option { min-height: 0; }
+.tag-link { color: var(--accent-ink); font-weight: 650; text-decoration: underline; text-decoration-style: dotted; text-underline-offset: 3px; }
+.step-link { display: inline-block; margin-top: .35rem; margin-right: .35rem; font-size: .78rem; font-weight: 650; padding: .2rem .55rem; border-radius: 999px;
+  background: var(--surface); border: 1px solid var(--border); color: var(--text); text-decoration: none; }
+.step-link:hover { border-color: var(--accent); color: var(--accent-ink); }

@@ -361,14 +361,28 @@ Question screens are now tiles (2 per row on phones), with a ✓ badge on the on
 
 ![Quiz with icon tiles](docs/img/25-quiz-tiles.png)
 
+#### 17. Links everywhere: shops, app stores, the exact comment
+
+the user's feedback: the small text on the quiz tiles was cut off, and results should link to what they mention. Changes:
+
+- **Full text on quiz tiles.** Nothing is cut off anymore.
+- **Tag links.** In "why it's worth trying", the first mention of a sticker or tag (e.g. "Put **an NFC sticker** on the jars…") links to a shop search for the exact tag recommended. Step 1, "Get the tag", has a "See it in shops" button.
+- **App-store links in "Set it up"**, matching the visitor's phone: Shortcuts on iPhone; NFC Tools Pro and MacroDroid on Android; NFC Tools for simple links; Home Assistant for smart-home ideas.
+- **Reddit links jump to the comment.** They use a *text fragment* (`#:~:text=…`), a browser feature that scrolls to and highlights a quote on the page. We already had the right quote for each idea (the "anchor quote" from the NotebookLM prompt), so it pays off here.
+- **Real YouTube links.** Claude searched each video by title and channel and found **19 of 21** (`db/source_urls.json`); one is marked "check" because its title changed. The other two, and the books, still use a search link.
+
+Still missing: **exact seconds in the videos.** That needs the video transcripts. The "listen for: …" quote shown next to each video tells you what to look for in the meantime.
+
+![An idea with shop and app links](docs/img/26-idea-with-links.png)
+
 ---
 
 ## Open to-do list
 
 - [ ] the user reviews the 43 flagged ideas
 - [ ] Prototype matching: Jev vs. a small general AI model, on the same test personas
-- [ ] Find the URL of each source (title + channel search), the user confirms
-- [ ] Find timestamps using the anchor quotes (YouTube transcripts)
+- [x] Find the URL of each source (19/21 videos found; Andilynn's Amazing Reviews and Slay Tag still missing)
+- [ ] Find timestamps using the anchor quotes (needs YouTube transcripts)
 - [ ] Write the **tag profiles** table (the buying guide)
 - [ ] Design the interview questions
 - [ ] Prototype the AI matching with test answers, before building any UI
