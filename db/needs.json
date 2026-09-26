@@ -829,7 +829,8 @@
    "songs"
   ],
   "ideas": {
-   "i081": "Picture cards with tags: your kid taps a card and their song or story starts. They choose by themselves, no screen needed."
+   "i081": "Picture cards with tags: your kid taps a card and their song or story starts. They choose by themselves, no screen needed.",
+   "i015": "Older kids can make their own music cards: album art in a card sleeve with a tag inside."
   }
  },
  {
@@ -1125,7 +1126,8 @@
   ],
   "ideas": {
    "i093": "Tags around the home for meds, meals and more. Each tap adds a time-stamped line to a log the whole family can see.",
-   "i028": "Tags on pill bottles show whether today's dose was already given."
+   "i028": "Tags on pill bottles show whether today's dose was already given.",
+   "i095": "For an older parent: a tag that calls you, or starts a screen-sharing session, with one tap."
   }
  },
  {
@@ -1227,5 +1229,21 @@
    "business_owner",
    "money"
   ]
+ },
+ {
+  "id": "p_alone",
+  "question": "pets",
+  "label": "My pet gets anxious when I leave",
+  "you_said": "your pet gets anxious when you leave",
+  "keywords": [
+   "anxious",
+   "separation",
+   "alone",
+   "pet cam",
+   "camera"
+  ],
+  "ideas": {
+   "i110": "Tap the tag by the door as you leave and the pet camera opens, so you can check on them right away."
+  }
  }
 ]

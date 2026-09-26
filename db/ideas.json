@@ -3912,6 +3912,84 @@
     "status": "ok"
   },
   {
+    "id": "i110",
+    "title": "Check on your pet as you leave",
+    "kind": "diy",
+    "summary": "A tag by the door opens the pet camera the moment you step out, so you can see how your anxious dog is doing.",
+    "how_it_works": "Tag opens your camera app's live view (or a smart home camera dashboard).",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home",
+      "pets"
+    ],
+    "goals": [
+      "automation"
+    ],
+    "phone_support": "any",
+    "setup_by_platform": "iPhone: Shortcuts app. Android: MacroDroid. Any camera app.",
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form": "sticker",
+      "on_metal": false,
+      "waterproof": false,
+      "rewritable": true,
+      "secure": false,
+      "memory": "small"
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "review_flags": [],
+    "hook": "Check on your pet the moment you leave",
+    "place": "by the front door",
+    "result": "the pet camera's live view opens",
+    "setup_type": "automation",
+    "status": "ok"
+  },
+  {
+    "id": "i111",
+    "title": "Pay with a ring, keychain or wearable",
+    "kind": "product_feature",
+    "summary": "Tap-to-pay doesn't need a card: payment rings, keychains and watches work at any card terminal.",
+    "how_it_works": "Buy a payment wearable supported by your bank; it contains its own secure payment chip.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "travel",
+      "shop"
+    ],
+    "goals": [
+      "payments"
+    ],
+    "phone_support": "any",
+    "setup_by_platform": null,
+    "difficulty": "easy",
+    "cost_level": "5_to_50_eur",
+    "tag_needs": {
+      "form": "sticker",
+      "on_metal": false,
+      "waterproof": false,
+      "rewritable": true,
+      "secure": false,
+      "memory": "small"
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "review_flags": [
+      "Never cut up or re-case bank or transit cards: use a bank-supported wearable."
+    ],
+    "hook": "Pay with a ring or keychain",
+    "place": null,
+    "result": null,
+    "setup_type": null,
+    "status": "needs_review"
+  },
+  {
     "id": "i074",
     "title": "Door access card copied to iPhone",
     "kind": "tip",

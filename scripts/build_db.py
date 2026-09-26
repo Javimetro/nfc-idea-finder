@@ -719,6 +719,8 @@ DISPLAY = {
  "i107": ("Only your card starts the car charger", "next to your home charger", "charging is allowed to start", "smarthome"),
  "i108": ("Pre-heat the coffee machine from bed", "on your headboard", "the coffee machine switches on", "smarthome"),
  "i109": ("Take payments at your stall without a terminal", "on your items or stall sign", "your payment link opens", "link"),
+ "i110": ("Check on your pet the moment you leave", "by the front door", "the pet camera's live view opens", "automation"),
+ "i111": ("Pay with a ring or keychain", None, None, None),
  "i004": ("Remember when you last changed or cleaned something", "on the toothbrush, filter or appliance", "today's date is saved and the next reminder is set", "automation"),
  "i005": ("Guests over? Pause your automations", "by the front door", "motion lights and doorbell alerts pause", "smarthome"),
  "i014": ("Movie, dinner or game night in one tap", "behind a painting, under the table or on the game box", "the lights and music for that moment start", "automation"),

@@ -14,6 +14,7 @@ RAW_FILES = {
     "F": "db/raw/batch8_reddit_sources_6-10.json",
     "R": "db/raw/batch9_reddit_sources_11-16.json",
     "C": "db/raw/batch10_reddit_sources_14_17_18.json",
+    "G": "db/raw/batch11_reddit_sources_19-22.json",
 }
 INVENTORY = "db/raw/10_reddit_sources_inventory.json"
 
@@ -103,6 +104,15 @@ NEW_IDEAS = [
      "NFC Tools (any phone).", "easy", "under_5_eur", {}, {"model": "one_time_sale", "who": "craft sellers, market stalls", "cost": "low"}, []),
 ]
 
+NEW_IDEAS += [
+    ("i110", "Check on your pet as you leave", "A tag by the door opens the pet camera the moment you step out, so you can see how your anxious dog is doing.",
+     "Tag opens your camera app's live view (or a smart home camera dashboard).", "diy", ["personal"], ["home", "pets"], ["automation"], "any",
+     "iPhone: Shortcuts app. Android: MacroDroid. Any camera app.", "easy", "under_5_eur", {}, None, []),
+    ("i111", "Pay with a ring, keychain or wearable", "Tap-to-pay doesn't need a card: payment rings, keychains and watches work at any card terminal.",
+     "Buy a payment wearable supported by your bank; it contains its own secure payment chip.", "product_feature", ["personal"], ["travel", "shop"], ["payments"], "any",
+     None, "easy", "5_to_50_eur", {}, None, ["Never cut up or re-case bank or transit cards: use a bank-supported wearable."]),
+]
+
 # ---------------------------------------------------------------- existing ideas that grew
 UPDATES = {
     "i001": {"setup_by_platform": "iPhone: Shortcuts app (set playback destination). Android: MacroDroid. Or Home Assistant.", "difficulty": "easy"},
@@ -160,6 +170,14 @@ MAPPING = {
     "C56": "i006", "C57": "i006", "C58": "i092", "C59": "i027", "C60": "i096", "C61": "i097", "C62": "i020", "C63": "i035",
     "C64": "i040", "C65": "i035", "C66": "i098", "C67": "i044", "C68": "i095", "C69": "i010", "C70": "i022", "C71": "i003",
     "C72": "i041", "C73": "i033", "C74": "i032", "C75": "i010", "C76": "i022", "C77": "i042", "C78": "i003", "C79": "i009",
+    # batch 11 (G): threads 19-22
+    "G0": "i110", "G1": "i028", "G2": "i041", "G3": "i042", "G4": "i042", "G5": "i006", "G6": "i014", "G7": "i006",
+    "G8": "i025", "G9": "i043", "G10": "i090", "G11": "i042", "G12": "i004", "G13": "i022", "G14": "i081", "G15": "i015",
+    "G16": "i028", "G17": "i017", "G18": "i081", "G19": "i090", "G20": "i096", "G21": "i018", "G22": "i036", "G23": "i010",
+    "G24": "i004", "G25": "i021", "G26": "i028", "G27": "i023", "G28": "i020", "G29": "i022", "G30": "i095", "G31": "i017",
+    "G32": "i096", "G33": "i042", "G34": "i006", "G35": "i031", "G36": "i027", "G37": "i044", "G38": "i006", "G39": "i009",
+    "G40": "i100", "G41": "i004", "G42": "i044", "G43": None, "G44": "i096", "G45": None, "G46": "i020", "G47": "i035",
+    "G48": "i015", "G49": "i111", "G50": None, "G51": "i111", "G52": "i105", "G53": "i111", "G54": "i111",
 }
 
 LEFT_OUT = {
@@ -173,4 +191,7 @@ LEFT_OUT = {
     "R15": "Re-using hotel key cards as tags: a tip, not an idea (could go in tag tips).",
     "C51": "Tasker emergency kill switch: too niche.",
     "C52": "Switching Reddit accounts: too niche.",
+    "G43": "Copying game figures (Amiibo): grey area with the game maker's rules.",
+    "G45": "Cider dispenser that reads tagged glasses: commercial hardware, not a DIY idea.",
+    "G50": "Cloning a work access card into a ring: usually against workplace security rules.",
 }

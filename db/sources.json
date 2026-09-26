@@ -572,5 +572,61 @@
     "published_date": null,
     "date_added": "2026-09-26",
     "notes": null
+  },
+  {
+    "id": "s45",
+    "notebooklm_no": 119,
+    "title": "What are your favourite or coolest use of NFC triggered automations? : r/smarthome",
+    "url": "https://www.reddit.com/r/smarthome/comments/1drqec8/what_are_your_favourite_or_coolest_use_of_nfc/",
+    "type": "social_post",
+    "platform": "Reddit",
+    "creator_name": "kiam0k0",
+    "creator_url": null,
+    "language": "en",
+    "published_date": null,
+    "date_added": "2026-09-26",
+    "notes": null
+  },
+  {
+    "id": "s46",
+    "notebooklm_no": 120,
+    "title": "What cool projects, automations or hacks do you implement with NFC tags? : r/homeassistant",
+    "url": "https://www.reddit.com/r/homeassistant/comments/1pj88qg/what_cool_projects_automations_or_hacks_do_you/",
+    "type": "social_post",
+    "platform": "Reddit",
+    "creator_name": "Easy_Confusion2415",
+    "creator_url": null,
+    "language": "en",
+    "published_date": null,
+    "date_added": "2026-09-26",
+    "notes": null
+  },
+  {
+    "id": "s47",
+    "notebooklm_no": 121,
+    "title": "What's the coolest thing you've built with an NFC tag? : r/NFC",
+    "url": "https://www.reddit.com/r/NFC/comments/1uquybt/whats_the_coolest_thing_youve_built_with_an_nfc/",
+    "type": "social_post",
+    "platform": "Reddit",
+    "creator_name": "HovercraftMain8564",
+    "creator_url": null,
+    "language": "en",
+    "published_date": null,
+    "date_added": "2026-09-26",
+    "notes": null
+  },
+  {
+    "id": "s48",
+    "notebooklm_no": 122,
+    "title": "What's the most unusual or creative object you've seen someone use for tap-to-pay? : r/NFC",
+    "url": "https://www.reddit.com/r/NFC/comments/1wpblf7/whats_the_most_unusual_or_creative_object_youve/",
+    "type": "social_post",
+    "platform": "Reddit",
+    "creator_name": "CheekiCheshire",
+    "creator_url": null,
+    "language": "en",
+    "published_date": null,
+    "date_added": "2026-09-26",
+    "notes": null
   }
 ]

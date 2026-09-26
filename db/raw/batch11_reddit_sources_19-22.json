@@ -1,0 +1,2028 @@
+[
+  {
+    "idea_title": "Front Door Security Camera Supervision Switch",
+    "summary": "Scanning a front door tag opens security camera feeds to supervise a dog with separation anxiety while away from home.",
+    "how_it_works": "A tag near the door is scanned when leaving, opening the security camera app to activate dog monitoring.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home",
+      "pets"
+    ],
+    "goals": [
+      "security",
+      "automation"
+    ],
+    "phone_support": "android_only",
+    "extra_app": "MacroDroid",
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "What are your favourite or coolest use of NFC triggered automations? : r/smarthome",
+    "source_url": "https://www.reddit.com/r/smarthome/comments/1drqec8/what_are_your_favourite_or_coolest_use_of_nfc/",
+    "creator_name": "gooutandbebrave",
+    "timestamp": null,
+    "anchor_quote": "opens my security camera app so I can turn it on to supervise my seperation anxiety dog",
+    "notes": null
+  },
+  {
+    "idea_title": "Pill Bottle Dosage Logger and Dynamic Alarm",
+    "summary": "Tapping a pill bottle cap logs medication timestamps and schedules next dose alarms or safe dosage time notifications.",
+    "how_it_works": "A tag on a pill bottle cap is scanned with a phone to record intake times and dismiss or adjust future dose alarms.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home",
+      "health"
+    ],
+    "goals": [
+      "reminder",
+      "tracking",
+      "automation"
+    ],
+    "phone_support": "android_only",
+    "extra_app": "MacroDroid",
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "What are your favourite or coolest use of NFC triggered automations? : r/smarthome",
+    "source_url": "https://www.reddit.com/r/smarthome/comments/1drqec8/what_are_your_favourite_or_coolest_use_of_nfc/",
+    "creator_name": "gooutandbebrave",
+    "timestamp": null,
+    "anchor_quote": "sticker in the lid of a pill bottle/pill organizer to log what time I took a medication",
+    "notes": null
+  },
+  {
+    "idea_title": "Coffee Maker Next-Day Partner Reminder",
+    "summary": "Scanning a tag when making coffee schedules a reminder text to your partner the next day to drink remaining coffee.",
+    "how_it_works": "A tag on a coffee maker is scanned during brewing, scheduling an automated text message for the following day.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home"
+    ],
+    "goals": [
+      "reminder",
+      "automation"
+    ],
+    "phone_support": "android_only",
+    "extra_app": "MacroDroid",
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": true,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "What are your favourite or coolest use of NFC triggered automations? : r/smarthome",
+    "source_url": "https://www.reddit.com/r/smarthome/comments/1drqec8/what_are_your_favourite_or_coolest_use_of_nfc/",
+    "creator_name": "gooutandbebrave",
+    "timestamp": null,
+    "anchor_quote": "sticker on my coffee maker that I scan when I make a pot, and it schedules a text",
+    "notes": null
+  },
+  {
+    "idea_title": "Driveway Phone Tap Garage Opener",
+    "summary": "Scanning an NFC tag mounted in your driveway opens your garage door without navigating app menus.",
+    "how_it_works": "A phone is tapped against a driveway tag to trigger a Home Assistant automation that opens the garage door.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home",
+      "car",
+      "outdoors"
+    ],
+    "goals": [
+      "access",
+      "automation"
+    ],
+    "phone_support": "any",
+    "extra_app": "Home Assistant",
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": true,
+      "waterproof": true,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "What are your favourite or coolest use of NFC triggered automations? : r/smarthome",
+    "source_url": "https://www.reddit.com/r/smarthome/comments/1drqec8/what_are_your_favourite_or_coolest_use_of_nfc/",
+    "creator_name": "tungvu256",
+    "timestamp": null,
+    "anchor_quote": "i have a NFC in the driveway to open the garage door",
+    "notes": null
+  },
+  {
+    "idea_title": "Dashboard Hula Girl Hidden Garage Opener",
+    "summary": "Scanning a tag hidden in a vehicle dashboard ornament opens or closes garage doors without physical remotes.",
+    "how_it_works": "An unlocked phone is tapped against a tag hidden inside a hula girl skirt on a doorless truck dashboard to control garage doors.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "car",
+      "home"
+    ],
+    "goals": [
+      "access",
+      "security",
+      "automation"
+    ],
+    "phone_support": "any",
+    "extra_app": null,
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "What are your favourite or coolest use of NFC triggered automations? : r/smarthome",
+    "source_url": "https://www.reddit.com/r/smarthome/comments/1drqec8/what_are_your_favourite_or_coolest_use_of_nfc/",
+    "creator_name": "lemon_tea",
+    "timestamp": null,
+    "anchor_quote": "hidden in the grass skirt of the hula girl on the dash of my truck",
+    "notes": null
+  },
+  {
+    "idea_title": "Washing Machine Longest Cycle Timer",
+    "summary": "Scanning a tag on a clothes washer sets a 45-minute timer so wet laundry is not forgotten.",
+    "how_it_works": "Tapping a phone against a washing machine tag sets a 45-minute countdown alert.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home"
+    ],
+    "goals": [
+      "reminder",
+      "automation"
+    ],
+    "phone_support": "any",
+    "extra_app": null,
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": true,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "What are your favourite or coolest use of NFC triggered automations? : r/smarthome",
+    "source_url": "https://www.reddit.com/r/smarthome/comments/1drqec8/what_are_your_favourite_or_coolest_use_of_nfc/",
+    "creator_name": null,
+    "timestamp": null,
+    "anchor_quote": "automatic timer for the clothes washer. I had it set to 45 minutes",
+    "notes": null
+  },
+  {
+    "idea_title": "Kitchen Cooking Climate and Plex Media Launcher",
+    "summary": "Scanning a kitchen tag adjusts thermostat temperatures, turns on stove lighting, and streams cooking playlists to Echo Show.",
+    "how_it_works": "A tag in the kitchen is scanned to set climate controls, switch on lights, and prompt Plex playlist playback on an Echo Show 5.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home"
+    ],
+    "goals": [
+      "automation"
+    ],
+    "phone_support": "any",
+    "extra_app": "Home Assistant",
+    "difficulty": "medium",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "What are your favourite or coolest use of NFC triggered automations? : r/smarthome",
+    "source_url": "https://www.reddit.com/r/smarthome/comments/1drqec8/what_are_your_favourite_or_coolest_use_of_nfc/",
+    "creator_name": "loujr15",
+    "timestamp": null,
+    "anchor_quote": "sets the thermostat to a comfortable temperature... start my cooking playlist",
+    "notes": null
+  },
+  {
+    "idea_title": "Baking Oven Climate Announcement and Shutoff",
+    "summary": "Scanning a baking tag turns off the thermostat and announces via smart speakers that the baking oven is turned on.",
+    "how_it_works": "Scanning a tag before baking turns off the thermostat and broadcasts a speaker announcement that the oven is active.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home"
+    ],
+    "goals": [
+      "automation",
+      "share_info"
+    ],
+    "phone_support": "any",
+    "extra_app": "Home Assistant",
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "What are your favourite or coolest use of NFC triggered automations? : r/smarthome",
+    "source_url": "https://www.reddit.com/r/smarthome/comments/1drqec8/what_are_your_favourite_or_coolest_use_of_nfc/",
+    "creator_name": "loujr15",
+    "timestamp": null,
+    "anchor_quote": "thermostat is turned off, and an announcement is sent to all available speakers",
+    "notes": null
+  },
+  {
+    "idea_title": "Smart Scale Health Log and Morning Wake-Up Routine",
+    "summary": "Scanning a tag attached to a scale logs weight in Apple Health, turns off Sleep Focus, disarms security, and opens shades.",
+    "how_it_works": "Tapping a scale tag logs body weight in Apple Health via Shortcuts while disarming Ring Alarm and opening bedroom shades via Home Assistant.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home",
+      "health"
+    ],
+    "goals": [
+      "automation",
+      "tracking",
+      "security"
+    ],
+    "phone_support": "iphone_only",
+    "extra_app": "iOS Shortcuts",
+    "difficulty": "medium",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "What are your favourite or coolest use of NFC triggered automations? : r/smarthome",
+    "source_url": "https://www.reddit.com/r/smarthome/comments/1drqec8/what_are_your_favourite_or_coolest_use_of_nfc/",
+    "creator_name": "Fluffy_Accountant_39",
+    "timestamp": null,
+    "anchor_quote": "log my weight in the Apple Health app, and it turns off Sleep Focus",
+    "notes": null
+  },
+  {
+    "idea_title": "Guest Wi-Fi Auto-Connect Tag",
+    "summary": "Scanning a tag allows guests to join a guest Wi-Fi network instantly without viewing or typing a password.",
+    "how_it_works": "Wi-Fi credentials on the tag allow guest phones to connect to the guest network automatically when tapped.",
+    "audience": [
+      "personal",
+      "business_customers"
+    ],
+    "settings": [
+      "home",
+      "office",
+      "shop"
+    ],
+    "goals": [
+      "share_info",
+      "access"
+    ],
+    "phone_support": "any",
+    "extra_app": null,
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "What cool projects, automations or hacks do you implement with NFC tags? : r/homeassistant",
+    "source_url": "https://www.reddit.com/r/homeassistant/comments/1pj88qg/what_cool_projects_automations_or_hacks_do_you/",
+    "creator_name": "Richard3004r",
+    "timestamp": null,
+    "anchor_quote": "auto connect to the quest network without ever hearing or seeing a password",
+    "notes": null
+  },
+  {
+    "idea_title": "Appliance Unloading Kid Allowance Bonus Tracker",
+    "summary": "Kids scan a tag on completed dishwashers or washing machines to earn pocket money bonus credits.",
+    "how_it_works": "Scanning a tag after emptying laundry or dishes triggers a Home Assistant automation crediting weekly allowance.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home"
+    ],
+    "goals": [
+      "automation",
+      "tracking"
+    ],
+    "phone_support": "any",
+    "extra_app": "Home Assistant",
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": true,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "What cool projects, automations or hacks do you implement with NFC tags? : r/homeassistant",
+    "source_url": "https://www.reddit.com/r/homeassistant/comments/1pj88qg/what_cool_projects_automations_or_hacks_do_you/",
+    "creator_name": "rapax",
+    "timestamp": null,
+    "anchor_quote": "scans the tag and gets a small bonus to his weekly pocket money",
+    "notes": null
+  },
+  {
+    "idea_title": "Entryway and Vehicle Garage Door Trigger",
+    "summary": "Tapping tags in your car or near house doors triggers Home Assistant to open the garage door.",
+    "how_it_works": "Scanning a tag in a vehicle or near an entryway sends a trigger command to open garage doors.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "car",
+      "home"
+    ],
+    "goals": [
+      "access",
+      "automation"
+    ],
+    "phone_support": "any",
+    "extra_app": "Home Assistant",
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": true,
+      "waterproof": true,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "What cool projects, automations or hacks do you implement with NFC tags? : r/homeassistant",
+    "source_url": "https://www.reddit.com/r/homeassistant/comments/1pj88qg/what_cool_projects_automations_or_hacks_do_you/",
+    "creator_name": "lukepatrick",
+    "timestamp": null,
+    "anchor_quote": "tap in my car or near the door to open",
+    "notes": null
+  },
+  {
+    "idea_title": "Furnace Air Filter Maintenance Tracker",
+    "summary": "Scanning tags on home equipment like air filters logs maintenance chores and resets replacement countdowns.",
+    "how_it_works": "Scanning a tag on an air filter updates maintenance logs and resets replacement reminders in Home Assistant.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home"
+    ],
+    "goals": [
+      "reminder",
+      "tracking",
+      "automation"
+    ],
+    "phone_support": "any",
+    "extra_app": "Home Assistant",
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": true,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "What cool projects, automations or hacks do you implement with NFC tags? : r/homeassistant",
+    "source_url": "https://www.reddit.com/r/homeassistant/comments/1pj88qg/what_cool_projects_automations_or_hacks_do_you/",
+    "creator_name": "lukepatrick",
+    "timestamp": null,
+    "anchor_quote": "air filter replacements and other chores",
+    "notes": null
+  },
+  {
+    "idea_title": "3D Pictogram Refrigerator Grocery List Scanner",
+    "summary": "Swiping 3D-printed fridge magnets over an ESPHome reader adds corresponding groceries to your shopping list.",
+    "how_it_works": "3D-printed food pictograms containing NFC tags are scanned across a fridge-mounted ESPHome reader to update shopping lists.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home"
+    ],
+    "goals": [
+      "automation",
+      "reminder"
+    ],
+    "phone_support": null,
+    "extra_app": "Home Assistant",
+    "difficulty": "medium",
+    "cost_level": "5_to_50_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "What cool projects, automations or hacks do you implement with NFC tags? : r/homeassistant",
+    "source_url": "https://www.reddit.com/r/homeassistant/comments/1pj88qg/what_cool_projects_automations_or_hacks_do_you/",
+    "creator_name": "kasakaATriot11",
+    "timestamp": null,
+    "anchor_quote": "3d printed pictograms with an NFC tag on them",
+    "notes": null
+  },
+  {
+    "idea_title": "Children Room NFC Card Playlist Player",
+    "summary": "Kids tap picture cards against a room card reader to stream selected music or podcasts independently.",
+    "how_it_works": "Picture cards embedded with tags are placed on a fixed room reader to trigger specific audio playlists.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home"
+    ],
+    "goals": [
+      "automation",
+      "accessibility"
+    ],
+    "phone_support": null,
+    "extra_app": "Home Assistant",
+    "difficulty": "medium",
+    "cost_level": "5_to_50_eur",
+    "tag_needs": {
+      "form_factor": "card",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "What cool projects, automations or hacks do you implement with NFC tags? : r/homeassistant",
+    "source_url": "https://www.reddit.com/r/homeassistant/comments/1pj88qg/what_cool_projects_automations_or_hacks_do_you/",
+    "creator_name": "CanuckNorris",
+    "timestamp": null,
+    "anchor_quote": "trigger a different playlist... without needing to ask anyone",
+    "notes": null
+  },
+  {
+    "idea_title": "Displayed Signed Vinyl Wall Album Streamer",
+    "summary": "Scanning tags hidden in wall-mounted vinyl album frames streams those albums across whole-house speakers.",
+    "how_it_works": "Tags concealed in displayed vinyl sleeves are scanned with a phone to play the album on all smart speakers.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home"
+    ],
+    "goals": [
+      "automation"
+    ],
+    "phone_support": "any",
+    "extra_app": "Home Assistant",
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "What cool projects, automations or hacks do you implement with NFC tags? : r/homeassistant",
+    "source_url": "https://www.reddit.com/r/homeassistant/comments/1pj88qg/what_cool_projects_automations_or_hacks_do_you/",
+    "creator_name": "thedancingmilk",
+    "timestamp": null,
+    "anchor_quote": "signed vinyl albums on display and in each of them I've hidden an NFC tag",
+    "notes": null
+  },
+  {
+    "idea_title": "Prescription Medicine Intake and Supply Decrement",
+    "summary": "Scanning tags on pill bottle caps tracks when medication was taken and alerts when supplies are running low.",
+    "how_it_works": "Scanning a bottle cap tag logs dose timestamps and decrements pill inventory counts in Home Assistant.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home",
+      "health"
+    ],
+    "goals": [
+      "tracking",
+      "reminder"
+    ],
+    "phone_support": "any",
+    "extra_app": "Home Assistant",
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "What cool projects, automations or hacks do you implement with NFC tags? : r/homeassistant",
+    "source_url": "https://www.reddit.com/r/homeassistant/comments/1pj88qg/what_cool_projects_automations_or_hacks_do_you/",
+    "creator_name": "idle_fragmentation",
+    "timestamp": null,
+    "anchor_quote": "track when the people in my household take them and when we’re running low",
+    "notes": null
+  },
+  {
+    "idea_title": "Potted Plant Sensor Dashboard Opener",
+    "summary": "Scanning tags on plant pots opens a Home Assistant dashboard displaying soil moisture and plant telemetry.",
+    "how_it_works": "Scanning an NFC tag on a potted plant opens a dedicated dashboard page showing connected sensor data.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home",
+      "outdoors"
+    ],
+    "goals": [
+      "tracking",
+      "share_info"
+    ],
+    "phone_support": "any",
+    "extra_app": "Home Assistant",
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": true,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "What cool projects, automations or hacks do you implement with NFC tags? : r/homeassistant",
+    "source_url": "https://www.reddit.com/r/homeassistant/comments/1pj88qg/what_cool_projects_automations_or_hacks_do_you/",
+    "creator_name": "WannaBMonkey",
+    "timestamp": null,
+    "anchor_quote": "links to a ha dashboard with plant info and sensors",
+    "notes": null
+  },
+  {
+    "idea_title": "Toddler Picture Card Song Player",
+    "summary": "Toddlers tap picture cards against a DIY reader to stream selected songs from Plex to room speakers.",
+    "how_it_works": "Cards featuring song photos are swiped across a DIY reader to play matching Plex tracks on Sonos speakers.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home"
+    ],
+    "goals": [
+      "automation",
+      "accessibility"
+    ],
+    "phone_support": null,
+    "extra_app": "Home Assistant",
+    "difficulty": "medium",
+    "cost_level": "5_to_50_eur",
+    "tag_needs": {
+      "form_factor": "card",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "What cool projects, automations or hacks do you implement with NFC tags? : r/homeassistant",
+    "source_url": "https://www.reddit.com/r/homeassistant/comments/1pj88qg/what_cool_projects_automations_or_hacks_do_you/",
+    "creator_name": "kjmerlinz",
+    "timestamp": null,
+    "anchor_quote": "cards with pictures of songs... scan the card on a diy reader",
+    "notes": null
+  },
+  {
+    "idea_title": "Dishwasher State Workflow and Detergent Inventory Restock",
+    "summary": "Scanning a dishwasher tag notifies family members to load/unload and decrements detergent tab inventory.",
+    "how_it_works": "Scan 1 signals clean dishes put away; Scan 2 decrements detergent count and auto-adds detergent to shopping list when low.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home"
+    ],
+    "goals": [
+      "automation",
+      "reminder",
+      "tracking"
+    ],
+    "phone_support": "any",
+    "extra_app": "Home Assistant",
+    "difficulty": "medium",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": true,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "What cool projects, automations or hacks do you implement with NFC tags? : r/homeassistant",
+    "source_url": "https://www.reddit.com/r/homeassistant/comments/1pj88qg/what_cool_projects_automations_or_hacks_do_you/",
+    "creator_name": "Jboyes",
+    "timestamp": null,
+    "anchor_quote": "dishwasher soap tabs is decremented... automatically gets added to the shopping list",
+    "notes": null
+  },
+  {
+    "idea_title": "Disney Toy Figure Treasure Hunt Clue Reader",
+    "summary": "Children place Disney Infinity figures on a reader during treasure hunts to hear character tunes or clues.",
+    "how_it_works": "Disney Infinity figures with built-in NFC chips are placed on a stationary reader to play theme songs or read next clues.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home",
+      "events"
+    ],
+    "goals": [
+      "share_info",
+      "automation"
+    ],
+    "phone_support": null,
+    "extra_app": "Home Assistant",
+    "difficulty": "medium",
+    "cost_level": "5_to_50_eur",
+    "tag_needs": {
+      "form_factor": "epoxy_disc",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": false,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "What cool projects, automations or hacks do you implement with NFC tags? : r/homeassistant",
+    "source_url": "https://www.reddit.com/r/homeassistant/comments/1pj88qg/what_cool_projects_automations_or_hacks_do_you/",
+    "creator_name": "Nuuki9",
+    "timestamp": null,
+    "anchor_quote": "Disney Infinity figures... plays a theme tune for that character",
+    "notes": null
+  },
+  {
+    "idea_title": "Outdoor Recycle Bin Collection Alert Canceler",
+    "summary": "Scanning a waterproof tag on outdoor bins cancels recurring collection day reminder notifications.",
+    "how_it_works": "Scanning a tag on outdoor trash or recycling bins turns off hourly home assistant reminders on collection eve.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home",
+      "outdoors"
+    ],
+    "goals": [
+      "reminder",
+      "automation"
+    ],
+    "phone_support": "any",
+    "extra_app": "Home Assistant",
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": true,
+      "waterproof": true,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "What cool projects, automations or hacks do you implement with NFC tags? : r/homeassistant",
+    "source_url": "https://www.reddit.com/r/homeassistant/comments/1pj88qg/what_cool_projects_automations_or_hacks_do_you/",
+    "creator_name": "schadwick",
+    "timestamp": null,
+    "anchor_quote": "stops the hourly reminders to take the bins to the curb",
+    "notes": null
+  },
+  {
+    "idea_title": "PC Desktop USB Reader Session Lock",
+    "summary": "Placing an NFC card on a desktop USB reader unlocks your PC session, and removing it locks the computer.",
+    "how_it_works": "A USB reader checks credentials stored on an NFC card to unlock desktop access and locks session when removed.",
+    "audience": [
+      "workplace",
+      "personal"
+    ],
+    "settings": [
+      "office",
+      "home"
+    ],
+    "goals": [
+      "security",
+      "access"
+    ],
+    "phone_support": null,
+    "extra_app": null,
+    "difficulty": "medium",
+    "cost_level": "5_to_50_eur",
+    "tag_needs": {
+      "form_factor": "card",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "What cool projects, automations or hacks do you implement with NFC tags? : r/homeassistant",
+    "source_url": "https://www.reddit.com/r/homeassistant/comments/1pj88qg/what_cool_projects_automations_or_hacks_do_you/",
+    "creator_name": "xanyook",
+    "timestamp": null,
+    "anchor_quote": "Lock automatically the session when you remove the card from the reader",
+    "notes": null
+  },
+  {
+    "idea_title": "Bedside Card Reader Scene and Hot Beverage Timer",
+    "summary": "Placing cards on a bedside table reader triggers morning curtain scenes or sets an 11-minute beverage cooling timer.",
+    "how_it_works": "Card 1 on reader opens apartment curtains; Card 2 starts an 11-minute timer that beeps when tea/coffee cools to drinking temp.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home"
+    ],
+    "goals": [
+      "automation",
+      "reminder"
+    ],
+    "phone_support": null,
+    "extra_app": "Home Assistant",
+    "difficulty": "medium",
+    "cost_level": "5_to_50_eur",
+    "tag_needs": {
+      "form_factor": "card",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "What cool projects, automations or hacks do you implement with NFC tags? : r/homeassistant",
+    "source_url": "https://www.reddit.com/r/homeassistant/comments/1pj88qg/what_cool_projects_automations_or_hacks_do_you/",
+    "creator_name": "Tim_Schuhmacher",
+    "timestamp": null,
+    "anchor_quote": "starts a timer that let the reader beep after 11 minutes... coffee and tea cooled",
+    "notes": null
+  },
+  {
+    "idea_title": "Furnace Maintenance Interactive Action Notification",
+    "summary": "Scanning a furnace tag in response to a reminder pops interactive notification options to reset, postpone, or order filter supplies.",
+    "how_it_works": "Scanning tag sends phone notification with options: 'Done' (resets timer), 'Postpone' (delays 3 days), 'Order Supplies' (opens Amazon link).",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home"
+    ],
+    "goals": [
+      "reminder",
+      "automation"
+    ],
+    "phone_support": "any",
+    "extra_app": "Home Assistant",
+    "difficulty": "medium",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": true,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "What cool projects, automations or hacks do you implement with NFC tags? : r/homeassistant",
+    "source_url": "https://www.reddit.com/r/homeassistant/comments/1pj88qg/what_cool_projects_automations_or_hacks_do_you/",
+    "creator_name": "CaptainAwesome06",
+    "timestamp": null,
+    "anchor_quote": "notification to my phone with options: 'Done', 'Postpone', and 'Order Supplies'",
+    "notes": null
+  },
+  {
+    "idea_title": "Bedroom Door Frame Privacy Blinds Switch",
+    "summary": "Tapping a tag on a bedroom door frame closes bedroom window blinds for instant privacy.",
+    "how_it_works": "A tag mounted on the bedroom door frame is scanned to trigger Home Assistant to close window blinds.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home"
+    ],
+    "goals": [
+      "automation"
+    ],
+    "phone_support": "any",
+    "extra_app": "Home Assistant",
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "What cool projects, automations or hacks do you implement with NFC tags? : r/homeassistant",
+    "source_url": "https://www.reddit.com/r/homeassistant/comments/1pj88qg/what_cool_projects_automations_or_hacks_do_you/",
+    "creator_name": "TheRealKeng",
+    "timestamp": null,
+    "anchor_quote": "allows her to close the bedroom blinds with one tap",
+    "notes": null
+  },
+  {
+    "idea_title": "Medical Treatment Medication and Calorie Log",
+    "summary": "Scanning tags helps log daily medications and track calorie intake targets during medical treatment.",
+    "how_it_works": "NFC stickers scanned with phone log taken medication timestamps and record food/supplement calories.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home",
+      "health"
+    ],
+    "goals": [
+      "tracking",
+      "reminder"
+    ],
+    "phone_support": "any",
+    "extra_app": null,
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "What's the coolest thing you've built with an NFC tag? : r/NFC",
+    "source_url": "https://www.reddit.com/r/NFC/comments/1uquybt/whats_the_coolest_thing_youve_built_with_an_nfc/",
+    "creator_name": "Apple-Banana-Pizza",
+    "timestamp": null,
+    "anchor_quote": "stickers to help him easily log his meds and track his calories",
+    "notes": null
+  },
+  {
+    "idea_title": "Vacation Cabin Door Departure Checklist",
+    "summary": "Scanning a tag on a vacation cabin exit door opens a shutdown checklist covering water and window checks.",
+    "how_it_works": "A sticker on the cabin door is scanned before leaving to open a home shutdown checklist page.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home",
+      "travel"
+    ],
+    "goals": [
+      "reminder",
+      "share_info"
+    ],
+    "phone_support": "any",
+    "extra_app": null,
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "What's the coolest thing you've built with an NFC tag? : r/NFC",
+    "source_url": "https://www.reddit.com/r/NFC/comments/1uquybt/whats_the_coolest_thing_youve_built_with_an_nfc/",
+    "creator_name": "Apple-Banana-Pizza",
+    "timestamp": null,
+    "anchor_quote": "nfc sticker on the door takes you to a checklist for closing down the house",
+    "notes": null
+  },
+  {
+    "idea_title": "Kitchen Appliance Favorite Recipe Guide",
+    "summary": "Attaching tags to small kitchen appliances opens cooking recipe guides for frequent meals.",
+    "how_it_works": "Scanning tags stuck on appliances like instant pots or sous vide circulators opens digital recipe notes.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home"
+    ],
+    "goals": [
+      "share_info"
+    ],
+    "phone_support": "any",
+    "extra_app": null,
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": true,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "What's the coolest thing you've built with an NFC tag? : r/NFC",
+    "source_url": "https://www.reddit.com/r/NFC/comments/1uquybt/whats_the_coolest_thing_youve_built_with_an_nfc/",
+    "creator_name": "Apple-Banana-Pizza",
+    "timestamp": null,
+    "anchor_quote": "stickers on a few small kitchen appliances... include info for a few recipes",
+    "notes": null
+  },
+  {
+    "idea_title": "Refrigerator Grocery Shopping List Field Opener",
+    "summary": "Scanning a tag beside your refrigerator takes you directly to an entry field in your grocery list.",
+    "how_it_works": "A tag mounted next to the fridge is scanned with a phone to open an input field in a grocery list.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home"
+    ],
+    "goals": [
+      "reminder",
+      "automation"
+    ],
+    "phone_support": "any",
+    "extra_app": null,
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "What's the coolest thing you've built with an NFC tag? : r/NFC",
+    "source_url": "https://www.reddit.com/r/NFC/comments/1uquybt/whats_the_coolest_thing_youve_built_with_an_nfc/",
+    "creator_name": "Apple-Banana-Pizza",
+    "timestamp": null,
+    "anchor_quote": "sticker next to the frig takes you to a field on the grocery list",
+    "notes": null
+  },
+  {
+    "idea_title": "Parent Screen-Share or Emergency Help Call Tag",
+    "summary": "Tapping a tag allows aging parents to start a remote screen-sharing session or place emergency help calls.",
+    "how_it_works": "A tag configured for parents is scanned to initiate phone support screen sharing or place an emergency call.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home"
+    ],
+    "goals": [
+      "accessibility",
+      "share_info",
+      "security"
+    ],
+    "phone_support": "any",
+    "extra_app": null,
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "What's the coolest thing you've built with an NFC tag? : r/NFC",
+    "source_url": "https://www.reddit.com/r/NFC/comments/1uquybt/whats_the_coolest_thing_youve_built_with_an_nfc/",
+    "creator_name": "HovercraftMain8564",
+    "timestamp": null,
+    "anchor_quote": "tap it to start a screen-sharing session or call me if she needs help",
+    "notes": null
+  },
+  {
+    "idea_title": "Houseplant Art Sticker Care Companion App",
+    "summary": "Tapping art stickers placed next to houseplants opens care instructions, watering logs, and photo notes.",
+    "how_it_works": "Embedded NFC inlays in illustrated plant stickers are scanned with the Canopy app to view plant care guides and log watering.",
+    "audience": [
+      "personal",
+      "nfc_as_business"
+    ],
+    "settings": [
+      "home"
+    ],
+    "goals": [
+      "tracking",
+      "share_info",
+      "automation"
+    ],
+    "phone_support": "iphone_only",
+    "extra_app": "Canopy Plant Care",
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": true,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": "custom_product",
+    "who_pays": "houseplant owners / consumers",
+    "startup_cost_level": "low",
+    "source_title": "What's the coolest thing you've built with an NFC tag? : r/NFC",
+    "source_url": "https://www.reddit.com/r/NFC/comments/1uquybt/whats_the_coolest_thing_youve_built_with_an_nfc/",
+    "creator_name": "mo_whiskyplz",
+    "timestamp": null,
+    "anchor_quote": "embed nfc inlays inside hand drawn plant stickers",
+    "notes": null
+  },
+  {
+    "idea_title": "Pub Crawl Sequential Clue Treasure Hunt",
+    "summary": "Placing a chain of tags across outdoor spots leaves sequential clues leading finders to beer at a pub.",
+    "how_it_works": "Each tag in a treasure hunt chain reveals a clue directing finders to the next tag location.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "outdoors",
+      "events"
+    ],
+    "goals": [
+      "share_info"
+    ],
+    "phone_support": "any",
+    "extra_app": null,
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": true,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "What's the coolest thing you've built with an NFC tag? : r/NFC",
+    "source_url": "https://www.reddit.com/r/NFC/comments/1uquybt/whats_the_coolest_thing_youve_built_with_an_nfc/",
+    "creator_name": "DutchOfBurdock",
+    "timestamp": null,
+    "anchor_quote": "A series of tags dotted over with one tag leaving a clue",
+    "notes": null
+  },
+  {
+    "idea_title": "Garage Door Exterior Trim Quick Opener",
+    "summary": "Scanning tags mounted on garage door trim opens doors quickly via Home Assistant without opening apps.",
+    "how_it_works": "Tags placed on door trim scanned with phone trigger ratgdo units via Home Assistant to open garage doors.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home",
+      "car",
+      "outdoors"
+    ],
+    "goals": [
+      "access",
+      "automation"
+    ],
+    "phone_support": "any",
+    "extra_app": "Home Assistant",
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": true,
+      "waterproof": true,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "What's the coolest thing you've built with an NFC tag? : r/NFC",
+    "source_url": "https://www.reddit.com/r/NFC/comments/1uquybt/whats_the_coolest_thing_youve_built_with_an_nfc/",
+    "creator_name": "cincyshirm61",
+    "timestamp": null,
+    "anchor_quote": "tag on the trim of each of my garage doors to easily open them",
+    "notes": null
+  },
+  {
+    "idea_title": "Washing Machine Snooze Timer for ADHD",
+    "summary": "Tapping a washing machine tag sets a wash timer with snooze support to avoid forgetting laundry.",
+    "how_it_works": "Scanning a washing machine tag starts a cycle timer app that allows snoozing until laundry is moved.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home"
+    ],
+    "goals": [
+      "reminder",
+      "automation"
+    ],
+    "phone_support": "any",
+    "extra_app": null,
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": true,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "What's the coolest thing you've built with an NFC tag? : r/NFC",
+    "source_url": "https://www.reddit.com/r/NFC/comments/1uquybt/whats_the_coolest_thing_youve_built_with_an_nfc/",
+    "creator_name": "ManjynaL",
+    "timestamp": null,
+    "anchor_quote": "tag on the washing machine to set a timer for the length of the wash",
+    "notes": null
+  },
+  {
+    "idea_title": "Customized Pomodoro Productivity Timer",
+    "summary": "Scanning a desk tag initiates customized Pomodoro time tracking sessions.",
+    "how_it_works": "Scanning a dedicated tag starts a Pomodoro work session timer on your phone.",
+    "audience": [
+      "personal",
+      "workplace"
+    ],
+    "settings": [
+      "office",
+      "home"
+    ],
+    "goals": [
+      "automation",
+      "tracking"
+    ],
+    "phone_support": "any",
+    "extra_app": null,
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "What's the coolest thing you've built with an NFC tag? : r/NFC",
+    "source_url": "https://www.reddit.com/r/NFC/comments/1uquybt/whats_the_coolest_thing_youve_built_with_an_nfc/",
+    "creator_name": "ManjynaL",
+    "timestamp": null,
+    "anchor_quote": "timers for a kind of customized pomodoro timer",
+    "notes": null
+  },
+  {
+    "idea_title": "Google Sheets Intake Logging Tag",
+    "summary": "Scanning a tag appends new rows into a Google Sheets document to log intake metrics.",
+    "how_it_works": "Scanning a tag triggers an automation that appends a timestamped data row to a Google Sheet.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home",
+      "office",
+      "health"
+    ],
+    "goals": [
+      "tracking",
+      "automation"
+    ],
+    "phone_support": "any",
+    "extra_app": null,
+    "difficulty": "medium",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "What's the coolest thing you've built with an NFC tag? : r/NFC",
+    "source_url": "https://www.reddit.com/r/NFC/comments/1uquybt/whats_the_coolest_thing_youve_built_with_an_nfc/",
+    "creator_name": "ManjynaL",
+    "timestamp": null,
+    "anchor_quote": "add rows to a Google sheet spreadsheet to track me intake",
+    "notes": null
+  },
+  {
+    "idea_title": "Digital NFC Business Card Contact Sharing",
+    "summary": "Tapping a card or tag transfers your digital business card contact details directly to a phone.",
+    "how_it_works": "An NFC card or tag encoded with contact details opens vCard info when tapped against a smartphone.",
+    "audience": [
+      "workplace",
+      "personal",
+      "nfc_as_business"
+    ],
+    "settings": [
+      "office",
+      "events"
+    ],
+    "goals": [
+      "share_info",
+      "marketing"
+    ],
+    "phone_support": "any",
+    "extra_app": null,
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "card",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": "one_time_sale",
+    "who_pays": "professionals / business clients",
+    "startup_cost_level": "low",
+    "source_title": "What's the coolest thing you've built with an NFC tag? : r/NFC",
+    "source_url": "https://www.reddit.com/r/NFC/comments/1uquybt/whats_the_coolest_thing_youve_built_with_an_nfc/",
+    "creator_name": "ManjynaL",
+    "timestamp": null,
+    "anchor_quote": "use them as digital business cards",
+    "notes": null
+  },
+  {
+    "idea_title": "Boiled Egg Cooking Timer Tag",
+    "summary": "Tapping a kitchen tag starts a timer for perfectly boiling eggs.",
+    "how_it_works": "Scanning a tag in the kitchen starts a countdown timer for egg boiling.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home"
+    ],
+    "goals": [
+      "automation",
+      "reminder"
+    ],
+    "phone_support": "any",
+    "extra_app": null,
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "What's the coolest thing you've built with an NFC tag? : r/NFC",
+    "source_url": "https://www.reddit.com/r/NFC/comments/1uquybt/whats_the_coolest_thing_youve_built_with_an_nfc/",
+    "creator_name": "Adorable_Ice_2963",
+    "timestamp": null,
+    "anchor_quote": "A simple timer for perfectly boiled eggs",
+    "notes": null
+  },
+  {
+    "idea_title": "Photo Frame Secret Alarm Disarm Tag",
+    "summary": "Scanning a secret tag hidden behind a picture frame disarms the house security alarm.",
+    "how_it_works": "A phone is tapped against a tag concealed behind a wall photo frame to disarm home security.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home"
+    ],
+    "goals": [
+      "security",
+      "access",
+      "automation"
+    ],
+    "phone_support": "any",
+    "extra_app": null,
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "What's the coolest thing you've built with an NFC tag? : r/NFC",
+    "source_url": "https://www.reddit.com/r/NFC/comments/1uquybt/whats_the_coolest_thing_youve_built_with_an_nfc/",
+    "creator_name": "jaknorthman",
+    "timestamp": null,
+    "anchor_quote": "secret tag behind a photo frame that deactivate the house alarm",
+    "notes": null
+  },
+  {
+    "idea_title": "3D Printing Filament Spool Inventory Manager",
+    "summary": "Attaching tags to 3D printing filament spools opens spool tracking and management on spoolease.io.",
+    "how_it_works": "Scanning a tag attached to a filament spool opens the spoolease.io web app to track material usage.",
+    "audience": [
+      "personal",
+      "workplace"
+    ],
+    "settings": [
+      "home",
+      "office",
+      "warehouse"
+    ],
+    "goals": [
+      "tracking",
+      "share_info"
+    ],
+    "phone_support": "any",
+    "extra_app": null,
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "What's the coolest thing you've built with an NFC tag? : r/NFC",
+    "source_url": "https://www.reddit.com/r/NFC/comments/1uquybt/whats_the_coolest_thing_youve_built_with_an_nfc/",
+    "creator_name": "yan-shay",
+    "timestamp": null,
+    "anchor_quote": "managing my 3D printing filament spools using https://spoolease.io",
+    "notes": null
+  },
+  {
+    "idea_title": "Electric Toothbrush Head Reset Tag",
+    "summary": "Scanning a tag resets the usage counter on Philips Sonicare replacement toothbrush heads.",
+    "how_it_works": "A specialized NFC app scans the toothbrush head tag to reset internal replacement counters.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home",
+      "health"
+    ],
+    "goals": [
+      "tracking",
+      "automation"
+    ],
+    "phone_support": "any",
+    "extra_app": null,
+    "difficulty": "medium",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": true,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "What's the coolest thing you've built with an NFC tag? : r/NFC",
+    "source_url": "https://www.reddit.com/r/NFC/comments/1uquybt/whats_the_coolest_thing_youve_built_with_an_nfc/",
+    "creator_name": "VRedd1t",
+    "timestamp": null,
+    "anchor_quote": "resetting Phillips Sonicare toothbrush heads",
+    "notes": null
+  },
+  {
+    "idea_title": "PowerBI Business Report Physical Sharing Tag",
+    "summary": "Handing a tag encoded with PowerBI report links to colleagues lets them open business dashboards instantly.",
+    "how_it_works": "PowerBI report URLs written to an NFC tag allow recipients to tap and open reports on their phones.",
+    "audience": [
+      "workplace"
+    ],
+    "settings": [
+      "office",
+      "events"
+    ],
+    "goals": [
+      "share_info"
+    ],
+    "phone_support": "any",
+    "extra_app": null,
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "What's the coolest thing you've built with an NFC tag? : r/NFC",
+    "source_url": "https://www.reddit.com/r/NFC/comments/1uquybt/whats_the_coolest_thing_youve_built_with_an_nfc/",
+    "creator_name": "aliv325",
+    "timestamp": null,
+    "anchor_quote": "put my powerBI reports links on some tags... handed them a tag",
+    "notes": null
+  },
+  {
+    "idea_title": "Custom DIY Animal Crossing Amiibo Cards",
+    "summary": "Encoding NFC cards with game data creates custom Animal Crossing Amiibo cards for Nintendo consoles.",
+    "how_it_works": "Amiibo character data written to NFC cards allows scanning cards into Nintendo Animal Crossing games.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home"
+    ],
+    "goals": [
+      "automation",
+      "share_info"
+    ],
+    "phone_support": "any",
+    "extra_app": null,
+    "difficulty": "medium",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "card",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": false,
+      "secure_anti_clone": null,
+      "chip_mentioned": "NTAG215"
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "What's the coolest thing you've built with an NFC tag? : r/NFC",
+    "source_url": "https://www.reddit.com/r/NFC/comments/1uquybt/whats_the_coolest_thing_youve_built_with_an_nfc/",
+    "creator_name": "Solid_Ad9170",
+    "timestamp": null,
+    "anchor_quote": "Made my own Animal Crossing Amiibos ( Card ones)",
+    "notes": null
+  },
+  {
+    "idea_title": "Interactive Storytelling Decay and Branching Narrative Tags",
+    "summary": "Placing marked outdoor discs or pucks chains story chapters together or changes destination links over time.",
+    "how_it_works": "Tags encoded with story URLs direct readers through branching narrative paths or update destinations over time.",
+    "audience": [
+      "personal",
+      "events"
+    ],
+    "settings": [
+      "outdoors",
+      "events"
+    ],
+    "goals": [
+      "share_info"
+    ],
+    "phone_support": "any",
+    "extra_app": null,
+    "difficulty": "medium",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "epoxy_disc",
+      "on_metal": true,
+      "waterproof": true,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "What's the coolest thing you've built with an NFC tag? : r/NFC",
+    "source_url": "https://www.reddit.com/r/NFC/comments/1uquybt/whats_the_coolest_thing_youve_built_with_an_nfc/",
+    "creator_name": "e_t_h_a",
+    "timestamp": null,
+    "anchor_quote": "Chain them into branching stories, or let a tag’s destination URL decay",
+    "notes": null
+  },
+  {
+    "idea_title": "Boxed Cider Glass Volume Auto-Dispenser",
+    "summary": "Attaching tags to glasses allows a cider dispenser to detect glass volume and stop filling automatically.",
+    "how_it_works": "NFC tags on drinking glasses are read by a boxed cider dispenser to identify maximum fluid volume.",
+    "audience": [
+      "personal",
+      "business_customers"
+    ],
+    "settings": [
+      "home",
+      "restaurant",
+      "events"
+    ],
+    "goals": [
+      "automation",
+      "tracking"
+    ],
+    "phone_support": null,
+    "extra_app": null,
+    "difficulty": "advanced",
+    "cost_level": "5_to_50_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": true,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "What's the coolest thing you've built with an NFC tag? : r/NFC",
+    "source_url": "https://www.reddit.com/r/NFC/comments/1uquybt/whats_the_coolest_thing_youve_built_with_an_nfc/",
+    "creator_name": "MotorradSolutions",
+    "timestamp": null,
+    "anchor_quote": "NFC tags on the glass so it knows the volume/max weight",
+    "notes": null
+  },
+  {
+    "idea_title": "Boat Helm Emergency Sound Signals Reference",
+    "summary": "Scanning a tag on a boat helm opens a list of maritime emergency Sound Signals.",
+    "how_it_works": "A tag mounted on a boat helm is scanned to open an emergency maritime sound signal guide.",
+    "audience": [
+      "personal",
+      "workplace"
+    ],
+    "settings": [
+      "outdoors",
+      "travel"
+    ],
+    "goals": [
+      "share_info",
+      "security"
+    ],
+    "phone_support": "any",
+    "extra_app": null,
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": true,
+      "waterproof": true,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "What's the coolest thing you've built with an NFC tag? : r/NFC",
+    "source_url": "https://www.reddit.com/r/NFC/comments/1uquybt/whats_the_coolest_thing_youve_built_with_an_nfc/",
+    "creator_name": "Jeff_Maynard",
+    "timestamp": null,
+    "anchor_quote": "Tag on the helm of my boat to open a list of Sound Signals",
+    "notes": null
+  },
+  {
+    "idea_title": "Air Fryer Companion App Quick Opener",
+    "summary": "Scanning a tag attached to an air fryer opens the AirFryer companion app for recipes and settings.",
+    "how_it_works": "A tag on an air fryer side panel is scanned with a phone to launch an air fryer app.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home"
+    ],
+    "goals": [
+      "automation",
+      "share_info"
+    ],
+    "phone_support": "any",
+    "extra_app": null,
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": true,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "What's the coolest thing you've built with an NFC tag? : r/NFC",
+    "source_url": "https://www.reddit.com/r/NFC/comments/1uquybt/whats_the_coolest_thing_youve_built_with_an_nfc/",
+    "creator_name": "Jeff_Maynard",
+    "timestamp": null,
+    "anchor_quote": "Tag on the side of my airfryer to open my AirFryer app",
+    "notes": null
+  },
+  {
+    "idea_title": "Trading Card Sleeve Album Music Playlist Cards",
+    "summary": "Inserting photo-printed album art with tags into plastic trading card sleeves creates physical music cards.",
+    "how_it_works": "Photo paper album art with an NFC sticker is sealed in trading card sleeves to launch Plexamp playlists.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home"
+    ],
+    "goals": [
+      "automation",
+      "share_info"
+    ],
+    "phone_support": "any",
+    "extra_app": "Plexamp",
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "card",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "What's the coolest thing you've built with an NFC tag? : r/NFC",
+    "source_url": "https://www.reddit.com/r/NFC/comments/1uquybt/whats_the_coolest_thing_youve_built_with_an_nfc/",
+    "creator_name": "knowherefast",
+    "timestamp": null,
+    "anchor_quote": "plastic sleeves for trading cards, then inserted artist/album art... with an NFC tag sticker",
+    "notes": null
+  },
+  {
+    "idea_title": "3D-Printed Novelty Magic Wand Tap-To-Pay",
+    "summary": "Using 3D-printed magic wands containing payment chips to tap payment terminals.",
+    "how_it_works": "A payment chip or card embedded inside a 3D-printed magic wand is tapped against payment terminals.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "shop",
+      "restaurant"
+    ],
+    "goals": [
+      "payments"
+    ],
+    "phone_support": null,
+    "extra_app": null,
+    "difficulty": "medium",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "epoxy_disc",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": false,
+      "secure_anti_clone": true,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "What's the most unusual or creative object you've seen someone use for tap-to-pay? : r/NFC",
+    "source_url": "https://www.reddit.com/r/NFC/comments/1wpblf7/whats_the_most_unusual_or_creative_object_youve/",
+    "creator_name": "matthewstinar",
+    "timestamp": null,
+    "anchor_quote": "unusual object I've seen used was a 3D printed magic wand",
+    "notes": null
+  },
+  {
+    "idea_title": "Cloned Work Access Wedding Band Ring",
+    "summary": "Cloning a work access ID card onto a chip inside a wedding ring to unlock doors with a fist bump.",
+    "how_it_works": "A work ID chip cloned using a Flipper Zero into a wedding ring unlocks access readers on fist bumps.",
+    "audience": [
+      "workplace",
+      "personal"
+    ],
+    "settings": [
+      "office"
+    ],
+    "goals": [
+      "access",
+      "security"
+    ],
+    "phone_support": null,
+    "extra_app": "Flipper Zero",
+    "difficulty": "medium",
+    "cost_level": "5_to_50_eur",
+    "tag_needs": {
+      "form_factor": "keyfob",
+      "on_metal": null,
+      "waterproof": true,
+      "rewritable": true,
+      "secure_anti_clone": false,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "What's the most unusual or creative object you've seen someone use for tap-to-pay? : r/NFC",
+    "source_url": "https://www.reddit.com/r/NFC/comments/1wpblf7/whats_the_most_unusual_or_creative_object_youve/",
+    "creator_name": "Bk_Punisher",
+    "timestamp": null,
+    "anchor_quote": "cloned my work ID to a wedding band with a chip built in",
+    "notes": null
+  },
+  {
+    "idea_title": "Encased Transit Card Bowling Ball Tap",
+    "summary": "Encasing a transit payment card inside a bowling ball to tap transit gates.",
+    "how_it_works": "A Presto transit card encased inside a bowling ball is tapped against transit card readers.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "travel"
+    ],
+    "goals": [
+      "payments",
+      "access"
+    ],
+    "phone_support": null,
+    "extra_app": null,
+    "difficulty": "advanced",
+    "cost_level": "5_to_50_eur",
+    "tag_needs": {
+      "form_factor": "card",
+      "on_metal": null,
+      "waterproof": true,
+      "rewritable": false,
+      "secure_anti_clone": true,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "What's the most unusual or creative object you've seen someone use for tap-to-pay? : r/NFC",
+    "source_url": "https://www.reddit.com/r/NFC/comments/1wpblf7/whats_the_most_unusual_or_creative_object_youve/",
+    "creator_name": "Own_Event_4363",
+    "timestamp": null,
+    "anchor_quote": "bowling ball into the NFC card we use for transit, a Presto Card",
+    "notes": null
+  },
+  {
+    "idea_title": "Wax Seal Art Exhibition Holy Text Link",
+    "summary": "Hiding NFC tags under wax seals on fake holy texts in an art show lets visitors scan and read texts online.",
+    "how_it_works": "Tags hidden beneath wax seals on physical artwork open online text links when scanned with smartphones.",
+    "audience": [
+      "business_customers",
+      "personal"
+    ],
+    "settings": [
+      "events"
+    ],
+    "goals": [
+      "share_info"
+    ],
+    "phone_support": "any",
+    "extra_app": null,
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "What's the most unusual or creative object you've seen someone use for tap-to-pay? : r/NFC",
+    "source_url": "https://www.reddit.com/r/NFC/comments/1wpblf7/whats_the_most_unusual_or_creative_object_youve/",
+    "creator_name": "OpALbatross",
+    "timestamp": null,
+    "anchor_quote": "hid NFC tags under wax seals for fake \"holy texts\" so people could scan",
+    "notes": null
+  },
+  {
+    "idea_title": "Embedded Fingernail NFC Tag",
+    "summary": "Embedding tiny NFC tags into fingernails for quick taps or payments.",
+    "how_it_works": "Miniature NFC tags applied or embedded onto fingernails are scanned by readers.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "events",
+      "shop"
+    ],
+    "goals": [
+      "payments",
+      "access",
+      "share_info"
+    ],
+    "phone_support": "any",
+    "extra_app": null,
+    "difficulty": "medium",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": true,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "What's the most unusual or creative object you've seen someone use for tap-to-pay? : r/NFC",
+    "source_url": "https://www.reddit.com/r/NFC/comments/1wpblf7/whats_the_most_unusual_or_creative_object_youve/",
+    "creator_name": "lilvixen",
+    "timestamp": null,
+    "anchor_quote": "embed into my nails, did it once at DEFCON",
+    "notes": null
+  },
+  {
+    "idea_title": "Drive-Through Fly Swatter Payment Tap",
+    "summary": "Embedding a payment tag into a fly swatter to reach drive-through card terminals easily from a car.",
+    "how_it_works": "A contactless card or tag embedded in a fly swatter extends reach to tap drive-through payment terminals.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "car",
+      "restaurant"
+    ],
+    "goals": [
+      "payments",
+      "access"
+    ],
+    "phone_support": null,
+    "extra_app": null,
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "keyfob",
+      "on_metal": null,
+      "waterproof": true,
+      "rewritable": false,
+      "secure_anti_clone": true,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "What's the most unusual or creative object you've seen someone use for tap-to-pay? : r/NFC",
+    "source_url": "https://www.reddit.com/r/NFC/comments/1wpblf7/whats_the_most_unusual_or_creative_object_youve/",
+    "creator_name": "lilvixen",
+    "timestamp": null,
+    "anchor_quote": "putting one in a fly swatter or something else random to leave in my car",
+    "notes": null
+  }
+]
