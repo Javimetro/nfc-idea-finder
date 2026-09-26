@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tapwise · NFC idea finder</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><circle cx='16' cy='16' r='5' fill='%23ff6a3d'/><circle cx='16' cy='16' r='10' fill='none' stroke='%23ff6a3d' stroke-width='2' opacity='.5'/><circle cx='16' cy='16' r='15' fill='none' stroke='%23ff6a3d' stroke-width='2' opacity='.25'/></svg>">
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#" data-go="home">
+      <span class="brand-dot"></span> Tapwise
+    </a>
+    <button class="link-btn" data-open="suggest">Got an NFC idea? <strong>Share it</strong></button>
+  </header>
+
+  <!-- ============ HOME ============ -->
+  <main id="view-home" class="view active">
+    <section class="hero">
+      <div class="hero-text">
+        <p class="eyebrow">NFC idea finder</p>
+        <h1>Tap your phone.<br><span class="accent">Make something happen.</span></h1>
+        <p class="lede">A sticker that costs less than €1 can share your wifi, start your bedtime routine or get your café more reviews. You don't need to know anything about NFC. Tell us about your day, and we'll show you which taps are worth trying, and why.</p>
+        <div class="cta-row">
+          <button class="btn primary big" data-go="quiz">Find my NFC ideas</button>
+          <span class="cta-note">2 minutes · no signup</span>
+        </div>
+        <ul class="chips-preview">
+          <li>☕ Mornings</li><li>🚗 Car</li><li>💻 Desk</li><li>🏠 Home</li><li>🏪 Business</li>
+        </ul>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="ripple r1"></div><div class="ripple r2"></div><div class="ripple r3"></div>
+        <div class="phone"><div class="phone-screen"><span>✓</span></div></div>
+        <div class="tag-sticker"></div>
+      </div>
+    </section>
+    <section class="stats" id="stats"></section>
+    <section class="explore">
+      <p class="eyebrow">Not sure what NFC is good for?</p>
+      <h2>See what one tap can do</h2>
+      <div class="tabs" id="explore-tabs" role="tablist"></div>
+      <div class="explore-grid" id="explore-grid"></div>
+      <div class="explore-cta">
+        <p class="muted">These are just examples. The quiz asks about <em>your</em> day and picks what fits.</p>
+        <button class="btn primary" data-go="quiz">Find the ones for me</button>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ QUIZ ============ -->
+  <main id="view-quiz" class="view">
+    <div class="quiz">
+      <div class="progress"><div class="progress-bar" id="progress-bar"></div></div>
+      <p class="step-count" id="step-count"></p>
+      <div id="question"></div>
+      <p class="error" id="quiz-error" role="alert"></p>
+      <div class="quiz-nav">
+        <button class="btn ghost" id="btn-back">Back</button>
+        <button class="btn primary" id="btn-next">Next</button>
+      </div>
+    </div>
+  </main>
+
+  <!-- ============ RESULTS ============ -->
+  <main id="view-results" class="view">
+    <div class="results-head">
+      <div>
+        <p class="eyebrow">Your NFC ideas</p>
+        <h2 id="results-title">Taps worth trying in your day</h2>
+        <p class="muted" id="results-sub"></p>
+      </div>
+      <div class="results-actions">
+        <button class="btn ghost" data-go="quiz">Change answers</button>
+      </div>
+    </div>
+    <section id="shopping" class="shopping"></section>
+    <section id="results" class="cards"></section>
+    <section id="tips" class="tips"></section>
+    <section id="also" class="also"></section>
+    <section class="suggest-cta">
+      <div>
+        <h3>Didn't see your use case?</h3>
+        <p class="muted">Tell us, and it may become an idea for the next person.</p>
+      </div>
+      <button class="btn primary" data-open="suggest" data-with-context="1">Suggest an idea</button>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>Ideas from real creators. Watch their videos and give them credit ✨</span>
+    <label class="engine">Ranking engine
+      <select id="engine"></select>
+    </label>
+  </footer>
+
+  <!-- ============ SUGGEST DIALOG ============ -->
+  <dialog id="suggest">
+    <form id="suggest-form" method="dialog" novalidate>
+      <h3>Share an NFC idea</h3>
+      <p class="muted">Seen a clever use, or have one yourself? Ideas are checked by hand before they're added.</p>
+      <label>The idea <span class="req">*</span>
+        <textarea name="description" rows="4" placeholder="e.g. A tag on my bike lock that logs where I parked"></textarea>
+      </label>
+      <label>Where did you see it? <span class="opt">optional</span>
+        <input name="source_url" type="url" placeholder="Link to a video or article">
+      </label>
+      <div class="row">
+        <label>Your name <span class="opt">optional</span>
+          <input name="submitter_name" placeholder="For credit">
+        </label>
+        <label>Email <span class="opt">optional</span>
+          <input name="email" type="email" placeholder="Only to reply to you">
+        </label>
+      </div>
+      <label class="check"><input type="checkbox" name="credit_ok"> Credit me by name if it's added</label>
+      <input class="hp" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <p class="error" id="suggest-error" role="alert"></p>
+      <div class="dialog-actions">
+        <button class="btn ghost" value="cancel" formnovalidate>Cancel</button>
+        <button class="btn primary" id="suggest-send" type="submit">Send idea</button>
+      </div>
+    </form>
+    <div id="suggest-thanks" class="thanks" hidden>
+      <div class="big-check">✓</div>
+      <h3>Thanks!</h3>
+      <p class="muted">Your idea is in the review queue.</p>
+      <button class="btn primary" id="suggest-close">Close</button>
+    </div>
+  </dialog>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>

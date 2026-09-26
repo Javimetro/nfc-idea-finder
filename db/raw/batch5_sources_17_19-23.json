@@ -1,0 +1,1292 @@
+[
+  {
+    "idea_title": "TV Smart Menu and Mood Lighting",
+    "summary": "Launches streaming services like Netflix or HBO and sets ambient lighting when tapping dedicated tags on a smart TV menu. It provides a touch-based media control hub from the couch.",
+    "how_it_works": "NFC stickers placed near the TV run iOS Shortcuts automations upon tapping to open Netflix, HBO, or adjust lighting.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home"
+    ],
+    "goals": [
+      "automation"
+    ],
+    "phone_support": "iphone_only",
+    "extra_app": "iOS Shortcuts",
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "NFC Stickers streamline your life! Get yours today!",
+    "source_url": null,
+    "creator_name": "Nexvolt",
+    "timestamp": null,
+    "anchor_quote": "start NetFlix one to start HBO and one to set the perfect mood lighting",
+    "notes": null
+  },
+  {
+    "idea_title": "Popcorn Machine Automation Trigger",
+    "summary": "Triggers a smart popcorn maker to prepare a fresh batch without leaving the sofa. It simplifies snack preparation during movie sessions.",
+    "how_it_works": "Scanning an NFC sticker triggers a smartphone automation that sends a start signal to a smart popcorn appliance.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home"
+    ],
+    "goals": [
+      "automation"
+    ],
+    "phone_support": "iphone_only",
+    "extra_app": "iOS Shortcuts",
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "NFC Stickers streamline your life! Get yours today!",
+    "source_url": null,
+    "creator_name": "Nexvolt",
+    "timestamp": null,
+    "anchor_quote": "popcorn automation which starts a fresh batch of popcorn from the comfort of my couch",
+    "notes": null
+  },
+  {
+    "idea_title": "Focus Timer and Do Not Disturb",
+    "summary": "Enables Do Not Disturb and initiates a 25-minute Pomodoro focus timer to improve study or work productivity.",
+    "how_it_works": "Scanning the NFC tag runs an automation that activates Do Not Disturb mode and sets a 25-minute countdown with break alerts.",
+    "audience": [
+      "personal",
+      "workplace"
+    ],
+    "settings": [
+      "home",
+      "office"
+    ],
+    "goals": [
+      "automation",
+      "reminder"
+    ],
+    "phone_support": "iphone_only",
+    "extra_app": "iOS Shortcuts",
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "Top 5 NFC tag creative ideas 💡 #nfcsticker #nfctag #appleshortcuts #phonehack #iphonetricks #hack",
+    "source_url": null,
+    "creator_name": "Slay Tag",
+    "timestamp": null,
+    "anchor_quote": "put your phone on do not disturb and set a timer for focused activities",
+    "notes": null
+  },
+  {
+    "idea_title": "Instant Location Sharing Text",
+    "summary": "Automatically texts your precise GPS location to a contact upon scanning a tag. It offers a fast way to update family on your whereabouts.",
+    "how_it_works": "Scanning the NFC sticker triggers an automated SMS action that retrieves current GPS coordinates and sends a message.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home",
+      "car",
+      "outdoors",
+      "travel"
+    ],
+    "goals": [
+      "automation",
+      "share_info"
+    ],
+    "phone_support": "iphone_only",
+    "extra_app": "iOS Shortcuts",
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "Top 5 NFC tag creative ideas 💡 #nfcsticker #nfctag #appleshortcuts #phonehack #iphonetricks #hack",
+    "source_url": null,
+    "creator_name": "Slay Tag",
+    "timestamp": null,
+    "anchor_quote": "scan the NFC tag to automatically send her a text with your precise location",
+    "notes": null
+  },
+  {
+    "idea_title": "Voice Dictation Idea Capture",
+    "summary": "Launches voice-to-text dictation instantly when tapped to record fleeting ideas before you forget them.",
+    "how_it_works": "Tapping the NFC tag opens voice dictation mode, transcribing spoken words into text that can be saved or shared.",
+    "audience": [
+      "personal",
+      "workplace"
+    ],
+    "settings": [
+      "home",
+      "office",
+      "travel"
+    ],
+    "goals": [
+      "automation",
+      "tracking"
+    ],
+    "phone_support": "iphone_only",
+    "extra_app": "iOS Shortcuts",
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "Top 5 NFC tag creative ideas 💡 #nfcsticker #nfctag #appleshortcuts #phonehack #iphonetricks #hack",
+    "source_url": null,
+    "creator_name": "Slay Tag",
+    "timestamp": null,
+    "anchor_quote": "Launch diation mode to turn what you say into text",
+    "notes": null
+  },
+  {
+    "idea_title": "Log Caffeine Intake in Health App",
+    "summary": "Logs coffee or soda caffeine volume directly into Apple Health when tapping a tag near your coffee maker. It supports tracking beverage habits.",
+    "how_it_works": "Scanning the tag on a mug or coffee machine runs a shortcut that logs a predefined caffeine quantity into the Health app.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home",
+      "office",
+      "health"
+    ],
+    "goals": [
+      "tracking",
+      "automation"
+    ],
+    "phone_support": "iphone_only",
+    "extra_app": "iOS Shortcuts",
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "Top 5 NFC tag creative ideas 💡 #nfcsticker #nfctag #appleshortcuts #phonehack #iphonetricks #hack",
+    "source_url": null,
+    "creator_name": "Slay Tag",
+    "timestamp": null,
+    "anchor_quote": "scan the NFC tag to log your caffeine intake into the health app",
+    "notes": null
+  },
+  {
+    "idea_title": "Digital Journaling Habit Launcher",
+    "summary": "Opens a digital journaling page instantly upon tapping to encourage daily habit tracking and personal reflection.",
+    "how_it_works": "Scanning the NFC sticker launches a digital journal or notes app ready for writing.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home",
+      "office"
+    ],
+    "goals": [
+      "automation",
+      "tracking"
+    ],
+    "phone_support": "iphone_only",
+    "extra_app": "iOS Shortcuts",
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "Top 5 NFC tag creative ideas 💡 #nfcsticker #nfctag #appleshortcuts #phonehack #iphonetricks #hack",
+    "source_url": null,
+    "creator_name": "Slay Tag",
+    "timestamp": null,
+    "anchor_quote": "gain deeper insight into yourself and increase your personal growth and development with digital journaling",
+    "notes": null
+  },
+  {
+    "idea_title": "Secure Personal Electric Gate Opener",
+    "summary": "Opens an automated electric driveway gate securely using a local phone automation without writing external web links on the tag. This prevents unauthorized users from operating the gate.",
+    "how_it_works": "An iOS Shortcuts automation scans a blank tag ID and triggers a Jeedom home automation webhook URL to open the gate.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home",
+      "car"
+    ],
+    "goals": [
+      "access",
+      "security",
+      "automation"
+    ],
+    "phone_support": "iphone_only",
+    "extra_app": "iOS Shortcuts",
+    "difficulty": "medium",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": true,
+      "waterproof": true,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "Qué se Puede Hacer con una Tarjeta o Etiqueta NFC en una Casa",
+    "source_url": null,
+    "creator_name": "PLUYU",
+    "timestamp": null,
+    "anchor_quote": "permitir abrir el portón eléctrico de vuestra casa pero solamente desde vuestro teléfono",
+    "notes": "Mentions Jeedom hub and Nodule relay."
+  },
+  {
+    "idea_title": "Smart Garden Lighting Toggle",
+    "summary": "Toggles outdoor garden lights on or off for any family member or guest scanning a shared tag. It provides physical access control without mobile app menus.",
+    "how_it_works": "A Jeedom execution URL is written onto an NTAG215 tag using NFC Tools; any phone scanning it opens the URL to toggle lights.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home",
+      "outdoors"
+    ],
+    "goals": [
+      "automation"
+    ],
+    "phone_support": "any",
+    "extra_app": "NFC Tools",
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": true,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": "NTAG215"
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "Qué se Puede Hacer con una Tarjeta o Etiqueta NFC en una Casa",
+    "source_url": null,
+    "creator_name": "PLUYU",
+    "timestamp": null,
+    "anchor_quote": "controlamos nuestras luces del jardín con el Loop domótico Girón y pegamos el enlace",
+    "notes": null
+  },
+  {
+    "idea_title": "Multi-Device Master Off Switch",
+    "summary": "Turns off multiple smart lights and switches simultaneously when scanned. It consolidates evening shutdown routines.",
+    "how_it_works": "Scanning the tag calls a Virtual Device command URL in Jeedom that sends off commands to multiple smart devices.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home"
+    ],
+    "goals": [
+      "automation"
+    ],
+    "phone_support": "any",
+    "extra_app": "NFC Tools",
+    "difficulty": "medium",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": "NTAG215"
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "Qué se Puede Hacer con una Tarjeta o Etiqueta NFC en una Casa",
+    "source_url": null,
+    "creator_name": "PLUYU",
+    "timestamp": null,
+    "anchor_quote": "Apagar todas las luces inteligentes desde un tag nfc para esto vamos a usar una función gratuita... virtual",
+    "notes": null
+  },
+  {
+    "idea_title": "Home Alarm Security Scene Trigger",
+    "summary": "Arms or disarms house alarm motion sensors when leaving or returning home. It simplifies security management without entering keycodes.",
+    "how_it_works": "Scanning the entry tag sends an API request to Jeedom to enable or disable the security alarm scene.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home"
+    ],
+    "goals": [
+      "security",
+      "automation"
+    ],
+    "phone_support": "any",
+    "extra_app": null,
+    "difficulty": "medium",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "Qué se Puede Hacer con una Tarjeta o Etiqueta NFC en una Casa",
+    "source_url": null,
+    "creator_name": "PLUYU",
+    "timestamp": null,
+    "anchor_quote": "al pasar el teléfono delante del tag nfc se va a activar la escena",
+    "notes": null
+  },
+  {
+    "idea_title": "Timed Garden Irrigation Scene Trigger",
+    "summary": "Launches a 30-minute lawn watering routine or stops multi-zone irrigation cycles by scanning a tag.",
+    "how_it_works": "Tag scan sends a Jeedom API command with 'Start' or 'Stop' parameters for the watering scene ID.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home",
+      "outdoors"
+    ],
+    "goals": [
+      "automation"
+    ],
+    "phone_support": "any",
+    "extra_app": null,
+    "difficulty": "medium",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": true,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "Qué se Puede Hacer con una Tarjeta o Etiqueta NFC en una Casa",
+    "source_url": null,
+    "creator_name": "PLUYU",
+    "timestamp": null,
+    "anchor_quote": "activa el riego del jardín durante 30 minutos Entonces podéis lanzar esta desde un tag nfc",
+    "notes": null
+  },
+  {
+    "idea_title": "Personalized Favorite Songs Playback",
+    "summary": "Plays customized music playlists depending on which family member taps the shared tag with their phone.",
+    "how_it_works": "Personal automation configured on individual phones plays user-specific playlists when scanning the same physical tag.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home"
+    ],
+    "goals": [
+      "automation"
+    ],
+    "phone_support": "any",
+    "extra_app": null,
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "Qué se Puede Hacer con una Tarjeta o Etiqueta NFC en una Casa",
+    "source_url": null,
+    "creator_name": "PLUYU",
+    "timestamp": null,
+    "anchor_quote": "cada miembro de la familia Puede reproducir automáticamente sus canciones favoritas de sus gustos",
+    "notes": null
+  },
+  {
+    "idea_title": "Automated Shutters or Heating Adjustment",
+    "summary": "Closes window shutters or switches home heating to Comfort mode by scanning a tag.",
+    "how_it_works": "Scanning the tag executes a Jeedom command to lower blinds or adjust smart thermostat settings.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home"
+    ],
+    "goals": [
+      "automation"
+    ],
+    "phone_support": "any",
+    "extra_app": null,
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "Qué se Puede Hacer con una Tarjeta o Etiqueta NFC en una Casa",
+    "source_url": null,
+    "creator_name": "PLUYU",
+    "timestamp": null,
+    "anchor_quote": "Cerrar todas las persianas con pasar vuestro teléfono encima de este tag nfc",
+    "notes": null
+  },
+  {
+    "idea_title": "Smart Keychain for Digital Contact Sharing",
+    "summary": "Shares social links or digital contact details with clients by tapping a personalized picture keychain containing an NFC sticker.",
+    "how_it_works": "An NFC sticker placed inside a plastic keychain opens Instagram or a link tree URL when scanned by a phone.",
+    "audience": [
+      "workplace",
+      "nfc_as_business"
+    ],
+    "settings": [
+      "office",
+      "events"
+    ],
+    "goals": [
+      "share_info",
+      "marketing"
+    ],
+    "phone_support": "any",
+    "extra_app": "NFC Tools",
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "keyfob",
+      "on_metal": null,
+      "waterproof": true,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": "one_time_sale",
+    "who_pays": "entrepreneurs or business owners",
+    "startup_cost_level": "low",
+    "source_title": "Stickers NFC: todo lo que puedes hacer con ellos 👀",
+    "source_url": null,
+    "creator_name": "Binata",
+    "timestamp": null,
+    "anchor_quote": "llavero... puse el sticker NFC... acercar el celular al llavero y automáticamente les abre mis redes sociales",
+    "notes": null
+  },
+  {
+    "idea_title": "Upcycled Plastic Smart Business Card",
+    "summary": "Converts old plastic gift cards into reusable business cards by sticking an NFC tag in the center to share social accounts.",
+    "how_it_works": "An NFC sticker stuck to a plastic card opens a portfolio or social media URL when tapped.",
+    "audience": [
+      "workplace",
+      "nfc_as_business"
+    ],
+    "settings": [
+      "office",
+      "events"
+    ],
+    "goals": [
+      "share_info",
+      "marketing"
+    ],
+    "phone_support": "any",
+    "extra_app": "NFC Tools",
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "card",
+      "on_metal": null,
+      "waterproof": true,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": "one_time_sale",
+    "who_pays": "professionals",
+    "startup_cost_level": "low",
+    "source_title": "Stickers NFC: todo lo que puedes hacer con ellos 👀",
+    "source_url": null,
+    "creator_name": "Binata",
+    "timestamp": null,
+    "anchor_quote": "reutilizar una tarjeta que ya no servía... pegando el sticker al centro",
+    "notes": null
+  },
+  {
+    "idea_title": "Unboxing Product Review Prompt Box",
+    "summary": "Prompts customers opening product boxes to tap their phone on the packaging to leave an online review.",
+    "how_it_works": "An NFC sticker placed beneath a call-to-action prompt on packaging directs phone browsers directly to a review page.",
+    "audience": [
+      "business_customers",
+      "nfc_as_business"
+    ],
+    "settings": [
+      "shop"
+    ],
+    "goals": [
+      "marketing",
+      "share_info"
+    ],
+    "phone_support": "any",
+    "extra_app": "NFC Tools",
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": "custom_product",
+    "who_pays": "e-commerce brands",
+    "startup_cost_level": "low",
+    "source_title": "Stickers NFC: todo lo que puedes hacer con ellos 👀",
+    "source_url": null,
+    "creator_name": "Binata",
+    "timestamp": null,
+    "anchor_quote": "Acerca tu celular para dejarnos una reseña... debajo de este sticker está el otro sticker NFC",
+    "notes": null
+  },
+  {
+    "idea_title": "Interactive Product Packaging Information",
+    "summary": "Attaches tags to product lids or containers so customers can tap to read usage instructions or ingredient details.",
+    "how_it_works": "NFC sticker glued to candle lid opens an instruction webpage when scanned.",
+    "audience": [
+      "business_customers"
+    ],
+    "settings": [
+      "shop"
+    ],
+    "goals": [
+      "share_info",
+      "marketing"
+    ],
+    "phone_support": "any",
+    "extra_app": null,
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "Stickers NFC: todo lo que puedes hacer con ellos 👀",
+    "source_url": null,
+    "creator_name": "Binata",
+    "timestamp": null,
+    "anchor_quote": "esta vela y este sticker lo puedes pegar en la tapa... leer las instrucciones de uso",
+    "notes": null
+  },
+  {
+    "idea_title": "Restaurant Table Digital Menu Sticker",
+    "summary": "Allows dining guests to tap table coasters or stickers to open online food and drink menus on their smartphones.",
+    "how_it_works": "NFC tag stuck to restaurant tables opens a digital menu URL in the mobile browser.",
+    "audience": [
+      "business_customers"
+    ],
+    "settings": [
+      "restaurant",
+      "shop"
+    ],
+    "goals": [
+      "share_info",
+      "marketing"
+    ],
+    "phone_support": "any",
+    "extra_app": null,
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": true,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "Stickers NFC: todo lo que puedes hacer con ellos 👀",
+    "source_url": null,
+    "creator_name": "Binata",
+    "timestamp": null,
+    "anchor_quote": "pegar uno de estos stickers en la mesa o en un portavasos... les abra el menú",
+    "notes": null
+  },
+  {
+    "idea_title": "Digital Portfolio Sharing Card or Keyring",
+    "summary": "Lets designers or architects share online portfolios with potential clients during networking by tapping a card or keyring.",
+    "how_it_works": "NFC tag programmed with a web portfolio link opens the site on the client's device upon contact.",
+    "audience": [
+      "workplace",
+      "business_customers"
+    ],
+    "settings": [
+      "office",
+      "events"
+    ],
+    "goals": [
+      "share_info",
+      "marketing"
+    ],
+    "phone_support": "any",
+    "extra_app": "NFC Tools",
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "card",
+      "on_metal": null,
+      "waterproof": true,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "Stickers NFC: todo lo que puedes hacer con ellos 👀",
+    "source_url": null,
+    "creator_name": "Binata",
+    "timestamp": null,
+    "anchor_quote": "si eres diseñador... podrías tener una tarjeta de estas... y que lleve a tu portafolio",
+    "notes": null
+  },
+  {
+    "idea_title": "Pop-Up Stand Social Follow Sign",
+    "summary": "Displays a tabletop sign at trade shows or markets inviting attendees to tap and follow social media pages or write reviews.",
+    "how_it_works": "An NFC sticker on a tabletop acrylic display opens an Instagram profile or review link when tapped.",
+    "audience": [
+      "business_customers",
+      "nfc_as_business"
+    ],
+    "settings": [
+      "events",
+      "shop"
+    ],
+    "goals": [
+      "marketing",
+      "share_info"
+    ],
+    "phone_support": "any",
+    "extra_app": null,
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": "custom_product",
+    "who_pays": "market vendors",
+    "startup_cost_level": "low",
+    "source_title": "Stickers NFC: todo lo que puedes hacer con ellos 👀",
+    "source_url": null,
+    "creator_name": "Binata",
+    "timestamp": null,
+    "anchor_quote": "crear un letrero pequeño en tu mesa que diga... acerca a tu celular para seguirnos en redes",
+    "notes": null
+  },
+  {
+    "idea_title": "Salon Guest Wi-Fi One-Tap Access",
+    "summary": "Connects salon or shop clients to guest Wi-Fi networks instantly upon tapping a sticker on the counter.",
+    "how_it_works": "NFC tag configured with Wi-Fi network credentials prompts client phones to auto-connect without typing passwords.",
+    "audience": [
+      "business_customers"
+    ],
+    "settings": [
+      "shop"
+    ],
+    "goals": [
+      "access",
+      "share_info"
+    ],
+    "phone_support": "any",
+    "extra_app": null,
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "Stickers NFC: todo lo que puedes hacer con ellos 👀",
+    "source_url": null,
+    "creator_name": "Binata",
+    "timestamp": null,
+    "anchor_quote": "pones uno de estos stickers en tu salón de belleza... se conecten al Wi-Fi",
+    "notes": null
+  },
+  {
+    "idea_title": "Automated Home Arrival Text Message",
+    "summary": "Sends an automated text message like 'I arrived safely' to family members when tapping a sticker on your entrance door or car.",
+    "how_it_works": "Tag on front door triggers an iOS Shortcuts automation to send a preformatted text message without typing.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home",
+      "car"
+    ],
+    "goals": [
+      "automation"
+    ],
+    "phone_support": "iphone_only",
+    "extra_app": "iOS Shortcuts",
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "Stickers NFC: todo lo que puedes hacer con ellos 👀",
+    "source_url": null,
+    "creator_name": "Binata",
+    "timestamp": null,
+    "anchor_quote": "sticker pegado en la puerta de mi casa... cuando yo llego... envía un mensaje",
+    "notes": null
+  },
+  {
+    "idea_title": "Language Study Material Quick Launcher",
+    "summary": "Tapping a sticker on a study notebook opens online language learning video lessons or study materials directly.",
+    "how_it_works": "An NFC sticker on a notebook opens a YouTube class link or study resource URL when scanned.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home",
+      "office"
+    ],
+    "goals": [
+      "automation",
+      "share_info"
+    ],
+    "phone_support": "any",
+    "extra_app": null,
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "Stickers NFC: todo lo que puedes hacer con ellos 👀",
+    "source_url": null,
+    "creator_name": "Binata",
+    "timestamp": null,
+    "anchor_quote": "mi libreta de inglés y le pegué un sticker NFC... abra directamente el contenido que estoy usando para estudiar",
+    "notes": null
+  },
+  {
+    "idea_title": "Workout Routine Quick Launcher",
+    "summary": "Opens fitness exercise video routines or gym tracking apps instantly by tapping a tag on your gear.",
+    "how_it_works": "NFC sticker on exercise equipment opens a workout routine video or app upon scanning.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home",
+      "health"
+    ],
+    "goals": [
+      "automation"
+    ],
+    "phone_support": "any",
+    "extra_app": null,
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "Stickers NFC: todo lo que puedes hacer con ellos 👀",
+    "source_url": null,
+    "creator_name": "Binata",
+    "timestamp": null,
+    "anchor_quote": "si haces ejercicio puedes abrir tu rutina acercando tu celular a un sticker",
+    "notes": null
+  },
+  {
+    "idea_title": "Workspace Project and Calendar Launcher",
+    "summary": "Tapping a desk sticker opens your digital calendar or current work project dashboard.",
+    "how_it_works": "Desk NFC tag opens calendar software or active workspace URL when scanned.",
+    "audience": [
+      "personal",
+      "workplace"
+    ],
+    "settings": [
+      "office",
+      "home"
+    ],
+    "goals": [
+      "automation"
+    ],
+    "phone_support": "any",
+    "extra_app": null,
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "Stickers NFC: todo lo que puedes hacer con ellos 👀",
+    "source_url": null,
+    "creator_name": "Binata",
+    "timestamp": null,
+    "anchor_quote": "En tu escritorio puedes poner un sticker y cuando lo acerques abra el calendario o el proyecto",
+    "notes": null
+  },
+  {
+    "idea_title": "Smart Business Card Contact Sharing",
+    "summary": "Transfers contact info directly to another phone upon tapping an NFC business card.",
+    "how_it_works": "NFC business card configured with vCard data transfers contact records on contact.",
+    "audience": [
+      "personal",
+      "workplace",
+      "nfc_as_business"
+    ],
+    "settings": [
+      "office",
+      "events"
+    ],
+    "goals": [
+      "share_info",
+      "marketing"
+    ],
+    "phone_support": "any",
+    "extra_app": null,
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "card",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": "one_time_sale",
+    "who_pays": "professionals",
+    "startup_cost_level": "low",
+    "source_title": "This is why you NEED NFC Tags! (NFC Tasks Automation)",
+    "source_url": null,
+    "creator_name": "Bren Maartens",
+    "timestamp": null,
+    "anchor_quote": "In my previous video I showed you how to make a smart business card",
+    "notes": null
+  },
+  {
+    "idea_title": "Bluetooth Speaker Fast Pairing",
+    "summary": "Establishes Bluetooth connection with speakers or transfers files between devices instantly by bringing them close together.",
+    "how_it_works": "NFC contact triggers Bluetooth pairing protocol on smartphone.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home",
+      "outdoors"
+    ],
+    "goals": [
+      "automation",
+      "share_info"
+    ],
+    "phone_support": "any",
+    "extra_app": null,
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": null,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "This is why you NEED NFC Tags! (NFC Tasks Automation)",
+    "source_url": null,
+    "creator_name": "Bren Maartens",
+    "timestamp": null,
+    "anchor_quote": "pair your phone with a Bluetooth speaker or even transfer files between two devices",
+    "notes": null
+  },
+  {
+    "idea_title": "Arriving Home Multi-Task Routine",
+    "summary": "Sets phone sound to vibrate, connects to home Wi-Fi, and opens smart home apps to turn on lights with a single entry tap.",
+    "how_it_works": "Tapping home entry tag executes a multi-action automation (vibrate mode, Wi-Fi enable, open smart home app, light on).",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home"
+    ],
+    "goals": [
+      "automation"
+    ],
+    "phone_support": "any",
+    "extra_app": "NFC Tasks",
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "This is why you NEED NFC Tags! (NFC Tasks Automation)",
+    "source_url": null,
+    "creator_name": "Bren Maartens",
+    "timestamp": null,
+    "anchor_quote": "put your phone onto vibrate connect to your home Wi-Fi and then open up your home automation app to automatically turn the lights on",
+    "notes": null
+  },
+  {
+    "idea_title": "In-Car Driving Navigation and Text Routine",
+    "summary": "Sets map destination, launches music app, and texts family members that you are driving home upon tapping a car tag.",
+    "how_it_works": "Car dashboard tag scan triggers GPS navigation routing, opens music player, and sends an automated SMS.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "car"
+    ],
+    "goals": [
+      "automation",
+      "share_info"
+    ],
+    "phone_support": "any",
+    "extra_app": null,
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "This is why you NEED NFC Tags! (NFC Tasks Automation)",
+    "source_url": null,
+    "creator_name": "Bren Maartens",
+    "timestamp": null,
+    "anchor_quote": "put one in your car that when scan sets your destination automatically turns your music app on and then sends a message",
+    "notes": null
+  },
+  {
+    "idea_title": "Gym Parking Countdown Timer",
+    "summary": "Sets a 1.5-hour parking countdown timer when exiting the car at the gym to avoid paying parking fines.",
+    "how_it_works": "In-car tag scan starts a 1.5-hour timer instantly as you exit.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "car",
+      "health"
+    ],
+    "goals": [
+      "automation",
+      "reminder"
+    ],
+    "phone_support": "any",
+    "extra_app": null,
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "This is why you NEED NFC Tags! (NFC Tasks Automation)",
+    "source_url": null,
+    "creator_name": "Bren Maartens",
+    "timestamp": null,
+    "anchor_quote": "in my car I have a tag that when tapped set a timer for that exact time as I get out",
+    "notes": null
+  },
+  {
+    "idea_title": "Water Bottle Hydration Tracker",
+    "summary": "Opens health tracking app and records exact fluid consumption each time you refill a tagged water bottle.",
+    "how_it_works": "Tag on water bottle scanned when refilling; opens health application and logs consumed volume.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home",
+      "office",
+      "health"
+    ],
+    "goals": [
+      "tracking",
+      "automation"
+    ],
+    "phone_support": "any",
+    "extra_app": null,
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": true,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "This is why you NEED NFC Tags! (NFC Tasks Automation)",
+    "source_url": null,
+    "creator_name": "Bren Maartens",
+    "timestamp": null,
+    "anchor_quote": "putting a small tag on the water bottle every time you refill it you tap the tag and it will open up your health app",
+    "notes": null
+  },
+  {
+    "idea_title": "Laptop Mobile Wi-Fi Hotspot Toggle",
+    "summary": "Toggles mobile hotspot settings on your smartphone by tapping a tag on top of your laptop for remote cafe work.",
+    "how_it_works": "Tag on laptop lid scanned with phone; turns mobile hotspot state on or off.",
+    "audience": [
+      "personal",
+      "workplace"
+    ],
+    "settings": [
+      "office",
+      "travel"
+    ],
+    "goals": [
+      "automation",
+      "access"
+    ],
+    "phone_support": "any",
+    "extra_app": null,
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "This is why you NEED NFC Tags! (NFC Tasks Automation)",
+    "source_url": null,
+    "creator_name": "Bren Maartens",
+    "timestamp": null,
+    "anchor_quote": "put a tag on top of your laptop that when you tap it will turn your mobile hotspot on and off",
+    "notes": null
+  },
+  {
+    "idea_title": "Medication Reorder Pharmacy Website Launcher",
+    "summary": "Opens a pharmacy reordering website when tapping a tag on the bottom of a pill bottle.",
+    "how_it_works": "NFC tag on pill bottle bottom opens pharmacy web browser link upon scanning.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home",
+      "health"
+    ],
+    "goals": [
+      "automation",
+      "reminder"
+    ],
+    "phone_support": "any",
+    "extra_app": null,
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "This is why you NEED NFC Tags! (NFC Tasks Automation)",
+    "source_url": null,
+    "creator_name": "Bren Maartens",
+    "timestamp": null,
+    "anchor_quote": "bottom of a medication bottle so when you tap it it might open up a pharmaceutical company's website that will remind you to re-order",
+    "notes": null
+  },
+  {
+    "idea_title": "Automated Community Gate Phone Dial Opener",
+    "summary": "Automatically dials the phone gate access number when tapping an in-car tag to open gated estate driveways.",
+    "how_it_works": "Tag in car programmed with security gate phone number; tapping initiates phone call to open gate automatically.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "car",
+      "home"
+    ],
+    "goals": [
+      "automation",
+      "access"
+    ],
+    "phone_support": "any",
+    "extra_app": null,
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "This is why you NEED NFC Tags! (NFC Tasks Automation)",
+    "source_url": null,
+    "creator_name": "Bren Maartens",
+    "timestamp": null,
+    "anchor_quote": "instead of phoning it you can actually just add the phone number to a tag and then tap your phone against that tag",
+    "notes": null
+  }
+]

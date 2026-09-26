@@ -1,0 +1,2783 @@
+[
+  {
+    "id": "i001",
+    "title": "Send music to the speaker in the room",
+    "kind": "diy",
+    "summary": "Tap a tag next to a speaker and whatever is playing on your phone moves to that speaker.",
+    "how_it_works": "Tag near the speaker triggers a smart home automation that switches Spotify playback to it.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home"
+    ],
+    "goals": [
+      "automation"
+    ],
+    "phone_support": "any",
+    "setup_by_platform": "Home Assistant (companion app on iPhone or Android).",
+    "difficulty": "medium",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form": "sticker",
+      "on_metal": false,
+      "waterproof": false,
+      "rewritable": true,
+      "secure": false,
+      "memory": "small"
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "review_flags": [],
+    "status": "ok"
+  },
+  {
+    "id": "i002",
+    "title": "Keep the garage lights on while you work",
+    "kind": "diy",
+    "summary": "Stops motion-sensor lights switching off while you are busy at the workbench.",
+    "how_it_works": "Tap sets an 'override' switch in your smart home, so the auto-off rule is skipped until you tap again.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home"
+    ],
+    "goals": [
+      "automation"
+    ],
+    "phone_support": "any",
+    "setup_by_platform": "Home Assistant (companion app on iPhone or Android).",
+    "difficulty": "medium",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form": "sticker",
+      "on_metal": false,
+      "waterproof": false,
+      "rewritable": true,
+      "secure": false,
+      "memory": "small"
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "review_flags": [],
+    "status": "ok"
+  },
+  {
+    "id": "i003",
+    "title": "See what is inside a box without opening it",
+    "kind": "diy",
+    "summary": "Tap a storage box or moving box to see its contents on your phone.",
+    "how_it_works": "Three ways: write a text list straight onto the tag; link the tag to a photo album of the contents; or have your smart home send a notification listing them.",
+    "audience": [
+      "personal",
+      "workplace"
+    ],
+    "settings": [
+      "home",
+      "warehouse",
+      "office"
+    ],
+    "goals": [
+      "tracking",
+      "share_info"
+    ],
+    "phone_support": "any",
+    "setup_by_platform": "Text list or photo-album link: NFC Tools (any phone). Notification: Home Assistant.",
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form": "sticker",
+      "on_metal": false,
+      "waterproof": false,
+      "rewritable": true,
+      "secure": false,
+      "memory": "medium"
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "review_flags": [
+      "Same concept as the user's 'peek behind' seed idea: link these together."
+    ],
+    "status": "needs_review"
+  },
+  {
+    "id": "i004",
+    "title": "Reset a chore or maintenance reminder",
+    "kind": "diy",
+    "summary": "Get reminded to empty the robot vacuum tank, service an appliance or do a chore, and tap the tag when it is done to reset the reminder.",
+    "how_it_works": "Your smart home keeps a counter or 'last done' date; the tap resets it and clears the notification.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home"
+    ],
+    "goals": [
+      "reminder",
+      "tracking",
+      "automation"
+    ],
+    "phone_support": "any",
+    "setup_by_platform": "Home Assistant (companion app on iPhone or Android).",
+    "difficulty": "medium",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form": "sticker",
+      "on_metal": false,
+      "waterproof": false,
+      "rewritable": true,
+      "secure": false,
+      "memory": "small"
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "review_flags": [
+      "Tags on metal appliances need anti-metal (on-metal) tags."
+    ],
+    "status": "needs_review"
+  },
+  {
+    "id": "i005",
+    "title": "Pause doorbell alerts while you work outside",
+    "kind": "diy",
+    "summary": "Stops your video doorbell sending motion alerts while you garden or clean near the door.",
+    "how_it_works": "Tap toggles a switch that mutes the doorbell notifications; tap again to turn them back on.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home"
+    ],
+    "goals": [
+      "automation"
+    ],
+    "phone_support": "any",
+    "setup_by_platform": "Home Assistant (companion app on iPhone or Android).",
+    "difficulty": "medium",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form": "sticker",
+      "on_metal": false,
+      "waterproof": false,
+      "rewritable": true,
+      "secure": false,
+      "memory": "small"
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "review_flags": [],
+    "status": "ok"
+  },
+  {
+    "id": "i006",
+    "title": "One-tap timer where you need it",
+    "kind": "diy",
+    "summary": "Start the right timer with one tap: kettle, oven, laundry, baby milk bottle, toothbrushing, car parking.",
+    "how_it_works": "Each tag starts a preset timer (e.g. 5 min kettle, 2 min toothbrush, 2 h baby bottle, 1.5 h parking). Laundry version: tap again to cancel.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home",
+      "car"
+    ],
+    "goals": [
+      "reminder",
+      "automation"
+    ],
+    "phone_support": "any",
+    "setup_by_platform": "iPhone: Shortcuts app. Android: NFC Tools Pro, MacroDroid or Tasker.",
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form": "sticker",
+      "on_metal": false,
+      "waterproof": false,
+      "rewritable": true,
+      "secure": false,
+      "memory": "small"
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "review_flags": [],
+    "status": "ok"
+  },
+  {
+    "id": "i007",
+    "title": "Unlock a smart door lock with a tap",
+    "kind": "diy",
+    "summary": "Tap your phone on a tag by the door to unlock a smart lock.",
+    "how_it_works": "Tag triggers the unlock action of your smart lock app or smart home.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home"
+    ],
+    "goals": [
+      "access",
+      "automation",
+      "security"
+    ],
+    "phone_support": "any",
+    "setup_by_platform": "Home Assistant (companion app on iPhone or Android).",
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form": "sticker",
+      "on_metal": false,
+      "waterproof": false,
+      "rewritable": true,
+      "secure": false,
+      "memory": "small"
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "review_flags": [
+      "Security: never write an unlock URL onto the tag itself (anyone could scan it). Use a phone automation that reacts to the tag, and keep the phone locked-screen protection on. See i030."
+    ],
+    "status": "needs_review"
+  },
+  {
+    "id": "i008",
+    "title": "Leaving-home routine",
+    "kind": "diy",
+    "summary": "One tap by the door as you leave: lights off, heating/AC to away, alarm armed, robot vacuum starts, transit app opens.",
+    "how_it_works": "Tag by the exit runs a multi-step routine in your smart home or phone automation app.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home"
+    ],
+    "goals": [
+      "automation",
+      "security"
+    ],
+    "phone_support": "any",
+    "setup_by_platform": "Home Assistant (companion app on iPhone or Android). Or: iPhone: Shortcuts app. Android: NFC Tools Pro, MacroDroid or Tasker.",
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form": "sticker",
+      "on_metal": false,
+      "waterproof": false,
+      "rewritable": true,
+      "secure": false,
+      "memory": "small"
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "review_flags": [],
+    "status": "ok"
+  },
+  {
+    "id": "i009",
+    "title": "Arriving-home routine",
+    "kind": "diy",
+    "summary": "Tap when you get home (or from the car on the way) to switch on lights, connect to wifi, set the phone to quiet and bring the heating/cooling back.",
+    "how_it_works": "Tag at the entrance or in the car runs an 'I'm home' routine.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home",
+      "car"
+    ],
+    "goals": [
+      "automation"
+    ],
+    "phone_support": "any",
+    "setup_by_platform": "iPhone: Shortcuts app. Android: NFC Tools Pro, MacroDroid or Tasker. Smart home app for lights/heating.",
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form": "sticker",
+      "on_metal": false,
+      "waterproof": false,
+      "rewritable": true,
+      "secure": false,
+      "memory": "small"
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "review_flags": [],
+    "status": "ok"
+  },
+  {
+    "id": "i010",
+    "title": "Bedtime routine",
+    "kind": "diy",
+    "summary": "Tap the nightstand (or put the phone on its charger) to turn off every light, switch on a dim bedside lamp and enable sleep / do-not-disturb mode.",
+    "how_it_works": "Tag on the nightstand or stuck to the wireless charger runs your bedtime routine.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home"
+    ],
+    "goals": [
+      "automation"
+    ],
+    "phone_support": "any",
+    "setup_by_platform": "iPhone: Shortcuts app. Android: NFC Tools Pro, MacroDroid or Tasker. Smart lights app or Home Assistant.",
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form": "sticker",
+      "on_metal": false,
+      "waterproof": false,
+      "rewritable": true,
+      "secure": false,
+      "memory": "small"
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "review_flags": [
+      "Charger version: check the tag does not interfere with wireless charging."
+    ],
+    "status": "needs_review"
+  },
+  {
+    "id": "i011",
+    "title": "One tag, different action depending on the time",
+    "kind": "diy",
+    "summary": "The same nightstand tag turns on hallway lights at 1 AM but starts your morning routine at 7 AM.",
+    "how_it_works": "The automation checks the clock when the tag is tapped and picks the matching routine.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home"
+    ],
+    "goals": [
+      "automation"
+    ],
+    "phone_support": "any",
+    "setup_by_platform": "Home Assistant (companion app on iPhone or Android).",
+    "difficulty": "medium",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form": "sticker",
+      "on_metal": false,
+      "waterproof": false,
+      "rewritable": true,
+      "secure": false,
+      "memory": "small"
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "review_flags": [],
+    "status": "ok"
+  },
+  {
+    "id": "i012",
+    "title": "Kids' bedtime from the light switch",
+    "kind": "diy",
+    "summary": "A tag on the child's light switch dims the lights and starts lullabies.",
+    "how_it_works": "Parent taps the tag; routine dims lights and plays music on a smart speaker. Kids can't fiddle with it like a button.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home"
+    ],
+    "goals": [
+      "automation"
+    ],
+    "phone_support": "any",
+    "setup_by_platform": "Home Assistant (companion app on iPhone or Android).",
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form": "sticker",
+      "on_metal": false,
+      "waterproof": false,
+      "rewritable": true,
+      "secure": false,
+      "memory": "small"
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "review_flags": [],
+    "status": "ok"
+  },
+  {
+    "id": "i013",
+    "title": "Tap-to-toggle lights (a light switch without wiring)",
+    "kind": "diy",
+    "summary": "Stick a tag where you want a light switch and tap to turn lights on or off. Great for renters or hard-to-reach lamps.",
+    "how_it_works": "Tag triggers a toggle of smart bulbs, plugs or LED strips. Can be hidden in a 3D-printed switch plate.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home"
+    ],
+    "goals": [
+      "automation",
+      "accessibility"
+    ],
+    "phone_support": "any",
+    "setup_by_platform": "iPhone: Shortcuts app. Android: NFC Tools Pro, MacroDroid or Tasker. Or Home Assistant (companion app on iPhone or Android).",
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form": "sticker",
+      "on_metal": false,
+      "waterproof": false,
+      "rewritable": true,
+      "secure": false,
+      "memory": "small"
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "review_flags": [],
+    "status": "ok"
+  },
+  {
+    "id": "i014",
+    "title": "Movie night mode",
+    "kind": "diy",
+    "summary": "Tap a tag hidden behind a painting or next to the TV to dim lights, stop motion sensors, open Netflix or even start the popcorn machine.",
+    "how_it_works": "Tag runs a 'movie' scene; separate tags can each open a different streaming app.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home"
+    ],
+    "goals": [
+      "automation"
+    ],
+    "phone_support": "any",
+    "setup_by_platform": "iPhone: Shortcuts app. Android: NFC Tools Pro, MacroDroid or Tasker. Or Home Assistant (companion app on iPhone or Android).",
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form": "sticker",
+      "on_metal": false,
+      "waterproof": false,
+      "rewritable": true,
+      "secure": false,
+      "memory": "small"
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "review_flags": [],
+    "status": "ok"
+  },
+  {
+    "id": "i015",
+    "title": "Play an album by tapping its record cover",
+    "kind": "diy",
+    "summary": "Records on the wall become buttons: tap the cover and that album plays on your TV or speakers.",
+    "how_it_works": "Tag hidden in each album sleeve passes the album ID to a script that turns on the audio gear and starts playback.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home"
+    ],
+    "goals": [
+      "automation"
+    ],
+    "phone_support": "any",
+    "setup_by_platform": "Home Assistant (companion app on iPhone or Android).",
+    "difficulty": "advanced",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form": "sticker",
+      "on_metal": false,
+      "waterproof": false,
+      "rewritable": true,
+      "secure": false,
+      "memory": "small"
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "review_flags": [],
+    "status": "ok"
+  },
+  {
+    "id": "i016",
+    "title": "Start your favourite music with a tap",
+    "kind": "diy",
+    "summary": "Tap a tag and a chosen playlist starts on your speaker. With several people at home, the same tag can play each person's own favourites.",
+    "how_it_works": "Tag runs a phone automation that plays a playlist and sends it to a speaker (AirPlay, HomePod, Sonos). Each family member can set up their own automation for the same tag.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home"
+    ],
+    "goals": [
+      "automation"
+    ],
+    "phone_support": "any",
+    "setup_by_platform": "iPhone: Shortcuts app. Android: NFC Tools Pro, MacroDroid or Tasker.",
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form": "sticker",
+      "on_metal": false,
+      "waterproof": false,
+      "rewritable": true,
+      "secure": false,
+      "memory": "small"
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "review_flags": [],
+    "status": "ok"
+  },
+  {
+    "id": "i017",
+    "title": "Plant care at a tap",
+    "kind": "diy",
+    "summary": "Tap a plant pot to see its care instructions, or tap the watering can to log that plants were watered.",
+    "how_it_works": "Pot tag links to a care sheet (e.g. a Google Doc) or sends a notification; watering-can tag adds a calendar entry.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home",
+      "outdoors"
+    ],
+    "goals": [
+      "share_info",
+      "reminder",
+      "tracking"
+    ],
+    "phone_support": "any",
+    "setup_by_platform": "Care-sheet link: NFC Tools (any phone). Logging: iPhone: Shortcuts app. Android: NFC Tools Pro, MacroDroid or Tasker.",
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form": "sticker",
+      "on_metal": false,
+      "waterproof": true,
+      "rewritable": true,
+      "secure": false,
+      "memory": "small"
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "review_flags": [],
+    "status": "ok"
+  },
+  {
+    "id": "i018",
+    "title": "Take-out-the-trash reminder you can silence",
+    "kind": "diy",
+    "summary": "Your phone nags you on bin day until you tap the tag on the bin outside.",
+    "how_it_works": "Reminder repeats until the bin tag is scanned, then resets for next week.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home",
+      "outdoors"
+    ],
+    "goals": [
+      "reminder",
+      "automation"
+    ],
+    "phone_support": "any",
+    "setup_by_platform": "Home Assistant (companion app on iPhone or Android).",
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form": "epoxy_disc",
+      "on_metal": false,
+      "waterproof": true,
+      "rewritable": true,
+      "secure": false,
+      "memory": "small"
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "review_flags": [],
+    "status": "ok"
+  },
+  {
+    "id": "i019",
+    "title": "Call for help from another room",
+    "kind": "diy",
+    "summary": "Out of toilet paper? Tap the bathroom tag and every smart speaker announces you need help.",
+    "how_it_works": "Tag triggers an announcement on all smart speakers.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home"
+    ],
+    "goals": [
+      "automation"
+    ],
+    "phone_support": "any",
+    "setup_by_platform": "Alexa or Google Home routine via Home Assistant or phone automation.",
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form": "sticker",
+      "on_metal": false,
+      "waterproof": false,
+      "rewritable": true,
+      "secure": false,
+      "memory": "small"
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "review_flags": [],
+    "status": "ok"
+  },
+  {
+    "id": "i020",
+    "title": "Home manual behind the light switch",
+    "kind": "diy",
+    "summary": "A tag hidden behind a switch plate shows how the room's smart home works and which fuse controls it.",
+    "how_it_works": "Tag links to a documentation page for that room.",
+    "audience": [
+      "personal",
+      "workplace"
+    ],
+    "settings": [
+      "home",
+      "office"
+    ],
+    "goals": [
+      "share_info"
+    ],
+    "phone_support": "any",
+    "setup_by_platform": "NFC Tools (any phone).",
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form": "sticker",
+      "on_metal": false,
+      "waterproof": false,
+      "rewritable": true,
+      "secure": false,
+      "memory": "small"
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "review_flags": [],
+    "status": "ok"
+  },
+  {
+    "id": "i021",
+    "title": "Garden watering, shutters and heating at a tap",
+    "kind": "diy",
+    "summary": "Start a 30-minute watering cycle, close all shutters or switch heating to comfort mode with a tap.",
+    "how_it_works": "Tag sends a command to your home automation hub.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home",
+      "outdoors"
+    ],
+    "goals": [
+      "automation"
+    ],
+    "phone_support": "any",
+    "setup_by_platform": "Home automation hub (Jeedom, Home Assistant).",
+    "difficulty": "medium",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form": "sticker",
+      "on_metal": false,
+      "waterproof": true,
+      "rewritable": true,
+      "secure": false,
+      "memory": "small"
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "review_flags": [],
+    "status": "ok"
+  },
+  {
+    "id": "i022",
+    "title": "Grocery list at a tap",
+    "kind": "diy",
+    "summary": "Tap the fridge to open your shopping list, or tap a jar when it runs out to add that item automatically.",
+    "how_it_works": "Fridge tag opens a list or grocery-delivery site; tags on food containers each add their item to the list.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home"
+    ],
+    "goals": [
+      "reminder",
+      "automation"
+    ],
+    "phone_support": "any",
+    "setup_by_platform": "iPhone: Shortcuts app. Android: NFC Tools Pro, MacroDroid or Tasker.",
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form": "sticker",
+      "on_metal": false,
+      "waterproof": false,
+      "rewritable": true,
+      "secure": false,
+      "memory": "small"
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "review_flags": [],
+    "status": "ok"
+  },
+  {
+    "id": "i023",
+    "title": "Packing list inside your suitcase",
+    "kind": "diy",
+    "summary": "Tap the tag in your luggage to get your standard packing checklist.",
+    "how_it_works": "Tag opens or creates a checklist in your reminders/notes app.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "travel",
+      "home"
+    ],
+    "goals": [
+      "reminder"
+    ],
+    "phone_support": "any",
+    "setup_by_platform": "iPhone: Shortcuts app. Android: NFC Tools Pro, MacroDroid or Tasker.",
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form": "sticker",
+      "on_metal": false,
+      "waterproof": false,
+      "rewritable": true,
+      "secure": false,
+      "memory": "small"
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "review_flags": [],
+    "status": "ok"
+  },
+  {
+    "id": "i024",
+    "title": "Hard-to-ignore alarm clock",
+    "kind": "diy",
+    "summary": "Your alarm only stops when you get out of bed and tap a tag across the room (e.g. in the bathroom).",
+    "how_it_works": "Alarm app with an 'NFC challenge': the tag's ID is the only way to dismiss it.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home"
+    ],
+    "goals": [
+      "reminder"
+    ],
+    "phone_support": "any",
+    "setup_by_platform": "Android: Sleep as Android or Alarmy. iPhone: Alarmy.",
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form": "sticker",
+      "on_metal": false,
+      "waterproof": false,
+      "rewritable": true,
+      "secure": false,
+      "memory": "small"
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "review_flags": [
+      "Verify current iPhone app support before publishing."
+    ],
+    "status": "needs_review"
+  },
+  {
+    "id": "i025",
+    "title": "Morning briefing read out loud",
+    "kind": "diy",
+    "summary": "Tap a tag in the morning and your phone reads today's calendar to you.",
+    "how_it_works": "Tag runs an automation that fetches today's events and speaks them.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home"
+    ],
+    "goals": [
+      "reminder",
+      "accessibility"
+    ],
+    "phone_support": "any",
+    "setup_by_platform": "iPhone: Shortcuts app. Android: NFC Tools Pro, MacroDroid or Tasker.",
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form": "sticker",
+      "on_metal": false,
+      "waterproof": false,
+      "rewritable": true,
+      "secure": false,
+      "memory": "small"
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "review_flags": [],
+    "status": "ok"
+  },
+  {
+    "id": "i026",
+    "title": "Pick up and take the next step (ADHD-friendly routines)",
+    "kind": "tip",
+    "summary": "Physical tags as reminders and shortcuts reduce the steps between intention and action.",
+    "how_it_works": "Combine timers (i006), grocery list (i022), morning briefing (i025) and light toggles (i013).",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home"
+    ],
+    "goals": [
+      "accessibility"
+    ],
+    "phone_support": "any",
+    "setup_by_platform": null,
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form": "sticker",
+      "on_metal": false,
+      "waterproof": false,
+      "rewritable": true,
+      "secure": false,
+      "memory": "small"
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "review_flags": [
+      "Framing tip for the results page, not a standalone idea. Consider an 'accessibility' interview answer."
+    ],
+    "status": "hidden"
+  },
+  {
+    "id": "i027",
+    "title": "Log a coffee or a glass of water",
+    "kind": "diy",
+    "summary": "Tap the coffee machine or your water bottle to log caffeine or water into your health app.",
+    "how_it_works": "Tag runs an automation that adds a preset amount to Apple Health (or opens your tracking app).",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home",
+      "office"
+    ],
+    "goals": [
+      "tracking"
+    ],
+    "phone_support": "any",
+    "setup_by_platform": "iPhone: Shortcuts app. Android: NFC Tools Pro, MacroDroid or Tasker.",
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form": "sticker",
+      "on_metal": false,
+      "waterproof": true,
+      "rewritable": true,
+      "secure": false,
+      "memory": "small"
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "review_flags": [],
+    "status": "ok"
+  },
+  {
+    "id": "i028",
+    "title": "Did I take my pills today?",
+    "kind": "diy",
+    "summary": "Tap the pill bottle when you take your medicine or vitamins; your phone records it so you never double-dose.",
+    "how_it_works": "Tag marks today's reminder as done or logs the time.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home"
+    ],
+    "goals": [
+      "tracking",
+      "reminder"
+    ],
+    "phone_support": "any",
+    "setup_by_platform": "iPhone: Shortcuts app. Android: NFC Tools Pro, MacroDroid or Tasker.",
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form": "sticker",
+      "on_metal": false,
+      "waterproof": false,
+      "rewritable": true,
+      "secure": false,
+      "memory": "small"
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "review_flags": [],
+    "status": "ok"
+  },
+  {
+    "id": "i029",
+    "title": "Reorder your medicine",
+    "kind": "diy",
+    "summary": "A tag under the pill bottle opens the pharmacy reorder page.",
+    "how_it_works": "Tag holds the pharmacy's reorder link.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home"
+    ],
+    "goals": [
+      "reminder"
+    ],
+    "phone_support": "any",
+    "setup_by_platform": "NFC Tools (any phone).",
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form": "sticker",
+      "on_metal": false,
+      "waterproof": false,
+      "rewritable": true,
+      "secure": false,
+      "memory": "small"
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "review_flags": [],
+    "status": "ok"
+  },
+  {
+    "id": "i030",
+    "title": "Set up the room for your workout",
+    "kind": "diy",
+    "summary": "Tap your bike, mat or gear to close blinds, set lights, open your workout video and play the right music.",
+    "how_it_works": "Tag runs a workout scene: smart home + opens fitness app or video.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home"
+    ],
+    "goals": [
+      "automation"
+    ],
+    "phone_support": "any",
+    "setup_by_platform": "iPhone: Shortcuts app. Android: NFC Tools Pro, MacroDroid or Tasker.",
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form": "sticker",
+      "on_metal": false,
+      "waterproof": false,
+      "rewritable": true,
+      "secure": false,
+      "memory": "small"
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "review_flags": [],
+    "status": "ok"
+  },
+  {
+    "id": "i031",
+    "title": "Focus mode at your desk",
+    "kind": "diy",
+    "summary": "Tap a tag in your desk drawer, notebook or e-reader case to silence notifications, start a Pomodoro timer and open your calendar or music.",
+    "how_it_works": "Tag switches on a Focus / do-not-disturb mode, starts a timer and opens your work tools.",
+    "audience": [
+      "personal",
+      "workplace"
+    ],
+    "settings": [
+      "office",
+      "home"
+    ],
+    "goals": [
+      "automation"
+    ],
+    "phone_support": "any",
+    "setup_by_platform": "iPhone: Shortcuts app. Android: NFC Tools Pro, MacroDroid or Tasker.",
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form": "sticker",
+      "on_metal": false,
+      "waterproof": false,
+      "rewritable": true,
+      "secure": false,
+      "memory": "small"
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "review_flags": [],
+    "status": "ok"
+  },
+  {
+    "id": "i032",
+    "title": "Lock distracting apps behind a tag",
+    "kind": "diy",
+    "summary": "Social media apps stay locked until you walk to the tag across the flat and tap it.",
+    "how_it_works": "Screen-time app uses the tag as the physical key to lock/unlock chosen apps.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home"
+    ],
+    "goals": [
+      "automation"
+    ],
+    "phone_support": "any",
+    "setup_by_platform": "Focus-blocking app with NFC unlock (check current app options).",
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form": "sticker",
+      "on_metal": false,
+      "waterproof": false,
+      "rewritable": true,
+      "secure": false,
+      "memory": "small"
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "review_flags": [],
+    "status": "ok"
+  },
+  {
+    "id": "i033",
+    "title": "Capture an idea by voice",
+    "kind": "diy",
+    "summary": "Tap a keychain or a tag on your desk and start dictating; the text lands in your notes.",
+    "how_it_works": "Tag starts dictation / voice memo and saves the result to a note.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home",
+      "office",
+      "travel"
+    ],
+    "goals": [
+      "automation",
+      "tracking"
+    ],
+    "phone_support": "any",
+    "setup_by_platform": "iPhone: Shortcuts app. Android: NFC Tools Pro, MacroDroid or Tasker.",
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form": "keyfob",
+      "on_metal": false,
+      "waterproof": false,
+      "rewritable": true,
+      "secure": false,
+      "memory": "small"
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "review_flags": [],
+    "status": "ok"
+  },
+  {
+    "id": "i034",
+    "title": "Open your journal or planner",
+    "kind": "diy",
+    "summary": "A tag in your paper planner opens your digital planning page, music and timer.",
+    "how_it_works": "Tag opens Notion (or your journal app) plus optional timer and music.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home",
+      "office"
+    ],
+    "goals": [
+      "automation"
+    ],
+    "phone_support": "any",
+    "setup_by_platform": "iPhone: Shortcuts app. Android: NFC Tools Pro, MacroDroid or Tasker.",
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form": "sticker",
+      "on_metal": false,
+      "waterproof": false,
+      "rewritable": true,
+      "secure": false,
+      "memory": "small"
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "review_flags": [],
+    "status": "ok"
+  },
+  {
+    "id": "i035",
+    "title": "Open the right app where you use it",
+    "kind": "diy",
+    "summary": "Put a tag where an app belongs: toothbrush case opens the toothbrush app, scale opens the weight app, study notebook opens your lesson, kitchen opens food delivery.",
+    "how_it_works": "Tag launches a specific app or web link.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home"
+    ],
+    "goals": [
+      "automation"
+    ],
+    "phone_support": "any",
+    "setup_by_platform": "Web link: NFC Tools (any phone). Open an app: iPhone Shortcuts / Android NFC Tools.",
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form": "sticker",
+      "on_metal": false,
+      "waterproof": false,
+      "rewritable": true,
+      "secure": false,
+      "memory": "small"
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "review_flags": [],
+    "status": "ok"
+  },
+  {
+    "id": "i036",
+    "title": "Start your computer and desk lights",
+    "kind": "diy",
+    "summary": "Tap your desk to boot your PC and switch on the lights behind it.",
+    "how_it_works": "Tag triggers wake-on-LAN plus a light scene in your smart home.",
+    "audience": [
+      "personal",
+      "workplace"
+    ],
+    "settings": [
+      "office",
+      "home"
+    ],
+    "goals": [
+      "automation"
+    ],
+    "phone_support": "any",
+    "setup_by_platform": "Home Assistant (companion app on iPhone or Android).",
+    "difficulty": "medium",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form": "sticker",
+      "on_metal": false,
+      "waterproof": false,
+      "rewritable": true,
+      "secure": false,
+      "memory": "small"
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "review_flags": [],
+    "status": "ok"
+  },
+  {
+    "id": "i037",
+    "title": "Hotspot for your laptop in one tap",
+    "kind": "diy",
+    "summary": "Tap the tag on your laptop and your phone turns its hotspot on (or off).",
+    "how_it_works": "Android automation toggles the hotspot when the tag is read.",
+    "audience": [
+      "personal",
+      "workplace"
+    ],
+    "settings": [
+      "office",
+      "travel"
+    ],
+    "goals": [
+      "automation",
+      "access"
+    ],
+    "phone_support": "android_only",
+    "setup_by_platform": "Android: MacroDroid or NFC Tasks.",
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form": "sticker",
+      "on_metal": false,
+      "waterproof": false,
+      "rewritable": true,
+      "secure": false,
+      "memory": "small"
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "review_flags": [
+      "iPhone cannot switch the hotspot on from an automation; confirm before listing as Android-only."
+    ],
+    "status": "needs_review"
+  },
+  {
+    "id": "i038",
+    "title": "Switch wifi or Bluetooth off to save battery",
+    "kind": "diy",
+    "summary": "Tap your desk tag to switch radios you don't need off (or on).",
+    "how_it_works": "Automation toggles wifi/Bluetooth.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "office"
+    ],
+    "goals": [
+      "automation"
+    ],
+    "phone_support": "android_only",
+    "setup_by_platform": "Android: NFC Tools Pro or MacroDroid.",
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form": "sticker",
+      "on_metal": false,
+      "waterproof": false,
+      "rewritable": true,
+      "secure": false,
+      "memory": "small"
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "review_flags": [],
+    "status": "ok"
+  },
+  {
+    "id": "i039",
+    "title": "Check your bank balance by SMS",
+    "kind": "diy",
+    "summary": "Tap a tag to send your bank's balance-request text message.",
+    "how_it_works": "Tag sends a preset SMS to your bank's number.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home"
+    ],
+    "goals": [
+      "automation"
+    ],
+    "phone_support": "any",
+    "setup_by_platform": "Android: MacroDroid.",
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form": "sticker",
+      "on_metal": false,
+      "waterproof": false,
+      "rewritable": true,
+      "secure": false,
+      "memory": "small"
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "review_flags": [
+      "Only works with banks that offer SMS balance; niche."
+    ],
+    "status": "needs_review"
+  },
+  {
+    "id": "i040",
+    "title": "Driving mode from the car mount",
+    "kind": "diy",
+    "summary": "Put your phone in the car mount and Bluetooth, navigation and music start automatically.",
+    "how_it_works": "Tag stuck in the phone holder or dashboard runs a driving routine.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "car"
+    ],
+    "goals": [
+      "automation"
+    ],
+    "phone_support": "any",
+    "setup_by_platform": "iPhone: Shortcuts app. Android: NFC Tools Pro, MacroDroid or Tasker.",
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form": "sticker",
+      "on_metal": false,
+      "waterproof": false,
+      "rewritable": true,
+      "secure": false,
+      "memory": "small"
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "review_flags": [],
+    "status": "ok"
+  },
+  {
+    "id": "i041",
+    "title": "Let family know where you are",
+    "kind": "diy",
+    "summary": "One tap sends your ETA, location or 'arrived safely' message to someone.",
+    "how_it_works": "Tag in the car or at the door runs an automation that calculates your ETA or grabs your location and texts it.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "car",
+      "home",
+      "travel"
+    ],
+    "goals": [
+      "share_info",
+      "automation"
+    ],
+    "phone_support": "any",
+    "setup_by_platform": "iPhone: Shortcuts app. Android: NFC Tools Pro, MacroDroid or Tasker.",
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form": "sticker",
+      "on_metal": false,
+      "waterproof": false,
+      "rewritable": true,
+      "secure": false,
+      "memory": "small"
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "review_flags": [],
+    "status": "ok"
+  },
+  {
+    "id": "i042",
+    "title": "Open the garage or gate from the car",
+    "kind": "diy",
+    "summary": "Tap a tag behind the sun visor to open the garage door or the driveway gate.",
+    "how_it_works": "Phone automation reacts to the tag and calls the garage/gate system (or dials the gate's phone number).",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "car",
+      "home"
+    ],
+    "goals": [
+      "access",
+      "automation",
+      "security"
+    ],
+    "phone_support": "any",
+    "setup_by_platform": "iPhone: Shortcuts app. Android: NFC Tools Pro, MacroDroid or Tasker. Plus a smart garage/gate controller.",
+    "difficulty": "medium",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form": "sticker",
+      "on_metal": false,
+      "waterproof": false,
+      "rewritable": true,
+      "secure": false,
+      "memory": "small"
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "review_flags": [
+      "Security pattern (from PLUYU): tag holds nothing; only YOUR phone's automation reacts to it."
+    ],
+    "status": "needs_review"
+  },
+  {
+    "id": "i043",
+    "title": "Guest wifi with one tap",
+    "kind": "diy",
+    "summary": "Guests tap a coaster or sticker and connect to your wifi without typing the password. Works at home, in cafes and salons.",
+    "how_it_works": "Wifi name and password are written onto the tag as a wifi record.",
+    "audience": [
+      "personal",
+      "business_customers"
+    ],
+    "settings": [
+      "home",
+      "shop",
+      "restaurant",
+      "office"
+    ],
+    "goals": [
+      "share_info",
+      "access"
+    ],
+    "phone_support": "android_only",
+    "setup_by_platform": "Write with NFC Tools or InstaWifi.",
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form": "sticker",
+      "on_metal": false,
+      "waterproof": false,
+      "rewritable": true,
+      "secure": false,
+      "memory": "medium"
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "review_flags": [
+      "Android joins automatically; iPhones generally don't join wifi from a tag record. Verify current iOS behaviour and suggest a QR code fallback."
+    ],
+    "status": "needs_review"
+  },
+  {
+    "id": "i044",
+    "title": "Smart business card",
+    "kind": "diy",
+    "summary": "Tap your card, keychain or sticker to share your contact, website, portfolio or social profiles.",
+    "how_it_works": "Tag holds a contact card (vCard) or a link to your portfolio / link page. Can be embedded in a 3D print or stuck on an old plastic card.",
+    "audience": [
+      "personal",
+      "workplace",
+      "nfc_as_business"
+    ],
+    "settings": [
+      "office",
+      "events"
+    ],
+    "goals": [
+      "share_info",
+      "marketing"
+    ],
+    "phone_support": "any",
+    "setup_by_platform": "NFC Tools (any phone).",
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form": "card",
+      "on_metal": false,
+      "waterproof": false,
+      "rewritable": true,
+      "secure": false,
+      "memory": "medium"
+    },
+    "business_model": "one_time_sale",
+    "who_pays": "professionals, freelancers, small businesses",
+    "startup_cost_level": "low",
+    "review_flags": [
+      "A link is more flexible than a vCard: you can change it later without rewriting the card."
+    ],
+    "status": "needs_review"
+  },
+  {
+    "id": "i045",
+    "title": "Your saved links behind a picture",
+    "kind": "diy",
+    "summary": "A tag behind a small painting opens a note with all your social links, ready to copy.",
+    "how_it_works": "Tag opens a specific note on your phone.",
+    "audience": [
+      "personal",
+      "workplace"
+    ],
+    "settings": [
+      "home"
+    ],
+    "goals": [
+      "share_info"
+    ],
+    "phone_support": "any",
+    "setup_by_platform": "iPhone: Shortcuts app. Android: NFC Tools Pro, MacroDroid or Tasker.",
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form": "sticker",
+      "on_metal": false,
+      "waterproof": false,
+      "rewritable": true,
+      "secure": false,
+      "memory": "small"
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "review_flags": [],
+    "status": "ok"
+  },
+  {
+    "id": "i046",
+    "title": "Lost & found tag for kids, pets and belongings",
+    "kind": "diy",
+    "summary": "Whoever finds a lost pet, child or bag can tap the tag and see how to contact you.",
+    "how_it_works": "Tag on a collar, hat or bag links to a page with your contact details (and pet info).",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "pets",
+      "outdoors",
+      "travel"
+    ],
+    "goals": [
+      "share_info",
+      "security"
+    ],
+    "phone_support": "any",
+    "setup_by_platform": "NFC Tools (any phone).",
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form": "epoxy_disc",
+      "on_metal": false,
+      "waterproof": true,
+      "rewritable": true,
+      "secure": false,
+      "memory": "small"
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "review_flags": [
+      "Privacy: link to a page you control and can edit, not your raw phone number. Examples in the book are from 2016."
+    ],
+    "status": "needs_review"
+  },
+  {
+    "id": "i047",
+    "title": "A gift that plays a message",
+    "kind": "diy",
+    "summary": "Jewellery, a keepsake or a 3D print that opens a voice message, photo or video when tapped.",
+    "how_it_works": "Tag inside the object links to a private media page.",
+    "audience": [
+      "personal",
+      "nfc_as_business"
+    ],
+    "settings": [
+      "home",
+      "events"
+    ],
+    "goals": [
+      "share_info"
+    ],
+    "phone_support": "any",
+    "setup_by_platform": "NFC Tools (any phone).",
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form": "epoxy_disc",
+      "on_metal": false,
+      "waterproof": false,
+      "rewritable": true,
+      "secure": false,
+      "memory": "small"
+    },
+    "business_model": "custom_product",
+    "who_pays": "gift buyers",
+    "startup_cost_level": "medium",
+    "review_flags": [],
+    "status": "ok"
+  },
+  {
+    "id": "i048",
+    "title": "Hidden secret note in an object",
+    "kind": "diy",
+    "summary": "A tag inside a desk organiser holds a text you can only read with an NFC reader app.",
+    "how_it_works": "Text is written onto the tag; reading it requires opening an NFC app.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home",
+      "office"
+    ],
+    "goals": [
+      "share_info"
+    ],
+    "phone_support": "any",
+    "setup_by_platform": "NFC Tools.",
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form": "sticker",
+      "on_metal": false,
+      "waterproof": false,
+      "rewritable": true,
+      "secure": false,
+      "memory": "small"
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "review_flags": [
+      "DO NOT recommend for passwords or crypto keys: any phone with a free NFC app can read the tag. Rephrase as a hidden message / fun secret, or drop."
+    ],
+    "status": "hidden"
+  },
+  {
+    "id": "i049",
+    "title": "Tap to leave a review",
+    "kind": "business",
+    "summary": "Customers tap a sticker on the packaging, counter or table and land directly on your review page.",
+    "how_it_works": "Tag holds the link to your Google (or other) review page, with a small 'tap to review' sign.",
+    "audience": [
+      "business_customers",
+      "nfc_as_business"
+    ],
+    "settings": [
+      "shop",
+      "restaurant"
+    ],
+    "goals": [
+      "marketing"
+    ],
+    "phone_support": "any",
+    "setup_by_platform": "NFC Tools (any phone).",
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form": "sticker",
+      "on_metal": false,
+      "waterproof": false,
+      "rewritable": true,
+      "secure": false,
+      "memory": "small"
+    },
+    "business_model": "subscription_or_lease",
+    "who_pays": "cafes, salons, shops, e-commerce brands",
+    "startup_cost_level": "low",
+    "review_flags": [
+      "Directly related to the user's NFC review-cards leasing idea."
+    ],
+    "status": "needs_review"
+  },
+  {
+    "id": "i050",
+    "title": "Digital menu on the table",
+    "kind": "business",
+    "summary": "Guests tap a table sticker or coaster to open the menu on their phone.",
+    "how_it_works": "Tag links to an online menu; update the menu without reprinting.",
+    "audience": [
+      "business_customers",
+      "nfc_as_business"
+    ],
+    "settings": [
+      "restaurant"
+    ],
+    "goals": [
+      "share_info"
+    ],
+    "phone_support": "any",
+    "setup_by_platform": null,
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form": "epoxy_disc",
+      "on_metal": false,
+      "waterproof": true,
+      "rewritable": true,
+      "secure": false,
+      "memory": "small"
+    },
+    "business_model": "subscription_or_lease",
+    "who_pays": "restaurants and cafes",
+    "startup_cost_level": "low",
+    "review_flags": [],
+    "status": "ok"
+  },
+  {
+    "id": "i051",
+    "title": "Product info inside the packaging",
+    "kind": "business",
+    "summary": "Customers tap the lid or label to see instructions, ingredients or care tips.",
+    "how_it_works": "Tag on the product links to an info page you can update.",
+    "audience": [
+      "business_customers"
+    ],
+    "settings": [
+      "shop"
+    ],
+    "goals": [
+      "share_info",
+      "marketing"
+    ],
+    "phone_support": "any",
+    "setup_by_platform": null,
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form": "sticker",
+      "on_metal": false,
+      "waterproof": false,
+      "rewritable": true,
+      "secure": false,
+      "memory": "small"
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "review_flags": [
+      "Matches the 'product ingredients' application of the user's 'peek behind' seed idea."
+    ],
+    "status": "needs_review"
+  },
+  {
+    "id": "i052",
+    "title": "Follow us / visit our website sign",
+    "kind": "business",
+    "summary": "A small sign on a market stall, counter or window: tap to follow on social media or open the website.",
+    "how_it_works": "Tag behind a printed sign links to a profile or site.",
+    "audience": [
+      "business_customers",
+      "nfc_as_business"
+    ],
+    "settings": [
+      "shop",
+      "events"
+    ],
+    "goals": [
+      "marketing"
+    ],
+    "phone_support": "any",
+    "setup_by_platform": null,
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form": "sticker",
+      "on_metal": false,
+      "waterproof": false,
+      "rewritable": true,
+      "secure": false,
+      "memory": "small"
+    },
+    "business_model": "one_time_sale",
+    "who_pays": "market vendors, small shops",
+    "startup_cost_level": "low",
+    "review_flags": [],
+    "status": "ok"
+  },
+  {
+    "id": "i053",
+    "title": "Smart posters and print ads",
+    "kind": "business",
+    "summary": "Posters, flyers or magazine ads with a tap spot that opens a video, coupon or event page.",
+    "how_it_works": "Tags behind the print link to campaign content.",
+    "audience": [
+      "business_customers",
+      "nfc_as_business"
+    ],
+    "settings": [
+      "shop",
+      "events",
+      "travel"
+    ],
+    "goals": [
+      "marketing"
+    ],
+    "phone_support": "any",
+    "setup_by_platform": null,
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form": "sticker",
+      "on_metal": false,
+      "waterproof": false,
+      "rewritable": true,
+      "secure": false,
+      "memory": "small"
+    },
+    "business_model": "custom_product",
+    "who_pays": "advertisers, venues, event organisers",
+    "startup_cost_level": "low",
+    "review_flags": [
+      "2016 examples; look for a recent source too."
+    ],
+    "status": "needs_review"
+  },
+  {
+    "id": "i054",
+    "title": "Branded NFC promo items (pens, merch)",
+    "kind": "business",
+    "summary": "Promotional pens or merch that open a demo video, booking page or product launch page when tapped.",
+    "how_it_works": "NFC chip in the item links to a page you keep updating (teaser -> launch -> follow-up).",
+    "audience": [
+      "workplace",
+      "business_customers",
+      "nfc_as_business"
+    ],
+    "settings": [
+      "events",
+      "office"
+    ],
+    "goals": [
+      "marketing"
+    ],
+    "phone_support": "any",
+    "setup_by_platform": null,
+    "difficulty": "easy",
+    "cost_level": "5_to_50_eur",
+    "tag_needs": {
+      "form": "epoxy_disc",
+      "on_metal": false,
+      "waterproof": false,
+      "rewritable": false,
+      "secure": false,
+      "memory": "small"
+    },
+    "business_model": "custom_product",
+    "who_pays": "companies at trade shows, product launches",
+    "startup_cost_level": "low",
+    "review_flags": [
+      "Source is a seller of NFC pens: commercial bias."
+    ],
+    "status": "needs_review"
+  },
+  {
+    "id": "i055",
+    "title": "Interactive restaurant tables for kids",
+    "kind": "business",
+    "summary": "Tags under the table turn it into a game board kids play with a phone while waiting for food.",
+    "how_it_works": "Several tags under the table trigger actions in a game app.",
+    "audience": [
+      "business_customers"
+    ],
+    "settings": [
+      "restaurant"
+    ],
+    "goals": [
+      "marketing"
+    ],
+    "phone_support": "any",
+    "setup_by_platform": null,
+    "difficulty": "advanced",
+    "cost_level": "5_to_50_eur",
+    "tag_needs": {
+      "form": "sticker",
+      "on_metal": false,
+      "waterproof": false,
+      "rewritable": true,
+      "secure": false,
+      "memory": "small"
+    },
+    "business_model": "custom_product",
+    "who_pays": "family restaurants",
+    "startup_cost_level": "medium",
+    "review_flags": [
+      "Needs a custom app; 2016 example."
+    ],
+    "status": "needs_review"
+  },
+  {
+    "id": "i056",
+    "title": "For-sale sign with listing info",
+    "kind": "business",
+    "summary": "Passers-by tap the estate agent's yard sign to see the listing.",
+    "how_it_works": "Tag on the sign links to the property page.",
+    "audience": [
+      "workplace",
+      "business_customers"
+    ],
+    "settings": [
+      "outdoors"
+    ],
+    "goals": [
+      "marketing",
+      "share_info"
+    ],
+    "phone_support": "any",
+    "setup_by_platform": null,
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form": "sticker",
+      "on_metal": false,
+      "waterproof": true,
+      "rewritable": true,
+      "secure": false,
+      "memory": "small"
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "review_flags": [],
+    "status": "ok"
+  },
+  {
+    "id": "i057",
+    "title": "Guard patrol checkpoints",
+    "kind": "diy",
+    "summary": "Guards tap tags along their route to prove each checkpoint was visited, with time stamps.",
+    "how_it_works": "Patrol app logs each tag scan; missed checkpoints raise an alert.",
+    "audience": [
+      "workplace",
+      "nfc_as_business"
+    ],
+    "settings": [
+      "office",
+      "warehouse"
+    ],
+    "goals": [
+      "tracking",
+      "security"
+    ],
+    "phone_support": "any",
+    "setup_by_platform": null,
+    "difficulty": "medium",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form": "sticker",
+      "on_metal": true,
+      "waterproof": true,
+      "rewritable": true,
+      "secure": true,
+      "memory": "small"
+    },
+    "business_model": "service",
+    "who_pays": "security companies, facility managers",
+    "startup_cost_level": "medium",
+    "review_flags": [],
+    "status": "ok"
+  },
+  {
+    "id": "i058",
+    "title": "Cleaning rounds and supply reordering",
+    "kind": "diy",
+    "summary": "Cleaners tap tags to confirm a room was cleaned, check equipment in and out, and reorder supplies.",
+    "how_it_works": "Each tag = one room, tool or supply; the app logs the tap.",
+    "audience": [
+      "workplace",
+      "nfc_as_business"
+    ],
+    "settings": [
+      "office",
+      "warehouse",
+      "shop"
+    ],
+    "goals": [
+      "tracking"
+    ],
+    "phone_support": "any",
+    "setup_by_platform": null,
+    "difficulty": "medium",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form": "sticker",
+      "on_metal": false,
+      "waterproof": true,
+      "rewritable": true,
+      "secure": false,
+      "memory": "small"
+    },
+    "business_model": "service",
+    "who_pays": "cleaning companies, facility managers",
+    "startup_cost_level": "medium",
+    "review_flags": [],
+    "status": "ok"
+  },
+  {
+    "id": "i059",
+    "title": "Vehicle inspection checklist",
+    "kind": "diy",
+    "summary": "Drivers tap tags on each part of the truck to prove the pre-trip check was done.",
+    "how_it_works": "Tags placed around the vehicle open the right checklist item in an inspection app.",
+    "audience": [
+      "workplace"
+    ],
+    "settings": [
+      "car",
+      "warehouse",
+      "outdoors"
+    ],
+    "goals": [
+      "tracking"
+    ],
+    "phone_support": "any",
+    "setup_by_platform": null,
+    "difficulty": "medium",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form": "epoxy_disc",
+      "on_metal": true,
+      "waterproof": true,
+      "rewritable": true,
+      "secure": false,
+      "memory": "small"
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "review_flags": [],
+    "status": "ok"
+  },
+  {
+    "id": "i060",
+    "title": "Hospital patient wristbands",
+    "kind": "industry_example",
+    "summary": "Nurses tap a patient's wristband to pull up records and check medication.",
+    "how_it_works": "Built by organisations with secure, dedicated systems; shown as inspiration.",
+    "audience": [
+      "workplace"
+    ],
+    "settings": [
+      "health"
+    ],
+    "goals": [
+      "tracking",
+      "security"
+    ],
+    "phone_support": "any",
+    "setup_by_platform": null,
+    "difficulty": "advanced",
+    "cost_level": null,
+    "tag_needs": {
+      "form": "card",
+      "on_metal": false,
+      "waterproof": false,
+      "rewritable": true,
+      "secure": true,
+      "memory": "small"
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "review_flags": [
+      "Not DIY. Show only as 'NFC in the real world' inspiration. 2016 examples."
+    ],
+    "status": "needs_review"
+  },
+  {
+    "id": "i061",
+    "title": "Medication verification in hospitals",
+    "kind": "industry_example",
+    "summary": "Scanning wristband + medicine confirms right patient, right dose.",
+    "how_it_works": "Built by organisations with secure, dedicated systems; shown as inspiration.",
+    "audience": [
+      "workplace"
+    ],
+    "settings": [
+      "health"
+    ],
+    "goals": [
+      "tracking",
+      "security"
+    ],
+    "phone_support": "any",
+    "setup_by_platform": null,
+    "difficulty": "advanced",
+    "cost_level": null,
+    "tag_needs": {
+      "form": "card",
+      "on_metal": false,
+      "waterproof": false,
+      "rewritable": true,
+      "secure": true,
+      "memory": "small"
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "review_flags": [
+      "Not DIY. Show only as 'NFC in the real world' inspiration. 2016 examples."
+    ],
+    "status": "needs_review"
+  },
+  {
+    "id": "i062",
+    "title": "Anti-counterfeit medicine packaging",
+    "kind": "industry_example",
+    "summary": "Tap a medicine box to check it is genuine and see instructions.",
+    "how_it_works": "Built by organisations with secure, dedicated systems; shown as inspiration.",
+    "audience": [
+      "workplace"
+    ],
+    "settings": [
+      "health",
+      "shop"
+    ],
+    "goals": [
+      "security",
+      "share_info"
+    ],
+    "phone_support": "any",
+    "setup_by_platform": null,
+    "difficulty": "advanced",
+    "cost_level": null,
+    "tag_needs": {
+      "form": "card",
+      "on_metal": false,
+      "waterproof": false,
+      "rewritable": true,
+      "secure": true,
+      "memory": "small"
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "review_flags": [
+      "Not DIY. Show only as 'NFC in the real world' inspiration. 2016 examples."
+    ],
+    "status": "needs_review"
+  },
+  {
+    "id": "i063",
+    "title": "Cold-chain temperature logger",
+    "kind": "industry_example",
+    "summary": "Shipping tags record temperature; tap to read the history.",
+    "how_it_works": "Built by organisations with secure, dedicated systems; shown as inspiration.",
+    "audience": [
+      "workplace"
+    ],
+    "settings": [
+      "warehouse"
+    ],
+    "goals": [
+      "tracking"
+    ],
+    "phone_support": "any",
+    "setup_by_platform": null,
+    "difficulty": "advanced",
+    "cost_level": null,
+    "tag_needs": {
+      "form": "card",
+      "on_metal": false,
+      "waterproof": false,
+      "rewritable": true,
+      "secure": true,
+      "memory": "small"
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "review_flags": [
+      "Not DIY. Show only as 'NFC in the real world' inspiration. 2016 examples."
+    ],
+    "status": "needs_review"
+  },
+  {
+    "id": "i064",
+    "title": "Transit cards",
+    "kind": "industry_example",
+    "summary": "Tap card or phone at the gate to pay the fare.",
+    "how_it_works": "Built by organisations with secure, dedicated systems; shown as inspiration.",
+    "audience": [
+      "workplace"
+    ],
+    "settings": [
+      "travel"
+    ],
+    "goals": [
+      "payments",
+      "access"
+    ],
+    "phone_support": "any",
+    "setup_by_platform": null,
+    "difficulty": "advanced",
+    "cost_level": null,
+    "tag_needs": {
+      "form": "card",
+      "on_metal": false,
+      "waterproof": false,
+      "rewritable": true,
+      "secure": true,
+      "memory": "small"
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "review_flags": [
+      "Not DIY. Show only as 'NFC in the real world' inspiration. 2016 examples."
+    ],
+    "status": "needs_review"
+  },
+  {
+    "id": "i065",
+    "title": "Campus ID on the phone",
+    "kind": "industry_example",
+    "summary": "Students open doors, pay and borrow books with their phone.",
+    "how_it_works": "Built by organisations with secure, dedicated systems; shown as inspiration.",
+    "audience": [
+      "workplace"
+    ],
+    "settings": [
+      "office"
+    ],
+    "goals": [
+      "access",
+      "payments"
+    ],
+    "phone_support": "any",
+    "setup_by_platform": null,
+    "difficulty": "advanced",
+    "cost_level": null,
+    "tag_needs": {
+      "form": "card",
+      "on_metal": false,
+      "waterproof": false,
+      "rewritable": true,
+      "secure": true,
+      "memory": "small"
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "review_flags": [
+      "Not DIY. Show only as 'NFC in the real world' inspiration. 2016 examples."
+    ],
+    "status": "needs_review"
+  },
+  {
+    "id": "i066",
+    "title": "Hotel room key on the phone",
+    "kind": "industry_example",
+    "summary": "Guests unlock their room with their phone.",
+    "how_it_works": "Built by organisations with secure, dedicated systems; shown as inspiration.",
+    "audience": [
+      "workplace"
+    ],
+    "settings": [
+      "travel"
+    ],
+    "goals": [
+      "access"
+    ],
+    "phone_support": "any",
+    "setup_by_platform": null,
+    "difficulty": "advanced",
+    "cost_level": null,
+    "tag_needs": {
+      "form": "card",
+      "on_metal": false,
+      "waterproof": false,
+      "rewritable": true,
+      "secure": true,
+      "memory": "small"
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "review_flags": [
+      "Not DIY. Show only as 'NFC in the real world' inspiration. 2016 examples."
+    ],
+    "status": "needs_review"
+  },
+  {
+    "id": "i067",
+    "title": "Phone as car key",
+    "kind": "industry_example",
+    "summary": "Tap to unlock the car; seat and mirrors adjust to the driver.",
+    "how_it_works": "Built by organisations with secure, dedicated systems; shown as inspiration.",
+    "audience": [
+      "workplace"
+    ],
+    "settings": [
+      "car"
+    ],
+    "goals": [
+      "access"
+    ],
+    "phone_support": "any",
+    "setup_by_platform": null,
+    "difficulty": "advanced",
+    "cost_level": null,
+    "tag_needs": {
+      "form": "card",
+      "on_metal": false,
+      "waterproof": false,
+      "rewritable": true,
+      "secure": true,
+      "memory": "small"
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "review_flags": [
+      "Not DIY. Show only as 'NFC in the real world' inspiration. 2016 examples."
+    ],
+    "status": "needs_review"
+  },
+  {
+    "id": "i068",
+    "title": "NFC driving licence",
+    "kind": "industry_example",
+    "summary": "ID cards with a chip that authorities can read.",
+    "how_it_works": "Built by organisations with secure, dedicated systems; shown as inspiration.",
+    "audience": [
+      "workplace"
+    ],
+    "settings": [
+      "car",
+      "travel"
+    ],
+    "goals": [
+      "security"
+    ],
+    "phone_support": "any",
+    "setup_by_platform": null,
+    "difficulty": "advanced",
+    "cost_level": null,
+    "tag_needs": {
+      "form": "card",
+      "on_metal": false,
+      "waterproof": false,
+      "rewritable": true,
+      "secure": true,
+      "memory": "small"
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "review_flags": [
+      "Not DIY. Show only as 'NFC in the real world' inspiration. 2016 examples."
+    ],
+    "status": "needs_review"
+  },
+  {
+    "id": "i069",
+    "title": "Tap to pair a Bluetooth speaker",
+    "kind": "product_feature",
+    "summary": "Many speakers and headphones pair when you touch your phone to them.",
+    "how_it_works": "NFC is built into the device; no tag to buy.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home"
+    ],
+    "goals": [
+      "share_info",
+      "automation"
+    ],
+    "phone_support": "any",
+    "setup_by_platform": null,
+    "difficulty": "easy",
+    "cost_level": null,
+    "tag_needs": null,
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "review_flags": [
+      "No tag needed; results page should say 'check if your device supports this'.",
+      "2016 source; check current devices."
+    ],
+    "status": "needs_review"
+  },
+  {
+    "id": "i070",
+    "title": "Tap to mirror your phone on a TV",
+    "kind": "product_feature",
+    "summary": "Some TVs start screen sharing when you touch them with your phone.",
+    "how_it_works": "NFC is built into the device; no tag to buy.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home"
+    ],
+    "goals": [
+      "share_info",
+      "automation"
+    ],
+    "phone_support": "any",
+    "setup_by_platform": null,
+    "difficulty": "easy",
+    "cost_level": null,
+    "tag_needs": null,
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "review_flags": [
+      "No tag needed; results page should say 'check if your device supports this'.",
+      "2016 source; check current devices."
+    ],
+    "status": "needs_review"
+  },
+  {
+    "id": "i071",
+    "title": "Tap to print",
+    "kind": "product_feature",
+    "summary": "Some printers accept a print job when you touch them with your phone.",
+    "how_it_works": "NFC is built into the device; no tag to buy.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home"
+    ],
+    "goals": [
+      "share_info",
+      "automation"
+    ],
+    "phone_support": "any",
+    "setup_by_platform": null,
+    "difficulty": "easy",
+    "cost_level": null,
+    "tag_needs": null,
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "review_flags": [
+      "No tag needed; results page should say 'check if your device supports this'.",
+      "2016 source; check current devices."
+    ],
+    "status": "needs_review"
+  },
+  {
+    "id": "i072",
+    "title": "Accessible appliances",
+    "kind": "product_feature",
+    "summary": "Blind users set a microwave from an accessible phone app and tap to send the settings.",
+    "how_it_works": "NFC is built into the device; no tag to buy.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home"
+    ],
+    "goals": [
+      "share_info",
+      "automation"
+    ],
+    "phone_support": "any",
+    "setup_by_platform": null,
+    "difficulty": "easy",
+    "cost_level": null,
+    "tag_needs": null,
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "review_flags": [
+      "No tag needed; results page should say 'check if your device supports this'.",
+      "2016 source; check current devices."
+    ],
+    "status": "needs_review"
+  },
+  {
+    "id": "i073",
+    "title": "Phone-to-phone sharing",
+    "kind": "product_feature",
+    "summary": "Touch two phones together to share contacts or files.",
+    "how_it_works": "NFC is built into the device; no tag to buy.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home"
+    ],
+    "goals": [
+      "share_info",
+      "automation"
+    ],
+    "phone_support": "any",
+    "setup_by_platform": null,
+    "difficulty": "easy",
+    "cost_level": null,
+    "tag_needs": null,
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "review_flags": [
+      "No tag needed; results page should say 'check if your device supports this'.",
+      "Phone-to-phone (Android Beam) was removed from Android in 2019."
+    ],
+    "status": "needs_review"
+  },
+  {
+    "id": "i079",
+    "title": "Tap-in attendance logger",
+    "kind": "maker",
+    "summary": "Members tap their card on a reader at the door and the system logs who came and when. Good for clubs, classes, small offices or a coworking space.",
+    "how_it_works": "A PN532 reader on a Raspberry Pi or Arduino reads each card's ID and a small program matches it to a person and saves the time.",
+    "audience": [
+      "workplace",
+      "nfc_as_business"
+    ],
+    "settings": [
+      "office",
+      "events"
+    ],
+    "goals": [
+      "tracking"
+    ],
+    "phone_support": null,
+    "setup_by_platform": "Reader module (e.g. PN532) on a Raspberry Pi or Arduino, plus a small program. Visitors' phones not needed.",
+    "difficulty": "advanced",
+    "cost_level": "5_to_50_eur",
+    "tag_needs": {
+      "form": "card",
+      "on_metal": false,
+      "waterproof": false,
+      "rewritable": true,
+      "secure": false,
+      "memory": "small"
+    },
+    "business_model": "service",
+    "who_pays": "clubs, gyms, schools, coworking spaces",
+    "startup_cost_level": "low",
+    "review_flags": [
+      "NotebookLM listed PN532 as the tag chip; it is the reader module. Cards: MIFARE Classic or NTAG.",
+      "Card IDs can be copied: fine for attendance, not for security."
+    ],
+    "status": "needs_review"
+  },
+  {
+    "id": "i080",
+    "title": "Prepaid card for a club kiosk or canteen",
+    "kind": "maker",
+    "summary": "Members top up credit and pay at a club kiosk, school canteen or event bar by tapping a card.",
+    "how_it_works": "A reader on a Raspberry Pi reads the card ID, looks up the balance, subtracts the price and saves the new balance.",
+    "audience": [
+      "business_customers",
+      "workplace",
+      "nfc_as_business"
+    ],
+    "settings": [
+      "shop",
+      "restaurant",
+      "events"
+    ],
+    "goals": [
+      "payments"
+    ],
+    "phone_support": null,
+    "setup_by_platform": "Reader module (e.g. PN532) on a Raspberry Pi or Arduino, plus a small program. Visitors' phones not needed.",
+    "difficulty": "advanced",
+    "cost_level": "5_to_50_eur",
+    "tag_needs": {
+      "form": "card",
+      "on_metal": false,
+      "waterproof": false,
+      "rewritable": true,
+      "secure": true,
+      "memory": "small"
+    },
+    "business_model": "service",
+    "who_pays": "clubs, event organisers, small canteens",
+    "startup_cost_level": "medium",
+    "review_flags": [
+      "Security: a plain card ID can be cloned. Keep balances on the server and use secure cards (e.g. NTAG 424 DNA / MIFARE DESFire) for anything beyond small closed-loop amounts.",
+      "Handling real money may bring legal/payment rules: describe as closed-loop tokens/credit."
+    ],
+    "status": "needs_review"
+  },
+  {
+    "id": "i074",
+    "title": "Door access card copied to iPhone",
+    "kind": "tip",
+    "summary": "Video claims you can add a building access card to your iPhone via Shortcuts.",
+    "how_it_works": "Shortcuts can react to a card being scanned, but cannot copy it or open a door with it.",
+    "audience": [
+      "personal",
+      "workplace"
+    ],
+    "settings": [
+      "home"
+    ],
+    "goals": [
+      "access"
+    ],
+    "phone_support": "iphone_only",
+    "setup_by_platform": null,
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form": "sticker",
+      "on_metal": false,
+      "waterproof": false,
+      "rewritable": true,
+      "secure": false,
+      "memory": "small"
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "review_flags": [
+      "LIKELY MISLEADING: do not publish without verifying. Apple Wallet keys only work with supported systems."
+    ],
+    "status": "hidden"
+  },
+  {
+    "id": "i075",
+    "title": "NFC rings and other wearables",
+    "kind": "tip",
+    "summary": "Tags come in ring form, so you can share info or trigger automations from your hand.",
+    "how_it_works": "A form factor, not a use case: any idea here can use a ring instead of a sticker.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home"
+    ],
+    "goals": [
+      "share_info"
+    ],
+    "phone_support": "any",
+    "setup_by_platform": null,
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form": "ring",
+      "on_metal": false,
+      "waterproof": false,
+      "rewritable": true,
+      "secure": false,
+      "memory": "small"
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "review_flags": [
+      "Belongs in tag profiles (form factor), not ideas."
+    ],
+    "status": "hidden"
+  },
+  {
+    "id": "i076",
+    "title": "RFID-blocking wallet card",
+    "kind": "tip",
+    "summary": "A card that protects your bank cards from being read without you knowing.",
+    "how_it_works": "Shielding product, not an NFC use.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home"
+    ],
+    "goals": [
+      "security"
+    ],
+    "phone_support": "any",
+    "setup_by_platform": null,
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": null,
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "review_flags": [
+      "Exclude from ideas; maybe an FAQ 'is NFC safe?' item."
+    ],
+    "status": "hidden"
+  },
+  {
+    "id": "i077",
+    "title": "Hide tags in decor",
+    "kind": "tip",
+    "summary": "Books, coasters and paintings make invisible tag holders.",
+    "how_it_works": "General placement tip.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home"
+    ],
+    "goals": [
+      "automation"
+    ],
+    "phone_support": "any",
+    "setup_by_platform": null,
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form": "sticker",
+      "on_metal": false,
+      "waterproof": false,
+      "rewritable": true,
+      "secure": false,
+      "memory": "small"
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "review_flags": [
+      "Use as a tip on results pages."
+    ],
+    "status": "hidden"
+  },
+  {
+    "id": "i078",
+    "title": "Home Assistant as the power-up",
+    "kind": "tip",
+    "summary": "With Home Assistant, a tag can control almost anything in the house.",
+    "how_it_works": "General tip.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home"
+    ],
+    "goals": [
+      "automation"
+    ],
+    "phone_support": "any",
+    "setup_by_platform": "Home Assistant (companion app on iPhone or Android).",
+    "difficulty": "medium",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form": "sticker",
+      "on_metal": false,
+      "waterproof": false,
+      "rewritable": true,
+      "secure": false,
+      "memory": "small"
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "review_flags": [],
+    "status": "hidden"
+  }
+]

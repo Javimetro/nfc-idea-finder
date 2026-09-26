@@ -1,0 +1,967 @@
+[
+  {
+    "idea_title": "Pass Off Music to Smart Speaker",
+    "summary": "Transfers currently playing Spotify music from your phone to a smart speaker when tapped near the speaker. It streamlines changing the playback device without navigating audio menus.",
+    "how_it_works": "NFC tag written with a unique trigger ID is placed near a smart speaker. Scanning it triggers a Home Assistant automation to change the Spotify playback source to the speaker and start playing.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home"
+    ],
+    "goals": [
+      "automation"
+    ],
+    "phone_support": "any",
+    "extra_app": "Home Assistant",
+    "difficulty": "medium",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "10 NEW ADVANCED WAYS to USE NFC Tags For Automation Ideas",
+    "source_url": null,
+    "creator_name": "Automated Tech",
+    "timestamp": null,
+    "anchor_quote": "pass off the music you can make the music currently playing on your phone switch to a Spotify source",
+    "notes": null
+  },
+  {
+    "idea_title": "Override Motion-Sensor Garage Lights",
+    "summary": "Prevents garage or workbench lights from automatically turning off after inactivity by setting an override toggle. This keeps the lights on while you work on longer tasks.",
+    "how_it_works": "NFC tag placed on workbench is scanned. Home Assistant toggles an input boolean override helper, which adds a condition to light automations preventing motion shutoff.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home"
+    ],
+    "goals": [
+      "automation"
+    ],
+    "phone_support": "any",
+    "extra_app": "Home Assistant",
+    "difficulty": "medium",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "10 NEW ADVANCED WAYS to USE NFC Tags For Automation Ideas",
+    "source_url": null,
+    "creator_name": "Automated Tech",
+    "timestamp": null,
+    "anchor_quote": "the lights in the garage will remain lit if an NFC tag that is located on your workbench is scanned",
+    "notes": null
+  },
+  {
+    "idea_title": "View Storage Bin Inventory List",
+    "summary": "Displays a list of items stored inside a specific container or box when scanned. This eliminates the need to open bins to check what is stored inside.",
+    "how_it_works": "An NFC tag is attached to a storage bin. Scanning the tag sends a trigger ID to Home Assistant, which identifies the specific bin and presents its inventory list.",
+    "audience": [
+      "personal",
+      "workplace"
+    ],
+    "settings": [
+      "home",
+      "warehouse"
+    ],
+    "goals": [
+      "tracking",
+      "share_info"
+    ],
+    "phone_support": "any",
+    "extra_app": "Home Assistant",
+    "difficulty": "medium",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "10 NEW ADVANCED WAYS to USE NFC Tags For Automation Ideas",
+    "source_url": null,
+    "creator_name": "Automated Tech",
+    "timestamp": null,
+    "anchor_quote": "if each container has an NFC tag you can quickly create a list of what is stored in that bin",
+    "notes": null
+  },
+  {
+    "idea_title": "Track Household Chores and Maintenance",
+    "summary": "Tracks recurring chores like emptying a robot vacuum water tank and sends periodic reminders. Scanning the tag marks the chore completed and resets the reminder schedule.",
+    "how_it_works": "An NFC tag on the appliance is scanned after completing a chore. Home Assistant updates a counter helper, clearing active notifications and resetting the weekly interval.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home"
+    ],
+    "goals": [
+      "tracking",
+      "reminder",
+      "automation"
+    ],
+    "phone_support": "any",
+    "extra_app": "Home Assistant",
+    "difficulty": "medium",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "10 NEW ADVANCED WAYS to USE NFC Tags For Automation Ideas",
+    "source_url": null,
+    "creator_name": "Automated Tech",
+    "timestamp": null,
+    "anchor_quote": "you can keep tabs on any and all of your errands",
+    "notes": null
+  },
+  {
+    "idea_title": "Pause Doorbell Motion Alerts",
+    "summary": "Temporarily disables motion notifications from smart doorbells while doing yard work or cleaning near the entrance. It prevents repetitive phone alerts.",
+    "how_it_works": "Tag placed near front entrance door is scanned. Home Assistant toggles an input boolean state that conditionalizes doorbell automations to suppress notifications.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home"
+    ],
+    "goals": [
+      "automation"
+    ],
+    "phone_support": "any",
+    "extra_app": "Home Assistant",
+    "difficulty": "medium",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "10 NEW ADVANCED WAYS to USE NFC Tags For Automation Ideas",
+    "source_url": null,
+    "creator_name": "Automated Tech",
+    "timestamp": null,
+    "anchor_quote": "doorbell motion alerts are temporarily suspended whenever it is scanned",
+    "notes": null
+  },
+  {
+    "idea_title": "Track Box or Cabinet Contents",
+    "summary": "Attaches NFC tags to moving boxes or cabinets to reveal their contents without opening them. This saves time during packing or searching for specific items.",
+    "how_it_works": "Tag attached to outside of box or cabinet is scanned with smartphone to view stored item details.",
+    "audience": [
+      "personal",
+      "workplace"
+    ],
+    "settings": [
+      "home",
+      "warehouse",
+      "office"
+    ],
+    "goals": [
+      "tracking",
+      "share_info"
+    ],
+    "phone_support": "any",
+    "extra_app": null,
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "10 NEW ADVANCED WAYS to USE NFC Tags For Automation Ideas",
+    "source_url": null,
+    "creator_name": "Automated Tech",
+    "timestamp": null,
+    "anchor_quote": "attach an NFC tag to the outside of each box so that you can keep track of what's inside",
+    "notes": null
+  },
+  {
+    "idea_title": "Set Preset Kitchen Timer",
+    "summary": "Launches a preset timer instantly for cooking without using voice assistants or manually opening timer apps. It is ideal for frequently prepared recipes.",
+    "how_it_works": "An NFC tag kept in the kitchen is scanned with a phone, immediately starting a pre-configured timer.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home"
+    ],
+    "goals": [
+      "automation",
+      "reminder"
+    ],
+    "phone_support": "any",
+    "extra_app": null,
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "10 NEW ADVANCED WAYS to USE NFC Tags For Automation Ideas",
+    "source_url": null,
+    "creator_name": "Automated Tech",
+    "timestamp": null,
+    "anchor_quote": "add a tag that will start the timer for you instead of having to do it yourself",
+    "notes": null
+  },
+  {
+    "idea_title": "Unlock Smart Door Lock",
+    "summary": "Unlocks smart door locks instantly when approaching the door by tapping your phone. It provides a quick alternative to entering keycodes or scanning fingerprints.",
+    "how_it_works": "NFC tag mounted near or on the smart lock triggers the unlocking action upon smartphone scan.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home"
+    ],
+    "goals": [
+      "access",
+      "automation",
+      "security"
+    ],
+    "phone_support": "any",
+    "extra_app": null,
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "10 NEW ADVANCED WAYS to USE NFC Tags For Automation Ideas",
+    "source_url": null,
+    "creator_name": "Automated Tech",
+    "timestamp": null,
+    "anchor_quote": "install an NFC tag on it to make it automatically unlock when you approach it",
+    "notes": null
+  },
+  {
+    "idea_title": "Turn Off Climate Control When Leaving",
+    "summary": "Shuts off heating or air conditioning systems with a tap as you exit the home. This helps lower utility bills and reduce energy consumption.",
+    "how_it_works": "An NFC tag placed near the exit door is scanned with a smartphone to send a command turning off smart climate control systems.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home"
+    ],
+    "goals": [
+      "automation"
+    ],
+    "phone_support": "any",
+    "extra_app": null,
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "10 NEW ADVANCED WAYS to USE NFC Tags For Automation Ideas",
+    "source_url": null,
+    "creator_name": "Automated Tech",
+    "timestamp": null,
+    "anchor_quote": "simply tap your phone to turn off the heating or cooling system",
+    "notes": null
+  },
+  {
+    "idea_title": "Toggle All House Lights",
+    "summary": "Turns all home lights on or off simultaneously when departing, going to bed, or returning home. It saves time spent checking individual rooms.",
+    "how_it_works": "Tag positioned near garage or front door triggers a master lighting automation to switch every light on or off.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home"
+    ],
+    "goals": [
+      "automation"
+    ],
+    "phone_support": "any",
+    "extra_app": null,
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "10 NEW ADVANCED WAYS to USE NFC Tags For Automation Ideas",
+    "source_url": null,
+    "creator_name": "Automated Tech",
+    "timestamp": null,
+    "anchor_quote": "tag will turn off all the lights for you at the same time",
+    "notes": null
+  },
+  {
+    "idea_title": "Automate Appliance Maintenance Reminders",
+    "summary": "Tracks maintenance intervals for major appliances like dishwashers and fridges. Scanning the tag logs servicing and resets automated maintenance alerts.",
+    "how_it_works": "An anti-metal NFC tag stuck to the appliance is scanned. Home Assistant updates a datetime helper and template sensor to recalculate days since last service.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home"
+    ],
+    "goals": [
+      "tracking",
+      "reminder",
+      "automation"
+    ],
+    "phone_support": "any",
+    "extra_app": "Home Assistant",
+    "difficulty": "medium",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": true,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "3 Crazy NFC Tag Ideas That Show How POWERFUL They Are!",
+    "source_url": null,
+    "creator_name": "Tom's Smart Home",
+    "timestamp": null,
+    "anchor_quote": "automating appliance maintenance schedules",
+    "notes": "Requires special anti-metal tags for metal appliances."
+  },
+  {
+    "idea_title": "Play Spotify Album from Wall Vinyl",
+    "summary": "Triggers music playback of a specific vinyl album on TV and speakers when scanning wall-mounted record covers. It converts decor into an interactive audio trigger.",
+    "how_it_works": "Tag concealed inside album cover is scanned. Home Assistant passes the Spotify album ID to a script that turns on TV/audio gear and starts Spotify playback.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home"
+    ],
+    "goals": [
+      "automation"
+    ],
+    "phone_support": "any",
+    "extra_app": "Home Assistant",
+    "difficulty": "advanced",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "3 Crazy NFC Tag Ideas That Show How POWERFUL They Are!",
+    "source_url": null,
+    "creator_name": "Tom's Smart Home",
+    "timestamp": null,
+    "anchor_quote": "each of those album covers not only has the original record still inside but in the lower lefthand corner there's an NFC tag",
+    "notes": null
+  },
+  {
+    "idea_title": "Send Plant Care Instructions Notification",
+    "summary": "Sends customized care instructions such as sunlight needs and fertilizer schedules directly to your phone as a notification when scanning a plant pot tag.",
+    "how_it_works": "NFC tag attached to plant pot is scanned with smartphone, prompting Home Assistant to send a pre-configured care notification.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home",
+      "outdoors"
+    ],
+    "goals": [
+      "reminder",
+      "share_info"
+    ],
+    "phone_support": "any",
+    "extra_app": "Home Assistant",
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "3 Crazy NFC Tag Ideas That Show How POWERFUL They Are!",
+    "source_url": null,
+    "creator_name": "Tom's Smart Home",
+    "timestamp": null,
+    "anchor_quote": "each of my pots has an NFC tag on the side that I can scan with my phone and I get a notification sent to me",
+    "notes": null
+  },
+  {
+    "idea_title": "3D Printed Smart Business Card",
+    "summary": "Embeds an NFC tag inside 3D printed business cards or keychains to transfer contact details or prompt messaging instantly upon contact.",
+    "how_it_works": "NFC tag embedded inside 3D print during pause in slicing. Programmed via NFC Tools to launch URL, send email, or transfer contact info.",
+    "audience": [
+      "personal",
+      "workplace",
+      "business_customers",
+      "nfc_as_business"
+    ],
+    "settings": [
+      "office",
+      "events"
+    ],
+    "goals": [
+      "share_info",
+      "marketing"
+    ],
+    "phone_support": "any",
+    "extra_app": "NFC Tools",
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "card",
+      "on_metal": null,
+      "waterproof": true,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": "one_time_sale",
+    "who_pays": "professionals or event attendees",
+    "startup_cost_level": "low",
+    "source_title": "3D Printing with NFC Tags | My Top 6 Prints and How to Make Them Work",
+    "source_url": null,
+    "creator_name": "The Scrappy Creative",
+    "timestamp": null,
+    "anchor_quote": "3D printed gifts video And this is a smart business card",
+    "notes": "3D printed enclosure around tag."
+  },
+  {
+    "idea_title": "3D Printed Planter Care Link",
+    "summary": "Stores rewritable plant care instructions linked to a Google Doc inside a 3D printed planter base. Useful when gifting plants or updating plant types.",
+    "how_it_works": "Tag embedded in 3D printed planter base during layer pause. Written via NFC Tools with custom Google Doc web address.",
+    "audience": [
+      "personal",
+      "business_customers"
+    ],
+    "settings": [
+      "home",
+      "shop"
+    ],
+    "goals": [
+      "share_info",
+      "reminder"
+    ],
+    "phone_support": "any",
+    "extra_app": "NFC Tools",
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": true,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "3D Printing with NFC Tags | My Top 6 Prints and How to Make Them Work",
+    "source_url": null,
+    "creator_name": "The Scrappy Creative",
+    "timestamp": null,
+    "anchor_quote": "planter that has an NFC tag built in to the base",
+    "notes": null
+  },
+  {
+    "idea_title": "Discreet Password Vault in Organizer",
+    "summary": "Conceals sensitive text like passwords or crypto wallet info inside a desk organizer. Reading requires explicitly opening an NFC scanner app for security.",
+    "how_it_works": "Tag embedded in 3D printed desk organizer; text written via NFC Tools. User must open an NFC app and scan the organizer to view stored text.",
+    "audience": [
+      "personal",
+      "workplace"
+    ],
+    "settings": [
+      "office",
+      "home"
+    ],
+    "goals": [
+      "security",
+      "access"
+    ],
+    "phone_support": "any",
+    "extra_app": "NFC Tools",
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": true,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "3D Printing with NFC Tags | My Top 6 Prints and How to Make Them Work",
+    "source_url": null,
+    "creator_name": "The Scrappy Creative",
+    "timestamp": null,
+    "anchor_quote": "store sensitive information in a little bit of a more discreet way",
+    "notes": "Mentions chip memory capacity >500 bytes."
+  },
+  {
+    "idea_title": "3D Printed Wireless Light Switch",
+    "summary": "Provides a wall-mountable wireless light switch trigger for renters or studio filming without needing electrical wiring.",
+    "how_it_works": "Tag embedded in 3D printed switch housing mounted with Command strips. Scanned with iPhone to trigger iOS Shortcuts automation for smart plugs and bulbs.",
+    "audience": [
+      "personal",
+      "workplace"
+    ],
+    "settings": [
+      "home",
+      "office"
+    ],
+    "goals": [
+      "automation"
+    ],
+    "phone_support": "iphone_only",
+    "extra_app": "iOS Shortcuts",
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "3D Printing with NFC Tags | My Top 6 Prints and How to Make Them Work",
+    "source_url": null,
+    "creator_name": "The Scrappy Creative",
+    "timestamp": null,
+    "anchor_quote": "This is a smart light switch And how it works is by triggering an iPhone automation",
+    "notes": null
+  },
+  {
+    "idea_title": "3D Printed Guest Wi-Fi Coaster",
+    "summary": "Embeds Wi-Fi network credentials inside decorative coasters or statues so guests can connect automatically without entering passwords.",
+    "how_it_works": "NFC tags embedded in 3D printed PC coasters/statues. Programmed with Wi-Fi login data using NFC Tools app.",
+    "audience": [
+      "personal",
+      "business_customers"
+    ],
+    "settings": [
+      "home",
+      "office",
+      "shop",
+      "restaurant"
+    ],
+    "goals": [
+      "share_info",
+      "access"
+    ],
+    "phone_support": "android_only",
+    "extra_app": "NFC Tools",
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": true,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "3D Printing with NFC Tags | My Top 6 Prints and How to Make Them Work",
+    "source_url": null,
+    "creator_name": "The Scrappy Creative",
+    "timestamp": null,
+    "anchor_quote": "statue and the coasters have NFC chips in them with my Wi-Fi credentials",
+    "notes": "Source notes native Wi-Fi sharing from tag works directly on Android."
+  },
+  {
+    "idea_title": "Preset Baby Milk Bottle Timer",
+    "summary": "Starts a 2-hour countdown timer on smartphone when tapped to track how long baby milk has been out before spoiling.",
+    "how_it_works": "NFC tag placed on/near baby bottle. Tapping triggers iOS Shortcuts automation to initiate a 2-hour timer.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home",
+      "travel"
+    ],
+    "goals": [
+      "reminder",
+      "automation"
+    ],
+    "phone_support": "iphone_only",
+    "extra_app": "iOS Shortcuts",
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "3D Printing with NFC Tags | My Top 6 Prints and How to Make Them Work",
+    "source_url": null,
+    "creator_name": "The Scrappy Creative",
+    "timestamp": null,
+    "anchor_quote": "bottle timer So for those of you with kids you know that milk can only be out so long",
+    "notes": null
+  },
+  {
+    "idea_title": "Log Caffeine or Hydration in Health App",
+    "summary": "Logs water or caffeine intake directly into the Apple Health app upon tapping a coffee machine or water bottle tag.",
+    "how_it_works": "Tag on Nespresso maker or water bottle scanned with iPhone, triggering iOS Shortcut action 'Log Health Sample' for caffeine or water volume.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home",
+      "office",
+      "health"
+    ],
+    "goals": [
+      "tracking",
+      "automation"
+    ],
+    "phone_support": "iphone_only",
+    "extra_app": "iOS Shortcuts",
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "5 Creative Uses for NFC Tags & Your iPhone!",
+    "source_url": null,
+    "creator_name": "AppleInsider",
+    "timestamp": null,
+    "anchor_quote": "put an NFC tag on top of my Nespresso maker then every time I go to get a cup of coffee I tap my phone",
+    "notes": null
+  },
+  {
+    "idea_title": "Mark Medication Reminders Completed",
+    "summary": "Marks daily medication or vitamin reminders as completed in Apple Reminders when tapping the top of the pill bottle.",
+    "how_it_works": "Tag on pill bottle scanned with iPhone; iOS Shortcut finds reminder named 'take my vitamins' and sets isCompleted to true.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home",
+      "health"
+    ],
+    "goals": [
+      "reminder",
+      "automation",
+      "tracking"
+    ],
+    "phone_support": "iphone_only",
+    "extra_app": "iOS Shortcuts",
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "5 Creative Uses for NFC Tags & Your iPhone!",
+    "source_url": null,
+    "creator_name": "AppleInsider",
+    "timestamp": null,
+    "anchor_quote": "take a look at take the meds in this case I can tap my iPhone on the NFC tag that I've attached to the top of my little medicine bottle",
+    "notes": null
+  },
+  {
+    "idea_title": "Share Driving ETA with Family",
+    "summary": "Calculates current travel time to home using Apple Maps and sends a custom text message with the ETA to a family member when tapping the car dashboard.",
+    "how_it_works": "Tag on dashboard scanned with iPhone; iOS Shortcut gets Apple Maps driving time from current location to home and sends SMS message.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "car",
+      "travel"
+    ],
+    "goals": [
+      "automation",
+      "share_info"
+    ],
+    "phone_support": "iphone_only",
+    "extra_app": "iOS Shortcuts",
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "5 Creative Uses for NFC Tags & Your iPhone!",
+    "source_url": null,
+    "creator_name": "AppleInsider",
+    "timestamp": null,
+    "anchor_quote": "tap the NFC tag right there on the dash... calculate driving time... send a text message",
+    "notes": null
+  },
+  {
+    "idea_title": "Automate Workout Room Environment",
+    "summary": "Prepares a room for exercising by waking Apple TV, opening fitness app, closing blinds, and setting lights with a single tap on exercise gear.",
+    "how_it_works": "Tag on bike/gear scanned with iPhone; iOS Shortcut executes HomeKit actions to adjust blinds/lights and Apple TV remote actions to launch workout app.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home",
+      "health"
+    ],
+    "goals": [
+      "automation"
+    ],
+    "phone_support": "iphone_only",
+    "extra_app": "iOS Shortcuts",
+    "difficulty": "medium",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "5 Creative Uses for NFC Tags & Your iPhone!",
+    "source_url": null,
+    "creator_name": "AppleInsider",
+    "timestamp": null,
+    "anchor_quote": "put NFC tag on the cycling equipment... wake up the living room Apple TV... open the fitness app... close the blinds",
+    "notes": null
+  },
+  {
+    "idea_title": "Generate Luggage Packing List",
+    "summary": "Generates or displays a standard packing checklist on your phone when tapping a tag placed inside your suitcase while preparing for trips.",
+    "how_it_works": "Tag inside luggage scanned with iPhone; iOS Shortcut creates or opens a pre-defined packing checklist.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "travel",
+      "home"
+    ],
+    "goals": [
+      "reminder",
+      "automation"
+    ],
+    "phone_support": "iphone_only",
+    "extra_app": "iOS Shortcuts",
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "5 Creative Uses for NFC Tags & Your iPhone!",
+    "source_url": null,
+    "creator_name": "AppleInsider",
+    "timestamp": null,
+    "anchor_quote": "put a little NFC tag into his luggage and then every time he goes to pack... generate a packing list",
+    "notes": null
+  },
+  {
+    "idea_title": "Trade Show Lead Generation NFC Pen",
+    "summary": "Directs trade show attendees to video demos, digital business cards, or meeting schedulers with a simple pen tap. It captures leads without QR codes or typing.",
+    "how_it_works": "NFC chip built into promotional pen logo. Tapping against smartphone opens pre-configured URL leading to landing page, lead form, or calendar booking.",
+    "audience": [
+      "workplace",
+      "business_customers",
+      "nfc_as_business"
+    ],
+    "settings": [
+      "events",
+      "office"
+    ],
+    "goals": [
+      "marketing",
+      "share_info"
+    ],
+    "phone_support": "any",
+    "extra_app": null,
+    "difficulty": "easy",
+    "cost_level": "5_to_50_eur",
+    "tag_needs": {
+      "form_factor": "epoxy_disc",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": false,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": "custom_product",
+    "who_pays": "businesses or organizations",
+    "startup_cost_level": "low",
+    "source_title": "Custom NFC Tap Pens - Creative Ideas How to Effectively Use Them For Your Business or Organization",
+    "source_url": null,
+    "creator_name": "Perfect Imprints Creative Marketing",
+    "timestamp": null,
+    "anchor_quote": "at a trade show for instance... send someone straight to a landing page with demo videos",
+    "notes": "Integrated into promotional stylus pen."
+  },
+  {
+    "idea_title": "Evolving Product Launch NFC Pen",
+    "summary": "Guides customers through stages of a product launch over time by updating the destination website content linked to promotional pens.",
+    "how_it_works": "Pen tap opens a target URL; company dynamically updates web content from teaser to launch details without altering physical pen.",
+    "audience": [
+      "business_customers",
+      "nfc_as_business"
+    ],
+    "settings": [
+      "events",
+      "office",
+      "shop"
+    ],
+    "goals": [
+      "marketing",
+      "share_info"
+    ],
+    "phone_support": "any",
+    "extra_app": null,
+    "difficulty": "easy",
+    "cost_level": "5_to_50_eur",
+    "tag_needs": {
+      "form_factor": "epoxy_disc",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": false,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": "custom_product",
+    "who_pays": "businesses launching new products",
+    "startup_cost_level": "low",
+    "source_title": "Custom NFC Tap Pens - Creative Ideas How to Effectively Use Them For Your Business or Organization",
+    "source_url": null,
+    "creator_name": "Perfect Imprints Creative Marketing",
+    "timestamp": null,
+    "anchor_quote": "guide customers from a teaser content in the beginning to launch day details... just by updating the web page",
+    "notes": null
+  }
+]

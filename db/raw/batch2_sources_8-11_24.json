@@ -1,0 +1,1125 @@
+[
+  {
+    "idea_title": "Wearable NFC Ring Data Sharing",
+    "summary": "A wearable ring with an embedded NFC chip lets users transfer personal or digital details instantly when tapped against a smartphone.",
+    "how_it_works": "Contact details or digital data are encoded on the ring. Scanning the ring with an NFC-compatible phone opens or transfers the stored information.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "outdoors",
+      "office",
+      "events"
+    ],
+    "goals": [
+      "share_info"
+    ],
+    "phone_support": "any",
+    "extra_app": null,
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": null,
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "Different Types of Useful NFC Tags! #NFC #Tech #rfid",
+    "source_url": null,
+    "creator_name": "Bren Maartens",
+    "timestamp": null,
+    "anchor_quote": "they even come in the form of a ring which is totally crazy",
+    "notes": null
+  },
+  {
+    "idea_title": "RFID Blocking Card for Wallet Security",
+    "summary": "A protective shielding card kept in a wallet blocks unauthorized wireless scanner signals to prevent credit card skimming.",
+    "how_it_works": "The card is placed alongside credit cards in a wallet to disrupt incoming signals and shield card data from external scanners.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "travel",
+      "outdoors"
+    ],
+    "goals": [
+      "security"
+    ],
+    "phone_support": null,
+    "extra_app": null,
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "card",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": null,
+      "secure_anti_clone": true,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "Different Types of Useful NFC Tags! #NFC #Tech #rfid",
+    "source_url": null,
+    "creator_name": "Bren Maartens",
+    "timestamp": null,
+    "anchor_quote": "stop people from going past you and skimming your credit card",
+    "notes": null
+  },
+  {
+    "idea_title": "Outdoor Trash Reminder Scan Reset",
+    "summary": "A waterproof tag attached to an outdoor recycling bin turns off repeating smart home trash reminders once bins are wheeled outside.",
+    "how_it_works": "An NFC tag with a center hole is zip-tied to a trash bin. Scanning the tag with a smartphone cancels active reminder notifications.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home",
+      "outdoors"
+    ],
+    "goals": [
+      "reminder",
+      "automation"
+    ],
+    "phone_support": "any",
+    "extra_app": null,
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": true,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "Extremely Useful NFC Home Automation Ideas!",
+    "source_url": null,
+    "creator_name": "Smart Home Solver",
+    "timestamp": null,
+    "anchor_quote": "my smart home will remind me over and over again until I actually come out here and then I just scan",
+    "notes": "Tag features a center hole for zip-tie attachment."
+  },
+  {
+    "idea_title": "Pre-Cool Home Thermostats from Car Console",
+    "summary": "Scanning an in-car tag switches home thermostats from away mode back into cooling mode before you reach home.",
+    "how_it_works": "An NFC tag is stuck inside a car console. Tapping the tag with a phone sends a command to return home climate control to cooling mode while driving.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "car"
+    ],
+    "goals": [
+      "automation"
+    ],
+    "phone_support": "any",
+    "extra_app": null,
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "Extremely Useful NFC Home Automation Ideas!",
+    "source_url": null,
+    "creator_name": "Smart Home Solver",
+    "timestamp": null,
+    "anchor_quote": "scan on my phone and that will send all my thermostats back into cooling mode",
+    "notes": null
+  },
+  {
+    "idea_title": "In-Car Visor Secure Garage Door Opener",
+    "summary": "Scanning a hidden tag behind a car sun visor opens the garage door securely upon approach without needing a physical remote.",
+    "how_it_works": "An NFC sticker is attached behind a car sun visor. Unlocking your phone and tapping the tag triggers the garage door opener automation.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "car",
+      "home"
+    ],
+    "goals": [
+      "access",
+      "security",
+      "automation"
+    ],
+    "phone_support": "any",
+    "extra_app": null,
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "Extremely Useful NFC Home Automation Ideas!",
+    "source_url": null,
+    "creator_name": "Smart Home Solver",
+    "timestamp": null,
+    "anchor_quote": "little nfc sticker right behind my visor and if I'm heading home I can just scan that and that will open up my garage door",
+    "notes": null
+  },
+  {
+    "idea_title": "Laundry Machine Smart Timer and Cancellation",
+    "summary": "Scanning a tag on washer or dryer appliances starts a countdown timer on smart speakers and allows canceling alerts early if laundry is moved early.",
+    "how_it_works": "NFC stickers placed on appliances start a smart speaker timer when scanned. Scanning again cancels the notification if laundry finishes ahead of schedule.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home"
+    ],
+    "goals": [
+      "automation",
+      "reminder"
+    ],
+    "phone_support": "any",
+    "extra_app": null,
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "Extremely Useful NFC Home Automation Ideas!",
+    "source_url": null,
+    "creator_name": "Smart Home Solver",
+    "timestamp": null,
+    "anchor_quote": "scan the tag again and it will cancel out the timer",
+    "notes": null
+  },
+  {
+    "idea_title": "Bathroom Toilet Paper Emergency Help Alert",
+    "summary": "Tapping a bathroom tag broadcasts an assistance request across smart home speakers when running low on toilet paper.",
+    "how_it_works": "An NFC tag in the bathroom is tapped with a smartphone, prompting smart home speakers to announce a request for toilet paper assistance.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home"
+    ],
+    "goals": [
+      "automation"
+    ],
+    "phone_support": "any",
+    "extra_app": null,
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "Extremely Useful NFC Home Automation Ideas!",
+    "source_url": null,
+    "creator_name": "Smart Home Solver",
+    "timestamp": null,
+    "anchor_quote": "scan that nfc tag and it will announce on all the echoes that you need help",
+    "notes": null
+  },
+  {
+    "idea_title": "Exit Door Home Departure Routine Trigger",
+    "summary": "Scanning an NFC sticker near the front door arms the security system, turns off lights and thermostats, and starts the robot vacuum simultaneously.",
+    "how_it_works": "An NFC sticker placed near the exit door is scanned when leaving. The smart home system arms alarms, sets away temperatures, and starts vacuuming.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home"
+    ],
+    "goals": [
+      "automation",
+      "security"
+    ],
+    "phone_support": "any",
+    "extra_app": null,
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "Extremely Useful NFC Home Automation Ideas!",
+    "source_url": null,
+    "creator_name": "Smart Home Solver",
+    "timestamp": null,
+    "anchor_quote": "nfc sticker right next to your door... arms your alarm put your thermostats in away mode start your robot vacuum",
+    "notes": null
+  },
+  {
+    "idea_title": "Nightstand All-Lights Bedtime Shutoff",
+    "summary": "Tapping a nightstand NFC tag at bedtime instantly turns off all smart lights across the entire house.",
+    "how_it_works": "An NFC tag is affixed to a nightstand. Tapping a smartphone on the tag executes an automation to turn off every light bulb in the house.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home"
+    ],
+    "goals": [
+      "automation"
+    ],
+    "phone_support": "any",
+    "extra_app": null,
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "Extremely Useful NFC Home Automation Ideas!",
+    "source_url": null,
+    "creator_name": "Smart Home Solver",
+    "timestamp": null,
+    "anchor_quote": "scan it at night when she goes to bed and it turns off every single light in the house",
+    "notes": null
+  },
+  {
+    "idea_title": "Time-Sensitive Nightstand Multi-Routine Switch",
+    "summary": "A nightstand tag executes different actions depending on time of day, turning on hallway lights for late-night noise checks or starting morning routines.",
+    "how_it_works": "Scanning a nightstand tag checks current time; at 1 AM it turns on security lights, while during morning hours it launches a morning routine.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home"
+    ],
+    "goals": [
+      "automation",
+      "security"
+    ],
+    "phone_support": "any",
+    "extra_app": null,
+    "difficulty": "medium",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "Extremely Useful NFC Home Automation Ideas!",
+    "source_url": null,
+    "creator_name": "Smart Home Solver",
+    "timestamp": null,
+    "anchor_quote": "different functionality depending on what time of day it is",
+    "notes": null
+  },
+  {
+    "idea_title": "Hidden Canvas Art Family Room Movie Mode",
+    "summary": "Scanning a hidden tag behind a wall canvas turns off room lights and disables motion sensors to prevent light interruptions during movies.",
+    "how_it_works": "An NFC tag concealed inside wall artwork is scanned with a phone to dim room lighting and temporarily turn off motion-activated light automations.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home"
+    ],
+    "goals": [
+      "automation"
+    ],
+    "phone_support": "any",
+    "extra_app": null,
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "Extremely Useful NFC Home Automation Ideas!",
+    "source_url": null,
+    "creator_name": "Smart Home Solver",
+    "timestamp": null,
+    "anchor_quote": "hidden in canvas picture... turns off movie mode in this room turns off all the lights and it disables the motion sensors",
+    "notes": "Hidden inside canvas print artwork."
+  },
+  {
+    "idea_title": "Discreet Decor Tags in Books and Coasters",
+    "summary": "Hiding NFC tags inside book covers or drink coasters offers seamless, invisible home automation triggers integrated into decor.",
+    "how_it_works": "NFC stickers placed inside book covers or coasters trigger custom smart home routines when a phone is tapped against them.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home"
+    ],
+    "goals": [
+      "automation"
+    ],
+    "phone_support": "any",
+    "extra_app": null,
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "Extremely Useful NFC Home Automation Ideas!",
+    "source_url": null,
+    "creator_name": "Smart Home Solver",
+    "timestamp": null,
+    "anchor_quote": "nfc tag right inside the cover or... coaster",
+    "notes": null
+  },
+  {
+    "idea_title": "Hidden Light Switch Plate Documentation Scanner",
+    "summary": "A tag hidden behind a light switch wall plate displays room automation details and electrical circuit switch info when scanned.",
+    "how_it_works": "An NFC tag mounted behind a light switch wall plate is scanned to display smart home documentation, active routines, and electrical breaker assignments.",
+    "audience": [
+      "personal",
+      "workplace"
+    ],
+    "settings": [
+      "home",
+      "office"
+    ],
+    "goals": [
+      "share_info"
+    ],
+    "phone_support": "any",
+    "extra_app": null,
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "Extremely Useful NFC Home Automation Ideas!",
+    "source_url": null,
+    "creator_name": "Smart Home Solver",
+    "timestamp": null,
+    "anchor_quote": "behind the light switch wall plate... documentation for their smart home",
+    "notes": "Concealed behind light switch wall plate."
+  },
+  {
+    "idea_title": "Kids Room Light Switch Bedtime Routine",
+    "summary": "A tag attached to a kid's room light switch dims room lighting and plays soothing lullabies over smart speakers.",
+    "how_it_works": "Scanning an NFC tag mounted on a kid's light switch plate triggers a bedtime routine that lowers light levels and streams lullaby audio on an Echo Dot.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home"
+    ],
+    "goals": [
+      "automation"
+    ],
+    "phone_support": "any",
+    "extra_app": null,
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "Extremely Useful NFC Home Automation Ideas!",
+    "source_url": null,
+    "creator_name": "Smart Home Solver",
+    "timestamp": null,
+    "anchor_quote": "trigger a bedtime routine with it so it will dim the lights and start playing lullabies",
+    "notes": "Prevents kids from tampering with physical smart buttons."
+  },
+  {
+    "idea_title": "Robot Vacuum Mop Tank Maintenance Reset",
+    "summary": "Scanning a tag on a robot vacuum dock resets weekly reminders to clean out dirty water mop tanks.",
+    "how_it_works": "After cleaning the robot vacuum mop tank, tapping an NFC sticker on the dock resets the smart home maintenance timer for another week.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home"
+    ],
+    "goals": [
+      "reminder",
+      "tracking",
+      "automation"
+    ],
+    "phone_support": "any",
+    "extra_app": null,
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "Extremely Useful NFC Home Automation Ideas!",
+    "source_url": null,
+    "creator_name": "Smart Home Solver",
+    "timestamp": null,
+    "anchor_quote": "scan the nfc tag and it will reset that reminder for another week",
+    "notes": null
+  },
+  {
+    "idea_title": "Storage Bin Inventory Notification Scan",
+    "summary": "An NFC tag stuck to garage storage bins sends a phone notification listing items stored inside without opening boxes.",
+    "how_it_works": "NFC stickers placed on garage storage containers send pop-up phone notifications listing box contents upon scanning.",
+    "audience": [
+      "personal",
+      "workplace"
+    ],
+    "settings": [
+      "home",
+      "warehouse"
+    ],
+    "goals": [
+      "share_info",
+      "tracking"
+    ],
+    "phone_support": "any",
+    "extra_app": null,
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "Extremely Useful NFC Home Automation Ideas!",
+    "source_url": null,
+    "creator_name": "Smart Home Solver",
+    "timestamp": null,
+    "anchor_quote": "put an nfc tag that will scan it and it will give me a notification of what's inside",
+    "notes": null
+  },
+  {
+    "idea_title": "Garage Motion Lighting Override Switch",
+    "summary": "Scanning a garage NFC tag overrides the automatic 10-minute light turn-off timer, keeping lights illuminated while working.",
+    "how_it_works": "An NFC tag in the garage is scanned with a phone to disable automatic motion light shutoff timers during extended projects.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home"
+    ],
+    "goals": [
+      "automation"
+    ],
+    "phone_support": "any",
+    "extra_app": null,
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "Extremely Useful NFC Home Automation Ideas!",
+    "source_url": null,
+    "creator_name": "Smart Home Solver",
+    "timestamp": null,
+    "anchor_quote": "nfc tag in here that will override those lights turning off",
+    "notes": null
+  },
+  {
+    "idea_title": "Spotify Playback Transfer to Local Speaker",
+    "summary": "Scanning an in-room tag transfers active Spotify audio streaming from your phone directly to that room's Echo Dot speaker.",
+    "how_it_works": "An NFC tag in the room is scanned to pass active Spotify audio playback from smartphone to the local Echo Dot speaker.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home"
+    ],
+    "goals": [
+      "automation"
+    ],
+    "phone_support": "any",
+    "extra_app": null,
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "Extremely Useful NFC Home Automation Ideas!",
+    "source_url": null,
+    "creator_name": "Smart Home Solver",
+    "timestamp": null,
+    "anchor_quote": "switch the spotify source to the echo dot right in the room and automatically start playing",
+    "notes": null
+  },
+  {
+    "idea_title": "Doorbell Motion Alert Pause Toggle",
+    "summary": "Scanning a tag near the front door temporarily disables video doorbell motion notifications while working in the yard or porch.",
+    "how_it_works": "An NFC tag mounted on the front entrance light switch plate toggles video doorbell motion alerts off or back on when scanned.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home"
+    ],
+    "goals": [
+      "automation"
+    ],
+    "phone_support": "any",
+    "extra_app": null,
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "Extremely Useful NFC Home Automation Ideas!",
+    "source_url": null,
+    "creator_name": "Smart Home Solver",
+    "timestamp": null,
+    "anchor_quote": "nfc tag right here in the light switch plate next to the front door... disable them all",
+    "notes": null
+  },
+  {
+    "idea_title": "Storage Bin Photo Album Visual Catalog",
+    "summary": "Attaching thin adhesive tags programmed with Google Photos album links to storage bins reveals photo catalogs of hidden items when scanned.",
+    "how_it_works": "Photos of items in a bin are uploaded to a Google Photos album. The album share link is written to an NFC tag using NFC Tools; scanning opens the photo album.",
+    "audience": [
+      "personal",
+      "workplace"
+    ],
+    "settings": [
+      "home",
+      "warehouse"
+    ],
+    "goals": [
+      "share_info",
+      "tracking"
+    ],
+    "phone_support": "any",
+    "extra_app": "NFC Tools",
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "How I used these NFC tags to organize my whole house?",
+    "source_url": null,
+    "creator_name": "Andilynn's Amazing Reviews",
+    "timestamp": null,
+    "anchor_quote": "hold your phone in front of the NFD tag... open the URL all you have to do is click that to open that you can see everything inside",
+    "notes": "Uses color-matched stickers (black/white) to match furniture."
+  },
+  {
+    "idea_title": "Physical Key Card Digitization for iPhone",
+    "summary": "Registers physical NFC door key cards into the iPhone Shortcuts app to unlock entry doors using the smartphone instead of plastic cards.",
+    "how_it_works": "Open iOS Shortcuts app, create a new NFC automation, scan your physical entry key card against the back of the iPhone, and set up the unlock action.",
+    "audience": [
+      "personal",
+      "workplace"
+    ],
+    "settings": [
+      "home",
+      "office"
+    ],
+    "goals": [
+      "access",
+      "automation",
+      "security"
+    ],
+    "phone_support": "iphone_only",
+    "extra_app": "iOS Shortcuts",
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "card",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": null,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "How to Add Door Access Cards to iPhone (Use NFC to Open Doors)",
+    "source_url": null,
+    "creator_name": "Digibase Media",
+    "timestamp": null,
+    "anchor_quote": "scan your card and complete the wizard... door access card will be added to your iPhone",
+    "notes": "Uses built-in iPhone Shortcuts app."
+  },
+  {
+    "idea_title": "Physical Barrier Social Media App Blocker",
+    "summary": "Scanning a tag on a distant container locks distracting social media apps, requiring physical movement to unlock them and stopping mind-less scrolling.",
+    "how_it_works": "An NFC sticker is attached to a container lid in an entryway. Tapping the phone configures the Focus app to lock selected social media apps until tapped again.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home"
+    ],
+    "goals": [
+      "automation",
+      "reminder"
+    ],
+    "phone_support": "any",
+    "extra_app": "Focus",
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "how I use NFC tags around my apartment (the ones that actually stuck)",
+    "source_url": null,
+    "creator_name": "Caitlin's Corner",
+    "timestamp": null,
+    "anchor_quote": "creating my own brick... when I want to lock the social media apps on my phone I scan it",
+    "notes": "Uses the free Focus app."
+  },
+  {
+    "idea_title": "Office Desk Drawer Work Focus Routine",
+    "summary": "Tapping a hidden tag inside an office drawer turns on Work Focus mode, sets a 30-minute Pomodoro timer, and opens YouTube background music.",
+    "how_it_works": "An NFC sticker inside an office drawer is tapped with an iPhone. An iOS Shortcut vibrates the phone, sets Work Focus till 5 PM, starts a 30-min timer, and launches YouTube.",
+    "audience": [
+      "personal",
+      "workplace"
+    ],
+    "settings": [
+      "office",
+      "home"
+    ],
+    "goals": [
+      "automation"
+    ],
+    "phone_support": "iphone_only",
+    "extra_app": "iOS Shortcuts",
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "how I use NFC tags around my apartment (the ones that actually stuck)",
+    "source_url": null,
+    "creator_name": "Caitlin's Corner",
+    "timestamp": null,
+    "anchor_quote": "NFC sticker stuck to the inside of one of my top office drawers... turns on my work focus",
+    "notes": "Mounted inside top office desk drawer."
+  },
+  {
+    "idea_title": "E-Reader Case Reading Focus Routine",
+    "summary": "Scanning a tag behind an e-reader case activates Do Not Disturb reading focus, vibrates device, and searches YouTube for instrumental reading music.",
+    "how_it_works": "An NFC tag slipped behind an e-reader case is scanned with an iPhone to run an iOS Shortcut: vibrates device, turns on Reading Focus, and opens YouTube reading ambient audio.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home"
+    ],
+    "goals": [
+      "automation"
+    ],
+    "phone_support": "iphone_only",
+    "extra_app": "iOS Shortcuts",
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "how I use NFC tags around my apartment (the ones that actually stuck)",
+    "source_url": null,
+    "creator_name": "Caitlin's Corner",
+    "timestamp": null,
+    "anchor_quote": "slip behind my e-reader case... program an automation with an NFC tag",
+    "notes": "Slipped behind e-reader case cover."
+  },
+  {
+    "idea_title": "Nightstand Bedtime Ambient Lighting Routine",
+    "summary": "Scanning a nightstand sticker turns off apartment lights, switches on a soothing red bedroom bulb, and enables Sleep Focus mode.",
+    "how_it_works": "An NFC sticker on a side table is scanned with an iPhone to execute a Shortcut: turns off main Philips Hue lights, turns on bedroom lamp red light, and activates Sleep Focus.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home"
+    ],
+    "goals": [
+      "automation"
+    ],
+    "phone_support": "iphone_only",
+    "extra_app": "iOS Shortcuts",
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "how I use NFC tags around my apartment (the ones that actually stuck)",
+    "source_url": null,
+    "creator_name": "Caitlin's Corner",
+    "timestamp": null,
+    "anchor_quote": "turns off all of the lights in my apartment but it also turns on the lamp in my bedroom",
+    "notes": "Controls smart Philips Hue bulbs."
+  },
+  {
+    "idea_title": "Entryway House Lockdown and Transit Check",
+    "summary": "Scanning an entryway tag ensures all smart lights are turned off and opens the local transit app to check subway delays before stepping out.",
+    "how_it_works": "An NFC tag near the entryway is scanned when leaving. An iOS Shortcut shuts off all smart lights and opens the TTC transit app to review delay alerts.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home",
+      "travel"
+    ],
+    "goals": [
+      "automation"
+    ],
+    "phone_support": "iphone_only",
+    "extra_app": "iOS Shortcuts",
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "how I use NFC tags around my apartment (the ones that actually stuck)",
+    "source_url": null,
+    "creator_name": "Caitlin's Corner",
+    "timestamp": null,
+    "anchor_quote": "puts my house in lockdown mode... open up the TTC app so I can see if there's any delays",
+    "notes": "Opens Toronto transit (TTC) app."
+  },
+  {
+    "idea_title": "Physical Planner Notion Life Manual Shortcut",
+    "summary": "Scanning a tag in a paper planner sets a timer, plays music, and opens Notion's Life Management Manual for updating appointments and lists.",
+    "how_it_works": "An NFC tag placed inside a Filofax planner pocket is tapped to launch a focus timer, turn on planning background music, and open a specific Notion template.",
+    "audience": [
+      "personal",
+      "workplace"
+    ],
+    "settings": [
+      "office",
+      "home"
+    ],
+    "goals": [
+      "automation",
+      "tracking"
+    ],
+    "phone_support": "any",
+    "extra_app": "Notion",
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "how I use NFC tags around my apartment (the ones that actually stuck)",
+    "source_url": null,
+    "creator_name": "Caitlin's Corner",
+    "timestamp": null,
+    "anchor_quote": "slipped an NFC tag in one of my pockets here that opens up a journaling planning mode",
+    "notes": "Bridges physical planner with Notion digital dashboard."
+  },
+  {
+    "idea_title": "Leather Journal On-The-Go Voice Dictation",
+    "summary": "Scanning a tag inside a mini leather notebook keychain immediately starts dictating spoken thoughts directly into an Apple Notes file.",
+    "how_it_works": "An NFC tag embedded in a miniature leather journal keychain is scanned. An iOS Shortcut opens voice transcription and appends spoken text to an 'on-the-go thoughts' note.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "outdoors",
+      "travel"
+    ],
+    "goals": [
+      "automation",
+      "tracking"
+    ],
+    "phone_support": "iphone_only",
+    "extra_app": "iOS Shortcuts",
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "how I use NFC tags around my apartment (the ones that actually stuck)",
+    "source_url": null,
+    "creator_name": "Caitlin's Corner",
+    "timestamp": null,
+    "anchor_quote": "opens up a voice note that I can speak into and it will dictate the text",
+    "notes": "Tag is inside a handmade miniature leather notebook keychain."
+  },
+  {
+    "idea_title": "Hidden Painting Quick Social Links Access",
+    "summary": "Scanning an NFC tag concealed behind a mini painting instantly opens a note containing pre-saved social media URLs for fast copying.",
+    "how_it_works": "An NFC tag behind a small painting is scanned with an iPhone to open a specific Apple Note holding all social media URLs.",
+    "audience": [
+      "personal",
+      "workplace"
+    ],
+    "settings": [
+      "home",
+      "office"
+    ],
+    "goals": [
+      "share_info"
+    ],
+    "phone_support": "iphone_only",
+    "extra_app": "iOS Shortcuts",
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "how I use NFC tags around my apartment (the ones that actually stuck)",
+    "source_url": null,
+    "creator_name": "Caitlin's Corner",
+    "timestamp": null,
+    "anchor_quote": "mini painting... behind it I have an NFC tag... opens up my notes that has my social media links",
+    "notes": "Concealed behind a mini art painting."
+  },
+  {
+    "idea_title": "Fridge Sticker Categorized Smart Grocery List",
+    "summary": "Tapping a fridge NFC sticker opens the Apple Reminders grocery list, which automatically categorizes added items by store section.",
+    "how_it_works": "An NFC sticker on the refrigerator is scanned to open the Apple Reminders groceries list directly, allowing quick entry of missing grocery items.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home"
+    ],
+    "goals": [
+      "automation",
+      "reminder"
+    ],
+    "phone_support": "iphone_only",
+    "extra_app": "iOS Shortcuts",
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "how I use NFC tags around my apartment (the ones that actually stuck)",
+    "source_url": null,
+    "creator_name": "Caitlin's Corner",
+    "timestamp": null,
+    "anchor_quote": "NFC sticker to open up the groceries notes within the reminders app",
+    "notes": "Mounted on refrigerator door."
+  },
+  {
+    "idea_title": "Watering Can Plant Care Calendar Logger",
+    "summary": "Scanning a tag beneath a watering can automatically adds a 'plants have been watered' event to your calendar to track plant care.",
+    "how_it_works": "An NFC tag affixed under a watering can is scanned with an iPhone. An iOS Shortcut adds a timestamped calendar event logging that plants were watered.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home"
+    ],
+    "goals": [
+      "tracking",
+      "automation"
+    ],
+    "phone_support": "iphone_only",
+    "extra_app": "iOS Shortcuts",
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "how I use NFC tags around my apartment (the ones that actually stuck)",
+    "source_url": null,
+    "creator_name": "Caitlin's Corner",
+    "timestamp": null,
+    "anchor_quote": "underneath my watering can... adds an event to my calendar that says plants have been watered",
+    "notes": "Placed under the base of a plant watering can."
+  }
+]
