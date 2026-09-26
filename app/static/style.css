@@ -300,3 +300,5 @@ dialog label.check input { width: auto; }
 @media (max-width: 800px) { .hero-art { order: 1; max-width: 340px; margin-top: .5rem; } }
 .hero-art img.pixel { image-rendering: pixelated; }
 .hero-art img.pixel { width: 468px; max-width: 100%; margin: 0 auto; }
+.hero-art img.hero-img { width: 100%; max-width: 520px; height: auto; border-radius: 20px; }
+@media (prefers-color-scheme: dark) { .hero-art img.hero-img { filter: none; box-shadow: 0 10px 40px rgba(0,0,0,.35); } }

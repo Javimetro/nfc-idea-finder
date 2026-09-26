@@ -339,6 +339,10 @@ the user then asked for **pixel art**. `scripts/draw_hero_pixel.py` draws the sa
 
 ![Home page, pixel art](docs/img/23-home-pixel-art.png)
 
+**Final choice:** the user generated an illustration from the same prompt with an AI image tool, and that is what the home page uses now (`hero.webp`, 73 KB, with a JPG fallback). Both code-drawn versions stay in the repo. A good example of trying three ways to the same goal: vector by code, pixel art by code, and an AI image generator.
+
+![Home page, final image](docs/img/24-home-final-image.png)
+
 ![Home page with illustration](docs/img/22-home-with-illustration.png)
 
 ---
