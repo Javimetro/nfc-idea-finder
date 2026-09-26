@@ -82,11 +82,12 @@ function renderQuestion() {
   } else {
     const opts = optionsFor(q);
     const chips = q.type === "multi" && q.id === "about";
-    body = `<div class="options ${chips ? "chips" : ""}" role="${q.type === "multi" ? "group" : "radiogroup"}">` +
+    const tiles = q.type === "multi" && q.id !== "about";
+    body = `<div class="options ${chips ? "chips" : ""} ${tiles ? "tiles" : ""}" role="${q.type === "multi" ? "group" : "radiogroup"}">` +
       opts.map((o) => {
         const sel = q.type === "multi" ? (val || []).includes(o.value) : val === o.value;
         return `<button type="button" class="option ${sel ? "selected" : ""}" data-value="${o.value}" aria-pressed="${sel}">
-          <span class="label">${esc(o.label)}</span>${o.hint ? `<span class="hint">${esc(o.hint)}</span>` : ""}</button>`;
+          ${o.icon ? `<span class="opt-ico" aria-hidden="true">${o.icon}</span>` : ""}<span class="opt-txt"><span class="label">${esc(o.label)}</span>${o.hint ? `<span class="hint">${esc(o.hint)}</span>` : ""}</span></button>`;
       }).join("") + "</div>";
   }
   $("#question").innerHTML = `<h2 class="q-title">${esc(q.title)}</h2>${q.subtitle ? `<p class="q-sub">${esc(q.subtitle)}</p>` : ""}${body}`;

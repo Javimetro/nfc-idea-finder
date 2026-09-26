@@ -28,14 +28,15 @@ INTRO = {
 
 
 def _need_options(question):
-    return [{"value": n["id"], "label": n["label"], **({"show_if": n["show_if"]} if n.get("show_if") else {})}
+    return [{"value": n["id"], "icon": n.get("icon"), "label": n.get("short") or n["label"], "hint": n["label"],
+             **({"show_if": n["show_if"]} if n.get("show_if") else {})}
             for n in NEEDS if n["question"] == question]
 
 
 # One screen per "world". show_if = only for people who picked one of these on screen 1.
 # Worlds without show_if are shown to everyone (everybody has mornings and a home).
 WORLDS = [
-    ("mornings", "Mornings and evenings", "Pick anything that sounds like you. Skip if nothing fits.", None),
+    ("mornings", "Mornings and evenings", "Tap what sounds like you. Skip if nothing fits.", None),
     ("home", "At home", "The little annoyances are the best clues.", None),
     ("kids", "With the kids", "Pick anything that sounds like your family.", ["kids"]),
     ("pets", "Your pets", "Pick anything that sounds familiar.", ["pets"]),
@@ -62,23 +63,23 @@ QUESTIONS = [
     {
         "id": "about", "type": "multi",
         "title": "First, a little about you",
-        "subtitle": "Pick everything that's true. This decides which questions come next.",
+        "subtitle": "Tap everything that fits you.",
         "options": [
-            {"value": "desk_job", "label": "I work at a desk / office"},
-            {"value": "work_from_home", "label": "I work from home"},
-            {"value": "student", "label": "I'm a student"},
-            {"value": "drive", "label": "I drive a car"},
-            {"value": "travel_often", "label": "I travel often"},
-            {"value": "kids", "label": "I have kids"},
-            {"value": "pets", "label": "I have pets"},
-            {"value": "plants", "label": "I have plants or a garden"},
-            {"value": "shared_home", "label": "I live with other people"},
-            {"value": "workout", "label": "I exercise at home"},
-            {"value": "hobbies", "label": "I have hobbies (music, games, crafts\u2026)"},
-            {"value": "smart_home", "label": "I have smart lights, plugs or speakers"},
-            {"value": "hub", "label": "I use Home Assistant or a smart home hub"},
-            {"value": "business_owner", "label": "I run a business, shop or club"},
-            {"value": "money", "label": "I'd like to earn money with NFC"},
+            {"value": "desk_job", "icon": "💼", "label": "I work at a desk / office"},
+            {"value": "work_from_home", "icon": "🏡", "label": "I work from home"},
+            {"value": "student", "icon": "🎓", "label": "I'm a student"},
+            {"value": "drive", "icon": "🚗", "label": "I drive a car"},
+            {"value": "travel_often", "icon": "✈️", "label": "I travel often"},
+            {"value": "kids", "icon": "🧒", "label": "I have kids"},
+            {"value": "pets", "icon": "🐾", "label": "I have pets"},
+            {"value": "plants", "icon": "🪴", "label": "I have plants or a garden"},
+            {"value": "shared_home", "icon": "👥", "label": "I live with other people"},
+            {"value": "workout", "icon": "🏋️", "label": "I exercise at home"},
+            {"value": "hobbies", "icon": "🎨", "label": "I have hobbies (music, games, crafts\u2026)"},
+            {"value": "smart_home", "icon": "💡", "label": "I have smart lights, plugs or speakers"},
+            {"value": "hub", "icon": "🏠", "label": "I use Home Assistant or a smart home hub"},
+            {"value": "business_owner", "icon": "🏪", "label": "I run a business, shop or club"},
+            {"value": "money", "icon": "💶", "label": "I'd like to earn money with NFC"},
         ],
     },
     *[_world_question(*w) for w in WORLDS],
@@ -87,18 +88,18 @@ QUESTIONS = [
         "title": "What phone do you have?",
         "subtitle": "Some ideas work a bit differently on each.",
         "options": [
-            {"value": "iphone", "label": "iPhone"},
-            {"value": "android", "label": "Android", "hint": "Samsung, Pixel, Xiaomi, OnePlus\u2026"},
-            {"value": "both", "label": "Both / other people's phones", "hint": "Family, guests or customers will tap too"},
+            {"value": "iphone", "icon": "📱", "label": "iPhone"},
+            {"value": "android", "icon": "🤖", "label": "Android", "hint": "Samsung, Pixel, Xiaomi, OnePlus\u2026"},
+            {"value": "both", "icon": "👥", "label": "Both / other people's phones", "hint": "Family, guests or customers will tap too"},
         ],
     },
     {
         "id": "hands_on", "type": "single", "required": True,
         "title": "How much setup is OK for you?",
         "options": [
-            {"value": "easy", "label": "It should just work", "hint": "A couple of minutes, no settings"},
-            {"value": "medium", "label": "I can follow a short guide", "hint": "About 10\u201320 minutes with an app"},
-            {"value": "advanced", "label": "I love tinkering", "hint": "Smart home setups, Raspberry Pi, building gadgets"},
+            {"value": "easy", "icon": "⚡", "label": "It should just work", "hint": "A couple of minutes, no settings"},
+            {"value": "medium", "icon": "🛠️", "label": "I can follow a short guide", "hint": "About 10\u201320 minutes with an app"},
+            {"value": "advanced", "icon": "🔧", "label": "I love tinkering", "hint": "Smart home setups, Raspberry Pi, building gadgets"},
         ],
     },
     {

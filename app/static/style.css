@@ -302,3 +302,20 @@ dialog label.check input { width: auto; }
 .hero-art img.pixel { width: 468px; max-width: 100%; margin: 0 auto; }
 .hero-art img.hero-img { width: 100%; max-width: 520px; height: auto; border-radius: 20px; }
 @media (prefers-color-scheme: dark) { .hero-art img.hero-img { filter: none; box-shadow: 0 10px 40px rgba(0,0,0,.35); } }
+
+/* ---------- v5: scannable options (icon + short title, detail in small text) ---------- */
+.option { display: flex; align-items: center; gap: .8rem; }
+.opt-ico { font-size: 1.6rem; line-height: 1; flex: none; }
+.opt-txt { display: grid; gap: .1rem; }
+.options.chips .option { gap: .45rem; }
+.options.chips .opt-ico { font-size: 1.15rem; }
+.options.chips .option.selected::before { content: none; }
+.options.tiles { grid-template-columns: repeat(auto-fill, minmax(165px, 1fr)); }
+.options.tiles .option { flex-direction: column; align-items: flex-start; gap: .55rem; padding: 1rem; min-height: 132px; position: relative; }
+.options.tiles .opt-ico { font-size: 2rem; }
+.options.tiles .label { font-size: 1rem; line-height: 1.25; }
+.options.tiles .hint { font-size: .78rem; line-height: 1.35; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+.options.tiles .option.selected::after { content: "✓"; position: absolute; top: .6rem; right: .7rem; width: 22px; height: 22px; border-radius: 50%;
+  background: var(--accent); color: #fff; font-weight: 800; font-size: .8rem; display: grid; place-items: center; }
+.options.chips .option.selected { box-shadow: inset 0 0 0 1px var(--accent); }
+@media (max-width: 520px) { .options.tiles { grid-template-columns: 1fr 1fr; } .options.tiles .option { min-height: 120px; } }

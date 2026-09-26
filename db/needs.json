@@ -12,7 +12,9 @@
   ],
   "ideas": {
    "i024": "Put a sticker in the bathroom or kitchen and set your alarm so it only stops when you tap it. You have to get out of bed to switch it off, and once you're up, you're up."
-  }
+  },
+  "icon": "😴",
+  "short": "Snooze addict"
  },
  {
   "id": "m_pills",
@@ -29,7 +31,9 @@
   "ideas": {
    "i028": "Stick a tag on the bottle and tap it when you take one. Your phone keeps the record, so you'll never wonder “did I already take it?” or take a double dose.",
    "i029": "A second tag under the bottle can open the pharmacy's reorder page, so running out never catches you by surprise."
-  }
+  },
+  "icon": "💊",
+  "short": "Did I take my pills?"
  },
  {
   "id": "m_rush",
@@ -47,7 +51,9 @@
   "ideas": {
    "i008": "One tap on a sticker by the door on your way out switches everything off (and can open your bus app). No more turning back halfway down the stairs.",
    "i084": "If you have door and window sensors, the same tap can tell you if anything is still open."
-  }
+  },
+  "icon": "🏃",
+  "short": "Left the lights on?"
  },
  {
   "id": "m_checks",
@@ -66,7 +72,9 @@
    "i025": "Tap a sticker next to your coffee machine and your phone reads today's plan out loud while you get ready. No scrolling through five apps.",
    "i008": "Your leaving-home tag can also open your transit app, so you see delays exactly when you need them.",
    "i099": "A tag on the fridge or by the door opens exactly the schedule you check most: bin days, bus times, the weather."
-  }
+  },
+  "icon": "📅",
+  "short": "Morning check-ins"
  },
  {
   "id": "m_coffee",
@@ -82,7 +90,9 @@
   "ideas": {
    "i006": "A tag next to the kettle starts a timer with one tap. Faster than asking a voice assistant, and it's there every single time.",
    "i108": "With a smart plug, a tag on your headboard can even switch the coffee machine on before you get up."
-  }
+  },
+  "icon": "☕",
+  "short": "Cold coffee again"
  },
  {
   "id": "h_lights",
@@ -102,7 +112,9 @@
    "i016": "One tap on a tag starts your favourite playlist on your speaker. No searching in the app.",
    "i014": "A “movie night” tag dims the lights and opens Netflix in one tap.",
    "i001": "And a tag by each speaker moves the music that's playing on your phone to that room."
-  }
+  },
+  "icon": "💡",
+  "short": "Lights & music hassle"
  },
  {
   "id": "h_bedtime",
@@ -117,7 +129,9 @@
   ],
   "ideas": {
    "i010": "A tag on your nightstand (or on the charger) turns off every light and puts your phone on sleep mode in one tap. Your whole goodnight routine in one move."
-  }
+  },
+  "icon": "🌙",
+  "short": "Bedtime switch-off"
  },
  {
   "id": "h_storage",
@@ -135,7 +149,9 @@
   ],
   "ideas": {
    "i003": "Put a sticker on each box. Tap it and see a list or photos of what's inside, without opening anything. Perfect for moving, the basement or the garage."
-  }
+  },
+  "icon": "📦",
+  "short": "What's in that box?"
  },
  {
   "id": "h_groceries",
@@ -151,7 +167,9 @@
   ],
   "ideas": {
    "i022": "Tag the jars or packs you always run out of. When one is almost empty, tap it and it lands on your shopping list. A tag on the fridge opens the list itself."
-  }
+  },
+  "icon": "🛒",
+  "short": "Out of milk again"
  },
  {
   "id": "h_wifi",
@@ -166,7 +184,9 @@
   ],
   "ideas": {
    "i043": "Put the wifi on a coaster or sticker. Guests tap and they're connected, with no more spelling out a 20-character password."
-  }
+  },
+  "icon": "📶",
+  "short": "Wifi password, again"
  },
  {
   "id": "h_chores",
@@ -186,7 +206,9 @@
    "i018": "Your phone reminds you on bin day until you tap the tag on the bin, so it can't be ignored or forgotten.",
    "i004": "Tap the appliance or filter when you've cleaned or changed it, and the reminder resets itself for next time.",
    "i017": "Tap the watering can after watering and your phone logs it, so you know when you last did it."
-  }
+  },
+  "icon": "🗑️",
+  "short": "Forgotten chores"
  },
  {
   "id": "h_laundry",
@@ -201,7 +223,9 @@
   ],
   "ideas": {
    "i006": "Tap the washing machine when you start it and your phone reminds you when it's done. No more damp, smelly forgotten laundry."
-  }
+  },
+  "icon": "🧺",
+  "short": "Forgotten laundry"
  },
  {
   "id": "h_plants",
@@ -216,7 +240,9 @@
   ],
   "ideas": {
    "i017": "A tag on each pot shows that plant's care card (light, water, fertiliser) when you tap it. Great as a gift too: the instructions come with the plant."
-  }
+  },
+  "icon": "🪴",
+  "short": "Plant care"
  },
  {
   "id": "h_kids_bed",
@@ -232,7 +258,9 @@
   "ideas": {
    "i012": "A tag by the kids' light switch dims the lights and starts their sleep music in one tap. It works like a button, but they can't play with it.",
    "i006": "Timer tags help too, e.g. two minutes of toothbrushing or “the milk has been out for 2 hours”."
-  }
+  },
+  "icon": "🧸",
+  "short": "Kids' bedtime"
  },
  {
   "id": "h_lost",
@@ -249,7 +277,9 @@
   ],
   "ideas": {
    "i046": "A tag on the collar, jacket or bag shows whoever finds them how to reach you, with one tap and no app needed. Link to a page you control, not your raw phone number."
-  }
+  },
+  "icon": "👧",
+  "short": "Child lost in a crowd"
  },
  {
   "id": "h_shared",
@@ -265,7 +295,9 @@
   ],
   "ideas": {
    "i020": "Stick a tag on the device and tap it to open its manual or how-to video. Handy for the baby car seat, the washing machine or the fuse box, and for anyone else in the house."
-  }
+  },
+  "icon": "📘",
+  "short": "Lost manuals"
  },
  {
   "id": "w_focus",
@@ -284,7 +316,9 @@
   "ideas": {
    "i031": "Tap a tag on your desk and your phone goes silent, a 25-minute focus timer starts and your work music plays. Starting to focus becomes a one-second ritual.",
    "i032": "Put a tag on the other side of the room that locks your social apps. To unlock them you have to get up, which is just enough friction to stop mindless scrolling."
-  }
+  },
+  "icon": "📵",
+  "short": "Phone distractions"
  },
  {
   "id": "w_ideas",
@@ -300,7 +334,9 @@
   "ideas": {
    "i033": "Tap your phone on a tag on your keychain or desk, and your phone starts listening. Say the idea and your phone types it into your notes. Saved in 5 seconds.",
    "i034": "A tag in your notebook or planner opens your digital notes page right away."
-  }
+  },
+  "icon": "💭",
+  "short": "Lost ideas"
  },
  {
   "id": "w_start",
@@ -317,7 +353,9 @@
   "ideas": {
    "i031": "One tap does all the small steps at once: focus mode on, timer started, the right apps and music open.",
    "i035": "Put tags where you use things (a notebook, the scale, the toothbrush) so each one opens exactly the right app."
-  }
+  },
+  "icon": "🖥️",
+  "short": "Slow start to work"
  },
  {
   "id": "w_network",
@@ -335,7 +373,9 @@
   "ideas": {
    "i044": "A card or keychain with a tag: people tap it with their phone and get your contact or portfolio. Nothing to install, and you can change the link any time.",
    "i045": "Or keep a small tag at your desk that opens all your links, ready to copy and send."
-  }
+  },
+  "icon": "🤝",
+  "short": "Share my contact"
  },
  {
   "id": "w_hotspot",
@@ -349,7 +389,9 @@
   ],
   "ideas": {
    "i037": "A tag on your laptop turns your phone's hotspot on with one tap, instead of digging through settings."
-  }
+  },
+  "icon": "📡",
+  "short": "Laptop needs internet"
  },
  {
   "id": "c_setup",
@@ -365,7 +407,9 @@
   ],
   "ideas": {
    "i040": "Put a tag in your phone holder. When the phone goes in, navigation, music and Bluetooth start by themselves."
-  }
+  },
+  "icon": "🚗",
+  "short": "Car setup, every time"
  },
  {
   "id": "c_eta",
@@ -380,7 +424,9 @@
   ],
   "ideas": {
    "i041": "Tap a tag in the car or at the door and your phone sends the message for you, even with your arrival time filled in."
-  }
+  },
+  "icon": "💬",
+  "short": "“On my way” texts"
  },
  {
   "id": "c_parking",
@@ -396,7 +442,9 @@
   "ideas": {
    "i006": "Tap a tag as you leave the car and a timer starts for exactly your parking time. No more fines.",
    "i094": "Tap the tag in the car when you park and your phone remembers the spot."
-  }
+  },
+  "icon": "🅿️",
+  "short": "Parking time runs out"
  },
  {
   "id": "c_gate",
@@ -410,7 +458,9 @@
   ],
   "ideas": {
    "i042": "A hidden tag behind the sun visor opens it from your phone. Set it up so only YOUR phone can trigger it."
-  }
+  },
+  "icon": "🏠",
+  "short": "Garage remote"
  },
  {
   "id": "t_packing",
@@ -430,7 +480,9 @@
   ],
   "ideas": {
    "i023": "A tag inside your suitcase opens your packing checklist. Tap, tick, go."
-  }
+  },
+  "icon": "🧳",
+  "short": "Packing lists"
  },
  {
   "id": "t_lost_bag",
@@ -447,7 +499,9 @@
   ],
   "ideas": {
    "i046": "A tag on the bag or keys tells whoever finds them how to reach you. Anyone can tap it, with no app needed."
-  }
+  },
+  "icon": "🎒",
+  "short": "Losing my stuff"
  },
  {
   "id": "x_water",
@@ -462,7 +516,9 @@
   ],
   "ideas": {
    "i027": "A tag on your bottle or coffee machine: tap and it's logged in your health app. Tracking takes one second instead of opening an app and typing."
-  }
+  },
+  "icon": "🚰",
+  "short": "Drink more water"
  },
  {
   "id": "x_workout",
@@ -482,7 +538,9 @@
   ],
   "ideas": {
    "i030": "Tap your mat or bike and the room sets itself up: lights, music and your workout video. Less friction means more workouts."
-  }
+  },
+  "icon": "🏋️",
+  "short": "Start working out"
  },
  {
   "id": "x_habit",
@@ -501,7 +559,9 @@
    "i035": "A tag on your study notebook opens today's lesson directly.",
    "i031": "A tag on your e-reader case turns on do-not-disturb, so reading time stays reading time.",
    "i091": "A tag where the habit happens (skincare shelf, bookshelf) marks today as done in your habit app. Streaks become satisfying."
-  }
+  },
+  "icon": "📖",
+  "short": "Build a habit"
  },
  {
   "id": "x_routines",
@@ -517,7 +577,9 @@
    "i006": "Timer tags put the timer exactly where the task is: kettle, laundry, toothbrush.",
    "i022": "Tap-to-add grocery tags catch things the moment you notice them.",
    "i091": "Habit tags turn each step into a tap, and your phone keeps the score."
-  }
+  },
+  "icon": "🧠",
+  "short": "Routines are hard"
  },
  {
   "id": "b_reviews",
@@ -535,7 +597,9 @@
   ],
   "ideas": {
    "i049": "A “tap to review” stand on the counter takes happy customers straight to your review page. Asking at the right moment, with zero effort, is what gets reviews."
-  }
+  },
+  "icon": "⭐",
+  "short": "More reviews"
  },
  {
   "id": "b_menu",
@@ -556,7 +620,9 @@
   "ideas": {
    "i050": "A tag on each table opens your menu. Change the menu online any time, with no reprinting.",
    "i052": "A small “tap for info” sign in the window works even when you're closed."
-  }
+  },
+  "icon": "📋",
+  "short": "Menu questions"
  },
  {
   "id": "b_wifi",
@@ -573,7 +639,9 @@
   ],
   "ideas": {
    "i043": "A wifi tag on the counter or table: customers tap and connect, and staff stop being asked all day."
-  }
+  },
+  "icon": "📶",
+  "short": "Customer wifi"
  },
  {
   "id": "b_followers",
@@ -591,7 +659,9 @@
   ],
   "ideas": {
    "i052": "A “tap to follow us” sign by the till turns a happy moment into a follow in one second."
-  }
+  },
+  "icon": "📣",
+  "short": "More followers"
  },
  {
   "id": "b_product",
@@ -610,7 +680,9 @@
   ],
   "ideas": {
    "i051": "A tag on the packaging opens instructions, ingredients or care tips. It's always up to date, and it feels premium."
-  }
+  },
+  "icon": "🏷️",
+  "short": "Product questions"
  },
  {
   "id": "b_events",
@@ -631,7 +703,9 @@
    "i052": "A tap sign on your stand gets visitors to follow or visit your shop after the event.",
    "i054": "Branded NFC items (pens, keychains) keep your page one tap away long after the fair.",
    "i044": "An NFC business card means no more running out of paper cards."
-  }
+  },
+  "icon": "🎪",
+  "short": "Markets & fairs"
  },
  {
   "id": "b_staff",
@@ -653,7 +727,9 @@
    "i058": "A tag in each room: staff tap it when done, and you get a time-stamped log instead of a paper list.",
    "i057": "Checkpoint tags along a route prove every stop was visited.",
    "i059": "Tags around a vehicle make sure every part of the check really happened."
-  }
+  },
+  "icon": "✅",
+  "short": "Proof of checks"
  },
  {
   "id": "b_members",
@@ -673,7 +749,9 @@
   "ideas": {
    "i079": "Members tap a card at the door and a small reader logs who came and when, with no paper list.",
    "i080": "The same cards can hold prepaid credit for a club kiosk or canteen."
-  }
+  },
+  "icon": "🎟️",
+  "short": "Member check-ins"
  },
  {
   "id": "b_new",
@@ -697,7 +775,9 @@
    "i047": "NFC gifts that play a voice message or video (jewellery, keepsakes, 3D prints).",
    "i054": "Branded NFC merch for companies at trade shows.",
    "i085": "Go one step further and sell it as a service: you set up the card plus its page (reviews, menu, links) and keep it updated for a monthly fee."
-  }
+  },
+  "icon": "💡",
+  "short": "Something new to sell"
  },
  {
   "id": "m_forget_stuff",
@@ -713,7 +793,9 @@
   ],
   "ideas": {
    "i023": "A tag by the door opens your checklist as you leave. Keys, wallet, bag: tick, tick, go."
-  }
+  },
+  "icon": "🔑",
+  "short": "Forgot my keys"
  },
  {
   "id": "e_lockup",
@@ -730,7 +812,9 @@
   "ideas": {
    "i082": "Put a tag at each door and window. Tap them on your round and your phone ticks them off, so you know you really did it and can stop worrying.",
    "i084": "With door/window sensors, one tap by the bed can check them all for you."
-  }
+  },
+  "icon": "🚪",
+  "short": "The final door check"
  },
  {
   "id": "h_replace",
@@ -747,7 +831,9 @@
   ],
   "ideas": {
    "i004": "Tap the tag when you change it and your phone reminds you when it's due again, e.g. a new toothbrush head in 90 days."
-  }
+  },
+  "icon": "🪥",
+  "short": "When did I change it?"
  },
  {
   "id": "h_family_chores",
@@ -765,7 +851,9 @@
   "show_if": [
    "shared_home",
    "kids"
-  ]
+  ],
+  "icon": "🧽",
+  "short": "Who did the dishes?"
  },
  {
   "id": "h_audio",
@@ -782,7 +870,9 @@
   "ideas": {
    "i088": "Tap the headphone case or the speaker and your phone connects and starts your audio. No digging in the Bluetooth menu.",
    "i001": "And to move music between rooms, tap the tag next to each speaker."
-  }
+  },
+  "icon": "🎧",
+  "short": "Headphone hassle"
  },
  {
   "id": "h_emergency",
@@ -800,7 +890,9 @@
   "ideas": {
    "i095": "A tag by the bed or in your wallet calls or texts your chosen person with your location in one tap.",
    "i019": "With smart speakers, a tag can also announce in every room that you need help."
-  }
+  },
+  "icon": "🆘",
+  "short": "Help in an emergency"
  },
  {
   "id": "h_clothes",
@@ -815,7 +907,9 @@
   ],
   "ideas": {
    "i106": "Tag your clothes and tap when you wear something. After a few months you'll see what you really wear, and what can go."
-  }
+  },
+  "icon": "👕",
+  "short": "Clothes I never wear"
  },
  {
   "id": "k_play",
@@ -831,7 +925,9 @@
   "ideas": {
    "i081": "Picture cards with tags: your kid taps a card and their song or story starts. They choose by themselves, no screen needed.",
    "i015": "Older kids can make their own music cards: album art in a card sleeve with a tag inside."
-  }
+  },
+  "icon": "🎵",
+  "short": "Screen-free music & stories"
  },
  {
   "id": "k_party",
@@ -846,7 +942,9 @@
   ],
   "ideas": {
    "i096": "Hide tags around the house or garden: each tap reveals the next clue. An instant treasure hunt."
-  }
+  },
+  "icon": "🎉",
+  "short": "Party games"
  },
  {
   "id": "p_fed",
@@ -862,7 +960,9 @@
   ],
   "ideas": {
    "i092": "A tag on the food container: whoever feeds the pet taps it, and everyone can check. No more double dinners."
-  }
+  },
+  "icon": "🐶",
+  "short": "Was the dog fed?"
  },
  {
   "id": "p_lost",
@@ -876,7 +976,9 @@
   ],
   "ideas": {
    "i046": "A tag on the collar shows whoever finds your pet how to reach you. Anyone can tap it, no app needed."
-  }
+  },
+  "icon": "🦮",
+  "short": "Lost pet"
  },
  {
   "id": "p_mess",
@@ -890,7 +992,9 @@
   ],
   "ideas": {
    "i098": "If you have a robot vacuum, a tag by the litter box sends it to clean just that spot."
-  }
+  },
+  "icon": "🧹",
+  "short": "Pet mess"
  },
  {
   "id": "pl_water",
@@ -905,7 +1009,9 @@
   "ideas": {
    "i017": "Tap the tag on the watering can after watering. Your phone logs it, so you always know when you last did it.",
    "i021": "With a smart garden setup, a tag by the door can start the watering itself."
-  }
+  },
+  "icon": "💧",
+  "short": "When did I water?"
  },
  {
   "id": "s_scenes",
@@ -921,7 +1027,9 @@
    "i013": "A tag anywhere becomes a light switch.",
    "i014": "Scene tags for movie night, dinner or game night.",
    "i010": "A nightstand tag switches the whole house off."
-  }
+  },
+  "icon": "🎛️",
+  "short": "No-app scenes"
  },
  {
   "id": "s_vacuum",
@@ -935,7 +1043,9 @@
   ],
   "ideas": {
    "i098": "A tag in each room: tap it and the vacuum cleans just that room."
-  }
+  },
+  "icon": "🤖",
+  "short": "Vacuum one room"
  },
  {
   "id": "s_guests",
@@ -950,7 +1060,9 @@
   "ideas": {
    "i005": "One tap turns on guest mode: motion lights and doorbell alerts pause until you tap again.",
    "i002": "A workbench tag keeps motion lights on while you're busy."
-  }
+  },
+  "icon": "🙋",
+  "short": "Guest mode"
  },
  {
   "id": "s_keys",
@@ -967,7 +1079,9 @@
   "ideas": {
    "i007": "A tag by your smart lock unlocks it with your phone. Set it up so only YOUR phone works.",
    "i042": "A hidden tag in the car opens the garage."
-  }
+  },
+  "icon": "🗝️",
+  "short": "Keyless doors"
  },
  {
   "id": "s_closed",
@@ -981,7 +1095,9 @@
   ],
   "ideas": {
    "i084": "One tap checks every door and window sensor and tells you what's still open."
-  }
+  },
+  "icon": "🪟",
+  "short": "Everything closed?"
  },
  {
   "id": "s_ready",
@@ -999,7 +1115,9 @@
    "i108": "A headboard tag switches the coffee machine on before you get up.",
    "i009": "A tag in the car gets the house ready as you drive home.",
    "i001": "Music can follow you: tap by a speaker and it moves there."
-  }
+  },
+  "icon": "♨️",
+  "short": "Ready before I wake"
  },
  {
   "id": "s_ev",
@@ -1017,7 +1135,9 @@
   },
   "show_if": [
    "drive"
-  ]
+  ],
+  "icon": "🔌",
+  "short": "EV charger at home"
  },
  {
   "id": "w_calls",
@@ -1033,7 +1153,9 @@
   ],
   "ideas": {
    "i103": "One tap before the call: desk lights set, sound ready, and a busy light turns on outside your door."
-  }
+  },
+  "icon": "🎥",
+  "short": "Video-call chaos"
  },
  {
   "id": "w_hours",
@@ -1048,7 +1170,9 @@
   ],
   "ideas": {
    "i089": "Tap the tag on your desk when you arrive and leave. Your hours log themselves."
-  }
+  },
+  "icon": "⏱️",
+  "short": "Track my hours"
  },
  {
   "id": "c_where",
@@ -1062,7 +1186,9 @@
   ],
   "ideas": {
    "i094": "Tap the tag in your car when you park. Your phone saves the spot and guides you back later."
-  }
+  },
+  "icon": "📍",
+  "short": "Where did I park?"
  },
  {
   "id": "o_apps",
@@ -1078,7 +1204,9 @@
   ],
   "ideas": {
    "i035": "Put a tag where you use it (bag strap, wallet, desk): tap and exactly that app opens."
-  }
+  },
+  "icon": "🎫",
+  "short": "Digging for apps"
  },
  {
   "id": "o_schedule",
@@ -1094,7 +1222,9 @@
   ],
   "ideas": {
    "i099": "A tag where you usually wonder opens that schedule in one tap."
-  }
+  },
+  "icon": "🗓️",
+  "short": "Same schedule, every day"
  },
  {
   "id": "x_measure",
@@ -1110,7 +1240,9 @@
   ],
   "ideas": {
    "i087": "Tap the device after measuring and the right log opens, ready for today's value."
-  }
+  },
+  "icon": "🩺",
+  "short": "Health measurements"
  },
  {
   "id": "x_care",
@@ -1128,7 +1260,9 @@
    "i093": "Tags around the home for meds, meals and more. Each tap adds a time-stamped line to a log the whole family can see.",
    "i028": "Tags on pill bottles show whether today's dose was already given.",
    "i095": "For an older parent: a tag that calls you, or starts a screen-sharing session, with one tap."
-  }
+  },
+  "icon": "🤲",
+  "short": "Caring for someone"
  },
  {
   "id": "y_music",
@@ -1143,7 +1277,9 @@
   ],
   "ideas": {
    "i015": "Hide a tag in each sleeve: tap a record and the album plays on your speakers. Your shelf becomes a jukebox."
-  }
+  },
+  "icon": "💿",
+  "short": "Music collection"
  },
  {
   "id": "y_games",
@@ -1159,7 +1295,9 @@
   "ideas": {
    "i014": "Tag the game box: tap it and the lights and playlist set the mood.",
    "i101": "Tags in card sleeves open rules, translations or your deck list."
-  }
+  },
+  "icon": "🎲",
+  "short": "Game nights"
  },
  {
   "id": "y_make",
@@ -1176,7 +1314,9 @@
   "ideas": {
    "i105": "Tag what you make: people tap to see the materials, pattern and story.",
    "i100": "Tag each 3D printer spool to see its material, settings and how much is left."
-  }
+  },
+  "icon": "🧶",
+  "short": "I make things"
  },
  {
   "id": "y_fun",
@@ -1192,7 +1332,9 @@
   "ideas": {
    "i104": "Hidden tags that play a sound effect or make the lights do something unexpected.",
    "i096": "A tag treasure hunt for friends or kids."
-  }
+  },
+  "icon": "🃏",
+  "short": "Pranks & surprises"
  },
  {
   "id": "y_trips",
@@ -1208,7 +1350,9 @@
   ],
   "ideas": {
    "i097": "Put tags behind places on a wall map: tap a country and that trip's album opens."
-  }
+  },
+  "icon": "🗺️",
+  "short": "Trip photos"
  },
  {
   "id": "b_payments",
@@ -1228,7 +1372,9 @@
   "show_if": [
    "business_owner",
    "money"
-  ]
+  ],
+  "icon": "💶",
+  "short": "Easy payments"
  },
  {
   "id": "p_alone",
@@ -1244,6 +1390,8 @@
   ],
   "ideas": {
    "i110": "Tap the tag by the door as you leave and the pet camera opens, so you can check on them right away."
-  }
+  },
+  "icon": "🐾",
+  "short": "Anxious pet"
  }
 ]

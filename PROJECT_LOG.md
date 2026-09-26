@@ -345,6 +345,22 @@ the user then asked for **pixel art**. `scripts/draw_hero_pixel.py` draws the sa
 
 ![Home page with illustration](docs/img/22-home-with-illustration.png)
 
+#### 16. A quiz you can scan, not read
+
+the user took his own quiz and noticed he'd taken a 30-minute break in the middle: too much text. Every option was a full sentence ("I want to be sure everything is closed before leaving or sleeping").
+
+Fix: every option now has a **big icon and a 2–4 word title** you can recognise at a glance, with the full sentence underneath in small grey text for anyone who wants it:
+
+| Before | After |
+|---|---|
+| I forget if I already took my vitamins or medicine | 💊 **Did I take my pills?** |
+| Before bed I walk around checking doors, windows and the stove | 🚪 **The final door check** |
+| We're never sure if the pet has already been fed | 🐶 **Was the dog fed?** |
+
+Question screens are now tiles (2 per row on phones), with a ✓ badge on the ones you picked, and the "about you" chips got icons too.
+
+![Quiz with icon tiles](docs/img/25-quiz-tiles.png)
+
 ---
 
 ## Open to-do list
@@ -389,5 +405,6 @@ Save in `docs/img/` with these names:
 3. **Ask AI tools for structured data** (JSON with fixed fields), in small batches.
 4. **AI extraction makes mistakes.** Some "ideas" were unsafe or wrong. Everything gets checked.
 5. **Credit creators.** Link to them, name them, never copy their content.
+8. **Watch yourself use it.** If you take a break in the middle of your own quiz, a visitor will simply leave. Short titles and icons beat full sentences.
 7. **Test with a real person's eyes.** the user read "Capture an idea by voice" next to "You need: NFC keyfob", googled the keyfob and found no microphone. The phone does the listening; the tag only starts it. Fixed the wording and added an intro card: "The tag is just a trigger."
 6. **New tools: test before trusting.** Check the official source (not a fan site), test on your own data, and compare against an alternative.
