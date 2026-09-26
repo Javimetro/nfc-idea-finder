@@ -321,4 +321,5 @@ Save in `docs/img/` with these names:
 3. **Ask AI tools for structured data** (JSON with fixed fields), in small batches.
 4. **AI extraction makes mistakes.** Some "ideas" were unsafe or wrong. Everything gets checked.
 5. **Credit creators.** Link to them, name them, never copy their content.
+7. **Test with a real person's eyes.** the user read "Capture an idea by voice" next to "You need: NFC keyfob", googled the keyfob and found no microphone. The phone does the listening; the tag only starts it. Fixed the wording and added an intro card: "The tag is just a trigger."
 6. **New tools: test before trusting.** Check the official source (not a fan site), test on your own data, and compare against an alternative.
