@@ -302,11 +302,39 @@ the user's feedback on version 2: all cards open at once felt overwhelming. Chan
 ![Results, closed](docs/img/19-v3-results-closed.png)
 ![One idea, opened](docs/img/20-v3-idea-open.png)
 
+#### 14. 22 Reddit threads, and a branching quiz
+
+the user searched Reddit (r/shortcuts, r/homeassistant, r/tasker, r/NFC, r/AutisticAdults…) and ran the same NotebookLM prompts: **239 raw idea entries** from 18 threads, this time with real links.
+
+What happened to them (`scripts/batch_reddit.py`):
+- **Every entry was sorted by hand**: linked to an existing idea, turned into one of **26 new ideas** (remember where you parked, did anyone feed the pet?, clock in and out, an emergency button, a treasure hunt, a care log…), or left out, with the reason written down (10 entries: e.g. "encrypted data" on a normal tag, hand implants, secret audio recording, copying game figures).
+- **Credit goes to the right person.** On Reddit the idea often comes from a commenter, not whoever started the thread, so each link stores the commenter's name and the site shows "u/name". Deleted accounts are shown as "a member of r/…".
+- **Popular ideas are now clearly popular**: "did I take my pills?" is explained by 9 people, which is useful for ranking.
+
+Database now: **106 ideas (99 shown), 41 sources, 384 idea–source links, 73 everyday problems ("needs")**.
+
+**The quiz became branching**, as planned in step 12's follow-up: screen 1 asks about your life, and each "world" only appears if it's relevant:
+
+| World | Shown to |
+|---|---|
+| Mornings and evenings, At home, Out and about, Habits and health | everyone |
+| With the kids / Your pets / Plants and garden | people with kids / pets / plants |
+| Your smart home | people with smart gear |
+| Work and study | desk workers, home office, students |
+| In the car | drivers |
+| Hobbies and fun | people with hobbies |
+| About your business | business owners, or people who want to earn money with NFC |
+
+A pet owner who drives now sees 7 short screens; a café owner sees a business screen that others never see.
+
+![Branching quiz: hobbies screen](docs/img/21-v4-branching-hobbies.png)
+
 ---
 
 ## Open to-do list
 
-- [ ] the user reviews the 38 flagged ideas
+- [ ] the user reviews the 42 flagged ideas
+- [ ] Reddit threads 19–22: ideas not extracted yet
 - [ ] Prototype matching: Jev vs. a small general AI model, on the same test personas
 - [ ] Find the URL of each source (title + channel search), the user confirms
 - [ ] Find timestamps using the anchor quotes (YouTube transcripts)

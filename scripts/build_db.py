@@ -72,7 +72,7 @@ def idea(id, title, summary, how, links_, kind="diy", audience=("personal",), se
     })
     for src, quote in links_:
         links.append({"idea_id": id, "source_id": f"s{src:02d}", "start_seconds": None,
-                      "end_seconds": None, "anchor_quote": quote})
+                      "end_seconds": None, "anchor_quote": quote, "credit": None})
 
 # --- Home & daily life -------------------------------------------------------
 idea("i001", "Send music to the speaker in the room",
@@ -539,7 +539,7 @@ for i, (title, summary, quote) in enumerate([
                 "Phone-to-phone (Android Beam) was removed from Android in 2019." if "Phone-to-phone" in title else "2016 source; check current devices."])
 # i069/i073 also have a second source
 links.append({"idea_id": "i069", "source_id": "s22", "start_seconds": None, "end_seconds": None,
-              "anchor_quote": "pair your phone with a Bluetooth speaker or even transfer files between two devices"})
+              "anchor_quote": "pair your phone with a Bluetooth speaker or even transfer files between two devices", "credit": None})
 
 # --- Maker projects: build your own NFC reader (Raspberry Pi / Arduino) ------
 MAKER = "Reader module (e.g. PN532) on a Raspberry Pi or Arduino, plus a small program. Visitors' phones not needed."
@@ -561,6 +561,43 @@ idea("i080", "Prepaid card for a club kiosk or canteen",
      business={"model": "service", "who": "clubs, event organisers, small canteens", "cost": "medium"},
      flags=["Security: a plain card ID can be cloned. Keep balances on the server and use secure cards (e.g. NTAG 424 DNA / MIFARE DESFire) for anything beyond small closed-loop amounts.",
             "Handling real money may bring legal/payment rules: describe as closed-loop tokens/credit."])
+
+# --- Batch 7-10: Reddit threads (see scripts/batch_reddit.py) ----------------
+import sys as _sys, os as _os
+_sys.path.insert(0, _os.path.dirname(__file__))
+import batch_reddit as RB
+
+for (nid, title, summary, how, kind, aud, sett, goals, phone, setup, diff, cost, tn, biz, flags) in RB.NEW_IDEAS:
+    idea(nid, title, summary, how, [], kind=kind, audience=aud, settings=sett, goals=goals, phone=phone,
+         setup=setup, difficulty=diff, cost=cost, tag_needs=tag(**tn), business=biz, flags=flags)
+_by_id = {i["id"]: i for i in ideas}
+for iid, changes in RB.UPDATES.items():
+    _by_id[iid].update(changes)
+
+# Reddit threads become sources (real URLs), numbered after the first 26
+_inv = json.load(open(RB.INVENTORY, encoding="utf-8"))
+_thread_by_url = {}
+for t in _inv:
+    sid = f"s{26 + t['source_no']:02d}"
+    sources.append({"id": sid, "notebooklm_no": 100 + t["source_no"], "title": t["title"], "url": t["url"],
+                    "type": "social_post", "platform": "Reddit", "creator_name": t["creator_name"], "creator_url": None,
+                    "language": t["language"], "published_date": None, "date_added": "2026-09-26", "notes": None})
+    _thread_by_url[t["url"]] = (sid, t["creator_name"])
+
+# every raw entry -> a link to its idea, crediting the commenter who actually shared it
+import re as _re
+for letter, path in RB.RAW_FILES.items():
+    for n, e in enumerate(json.load(open(path, encoding="utf-8"))):
+        target = RB.MAPPING.get(f"{letter}{n}", "MISSING")
+        if target == "MISSING":
+            raise SystemExit(f"raw entry {letter}{n} ({e['idea_title']}) has no mapping")
+        if target is None:
+            continue
+        sid, op = _thread_by_url[e["source_url"]]
+        m = _re.search(r"commenter\s+([\w\-]+)", e.get("notes") or "")
+        credit = m.group(1) if m else e["creator_name"]
+        links.append({"idea_id": target, "source_id": sid, "start_seconds": None, "end_seconds": None,
+                      "anchor_quote": e["anchor_quote"], "credit": None if credit in (None, "deleted") else credit})
 
 # --- Items flagged for exclusion ---------------------------------------------
 idea("i074", "Door access card copied to iPhone",
@@ -656,6 +693,38 @@ DISPLAY = {
  "i059": ("Inspections that can't be skipped", "around the vehicle", "each checked part is logged", "app"),
  "i079": ("Check-ins without a paper list", "on a reader at the door", "the member is logged in", "maker"),
  "i080": ("Your own tap-to-pay credit system", "on a reader at the kiosk", "credit is taken off the card", "maker"),
+ "i081": ("Picture cards that play songs and stories", "on each picture card (and a reader or speaker)", "that card's song or story starts", "smarthome"),
+ "i082": ("A bedtime lock-up round you can't half-do", "on each door and window", "that door or window is ticked off your checklist", "automation"),
+ "i084": ("Know everything is closed before you leave", "by the front door", "your phone tells you if any window or door is still open", "smarthome"),
+ "i085": ("Turn NFC cards into a monthly business", "on cards or stands you set up for local businesses", "the business's review or menu page opens, and you keep it updated", "link"),
+ "i087": ("Log your blood pressure or oxygen in one tap", "on the measuring device", "the right health log opens, ready for today's value", "automation"),
+ "i088": ("Connect headphones or a speaker in one tap", "on the headphone case or speaker", "your phone connects and starts your audio", "automation"),
+ "i089": ("Clock in and out of work without thinking", "on the side of your desk", "your arrival or departure time is logged", "automation"),
+ "i090": ("Chores the whole family can tick off", "where each chore happens", "the chore is marked done for everyone", "automation"),
+ "i091": ("Keep your habit streak with one tap", "where the habit happens", "today is marked done in your habit app", "automation"),
+ "i092": ("Never wonder “did anyone feed the dog?”", "on the pet food container", "the feeding time is logged for the whole family", "automation"),
+ "i093": ("A care log the whole family can see", "around the home (meds, kitchen, bathroom)", "the action and time are added to a shared log", "automation"),
+ "i094": ("Never lose your car in a parking lot", "in your car", "your parking spot is saved on the map", "automation"),
+ "i095": ("An emergency button you can always reach", "by the bed or in your wallet", "your chosen person is called or texted with your location", "automation"),
+ "i096": ("A treasure hunt kids will remember", "hidden around the house or garden", "the next clue appears", "link"),
+ "i097": ("A wall map that opens your trip photos", "behind each place on a map", "the photo album from that trip opens", "link"),
+ "i098": ("Send the robot vacuum to one spot", "in the room that gets messy (or by the litter box)", "the vacuum cleans just that room", "smarthome"),
+ "i099": ("The schedule you always check, one tap away", "where you usually wonder (fridge, door, coaster)", "the bin days, match times or weather open", "link"),
+ "i100": ("Know what's on every filament spool", "on each spool", "the material, settings and amount left appear", "link"),
+ "i101": ("Tap a game card to see its rules", "inside the card sleeves", "the card's rules, translation or your deck list open", "link"),
+ "i103": ("Video-call mode in one tap", "on your desk or door", "lights and sound get set, and a busy light turns on outside", "automation"),
+ "i104": ("Hidden sound effects and harmless pranks", "somewhere surprising", "a sound or light effect plays", "automation"),
+ "i105": ("Show the story behind something you made", "on the finished piece", "the materials, pattern and inspiration open", "link"),
+ "i106": ("Find out which clothes you really wear", "inside each piece of clothing", "the item is logged as worn today", "automation"),
+ "i107": ("Only your card starts the car charger", "next to your home charger", "charging is allowed to start", "smarthome"),
+ "i108": ("Pre-heat the coffee machine from bed", "on your headboard", "the coffee machine switches on", "smarthome"),
+ "i109": ("Take payments at your stall without a terminal", "on your items or stall sign", "your payment link opens", "link"),
+ "i004": ("Remember when you last changed or cleaned something", "on the toothbrush, filter or appliance", "today's date is saved and the next reminder is set", "automation"),
+ "i005": ("Guests over? Pause your automations", "by the front door", "motion lights and doorbell alerts pause", "smarthome"),
+ "i014": ("Movie, dinner or game night in one tap", "behind a painting, under the table or on the game box", "the lights and music for that moment start", "automation"),
+ "i020": ("Instructions exactly where you need them", "on the device (car seat, washing machine, fuse box)", "its manual or how-to video opens", "link"),
+ "i023": ("A checklist by the door so nothing gets left behind", "by the door or inside your bag", "your checklist opens", "automation"),
+ "i038": ("Switch phone settings with a tap", "wherever you change them", "wifi, Bluetooth or VPN switches on or off", "automation"),
 }
 for i in ideas:
     hook, place, result, setup = DISPLAY.get(i["id"], (i["title"], None, None, None))
@@ -670,6 +739,9 @@ for i in ideas:
     i["status"] = "hidden" if (i["kind"] == "tip" or unsafe) else ("needs_review" if i["review_flags"] else "ok")
 
 # ---------------------------------------------------------------- write
+# threads whose ideas haven't been extracted yet stay out until they have ideas
+_used = {l["source_id"] for l in links}
+sources = [x for x in sources if x["id"] in _used]
 for name, data in [("sources", sources), ("ideas", ideas), ("idea_sources", links)]:
     with open(f"db/{name}.json", "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=2)

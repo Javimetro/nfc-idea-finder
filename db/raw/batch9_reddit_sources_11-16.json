@@ -1,0 +1,742 @@
+[
+  {
+    "idea_title": "In-Car Traffic-Aware On My Way ETA Notification",
+    "summary": "Tapping an in-car NFC tag triggers Home Assistant to calculate live Google Maps driving time and text your spouse an ETA. It keeps family informed of arrival times without needing to text while driving.",
+    "how_it_works": "An iPhone scans an in-car NFC tag to trigger an Apple Shortcut, which calls a Home Assistant script using Google Maps Travel Time to calculate driving duration and send a notification with ETA and distance.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "car",
+      "travel"
+    ],
+    "goals": [
+      "automation",
+      "share_info"
+    ],
+    "phone_support": "iphone_only",
+    "extra_app": "Apple Shortcuts",
+    "difficulty": "medium",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "My NFC-triggered, traffic-aware “On My Way” automation : r/homeassistant",
+    "source_url": "https://www.reddit.com/r/homeassistant/comments/1wq1n8u/my_nfctriggered_trafficaware_on_my_way_automation/",
+    "creator_name": "asadali95",
+    "timestamp": null,
+    "anchor_quote": "tap an NFC tag placed in the car with my iPhone",
+    "notes": null
+  },
+  {
+    "idea_title": "In-Car RFID Sticker Spotify Playlist Launcher",
+    "summary": "Scanning an RFID sticker mounted inside a car starts playing a designated Spotify playlist. It allows passengers to quickly launch music without navigating menus.",
+    "how_it_works": "An RFID or NFC sticker placed in a vehicle is scanned by a smartphone to start playback of a Spotify playlist.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "car"
+    ],
+    "goals": [
+      "automation"
+    ],
+    "phone_support": null,
+    "extra_app": "Spotify",
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "My NFC-triggered, traffic-aware “On My Way” automation : r/homeassistant",
+    "source_url": "https://www.reddit.com/r/homeassistant/comments/1wq1n8u/my_nfctriggered_trafficaware_on_my_way_automation/",
+    "creator_name": "asadali95",
+    "timestamp": null,
+    "anchor_quote": "rfid sticker i put car that triggers a Spotify playlist",
+    "notes": "Mentioned by commenter Christopoulos."
+  },
+  {
+    "idea_title": "Toys-to-Life Interactive Physical Object Reaction System",
+    "summary": "Placing chipped physical objects or cards on a custom console triggers specific animations or media responses on screen. It provides a tactile, interactive interface similar to toys-to-life products.",
+    "how_it_works": "An NFC reader connected to a microcontroller reads the unique ID of a tagged figurine or card and triggers a corresponding video animation or software function from a database.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home"
+    ],
+    "goals": [
+      "automation",
+      "share_info"
+    ],
+    "phone_support": null,
+    "extra_app": null,
+    "difficulty": "advanced",
+    "cost_level": "5_to_50_eur",
+    "tag_needs": {
+      "form_factor": null,
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": "PN532"
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "NFC ideas? : r/cyberDeck",
+    "source_url": "https://www.reddit.com/r/cyberDeck/comments/1tcdwcd/nfc_ideas/",
+    "creator_name": "TheMothKing_013",
+    "timestamp": null,
+    "anchor_quote": "interacted with by an outside object... an animation plays",
+    "notes": null
+  },
+  {
+    "idea_title": "Vinyl Collection NFC Card Audio Streamer",
+    "summary": "Attaching NFC cards to physical vinyl record jackets streams digital copies of the album across a home audio system upon scanning. It bridges physical music collections with digital multi-room playback.",
+    "how_it_works": "NFC cards attached to vinyl sleeves store unique IDs or links that an NFC reader reads to trigger playback of ripped digital audio files.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home"
+    ],
+    "goals": [
+      "automation"
+    ],
+    "phone_support": null,
+    "extra_app": null,
+    "difficulty": "medium",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "card",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "NFC ideas? : r/cyberDeck",
+    "source_url": "https://www.reddit.com/r/cyberDeck/comments/1tcdwcd/nfc_ideas/",
+    "creator_name": "TheMothKing_013",
+    "timestamp": null,
+    "anchor_quote": "attached to my vinyl collection, so that when you scan them it plays my ripped copy",
+    "notes": "Mentioned by commenter vlegionv."
+  },
+  {
+    "idea_title": "Subdermal NFC Hand Implant Door Lock Release",
+    "summary": "Unlocks physical door locks keylessly by holding an microchip implanted under the skin of your hand against a reader. It offers ultimate keyless convenience and access control.",
+    "how_it_works": "An NFC reader mounted at a door reads the unique identifier of a subdermal hand implant and releases the door lock.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home",
+      "office"
+    ],
+    "goals": [
+      "access",
+      "security"
+    ],
+    "phone_support": null,
+    "extra_app": null,
+    "difficulty": "advanced",
+    "cost_level": null,
+    "tag_needs": {
+      "form_factor": null,
+      "on_metal": null,
+      "waterproof": true,
+      "rewritable": null,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "NFC ideas? : r/cyberDeck",
+    "source_url": "https://www.reddit.com/r/cyberDeck/comments/1tcdwcd/nfc_ideas/",
+    "creator_name": "TheMothKing_013",
+    "timestamp": null,
+    "anchor_quote": "NFC implants in my hand... used them for was for locks",
+    "notes": "Mentioned by commenter vlegionv."
+  },
+  {
+    "idea_title": "Smartwatch NFC Computer Power-On Switch",
+    "summary": "Tapping an NFC smartwatch against an external desktop reader turns on a computer and activates custom lighting effects. It provides keyless hardware activation for custom PC builds.",
+    "how_it_works": "An ESP32 microcontroller paired with an NFC reader detects the unique ID of a smartwatch to signal power-on to a PC motherboard.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home",
+      "office"
+    ],
+    "goals": [
+      "automation",
+      "access"
+    ],
+    "phone_support": null,
+    "extra_app": null,
+    "difficulty": "advanced",
+    "cost_level": "5_to_50_eur",
+    "tag_needs": {
+      "form_factor": null,
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": null,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "NFC ideas? : r/cyberDeck",
+    "source_url": "https://www.reddit.com/r/cyberDeck/comments/1tcdwcd/nfc_ideas/",
+    "creator_name": "TheMothKing_013",
+    "timestamp": null,
+    "anchor_quote": "NFC reader with an ESP32 to turn on a computer... detect the NFC capable smartwatch",
+    "notes": "Mentioned by commenter LegionDD."
+  },
+  {
+    "idea_title": "Freezer Container Content Digital Scanner",
+    "summary": "Scanning tags on frozen food containers with a dedicated reader displays stored items without unwrapping packages. It prevents mystery items from accumulating in home freezers.",
+    "how_it_works": "Small NFC stickers attached to freezer containers are read using a Cheap Yellow Display (CYD) unit with a PN532 module or phone to display item records.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home"
+    ],
+    "goals": [
+      "tracking",
+      "share_info"
+    ],
+    "phone_support": "any",
+    "extra_app": "NFC Tools",
+    "difficulty": "medium",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": true,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": "PN532"
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "NFC ideas? : r/cyberDeck",
+    "source_url": "https://www.reddit.com/r/cyberDeck/comments/1tcdwcd/nfc_ideas/",
+    "creator_name": "TheMothKing_013",
+    "timestamp": null,
+    "anchor_quote": "reading tags on unidentified items in my freezer",
+    "notes": "Mentioned by commenter inastew."
+  },
+  {
+    "idea_title": "Home Lockup Routine Progress Tracker",
+    "summary": "Scanning tags placed at windows and doors during a nightly lockup routine marks items complete in a checklist app. It provides visual progress tracking for home security.",
+    "how_it_works": "Scanning a tag at a window or door uses MacroDroid or Tasker to open TickTick or a widget, marking that specific location complete on a visual list.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home"
+    ],
+    "goals": [
+      "security",
+      "tracking",
+      "automation",
+      "accessibility"
+    ],
+    "phone_support": "android_only",
+    "extra_app": "MacroDroid",
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "NFC tag ideas...not sure if this is achievable : r/tasker",
+    "source_url": "https://www.reddit.com/r/tasker/comments/1no78nq/nfc_tag_ideasnot_sure_if_this_is_achievable/",
+    "creator_name": "Similar_Bid_4889",
+    "timestamp": null,
+    "anchor_quote": "Scan tag > It opens a checklist app... then on the app it marks the item as complete",
+    "notes": null
+  },
+  {
+    "idea_title": "Front Door Open Openings Security Inspector",
+    "summary": "Scanning a tag at the front door checks magnetic contact sensors on all windows and doors to verify the house is fully secured. It gives immediate peace of mind before departure.",
+    "how_it_works": "An NFC tag at the entryway scanned with a smartphone triggers Home Assistant to query Zigbee door and window sensors and alert the user if any are open.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home"
+    ],
+    "goals": [
+      "security",
+      "automation",
+      "share_info"
+    ],
+    "phone_support": "any",
+    "extra_app": null,
+    "difficulty": "medium",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "NFC tag ideas...not sure if this is achievable : r/tasker",
+    "source_url": "https://www.reddit.com/r/tasker/comments/1no78nq/nfc_tag_ideasnot_sure_if_this_is_achievable/",
+    "creator_name": "Similar_Bid_4889",
+    "timestamp": null,
+    "anchor_quote": "nfc... at the front door that tells you if there are any open doors/windows",
+    "notes": "Mentioned by commenter Exciting-Compote5680."
+  },
+  {
+    "idea_title": "Pill Bottle Cap Dosage Logger",
+    "summary": "Scanning an NFC chip glued to a medication bottle cap logs the date, time, and medication name into a text file. It ensures medical adherence without relying on memory.",
+    "how_it_works": "Scanning the chip on a pill cap with an Android phone running MacroDroid appends a timestamped entry of the taken medication to a text log file.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home",
+      "health"
+    ],
+    "goals": [
+      "tracking",
+      "reminder",
+      "automation",
+      "accessibility"
+    ],
+    "phone_support": "android_only",
+    "extra_app": "MacroDroid",
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "Need NFC tag ideas : r/AutisticAdults",
+    "source_url": "https://www.reddit.com/r/AutisticAdults/comments/1ovtgtg/need_nfc_tag_ideas/",
+    "creator_name": "AlexWillis21",
+    "timestamp": null,
+    "anchor_quote": "glued NFC chips onto pill bottle caps so when I take any pill the chip logs in a file",
+    "notes": null
+  },
+  {
+    "idea_title": "Laundry Washer and Dryer Timer with Detergent Tracker",
+    "summary": "Tapping stickers on washing machines or dryers starts cycle countdown timers and reminds you to tally detergent load counts. It prevents forgotten wet clothes and tracks supply consumption.",
+    "how_it_works": "Scanning the washer tag with MacroDroid creates a 1-hour timer and notification to log a detergent tally mark; scanning the dryer tag starts a dryer countdown timer.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home"
+    ],
+    "goals": [
+      "reminder",
+      "tracking",
+      "automation"
+    ],
+    "phone_support": "android_only",
+    "extra_app": "MacroDroid",
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": true,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "Need NFC tag ideas : r/AutisticAdults",
+    "source_url": "https://www.reddit.com/r/AutisticAdults/comments/1ovtgtg/need_nfc_tag_ideas/",
+    "creator_name": "AlexWillis21",
+    "timestamp": null,
+    "anchor_quote": "washer creates an hour countdown timer and a notification reminding me to add another tally mark to my detergent bottle",
+    "notes": null
+  },
+  {
+    "idea_title": "Electric Toothbrush Head Replacement Scheduler",
+    "summary": "Scanning a sticker next to a toothbrush when changing heads schedules an automated calendar reminder 90 days later. It maintains oral hygiene routines without tracking days manually.",
+    "how_it_works": "Scanning the bathroom tag when replacing an electric toothbrush head triggers a phone automation to schedule a replacement event on the calendar 90 days in the future.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home",
+      "health"
+    ],
+    "goals": [
+      "reminder",
+      "automation"
+    ],
+    "phone_support": "android_only",
+    "extra_app": "MacroDroid",
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": true,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "Need NFC tag ideas : r/AutisticAdults",
+    "source_url": "https://www.reddit.com/r/AutisticAdults/comments/1ovtgtg/need_nfc_tag_ideas/",
+    "creator_name": "AlexWillis21",
+    "timestamp": null,
+    "anchor_quote": "scan it and it will create a calendar event 90 days later to remind me to replace the toothbrush head",
+    "notes": null
+  },
+  {
+    "idea_title": "Concealed Watch Discreet Audio Recorder Trigger",
+    "summary": "Discreetly tapping a sticker hidden under a wristwatch starts an audio recording app on a smartphone. It provides personal security against workplace harassment or discrimination.",
+    "how_it_works": "Scanning a hidden tag under a watch casing triggers MacroDroid to launch an audio recorder app and simulate a screen tap on the record button.",
+    "audience": [
+      "personal",
+      "workplace"
+    ],
+    "settings": [
+      "office",
+      "health"
+    ],
+    "goals": [
+      "security",
+      "automation"
+    ],
+    "phone_support": "android_only",
+    "extra_app": "MacroDroid",
+    "difficulty": "medium",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "Need NFC tag ideas : r/AutisticAdults",
+    "source_url": "https://www.reddit.com/r/AutisticAdults/comments/1ovtgtg/need_nfc_tag_ideas/",
+    "creator_name": "AlexWillis21",
+    "timestamp": null,
+    "anchor_quote": "sticker under my watch to secretly scan so my phone will discreetly start an audio recording app",
+    "notes": null
+  },
+  {
+    "idea_title": "Bedside Brain.fm Sleep Audio Launcher",
+    "summary": "Tapping a nightstand tag launches Brain.fm using custom URL parameters to play relaxing sleep audio. It simplifies bedtime routines without browsing apps.",
+    "how_it_works": "A tag on a nightstand scanned by a phone opens a direct Brain.fm URL schema to initiate sleep audio.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home",
+      "health"
+    ],
+    "goals": [
+      "automation"
+    ],
+    "phone_support": "any",
+    "extra_app": "Brain.fm",
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "Need NFC tag ideas : r/AutisticAdults",
+    "source_url": "https://www.reddit.com/r/AutisticAdults/comments/1ovtgtg/need_nfc_tag_ideas/",
+    "creator_name": "AlexWillis21",
+    "timestamp": null,
+    "anchor_quote": "night stand that turns on the music that I sleep to... Brain.fm",
+    "notes": "Mentioned by commenter gwmccull."
+  },
+  {
+    "idea_title": "Front Door Running Fitness Mode Toggle",
+    "summary": "Tapping door tags enables iPhone fitness focus mode when heading out for a run to limit notifications and disables it upon return.",
+    "how_it_works": "An NFC tag mounted by the exit door scanned with an iPhone toggles Fitness focus mode on or off.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home",
+      "outdoors"
+    ],
+    "goals": [
+      "automation"
+    ],
+    "phone_support": "iphone_only",
+    "extra_app": "iOS Shortcuts",
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "Need NFC tag ideas : r/AutisticAdults",
+    "source_url": "https://www.reddit.com/r/AutisticAdults/comments/1ovtgtg/need_nfc_tag_ideas/",
+    "creator_name": "AlexWillis21",
+    "timestamp": null,
+    "anchor_quote": "door to enable fitness mode on my iPhone and to turn it off when I’m back",
+    "notes": "Mentioned by commenter gwmccull."
+  },
+  {
+    "idea_title": "Hotel Key Card Repurposed Automation Trigger",
+    "summary": "Uses the static chip ID inside a saved hotel key card to trigger personal phone automations while traveling.",
+    "how_it_works": "A mobile automation app reads the read-only UID of a discarded or saved hotel key card to run custom actions.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "travel"
+    ],
+    "goals": [
+      "automation"
+    ],
+    "phone_support": "any",
+    "extra_app": null,
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "card",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": false,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "Need NFC tag ideas : r/AutisticAdults",
+    "source_url": "https://www.reddit.com/r/AutisticAdults/comments/1ovtgtg/need_nfc_tag_ideas/",
+    "creator_name": "AlexWillis21",
+    "timestamp": null,
+    "anchor_quote": "use the nfc chip in a hotel key card to trigger an action",
+    "notes": "Mentioned by commenter gwmccull."
+  },
+  {
+    "idea_title": "Prescription Bottle Refill Email Composer",
+    "summary": "Tapping a tag on a medication bottle opens Outlook with a pre-addressed refill request email ready to send to your doctor. It simplifies prescription reordering.",
+    "how_it_works": "Scanning a tag on a medicine bottle written with a mailto link opens Outlook and composes a pre-filled refill request email to a physician.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home",
+      "health"
+    ],
+    "goals": [
+      "reminder",
+      "share_info",
+      "automation"
+    ],
+    "phone_support": "any",
+    "extra_app": "Outlook",
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "Need NFC tag ideas : r/AutisticAdults",
+    "source_url": "https://www.reddit.com/r/AutisticAdults/comments/1ovtgtg/need_nfc_tag_ideas/",
+    "creator_name": "AlexWillis21",
+    "timestamp": null,
+    "anchor_quote": "NFC tag on my medicine bottle to send myself an email reminder to request a refill",
+    "notes": "Mentioned by commenter Tom_Michel."
+  },
+  {
+    "idea_title": "Restaurant Custom Google Review Stand Sales",
+    "summary": "Sells custom-branded NFC cards or table stands to local restaurants, enabling customers to tap and leave Google reviews directly. It helps local businesses gather customer feedback effortlessly.",
+    "how_it_works": "Plain white NFC cards or PVC table stands encoded with NTAG213 chips are decorated with custom branding stickers pointing to a Google Review link and sold to business owners.",
+    "audience": [
+      "business_customers",
+      "nfc_as_business"
+    ],
+    "settings": [
+      "restaurant",
+      "shop"
+    ],
+    "goals": [
+      "marketing",
+      "share_info"
+    ],
+    "phone_support": "any",
+    "extra_app": null,
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "card",
+      "on_metal": null,
+      "waterproof": true,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": "NTAG213"
+    },
+    "business_model": "one_time_sale",
+    "who_pays": "restaurant and shop owners",
+    "startup_cost_level": "low",
+    "source_title": "Need help for NFC Card business idea : r/NFC",
+    "source_url": "https://www.reddit.com/r/NFC/comments/1vw632j/need_help_for_nfc_card_business_idea/",
+    "creator_name": "GigahatesChad",
+    "timestamp": null,
+    "anchor_quote": "making nfc review cards for restraunts and sell them for profit",
+    "notes": null
+  },
+  {
+    "idea_title": "Managed NFC Profile and URL Maintenance Service",
+    "summary": "Provides ongoing technical updates and landing page URL maintenance to small businesses that purchase NFC review cards. It generates recurring revenue by offering technical upkeep.",
+    "how_it_works": "A vendor manages tag target URLs and web landing pages for non-technical small business clients as a recurring service.",
+    "audience": [
+      "business_customers",
+      "nfc_as_business"
+    ],
+    "settings": [
+      "shop",
+      "restaurant",
+      "office"
+    ],
+    "goals": [
+      "marketing",
+      "share_info"
+    ],
+    "phone_support": "any",
+    "extra_app": null,
+    "difficulty": "easy",
+    "cost_level": "5_to_50_eur",
+    "tag_needs": {
+      "form_factor": "card",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": "service",
+    "who_pays": "small business owners",
+    "startup_cost_level": "low",
+    "source_title": "Need help for NFC Card business idea : r/NFC",
+    "source_url": "https://www.reddit.com/r/NFC/comments/1vw632j/need_help_for_nfc_card_business_idea/",
+    "creator_name": "GigahatesChad",
+    "timestamp": null,
+    "anchor_quote": "include free updates for some number of months",
+    "notes": "Mentioned by commenter Chongulator."
+  },
+  {
+    "idea_title": "NFC Digital Biolink Page Hosting Platform",
+    "summary": "Connects physical NFC cards to online biolink landing pages that aggregate social media links and menus. It offers local merchants a turnkey digital presence.",
+    "how_it_works": "An NFC card links to a digital biolink web platform (e.g. 66biolinks) hosting structured menus, links, and contact details.",
+    "audience": [
+      "business_customers",
+      "nfc_as_business"
+    ],
+    "settings": [
+      "shop",
+      "restaurant",
+      "events"
+    ],
+    "goals": [
+      "marketing",
+      "share_info"
+    ],
+    "phone_support": "any",
+    "extra_app": null,
+    "difficulty": "medium",
+    "cost_level": "5_to_50_eur",
+    "tag_needs": {
+      "form_factor": "card",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": "subscription_or_lease",
+    "who_pays": "local businesses and professionals",
+    "startup_cost_level": "low",
+    "source_title": "Need help for NFC Card business idea : r/NFC",
+    "source_url": "https://www.reddit.com/r/NFC/comments/1vw632j/need_help_for_nfc_card_business_idea/",
+    "creator_name": "GigahatesChad",
+    "timestamp": null,
+    "anchor_quote": "connected them with software to create landing pages",
+    "notes": "Mentioned by commenter gaddicted."
+  }
+]

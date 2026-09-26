@@ -29,7 +29,7 @@ CREATE TABLE IF NOT EXISTS ideas (
     hook TEXT, place TEXT, result TEXT, setup_type TEXT
 );
 CREATE TABLE IF NOT EXISTS idea_sources (
-    idea_id TEXT, source_id TEXT, start_seconds INTEGER, end_seconds INTEGER, anchor_quote TEXT
+    idea_id TEXT, source_id TEXT, start_seconds INTEGER, end_seconds INTEGER, anchor_quote TEXT, credit TEXT
 );
 CREATE TABLE IF NOT EXISTS tag_profiles (
     id TEXT PRIMARY KEY, data TEXT                  -- whole profile as JSON
@@ -73,7 +73,7 @@ def load_content():
             ":phone_support,:difficulty,:cost_level,:audience,:settings,:goals,:tag_needs,:review_flags,"
             ":business_model,:who_pays,:startup_cost_level,:hook,:place,:result,:setup_type)", row)
     con.executemany(
-        "INSERT INTO idea_sources VALUES (:idea_id,:source_id,:start_seconds,:end_seconds,:anchor_quote)",
+        "INSERT INTO idea_sources VALUES (:idea_id,:source_id,:start_seconds,:end_seconds,:anchor_quote,:credit)",
         load("idea_sources"))
     con.executemany("INSERT INTO tag_profiles VALUES (?, ?)",
                     [(t["id"], json.dumps(t)) for t in load("tag_profiles")])

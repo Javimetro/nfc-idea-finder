@@ -45,7 +45,8 @@
    "heating"
   ],
   "ideas": {
-   "i008": "One tap on a sticker by the door on your way out switches everything off (and can open your bus app). No more turning back halfway down the stairs."
+   "i008": "One tap on a sticker by the door on your way out switches everything off (and can open your bus app). No more turning back halfway down the stairs.",
+   "i084": "If you have door and window sensors, the same tap can tell you if anything is still open."
   }
  },
  {
@@ -63,7 +64,8 @@
   ],
   "ideas": {
    "i025": "Tap a sticker next to your coffee machine and your phone reads today's plan out loud while you get ready. No scrolling through five apps.",
-   "i008": "Your leaving-home tag can also open your transit app, so you see delays exactly when you need them."
+   "i008": "Your leaving-home tag can also open your transit app, so you see delays exactly when you need them.",
+   "i099": "A tag on the fridge or by the door opens exactly the schedule you check most: bin days, bus times, the weather."
   }
  },
  {
@@ -78,7 +80,8 @@
    "cold"
   ],
   "ideas": {
-   "i006": "A tag next to the kettle starts a timer with one tap. Faster than asking a voice assistant, and it's there every single time."
+   "i006": "A tag next to the kettle starts a timer with one tap. Faster than asking a voice assistant, and it's there every single time.",
+   "i108": "With a smart plug, a tag on your headboard can even switch the coffee machine on before you get up."
   }
  },
  {
@@ -97,12 +100,13 @@
   "ideas": {
    "i013": "Stick a tag wherever you wish there was a light switch, and one tap turns the lights on or off. No drilling and no wiring, so it's great if you rent.",
    "i016": "One tap on a tag starts your favourite playlist on your speaker. No searching in the app.",
-   "i014": "A “movie night” tag dims the lights and opens Netflix in one tap."
+   "i014": "A “movie night” tag dims the lights and opens Netflix in one tap.",
+   "i001": "And a tag by each speaker moves the music that's playing on your phone to that room."
   }
  },
  {
   "id": "h_bedtime",
-  "question": "home",
+  "question": "mornings",
   "label": "Going to bed means switching lots of things off",
   "you_said": "going to bed means switching lots of things off",
   "keywords": [
@@ -180,7 +184,7 @@
   ],
   "ideas": {
    "i018": "Your phone reminds you on bin day until you tap the tag on the bin, so it can't be ignored or forgotten.",
-   "i004": "Tap the appliance when you've cleaned it and the reminder resets itself for next time.",
+   "i004": "Tap the appliance or filter when you've cleaned or changed it, and the reminder resets itself for next time.",
    "i017": "Tap the watering can after watering and your phone logs it, so you know when you last did it."
   }
  },
@@ -201,10 +205,7 @@
  },
  {
   "id": "h_plants",
-  "question": "home",
-  "show_if": [
-   "plants"
-  ],
+  "question": "plants",
   "label": "I never remember how to care for each plant",
   "you_said": "you never remember how to care for each plant",
   "keywords": [
@@ -219,10 +220,7 @@
  },
  {
   "id": "h_kids_bed",
-  "question": "home",
-  "show_if": [
-   "kids"
-  ],
+  "question": "kids",
   "label": "The kids' bedtime routine takes forever",
   "you_said": "the kids' bedtime routine takes forever",
   "keywords": [
@@ -238,13 +236,9 @@
  },
  {
   "id": "h_lost",
-  "question": "home",
-  "show_if": [
-   "kids",
-   "pets"
-  ],
-  "label": "I worry my child or pet could get lost",
-  "you_said": "you worry your child or pet could get lost",
+  "question": "kids",
+  "label": "I worry my child could get lost",
+  "you_said": "you worry your child could get lost",
   "keywords": [
    "lost",
    "pet",
@@ -260,29 +254,22 @@
  {
   "id": "h_shared",
   "question": "home",
-  "show_if": [
-   "shared_home"
-  ],
-  "label": "People in my home don't know how things work (heating, fuses, devices)",
-  "you_said": "people in your home don't know how things work",
+  "label": "I lose manuals, or others don't know how things work (heating, car seat, fuses)",
+  "you_said": "you lose manuals, or others don't know how things work",
   "keywords": [
-   "roommate",
-   "flatmate",
    "manual",
-   "instructions"
+   "instructions",
+   "how does",
+   "fuse",
+   "car seat"
   ],
   "ideas": {
-   "i020": "Hide a tag behind the switch plate or on the device. One tap shows the instructions: which fuse, how the heating works, what the buttons do."
+   "i020": "Stick a tag on the device and tap it to open its manual or how-to video. Handy for the baby car seat, the washing machine or the fuse box, and for anyone else in the house."
   }
  },
  {
   "id": "w_focus",
-  "question": "work",
-  "show_if": [
-   "desk_job",
-   "work_from_home",
-   "student"
-  ],
+  "question": "desk",
   "label": "My phone distracts me when I should focus",
   "you_said": "your phone distracts you when you should focus",
   "keywords": [
@@ -301,7 +288,7 @@
  },
  {
   "id": "w_ideas",
-  "question": "work",
+  "question": "desk",
   "label": "Good ideas pop up and I lose them before writing them down",
   "you_said": "good ideas pop up and you lose them",
   "keywords": [
@@ -317,12 +304,7 @@
  },
  {
   "id": "w_start",
-  "question": "work",
-  "show_if": [
-   "desk_job",
-   "work_from_home",
-   "student"
-  ],
+  "question": "desk",
   "label": "Starting work takes many small steps (apps, music, timer)",
   "you_said": "starting work takes many small steps",
   "keywords": [
@@ -339,7 +321,7 @@
  },
  {
   "id": "w_network",
-  "question": "work",
+  "question": "desk",
   "label": "I meet people and want to share my contact, portfolio or socials fast",
   "you_said": "you want to share your contact, portfolio or socials fast",
   "keywords": [
@@ -357,13 +339,7 @@
  },
  {
   "id": "w_hotspot",
-  "question": "work",
-  "show_if": [
-   "desk_job",
-   "work_from_home",
-   "student",
-   "travel_often"
-  ],
+  "question": "desk",
   "label": "I often share my phone's internet with my laptop",
   "you_said": "you often share your phone's internet with your laptop",
   "keywords": [
@@ -377,10 +353,7 @@
  },
  {
   "id": "c_setup",
-  "question": "move",
-  "show_if": [
-   "drive"
-  ],
+  "question": "car",
   "label": "Every time I get in the car I set up maps, music and Bluetooth",
   "you_said": "you set up maps, music and Bluetooth every time you get in the car",
   "keywords": [
@@ -396,7 +369,7 @@
  },
  {
   "id": "c_eta",
-  "question": "move",
+  "question": "out",
   "label": "I often text family “on my way” or “arrived”",
   "you_said": "you often text family “on my way” or “arrived”",
   "keywords": [
@@ -411,10 +384,7 @@
  },
  {
   "id": "c_parking",
-  "question": "move",
-  "show_if": [
-   "drive"
-  ],
+  "question": "car",
   "label": "I lose track of paid parking time",
   "you_said": "you lose track of paid parking time",
   "keywords": [
@@ -424,15 +394,13 @@
    "ticket"
   ],
   "ideas": {
-   "i006": "Tap a tag as you leave the car and a timer starts for exactly your parking time. No more fines."
+   "i006": "Tap a tag as you leave the car and a timer starts for exactly your parking time. No more fines.",
+   "i094": "Tap the tag in the car when you park and your phone remembers the spot."
   }
  },
  {
   "id": "c_gate",
-  "question": "move",
-  "show_if": [
-   "drive"
-  ],
+  "question": "car",
   "label": "I open a garage door or gate with a remote",
   "you_said": "you open a garage door or gate with a remote",
   "keywords": [
@@ -446,7 +414,7 @@
  },
  {
   "id": "t_packing",
-  "question": "move",
+  "question": "out",
   "show_if": [
    "travel_often"
   ],
@@ -466,7 +434,7 @@
  },
  {
   "id": "t_lost_bag",
-  "question": "move",
+  "question": "out",
   "label": "I'm scared of losing my bag, keys or luggage",
   "you_said": "you're scared of losing your bag, keys or luggage",
   "keywords": [
@@ -531,7 +499,8 @@
   "ideas": {
    "i034": "A tag in your journal or planner opens the right page and starts calm music, a small cue that makes the habit automatic.",
    "i035": "A tag on your study notebook opens today's lesson directly.",
-   "i031": "A tag on your e-reader case turns on do-not-disturb, so reading time stays reading time."
+   "i031": "A tag on your e-reader case turns on do-not-disturb, so reading time stays reading time.",
+   "i091": "A tag where the habit happens (skincare shelf, bookshelf) marks today as done in your habit app. Streaks become satisfying."
   }
  },
  {
@@ -546,7 +515,8 @@
   "ideas": {
    "i025": "A morning tag reads your day out loud, so there's one less thing to keep in your head.",
    "i006": "Timer tags put the timer exactly where the task is: kettle, laundry, toothbrush.",
-   "i022": "Tap-to-add grocery tags catch things the moment you notice them."
+   "i022": "Tap-to-add grocery tags catch things the moment you notice them.",
+   "i091": "Habit tags turn each step into a tap, and your phone keeps the score."
   }
  },
  {
@@ -725,7 +695,537 @@
    "i049": "Sell or lease “tap to review” stands to local cafés and salons. They're cheap to make, and every small business wants reviews.",
    "i044": "Custom NFC business cards and keychains: low startup cost, easy to personalise.",
    "i047": "NFC gifts that play a voice message or video (jewellery, keepsakes, 3D prints).",
-   "i054": "Branded NFC merch for companies at trade shows."
+   "i054": "Branded NFC merch for companies at trade shows.",
+   "i085": "Go one step further and sell it as a service: you set up the card plus its page (reviews, menu, links) and keep it updated for a monthly fee."
   }
+ },
+ {
+  "id": "m_forget_stuff",
+  "question": "mornings",
+  "label": "I leave home and forget things (keys, wallet, gym bag)",
+  "you_said": "you leave home and forget things",
+  "keywords": [
+   "keys",
+   "wallet",
+   "forgot",
+   "left behind",
+   "gym bag"
+  ],
+  "ideas": {
+   "i023": "A tag by the door opens your checklist as you leave. Keys, wallet, bag: tick, tick, go."
+  }
+ },
+ {
+  "id": "e_lockup",
+  "question": "mornings",
+  "label": "Before bed I walk around checking doors, windows and the stove",
+  "you_said": "you check doors, windows and the stove before bed",
+  "keywords": [
+   "lock",
+   "locked",
+   "window",
+   "stove",
+   "check"
+  ],
+  "ideas": {
+   "i082": "Put a tag at each door and window. Tap them on your round and your phone ticks them off, so you know you really did it and can stop worrying.",
+   "i084": "With door/window sensors, one tap by the bed can check them all for you."
+  }
+ },
+ {
+  "id": "h_replace",
+  "question": "home",
+  "label": "I never remember when I last changed something (toothbrush head, filter, lenses)",
+  "you_said": "you never remember when you last changed something",
+  "keywords": [
+   "toothbrush",
+   "filter",
+   "lens",
+   "lenses",
+   "replace",
+   "battery"
+  ],
+  "ideas": {
+   "i004": "Tap the tag when you change it and your phone reminds you when it's due again, e.g. a new toothbrush head in 90 days."
+  }
+ },
+ {
+  "id": "h_family_chores",
+  "question": "home",
+  "label": "At home it's always “who did the dishes / took the bins?”",
+  "you_said": "it's always unclear who did which chore",
+  "keywords": [
+   "chores",
+   "dishes",
+   "who did"
+  ],
+  "ideas": {
+   "i090": "A tag where each chore happens: tap when done and everyone sees it. You can even turn it into a points game."
+  },
+  "show_if": [
+   "shared_home",
+   "kids"
+  ]
+ },
+ {
+  "id": "h_audio",
+  "question": "home",
+  "label": "Connecting headphones or speakers is always fiddly",
+  "you_said": "connecting headphones or speakers is fiddly",
+  "keywords": [
+   "headphones",
+   "airpods",
+   "earbuds",
+   "bluetooth",
+   "speaker"
+  ],
+  "ideas": {
+   "i088": "Tap the headphone case or the speaker and your phone connects and starts your audio. No digging in the Bluetooth menu.",
+   "i001": "And to move music between rooms, tap the tag next to each speaker."
+  }
+ },
+ {
+  "id": "h_emergency",
+  "question": "home",
+  "label": "I'd like a quick way to get help in an emergency",
+  "you_said": "you'd like a quick way to get help in an emergency",
+  "keywords": [
+   "emergency",
+   "help",
+   "alone",
+   "fall",
+   "panic",
+   "burglar"
+  ],
+  "ideas": {
+   "i095": "A tag by the bed or in your wallet calls or texts your chosen person with your location in one tap.",
+   "i019": "With smart speakers, a tag can also announce in every room that you need help."
+  }
+ },
+ {
+  "id": "h_clothes",
+  "question": "home",
+  "label": "My closet is full of clothes I never wear",
+  "you_said": "your closet is full of clothes you never wear",
+  "keywords": [
+   "clothes",
+   "closet",
+   "wardrobe",
+   "wear"
+  ],
+  "ideas": {
+   "i106": "Tag your clothes and tap when you wear something. After a few months you'll see what you really wear, and what can go."
+  }
+ },
+ {
+  "id": "k_play",
+  "question": "kids",
+  "label": "I want screen-free ways for my kids to play music or stories",
+  "you_said": "you want screen-free music and stories for your kids",
+  "keywords": [
+   "stories",
+   "screen",
+   "toddler",
+   "songs"
+  ],
+  "ideas": {
+   "i081": "Picture cards with tags: your kid taps a card and their song or story starts. They choose by themselves, no screen needed."
+  }
+ },
+ {
+  "id": "k_party",
+  "question": "kids",
+  "label": "I plan birthday parties and games for kids",
+  "you_said": "you plan parties and games for kids",
+  "keywords": [
+   "party",
+   "birthday",
+   "game",
+   "treasure"
+  ],
+  "ideas": {
+   "i096": "Hide tags around the house or garden: each tap reveals the next clue. An instant treasure hunt."
+  }
+ },
+ {
+  "id": "p_fed",
+  "question": "pets",
+  "label": "We're never sure if the pet has already been fed",
+  "you_said": "you're never sure if the pet has been fed",
+  "keywords": [
+   "fed",
+   "feed",
+   "food",
+   "dog",
+   "cat"
+  ],
+  "ideas": {
+   "i092": "A tag on the food container: whoever feeds the pet taps it, and everyone can check. No more double dinners."
+  }
+ },
+ {
+  "id": "p_lost",
+  "question": "pets",
+  "label": "I worry my pet could get lost",
+  "you_said": "you worry your pet could get lost",
+  "keywords": [
+   "lost",
+   "collar",
+   "escape"
+  ],
+  "ideas": {
+   "i046": "A tag on the collar shows whoever finds your pet how to reach you. Anyone can tap it, no app needed."
+  }
+ },
+ {
+  "id": "p_mess",
+  "question": "pets",
+  "label": "Pet hair or the litter box area needs cleaning all the time",
+  "you_said": "the pet area needs cleaning all the time",
+  "keywords": [
+   "litter",
+   "hair",
+   "mess"
+  ],
+  "ideas": {
+   "i098": "If you have a robot vacuum, a tag by the litter box sends it to clean just that spot."
+  }
+ },
+ {
+  "id": "pl_water",
+  "question": "plants",
+  "label": "I forget when I last watered",
+  "you_said": "you forget when you last watered",
+  "keywords": [
+   "water",
+   "watered",
+   "watering"
+  ],
+  "ideas": {
+   "i017": "Tap the tag on the watering can after watering. Your phone logs it, so you always know when you last did it.",
+   "i021": "With a smart garden setup, a tag by the door can start the watering itself."
+  }
+ },
+ {
+  "id": "s_scenes",
+  "question": "smarthome",
+  "label": "I want to control lights and scenes without opening an app",
+  "you_said": "you want to control lights and scenes without an app",
+  "keywords": [
+   "app",
+   "scene",
+   "lights"
+  ],
+  "ideas": {
+   "i013": "A tag anywhere becomes a light switch.",
+   "i014": "Scene tags for movie night, dinner or game night.",
+   "i010": "A nightstand tag switches the whole house off."
+  }
+ },
+ {
+  "id": "s_vacuum",
+  "question": "smarthome",
+  "label": "I'd like to send the robot vacuum to just one room",
+  "you_said": "you'd like to send the robot vacuum to one room",
+  "keywords": [
+   "vacuum",
+   "roomba",
+   "robot"
+  ],
+  "ideas": {
+   "i098": "A tag in each room: tap it and the vacuum cleans just that room."
+  }
+ },
+ {
+  "id": "s_guests",
+  "question": "smarthome",
+  "label": "Guests set off my automations (motion lights, doorbell alerts)",
+  "you_said": "guests set off your automations",
+  "keywords": [
+   "guest",
+   "motion",
+   "doorbell"
+  ],
+  "ideas": {
+   "i005": "One tap turns on guest mode: motion lights and doorbell alerts pause until you tap again.",
+   "i002": "A workbench tag keeps motion lights on while you're busy."
+  }
+ },
+ {
+  "id": "s_keys",
+  "question": "smarthome",
+  "label": "I want to open the door or garage without keys or a remote",
+  "you_said": "you want to open doors without keys or a remote",
+  "keywords": [
+   "garage",
+   "gate",
+   "keys",
+   "unlock",
+   "door"
+  ],
+  "ideas": {
+   "i007": "A tag by your smart lock unlocks it with your phone. Set it up so only YOUR phone works.",
+   "i042": "A hidden tag in the car opens the garage."
+  }
+ },
+ {
+  "id": "s_closed",
+  "question": "smarthome",
+  "label": "I want to be sure everything is closed before leaving or sleeping",
+  "you_said": "you want to know everything is closed",
+  "keywords": [
+   "closed",
+   "open window",
+   "sensor"
+  ],
+  "ideas": {
+   "i084": "One tap checks every door and window sensor and tells you what's still open."
+  }
+ },
+ {
+  "id": "s_ready",
+  "question": "smarthome",
+  "label": "I'd like things ready before I need them (coffee, heating, music)",
+  "you_said": "you'd like things ready before you need them",
+  "keywords": [
+   "coffee",
+   "espresso",
+   "heating",
+   "preheat",
+   "warm"
+  ],
+  "ideas": {
+   "i108": "A headboard tag switches the coffee machine on before you get up.",
+   "i009": "A tag in the car gets the house ready as you drive home.",
+   "i001": "Music can follow you: tap by a speaker and it moves there."
+  }
+ },
+ {
+  "id": "s_ev",
+  "question": "smarthome",
+  "label": "I have an electric car charger at home",
+  "you_said": "you have an electric car charger at home",
+  "keywords": [
+   "ev",
+   "electric car",
+   "charger",
+   "tesla"
+  ],
+  "ideas": {
+   "i107": "A tag by the charger means only your tap starts charging, so neighbours can't use it."
+  },
+  "show_if": [
+   "drive"
+  ]
+ },
+ {
+  "id": "w_calls",
+  "question": "desk",
+  "label": "Video calls: people walk in, or my lights and camera need setting up",
+  "you_said": "video calls need setting up, and people walk in",
+  "keywords": [
+   "zoom",
+   "teams",
+   "video call",
+   "meeting",
+   "camera"
+  ],
+  "ideas": {
+   "i103": "One tap before the call: desk lights set, sound ready, and a busy light turns on outside your door."
+  }
+ },
+ {
+  "id": "w_hours",
+  "question": "desk",
+  "label": "I need to track my work or study hours",
+  "you_said": "you need to track your hours",
+  "keywords": [
+   "hours",
+   "timesheet",
+   "clock in",
+   "track time"
+  ],
+  "ideas": {
+   "i089": "Tap the tag on your desk when you arrive and leave. Your hours log themselves."
+  }
+ },
+ {
+  "id": "c_where",
+  "question": "car",
+  "label": "I forget where I parked",
+  "you_said": "you forget where you parked",
+  "keywords": [
+   "parked",
+   "parking lot",
+   "find my car"
+  ],
+  "ideas": {
+   "i094": "Tap the tag in your car when you park. Your phone saves the spot and guides you back later."
+  }
+ },
+ {
+  "id": "o_apps",
+  "question": "out",
+  "label": "I dig for the same app every time (tickets, bank, payment)",
+  "you_said": "you dig for the same app every time",
+  "keywords": [
+   "ticket",
+   "bank",
+   "app",
+   "payment",
+   "transit"
+  ],
+  "ideas": {
+   "i035": "Put a tag where you use it (bag strap, wallet, desk): tap and exactly that app opens."
+  }
+ },
+ {
+  "id": "o_schedule",
+  "question": "out",
+  "label": "I always check the same schedule (bins, matches, weather)",
+  "you_said": "you always check the same schedule",
+  "keywords": [
+   "schedule",
+   "bin day",
+   "match",
+   "weather",
+   "forecast"
+  ],
+  "ideas": {
+   "i099": "A tag where you usually wonder opens that schedule in one tap."
+  }
+ },
+ {
+  "id": "x_measure",
+  "question": "health",
+  "label": "I measure blood pressure, oxygen or temperature regularly",
+  "you_said": "you measure blood pressure, oxygen or temperature regularly",
+  "keywords": [
+   "blood pressure",
+   "oxygen",
+   "temperature",
+   "oximeter",
+   "measure"
+  ],
+  "ideas": {
+   "i087": "Tap the device after measuring and the right log opens, ready for today's value."
+  }
+ },
+ {
+  "id": "x_care",
+  "question": "health",
+  "label": "I look after someone and keep track of meds, meals or notes",
+  "you_said": "you look after someone and keep track of their care",
+  "keywords": [
+   "care",
+   "caregiver",
+   "elderly",
+   "disabled",
+   "parent"
+  ],
+  "ideas": {
+   "i093": "Tags around the home for meds, meals and more. Each tap adds a time-stamped line to a log the whole family can see.",
+   "i028": "Tags on pill bottles show whether today's dose was already given."
+  }
+ },
+ {
+  "id": "y_music",
+  "question": "hobbies",
+  "label": "I have a record, CD or music collection",
+  "you_said": "you have a music collection",
+  "keywords": [
+   "vinyl",
+   "record",
+   "cd",
+   "album"
+  ],
+  "ideas": {
+   "i015": "Hide a tag in each sleeve: tap a record and the album plays on your speakers. Your shelf becomes a jukebox."
+  }
+ },
+ {
+  "id": "y_games",
+  "question": "hobbies",
+  "label": "I play board games or card games",
+  "you_said": "you play board or card games",
+  "keywords": [
+   "board game",
+   "card game",
+   "cards",
+   "deck"
+  ],
+  "ideas": {
+   "i014": "Tag the game box: tap it and the lights and playlist set the mood.",
+   "i101": "Tags in card sleeves open rules, translations or your deck list."
+  }
+ },
+ {
+  "id": "y_make",
+  "question": "hobbies",
+  "label": "I make things (knitting, crafts, 3D printing)",
+  "you_said": "you make things",
+  "keywords": [
+   "knit",
+   "craft",
+   "3d print",
+   "filament",
+   "handmade"
+  ],
+  "ideas": {
+   "i105": "Tag what you make: people tap to see the materials, pattern and story.",
+   "i100": "Tag each 3D printer spool to see its material, settings and how much is left."
+  }
+ },
+ {
+  "id": "y_fun",
+  "question": "hobbies",
+  "label": "I love surprising guests and playing pranks",
+  "you_said": "you love surprising guests",
+  "keywords": [
+   "prank",
+   "fun",
+   "surprise",
+   "guests"
+  ],
+  "ideas": {
+   "i104": "Hidden tags that play a sound effect or make the lights do something unexpected.",
+   "i096": "A tag treasure hunt for friends or kids."
+  }
+ },
+ {
+  "id": "y_trips",
+  "question": "hobbies",
+  "label": "I have trip photos I never look at",
+  "you_said": "you have trip photos you never look at",
+  "keywords": [
+   "photos",
+   "trip",
+   "travel",
+   "vacation",
+   "memories"
+  ],
+  "ideas": {
+   "i097": "Put tags behind places on a wall map: tap a country and that trip's album opens."
+  }
+ },
+ {
+  "id": "b_payments",
+  "question": "business",
+  "label": "I sell handmade things and want an easy way to get paid",
+  "you_said": "you sell handmade things",
+  "keywords": [
+   "pay",
+   "payment",
+   "mobilepay",
+   "handmade",
+   "stall"
+  ],
+  "ideas": {
+   "i109": "A tag on your items or stall sign opens your payment link. No card terminal needed."
+  },
+  "show_if": [
+   "business_owner",
+   "money"
+  ]
  }
 ]

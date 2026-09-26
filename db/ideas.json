@@ -15,8 +15,8 @@
       "automation"
     ],
     "phone_support": "any",
-    "setup_by_platform": "Home Assistant (companion app on iPhone or Android).",
-    "difficulty": "medium",
+    "setup_by_platform": "iPhone: Shortcuts app (set playback destination). Android: MacroDroid. Or Home Assistant.",
+    "difficulty": "easy",
     "cost_level": "under_5_eur",
     "tag_needs": {
       "form": "sticker",
@@ -118,10 +118,10 @@
   },
   {
     "id": "i004",
-    "title": "Reset a chore or maintenance reminder",
+    "title": "Remember when you last changed or cleaned something",
     "kind": "diy",
-    "summary": "Get reminded to empty the robot vacuum tank, service an appliance or do a chore, and tap the tag when it is done to reset the reminder.",
-    "how_it_works": "Your smart home keeps a counter or 'last done' date; the tap resets it and clears the notification.",
+    "summary": "Toothbrush heads, water filters, contact lenses, the robot vacuum's tank: tap the tag when you replace or clean it, and your phone reminds you next time.",
+    "how_it_works": "Tapping saves today's date and schedules the next reminder (e.g. 90 days later).",
     "audience": [
       "personal"
     ],
@@ -134,8 +134,8 @@
       "automation"
     ],
     "phone_support": "any",
-    "setup_by_platform": "Home Assistant (companion app on iPhone or Android).",
-    "difficulty": "medium",
+    "setup_by_platform": "iPhone: Shortcuts app. Android: MacroDroid. Or Home Assistant.",
+    "difficulty": "easy",
     "cost_level": "under_5_eur",
     "tag_needs": {
       "form": "sticker",
@@ -151,18 +151,18 @@
     "review_flags": [
       "Tags on metal appliances need anti-metal (on-metal) tags."
     ],
-    "hook": "Chore reminders that reset themselves",
-    "place": "on the appliance",
-    "result": "the reminder resets for next time",
-    "setup_type": "smarthome",
+    "hook": "Remember when you last changed or cleaned something",
+    "place": "on the toothbrush, filter or appliance",
+    "result": "today's date is saved and the next reminder is set",
+    "setup_type": "automation",
     "status": "needs_review"
   },
   {
     "id": "i005",
-    "title": "Pause doorbell alerts while you work outside",
+    "title": "Guest mode: pause your automations",
     "kind": "diy",
-    "summary": "Stops your video doorbell sending motion alerts while you garden or clean near the door.",
-    "how_it_works": "Tap toggles a switch that mutes the doorbell notifications; tap again to turn them back on.",
+    "summary": "Guests set off motion lights and doorbell alerts. One tap pauses them while people are over.",
+    "how_it_works": "Tag toggles a 'guest mode' switch that your automations check before running.",
     "audience": [
       "personal"
     ],
@@ -188,9 +188,9 @@
     "who_pays": null,
     "startup_cost_level": null,
     "review_flags": [],
-    "hook": "Silence the doorbell while you work outside",
+    "hook": "Guests over? Pause your automations",
     "place": "by the front door",
-    "result": "doorbell alerts pause until you tap again",
+    "result": "motion lights and doorbell alerts pause",
     "setup_type": "smarthome",
     "status": "ok"
   },
@@ -503,9 +503,9 @@
   },
   {
     "id": "i014",
-    "title": "Movie night mode",
+    "title": "Set the mood: movie, dinner or game night",
     "kind": "diy",
-    "summary": "Tap a tag hidden behind a painting or next to the TV to dim lights, stop motion sensors, open Netflix or even start the popcorn machine.",
+    "summary": "A tag behind a painting, under the coffee table or on the board-game box sets the lights and music for that moment.",
     "how_it_works": "Tag runs a 'movie' scene; separate tags can each open a different streaming app.",
     "audience": [
       "personal"
@@ -532,9 +532,9 @@
     "who_pays": null,
     "startup_cost_level": null,
     "review_flags": [],
-    "hook": "Movie night in one tap",
-    "place": "behind a painting or by the TV",
-    "result": "lights dim and Netflix opens",
+    "hook": "Movie, dinner or game night in one tap",
+    "place": "behind a painting, under the table or on the game box",
+    "result": "the lights and music for that moment start",
     "setup_type": "automation",
     "status": "ok"
   },
@@ -730,9 +730,9 @@
   },
   {
     "id": "i020",
-    "title": "Home manual behind the light switch",
+    "title": "Instructions exactly where you need them",
     "kind": "diy",
-    "summary": "A tag hidden behind a switch plate shows how the room's smart home works and which fuse controls it.",
+    "summary": "Tag the baby car seat, the washing machine or the fuse box: tap to open its manual or how-to video.",
     "how_it_works": "Tag links to a documentation page for that room.",
     "audience": [
       "personal",
@@ -761,9 +761,9 @@
     "who_pays": null,
     "startup_cost_level": null,
     "review_flags": [],
-    "hook": "A hidden manual for your home",
-    "place": "behind a switch plate or on a device",
-    "result": "the instructions for that room or device open",
+    "hook": "Instructions exactly where you need them",
+    "place": "on the device (car seat, washing machine, fuse box)",
+    "result": "its manual or how-to video opens",
     "setup_type": "link",
     "status": "ok"
   },
@@ -845,9 +845,9 @@
   },
   {
     "id": "i023",
-    "title": "Packing list inside your suitcase",
+    "title": "A checklist by the door before you leave",
     "kind": "diy",
-    "summary": "Tap the tag in your luggage to get your standard packing checklist.",
+    "summary": "Keys, wallet, gym bag, camera batteries: tap by the door or in your bag and your checklist opens, so nothing is left behind.",
     "how_it_works": "Tag opens or creates a checklist in your reminders/notes app.",
     "audience": [
       "personal"
@@ -875,9 +875,9 @@
     "who_pays": null,
     "startup_cost_level": null,
     "review_flags": [],
-    "hook": "Pack without forgetting anything",
-    "place": "inside your suitcase",
-    "result": "your packing checklist opens",
+    "hook": "A checklist by the door so nothing gets left behind",
+    "place": "by the door or inside your bag",
+    "result": "your checklist opens",
     "setup_type": "automation",
     "status": "ok"
   },
@@ -1421,9 +1421,9 @@
   },
   {
     "id": "i038",
-    "title": "Switch wifi or Bluetooth off to save battery",
+    "title": "Switch phone settings with a tap",
     "kind": "diy",
-    "summary": "Tap your desk tag to switch radios you don't need off (or on).",
+    "summary": "Wifi, Bluetooth, VPN, brightness: one tap switches the settings you change all the time.",
     "how_it_works": "Automation toggles wifi/Bluetooth.",
     "audience": [
       "personal"
@@ -1450,9 +1450,9 @@
     "who_pays": null,
     "startup_cost_level": null,
     "review_flags": [],
-    "hook": "Switch wifi and Bluetooth off to save battery",
-    "place": "on your desk",
-    "result": "wifi or Bluetooth switches on or off",
+    "hook": "Switch phone settings with a tap",
+    "place": "wherever you change them",
+    "result": "wifi, Bluetooth or VPN switches on or off",
     "setup_type": "automation",
     "status": "ok"
   },
@@ -2912,6 +2912,1004 @@
     "result": "credit is taken off the card",
     "setup_type": "maker",
     "status": "needs_review"
+  },
+  {
+    "id": "i081",
+    "title": "Picture cards that play music or stories",
+    "kind": "diy",
+    "summary": "Kids tap a picture card and their song or story starts. Screen-free, and small children can choose by themselves.",
+    "how_it_works": "Each card has a tag. A reader (or a phone/smart speaker automation) plays the song or story linked to that card.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home"
+    ],
+    "goals": [
+      "automation",
+      "accessibility"
+    ],
+    "phone_support": "any",
+    "setup_by_platform": "Home Assistant with a smart speaker, or a Raspberry Pi with a reader.",
+    "difficulty": "medium",
+    "cost_level": "5_to_50_eur",
+    "tag_needs": {
+      "form": "card",
+      "on_metal": false,
+      "waterproof": false,
+      "rewritable": true,
+      "secure": false,
+      "memory": "small"
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "review_flags": [],
+    "hook": "Picture cards that play songs and stories",
+    "place": "on each picture card (and a reader or speaker)",
+    "result": "that card's song or story starts",
+    "setup_type": "smarthome",
+    "status": "ok"
+  },
+  {
+    "id": "i082",
+    "title": "A nightly lock-up round you can't half-do",
+    "kind": "diy",
+    "summary": "Tap a tag at each door and window during your evening check. Your phone ticks them off, so you know the round is really done.",
+    "how_it_works": "Each door/window tag marks its item as done in a checklist app, or logs the time.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home"
+    ],
+    "goals": [
+      "security",
+      "tracking"
+    ],
+    "phone_support": "any",
+    "setup_by_platform": "iPhone: Shortcuts app. Android: MacroDroid or Tasker.",
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form": "sticker",
+      "on_metal": false,
+      "waterproof": false,
+      "rewritable": true,
+      "secure": false,
+      "memory": "small"
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "review_flags": [],
+    "hook": "A bedtime lock-up round you can't half-do",
+    "place": "on each door and window",
+    "result": "that door or window is ticked off your checklist",
+    "setup_type": "automation",
+    "status": "ok"
+  },
+  {
+    "id": "i084",
+    "title": "Know everything is closed before you leave",
+    "kind": "diy",
+    "summary": "One tap by the door checks every window and door sensor and tells you if something is still open.",
+    "how_it_works": "The tag triggers your smart home to read all door/window sensors and announce or notify anything left open.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home"
+    ],
+    "goals": [
+      "security",
+      "automation"
+    ],
+    "phone_support": "any",
+    "setup_by_platform": "Home Assistant (companion app on iPhone or Android).",
+    "difficulty": "medium",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form": "sticker",
+      "on_metal": false,
+      "waterproof": false,
+      "rewritable": true,
+      "secure": false,
+      "memory": "small"
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "review_flags": [
+      "Needs door/window sensors."
+    ],
+    "hook": "Know everything is closed before you leave",
+    "place": "by the front door",
+    "result": "your phone tells you if any window or door is still open",
+    "setup_type": "smarthome",
+    "status": "needs_review"
+  },
+  {
+    "id": "i085",
+    "title": "Sell NFC as a service to local businesses",
+    "kind": "business",
+    "summary": "Instead of selling a card once, set up the card plus its landing page (reviews, menu, links) and keep it updated for a monthly fee.",
+    "how_it_works": "You write the tag to point at a page you control and manage that page for the business.",
+    "audience": [
+      "nfc_as_business",
+      "business_customers"
+    ],
+    "settings": [
+      "shop",
+      "restaurant",
+      "events"
+    ],
+    "goals": [
+      "marketing"
+    ],
+    "phone_support": "any",
+    "setup_by_platform": "NFC Tools to write tags; any link-page tool for the landing pages.",
+    "difficulty": "easy",
+    "cost_level": "5_to_50_eur",
+    "tag_needs": {
+      "form": "card",
+      "on_metal": false,
+      "waterproof": false,
+      "rewritable": true,
+      "secure": false,
+      "memory": "small"
+    },
+    "business_model": "subscription_or_lease",
+    "who_pays": "cafes, restaurants, salons, local shops",
+    "startup_cost_level": "low",
+    "review_flags": [
+      "Directly related to the user's NFC review-cards leasing idea."
+    ],
+    "hook": "Turn NFC cards into a monthly business",
+    "place": "on cards or stands you set up for local businesses",
+    "result": "the business's review or menu page opens, and you keep it updated",
+    "setup_type": "link",
+    "status": "needs_review"
+  },
+  {
+    "id": "i087",
+    "title": "Log blood pressure, oxygen or temperature in one tap",
+    "kind": "diy",
+    "summary": "Tap the device after measuring and your phone opens the right log with today's date ready.",
+    "how_it_works": "Tag on the blood pressure monitor, oximeter or thermometer opens a shortcut that logs the value in your health app.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home",
+      "health"
+    ],
+    "goals": [
+      "tracking"
+    ],
+    "phone_support": "any",
+    "setup_by_platform": "iPhone: Shortcuts app (Apple Health). Android: MacroDroid + your health app.",
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form": "sticker",
+      "on_metal": false,
+      "waterproof": false,
+      "rewritable": true,
+      "secure": false,
+      "memory": "small"
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "review_flags": [],
+    "hook": "Log your blood pressure or oxygen in one tap",
+    "place": "on the measuring device",
+    "result": "the right health log opens, ready for today's value",
+    "setup_type": "automation",
+    "status": "ok"
+  },
+  {
+    "id": "i088",
+    "title": "Connect headphones or a speaker in one tap",
+    "kind": "diy",
+    "summary": "Tap the headphone case or the speaker and your phone connects to it and starts your audio.",
+    "how_it_works": "Tag triggers an automation that connects that Bluetooth device (or sets it as the audio output) and can open your music or audiobook app.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home",
+      "office"
+    ],
+    "goals": [
+      "automation"
+    ],
+    "phone_support": "any",
+    "setup_by_platform": "Android: NFC Tools Pro, MacroDroid or Bixby Routines. iPhone: Shortcuts (sets the audio output for AirPlay/AirPods).",
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form": "sticker",
+      "on_metal": false,
+      "waterproof": false,
+      "rewritable": true,
+      "secure": false,
+      "memory": "small"
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "review_flags": [
+      "iPhone automations can't connect every Bluetooth device; best for AirPods/AirPlay."
+    ],
+    "hook": "Connect headphones or a speaker in one tap",
+    "place": "on the headphone case or speaker",
+    "result": "your phone connects and starts your audio",
+    "setup_type": "automation",
+    "status": "needs_review"
+  },
+  {
+    "id": "i089",
+    "title": "Clock in and out of work with a tap",
+    "kind": "diy",
+    "summary": "Tap the tag on your desk when you arrive and leave. Your hours are logged without thinking about it.",
+    "how_it_works": "The tag toggles an 'in/out' state and writes the time to a sheet, calendar or time-tracking app.",
+    "audience": [
+      "personal",
+      "workplace"
+    ],
+    "settings": [
+      "office"
+    ],
+    "goals": [
+      "tracking"
+    ],
+    "phone_support": "any",
+    "setup_by_platform": "iPhone: Shortcuts app. Android: MacroDroid or Tasker.",
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form": "sticker",
+      "on_metal": false,
+      "waterproof": false,
+      "rewritable": true,
+      "secure": false,
+      "memory": "small"
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "review_flags": [],
+    "hook": "Clock in and out of work without thinking",
+    "place": "on the side of your desk",
+    "result": "your arrival or departure time is logged",
+    "setup_type": "automation",
+    "status": "ok"
+  },
+  {
+    "id": "i090",
+    "title": "Family chores you tick off with a tap",
+    "kind": "diy",
+    "summary": "Tags where the chores happen (dishwasher, bins, plants). Tap when done and everyone sees it's done. It can even become a points game.",
+    "how_it_works": "Each tag marks its chore as completed in a shared reminders list and your phone buzzes to confirm.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home"
+    ],
+    "goals": [
+      "tracking",
+      "reminder"
+    ],
+    "phone_support": "any",
+    "setup_by_platform": "iPhone: Shortcuts app + shared Reminders. Android: MacroDroid + a shared list app.",
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form": "sticker",
+      "on_metal": false,
+      "waterproof": false,
+      "rewritable": true,
+      "secure": false,
+      "memory": "small"
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "review_flags": [],
+    "hook": "Chores the whole family can tick off",
+    "place": "where each chore happens",
+    "result": "the chore is marked done for everyone",
+    "setup_type": "automation",
+    "status": "ok"
+  },
+  {
+    "id": "i091",
+    "title": "Keep your habit streak with a tap",
+    "kind": "diy",
+    "summary": "Put a tag where the habit happens (skincare shelf, bookshelf, front door). One tap marks today as done in your habit app.",
+    "how_it_works": "Tag runs an automation that logs the habit in a habit-tracking app or counter.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home",
+      "health"
+    ],
+    "goals": [
+      "tracking",
+      "accessibility"
+    ],
+    "phone_support": "any",
+    "setup_by_platform": "iPhone: Shortcuts app (e.g. Streaks). Android: MacroDroid + a habit app.",
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form": "sticker",
+      "on_metal": false,
+      "waterproof": false,
+      "rewritable": true,
+      "secure": false,
+      "memory": "small"
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "review_flags": [],
+    "hook": "Keep your habit streak with one tap",
+    "place": "where the habit happens",
+    "result": "today is marked done in your habit app",
+    "setup_type": "automation",
+    "status": "ok"
+  },
+  {
+    "id": "i092",
+    "title": "Did anyone feed the pet?",
+    "kind": "diy",
+    "summary": "A tag on the food container: whoever feeds the pet taps it. Everyone can check, and the pet never gets two dinners.",
+    "how_it_works": "Tapping logs the feeding time to a shared note, sheet or calendar the whole family can see.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home",
+      "pets"
+    ],
+    "goals": [
+      "tracking"
+    ],
+    "phone_support": "any",
+    "setup_by_platform": "iPhone: Shortcuts app. Android: MacroDroid. Shared note or calendar.",
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form": "sticker",
+      "on_metal": false,
+      "waterproof": false,
+      "rewritable": true,
+      "secure": false,
+      "memory": "small"
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "review_flags": [],
+    "hook": "Never wonder “did anyone feed the dog?”",
+    "place": "on the pet food container",
+    "result": "the feeding time is logged for the whole family",
+    "setup_type": "automation",
+    "status": "ok"
+  },
+  {
+    "id": "i093",
+    "title": "A care log for someone you look after",
+    "kind": "diy",
+    "summary": "Tags around the home for medicine, meals and toilet breaks. Each tap adds a time-stamped line to a log the whole care team can see.",
+    "how_it_works": "Each tag writes its action and the time to a shared Google Sheet.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home",
+      "health"
+    ],
+    "goals": [
+      "tracking"
+    ],
+    "phone_support": "any",
+    "setup_by_platform": "Android: MacroDroid or Tasker. iPhone: Shortcuts app. Google Sheets or similar.",
+    "difficulty": "medium",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form": "sticker",
+      "on_metal": false,
+      "waterproof": false,
+      "rewritable": true,
+      "secure": false,
+      "memory": "small"
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "review_flags": [],
+    "hook": "A care log the whole family can see",
+    "place": "around the home (meds, kitchen, bathroom)",
+    "result": "the action and time are added to a shared log",
+    "setup_type": "automation",
+    "status": "ok"
+  },
+  {
+    "id": "i094",
+    "title": "Remember where you parked",
+    "kind": "diy",
+    "summary": "Tap the tag in your car when you park and your phone saves the spot. Later it guides you back.",
+    "how_it_works": "The tag saves your current location (and can open the map to it later).",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "car"
+    ],
+    "goals": [
+      "tracking"
+    ],
+    "phone_support": "any",
+    "setup_by_platform": "iPhone: Shortcuts app. Android: MacroDroid or Tasker.",
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form": "sticker",
+      "on_metal": false,
+      "waterproof": false,
+      "rewritable": true,
+      "secure": false,
+      "memory": "small"
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "review_flags": [],
+    "hook": "Never lose your car in a parking lot",
+    "place": "in your car",
+    "result": "your parking spot is saved on the map",
+    "setup_type": "automation",
+    "status": "ok"
+  },
+  {
+    "id": "i095",
+    "title": "An emergency button you can always reach",
+    "kind": "diy",
+    "summary": "A tag by the bed or in your wallet that calls or texts a chosen person, or lights up the house, with one tap.",
+    "how_it_works": "Tag runs an automation that calls/texts an emergency contact with your location, or turns on all lights and a loud sound.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home",
+      "health"
+    ],
+    "goals": [
+      "security"
+    ],
+    "phone_support": "any",
+    "setup_by_platform": "iPhone: Shortcuts app. Android: MacroDroid. Lights part needs smart lights.",
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form": "sticker",
+      "on_metal": false,
+      "waterproof": false,
+      "rewritable": true,
+      "secure": false,
+      "memory": "small"
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "review_flags": [
+      "Not a replacement for emergency services or a certified alarm."
+    ],
+    "hook": "An emergency button you can always reach",
+    "place": "by the bed or in your wallet",
+    "result": "your chosen person is called or texted with your location",
+    "setup_type": "automation",
+    "status": "needs_review"
+  },
+  {
+    "id": "i096",
+    "title": "A treasure hunt with tags",
+    "kind": "diy",
+    "summary": "Hide tags around the house, garden or town. Each tap reveals the next clue. Great for kids' parties and birthdays.",
+    "how_it_works": "Each tag opens a link or map location with the next clue.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home",
+      "outdoors",
+      "events"
+    ],
+    "goals": [
+      "share_info"
+    ],
+    "phone_support": "any",
+    "setup_by_platform": "NFC Tools (any phone).",
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form": "sticker",
+      "on_metal": false,
+      "waterproof": false,
+      "rewritable": true,
+      "secure": false,
+      "memory": "small"
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "review_flags": [],
+    "hook": "A treasure hunt kids will remember",
+    "place": "hidden around the house or garden",
+    "result": "the next clue appears",
+    "setup_type": "link",
+    "status": "ok"
+  },
+  {
+    "id": "i097",
+    "title": "A map that opens your trip photos",
+    "kind": "diy",
+    "summary": "Hide tags behind places on a wall map. Tap a country and the photos from that trip open.",
+    "how_it_works": "Each tag holds the link to a shared photo album for that place.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home",
+      "travel"
+    ],
+    "goals": [
+      "share_info"
+    ],
+    "phone_support": "any",
+    "setup_by_platform": "NFC Tools (any phone).",
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form": "sticker",
+      "on_metal": false,
+      "waterproof": false,
+      "rewritable": true,
+      "secure": false,
+      "memory": "small"
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "review_flags": [],
+    "hook": "A wall map that opens your trip photos",
+    "place": "behind each place on a map",
+    "result": "the photo album from that trip opens",
+    "setup_type": "link",
+    "status": "ok"
+  },
+  {
+    "id": "i098",
+    "title": "Send the robot vacuum to one spot",
+    "kind": "diy",
+    "summary": "Tap the tag in the kitchen, or by the litter box, and the robot vacuum cleans just that room.",
+    "how_it_works": "Tag triggers your smart home to start a room-specific clean.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home",
+      "pets"
+    ],
+    "goals": [
+      "automation"
+    ],
+    "phone_support": "any",
+    "setup_by_platform": "Home Assistant or the vacuum's app via Shortcuts/MacroDroid.",
+    "difficulty": "medium",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form": "sticker",
+      "on_metal": false,
+      "waterproof": false,
+      "rewritable": true,
+      "secure": false,
+      "memory": "small"
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "review_flags": [],
+    "hook": "Send the robot vacuum to one spot",
+    "place": "in the room that gets messy (or by the litter box)",
+    "result": "the vacuum cleans just that room",
+    "setup_type": "smarthome",
+    "status": "ok"
+  },
+  {
+    "id": "i099",
+    "title": "The schedule you always look up, one tap away",
+    "kind": "diy",
+    "summary": "Bin collection days, your team's matches, today's weather: put the tag where you usually wonder about it.",
+    "how_it_works": "Tag opens the web page or app with that schedule.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home"
+    ],
+    "goals": [
+      "share_info"
+    ],
+    "phone_support": "any",
+    "setup_by_platform": "NFC Tools (any phone).",
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form": "sticker",
+      "on_metal": false,
+      "waterproof": false,
+      "rewritable": true,
+      "secure": false,
+      "memory": "small"
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "review_flags": [],
+    "hook": "The schedule you always check, one tap away",
+    "place": "where you usually wonder (fridge, door, coaster)",
+    "result": "the bin days, match times or weather open",
+    "setup_type": "link",
+    "status": "ok"
+  },
+  {
+    "id": "i100",
+    "title": "Know what's on each 3D printer spool",
+    "kind": "maker",
+    "summary": "Tag each filament spool: tap to see the material, print settings and how much is left.",
+    "how_it_works": "Each tag links to the spool's entry in a filament tracker.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home"
+    ],
+    "goals": [
+      "tracking"
+    ],
+    "phone_support": "any",
+    "setup_by_platform": "Filament-tracking app or sheet; NFC Tools to write the tags.",
+    "difficulty": "medium",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form": "sticker",
+      "on_metal": false,
+      "waterproof": false,
+      "rewritable": true,
+      "secure": false,
+      "memory": "small"
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "review_flags": [],
+    "hook": "Know what's on every filament spool",
+    "place": "on each spool",
+    "result": "the material, settings and amount left appear",
+    "setup_type": "link",
+    "status": "ok"
+  },
+  {
+    "id": "i101",
+    "title": "Tap a game card to see its rules",
+    "kind": "diy",
+    "summary": "Tags in card sleeves open the rules or a translation of foreign cards, or your whole deck list.",
+    "how_it_works": "Each tag links to the card's page or your deck list.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home",
+      "events"
+    ],
+    "goals": [
+      "share_info"
+    ],
+    "phone_support": "any",
+    "setup_by_platform": "NFC Tools (any phone).",
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form": "sticker",
+      "on_metal": false,
+      "waterproof": false,
+      "rewritable": true,
+      "secure": false,
+      "memory": "small"
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "review_flags": [],
+    "hook": "Tap a game card to see its rules",
+    "place": "inside the card sleeves",
+    "result": "the card's rules, translation or your deck list open",
+    "setup_type": "link",
+    "status": "ok"
+  },
+  {
+    "id": "i103",
+    "title": "Video-call mode in one tap",
+    "kind": "diy",
+    "summary": "Tap before a call: desk lights set, camera and mic ready, and a 'do not disturb' light outside the door turns red.",
+    "how_it_works": "Tag runs a scene: lights for the camera, sound settings, and a status light outside.",
+    "audience": [
+      "personal",
+      "workplace"
+    ],
+    "settings": [
+      "office",
+      "home"
+    ],
+    "goals": [
+      "automation"
+    ],
+    "phone_support": "any",
+    "setup_by_platform": "iPhone: Shortcuts app. Android: MacroDroid. Status light needs a smart bulb.",
+    "difficulty": "medium",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form": "sticker",
+      "on_metal": false,
+      "waterproof": false,
+      "rewritable": true,
+      "secure": false,
+      "memory": "small"
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "review_flags": [],
+    "hook": "Video-call mode in one tap",
+    "place": "on your desk or door",
+    "result": "lights and sound get set, and a busy light turns on outside",
+    "setup_type": "automation",
+    "status": "ok"
+  },
+  {
+    "id": "i104",
+    "title": "Hidden sound effects and pranks",
+    "kind": "diy",
+    "summary": "Tap a hidden tag and a sound effect plays, or the lights do something surprising. Pure fun for guests and kids.",
+    "how_it_works": "Tag runs an automation that plays a sound or triggers a light effect.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home"
+    ],
+    "goals": [
+      "automation"
+    ],
+    "phone_support": "any",
+    "setup_by_platform": "iPhone: Shortcuts app. Android: MacroDroid.",
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form": "sticker",
+      "on_metal": false,
+      "waterproof": false,
+      "rewritable": true,
+      "secure": false,
+      "memory": "small"
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "review_flags": [],
+    "hook": "Hidden sound effects and harmless pranks",
+    "place": "somewhere surprising",
+    "result": "a sound or light effect plays",
+    "setup_type": "automation",
+    "status": "ok"
+  },
+  {
+    "id": "i105",
+    "title": "The story behind something you made",
+    "kind": "diy",
+    "summary": "Tag a knitted piece, a craft or a gift: friends tap to see the materials, pattern and inspiration.",
+    "how_it_works": "Tag links to a page or note with the project details.",
+    "audience": [
+      "personal",
+      "nfc_as_business"
+    ],
+    "settings": [
+      "home",
+      "events"
+    ],
+    "goals": [
+      "share_info"
+    ],
+    "phone_support": "any",
+    "setup_by_platform": "NFC Tools (any phone).",
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form": "sticker",
+      "on_metal": false,
+      "waterproof": false,
+      "rewritable": true,
+      "secure": false,
+      "memory": "small"
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "review_flags": [],
+    "hook": "Show the story behind something you made",
+    "place": "on the finished piece",
+    "result": "the materials, pattern and inspiration open",
+    "setup_type": "link",
+    "status": "ok"
+  },
+  {
+    "id": "i106",
+    "title": "Find out which clothes you really wear",
+    "kind": "diy",
+    "summary": "Tag your clothes and tap when you wear something. After a few months you know what to keep.",
+    "how_it_works": "Each tag logs the item as worn in a wardrobe app or sheet.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home"
+    ],
+    "goals": [
+      "tracking"
+    ],
+    "phone_support": "any",
+    "setup_by_platform": "iPhone: Shortcuts app + a wardrobe app. Android: MacroDroid + a sheet.",
+    "difficulty": "medium",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form": "sticker",
+      "on_metal": false,
+      "waterproof": false,
+      "rewritable": true,
+      "secure": false,
+      "memory": "small"
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "review_flags": [],
+    "hook": "Find out which clothes you really wear",
+    "place": "inside each piece of clothing",
+    "result": "the item is logged as worn today",
+    "setup_type": "automation",
+    "status": "ok"
+  },
+  {
+    "id": "i107",
+    "title": "Only your card starts the car charger",
+    "kind": "diy",
+    "summary": "A tag by your home EV charger: charging starts only after a tap, so neighbours can't use it.",
+    "how_it_works": "The smart home enables the charger when the tag is scanned.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "car",
+      "home"
+    ],
+    "goals": [
+      "security",
+      "access"
+    ],
+    "phone_support": "any",
+    "setup_by_platform": "Home Assistant + a smart charger.",
+    "difficulty": "advanced",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form": "sticker",
+      "on_metal": false,
+      "waterproof": true,
+      "rewritable": true,
+      "secure": false,
+      "memory": "small"
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "review_flags": [],
+    "hook": "Only your card starts the car charger",
+    "place": "next to your home charger",
+    "result": "charging is allowed to start",
+    "setup_type": "smarthome",
+    "status": "ok"
+  },
+  {
+    "id": "i108",
+    "title": "Pre-heat the coffee machine from bed",
+    "kind": "diy",
+    "summary": "Tap the tag on your headboard and the espresso machine is warm by the time you reach the kitchen.",
+    "how_it_works": "Tag switches on a smart plug for the coffee machine.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home"
+    ],
+    "goals": [
+      "automation"
+    ],
+    "phone_support": "any",
+    "setup_by_platform": "Smart plug + Shortcuts, MacroDroid or Home Assistant.",
+    "difficulty": "medium",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form": "sticker",
+      "on_metal": false,
+      "waterproof": false,
+      "rewritable": true,
+      "secure": false,
+      "memory": "small"
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "review_flags": [],
+    "hook": "Pre-heat the coffee machine from bed",
+    "place": "on your headboard",
+    "result": "the coffee machine switches on",
+    "setup_type": "smarthome",
+    "status": "ok"
+  },
+  {
+    "id": "i109",
+    "title": "Tap to pay at your craft stall",
+    "kind": "business",
+    "summary": "A tag on your handmade items or stall sign opens your payment link. No card terminal needed.",
+    "how_it_works": "Tag holds your payment link (e.g. MobilePay, PayPal).",
+    "audience": [
+      "business_customers",
+      "nfc_as_business"
+    ],
+    "settings": [
+      "events",
+      "shop"
+    ],
+    "goals": [
+      "payments"
+    ],
+    "phone_support": "any",
+    "setup_by_platform": "NFC Tools (any phone).",
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form": "sticker",
+      "on_metal": false,
+      "waterproof": false,
+      "rewritable": true,
+      "secure": false,
+      "memory": "small"
+    },
+    "business_model": "one_time_sale",
+    "who_pays": "craft sellers, market stalls",
+    "startup_cost_level": "low",
+    "review_flags": [],
+    "hook": "Take payments at your stall without a terminal",
+    "place": "on your items or stall sign",
+    "result": "your payment link opens",
+    "setup_type": "link",
+    "status": "ok"
   },
   {
     "id": "i074",

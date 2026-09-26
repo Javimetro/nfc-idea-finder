@@ -1,0 +1,3023 @@
+[
+  {
+    "idea_title": "Football Team Game Schedule Coaster",
+    "summary": "Tapping a custom coaster opens the match schedule for a favorite football team on a smartphone. It provides quick access to upcoming game times during match days.",
+    "how_it_works": "A game schedule URL is written to an NFC tag inside a 3D-printed coaster. Tapping the coaster opens the team schedule in a web browser.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home"
+    ],
+    "goals": [
+      "share_info"
+    ],
+    "phone_support": "any",
+    "extra_app": null,
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "How do you use NFC tags in your daily life! : r/NFC",
+    "source_url": "https://www.reddit.com/r/NFC/comments/1ukrfoz/how_do_you_use_nfc_tags_in_your_daily_life/",
+    "creator_name": "Pesci_09",
+    "timestamp": null,
+    "anchor_quote": "coasters I printed that have a football team theme",
+    "notes": null
+  },
+  {
+    "idea_title": "Vehicle Commute ETA Text to Spouse",
+    "summary": "Scanning an in-car tag calculates driving time home and sends an automated text update to a spouse. It keeps family informed without manual typing while driving.",
+    "how_it_works": "Scanning the car tag triggers Apple Navigation to calculate commute duration and sends a preformatted SMS with the ETA.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "car",
+      "travel"
+    ],
+    "goals": [
+      "automation",
+      "share_info"
+    ],
+    "phone_support": "iphone_only",
+    "extra_app": "iOS Shortcuts",
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "How do you use NFC tags in your daily life! : r/NFC",
+    "source_url": "https://www.reddit.com/r/NFC/comments/1ukrfoz/how_do_you_use_nfc_tags_in_your_daily_life/",
+    "creator_name": "Pesci_09",
+    "timestamp": null,
+    "anchor_quote": "pull up my Apple navigation app, get the length of time",
+    "notes": null
+  },
+  {
+    "idea_title": "Washing Machine Laundry Timer",
+    "summary": "Starts a countdown timer when starting laundry to ensure clothes are not forgotten in the washing machine.",
+    "how_it_works": "Scanning a tag on the washing machine starts a laundry countdown timer on your phone.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home"
+    ],
+    "goals": [
+      "reminder",
+      "automation"
+    ],
+    "phone_support": "any",
+    "extra_app": null,
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": true,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "How do you use NFC tags in your daily life! : r/NFC",
+    "source_url": "https://www.reddit.com/r/NFC/comments/1ukrfoz/how_do_you_use_nfc_tags_in_your_daily_life/",
+    "creator_name": "Pesci_09",
+    "timestamp": null,
+    "anchor_quote": "set timers for things like washing clothes",
+    "notes": null
+  },
+  {
+    "idea_title": "Work Pomodoro Focus Timer",
+    "summary": "Initiates a Pomodoro timer interval to structure productivity and manage work breaks effectively.",
+    "how_it_works": "Tapping a desk tag launches a Pomodoro countdown timer automation on your smartphone.",
+    "audience": [
+      "personal",
+      "workplace"
+    ],
+    "settings": [
+      "office",
+      "home"
+    ],
+    "goals": [
+      "automation",
+      "reminder"
+    ],
+    "phone_support": "any",
+    "extra_app": null,
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "How do you use NFC tags in your daily life! : r/NFC",
+    "source_url": "https://www.reddit.com/r/NFC/comments/1ukrfoz/how_do_you_use_nfc_tags_in_your_daily_life/",
+    "creator_name": "Pesci_09",
+    "timestamp": null,
+    "anchor_quote": "set pomodoro timers for when I am working",
+    "notes": null
+  },
+  {
+    "idea_title": "3D Printer Filament Spool Tracker",
+    "summary": "Tags 3D printer filament spools to identify material types, configure print settings, and track remaining filament weight.",
+    "how_it_works": "NFC tags attached to spools are scanned to transmit material details and weight data to the 3D printer workflow.",
+    "audience": [
+      "personal",
+      "workplace"
+    ],
+    "settings": [
+      "office",
+      "home",
+      "warehouse"
+    ],
+    "goals": [
+      "tracking",
+      "automation"
+    ],
+    "phone_support": "any",
+    "extra_app": null,
+    "difficulty": "medium",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "How do you use NFC tags in your daily life! : r/NFC",
+    "source_url": "https://www.reddit.com/r/NFC/comments/1ukrfoz/how_do_you_use_nfc_tags_in_your_daily_life/",
+    "creator_name": "Pesci_09",
+    "timestamp": null,
+    "anchor_quote": "tag all my 3D printer filament spools with NFC tags",
+    "notes": null
+  },
+  {
+    "idea_title": "Collectible Gaming Card Rule Translation Tag",
+    "summary": "Attaches tags to gaming card sleeves to instantly display translations or card rules for foreign cards.",
+    "how_it_works": "Scanning an NFC tag embedded in a card sleeve opens a web link displaying the card text and rules.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home",
+      "events"
+    ],
+    "goals": [
+      "share_info"
+    ],
+    "phone_support": "any",
+    "extra_app": null,
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "How do you use NFC tags in your daily life! : r/NFC",
+    "source_url": "https://www.reddit.com/r/NFC/comments/1ukrfoz/how_do_you_use_nfc_tags_in_your_daily_life/",
+    "creator_name": "Pesci_09",
+    "timestamp": null,
+    "anchor_quote": "magic the gathering card sleeves for foreign or otherwise not-readable cards",
+    "notes": null
+  },
+  {
+    "idea_title": "Encrypted Confidential Data Storage on NFC",
+    "summary": "Stores encrypted passwords and secret notes directly on an NFC tag for secure physical offline storage.",
+    "how_it_works": "Encrypted data is written to an NFC tag and read using OpenPrintTag or a custom decryption utility.",
+    "audience": [
+      "personal",
+      "workplace"
+    ],
+    "settings": [
+      "home",
+      "office"
+    ],
+    "goals": [
+      "security",
+      "share_info"
+    ],
+    "phone_support": "any",
+    "extra_app": "OpenPrintTag",
+    "difficulty": "medium",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": true,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "How do you use NFC tags in your daily life! : r/NFC",
+    "source_url": "https://www.reddit.com/r/NFC/comments/1ukrfoz/how_do_you_use_nfc_tags_in_your_daily_life/",
+    "creator_name": "Pesci_09",
+    "timestamp": null,
+    "anchor_quote": "encrypt my secrets on NFC tags",
+    "notes": null
+  },
+  {
+    "idea_title": "Boat Helm Nautical Sound Signals Quick-Reference",
+    "summary": "Opens a quick-reference guide of nautical sound signals when tapping a tag mounted on a boat helm during navigation emergencies.",
+    "how_it_works": "Tag mounted on boat helm opens a shortcut or web page listing nautical sound signals.",
+    "audience": [
+      "personal",
+      "workplace"
+    ],
+    "settings": [
+      "outdoors",
+      "travel"
+    ],
+    "goals": [
+      "share_info",
+      "security"
+    ],
+    "phone_support": "iphone_only",
+    "extra_app": "iOS Shortcuts",
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": true,
+      "waterproof": true,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "How do you use NFC tags in your daily life! : r/NFC",
+    "source_url": "https://www.reddit.com/r/NFC/comments/1ukrfoz/how_do_you_use_nfc_tags_in_your_daily_life/",
+    "creator_name": "Pesci_09",
+    "timestamp": null,
+    "anchor_quote": "helm of my cruiser to open a page showing Sound Signals",
+    "notes": null
+  },
+  {
+    "idea_title": "Air Fryer Recipe App Quick Launcher",
+    "summary": "Launches a dedicated air fryer recipe application when tapping a tag attached to the side of the air fryer.",
+    "how_it_works": "An NFC tag glued to an air fryer opens a recipe web app upon scanning.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home"
+    ],
+    "goals": [
+      "automation",
+      "share_info"
+    ],
+    "phone_support": "any",
+    "extra_app": null,
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": true,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "How do you use NFC tags in your daily life! : r/NFC",
+    "source_url": "https://www.reddit.com/r/NFC/comments/1ukrfoz/how_do_you_use_nfc_tags_in_your_daily_life/",
+    "creator_name": "Pesci_09",
+    "timestamp": null,
+    "anchor_quote": "side of my AirFryer to open relevant app",
+    "notes": null
+  },
+  {
+    "idea_title": "Desk Multi-Factor Authentication App Launcher",
+    "summary": "Launches a multi-factor authentication token application immediately upon tapping a desk-mounted tag.",
+    "how_it_works": "Scanning a desk tag opens an authenticator or MFA token app on your phone.",
+    "audience": [
+      "workplace",
+      "personal"
+    ],
+    "settings": [
+      "office",
+      "home"
+    ],
+    "goals": [
+      "automation",
+      "security"
+    ],
+    "phone_support": "any",
+    "extra_app": null,
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "How do you use NFC tags in your daily life! : r/NFC",
+    "source_url": "https://www.reddit.com/r/NFC/comments/1ukrfoz/how_do_you_use_nfc_tags_in_your_daily_life/",
+    "creator_name": "Pesci_09",
+    "timestamp": null,
+    "anchor_quote": "one on my desk and set it to open out mfa roken app",
+    "notes": null
+  },
+  {
+    "idea_title": "Medication Dosage Calendar Tracker",
+    "summary": "Logs a timestamped entry in a digital calendar whenever medication is taken to keep track of daily health routines.",
+    "how_it_works": "Scanning a medicine bottle tag triggers a shortcut that adds a completed dose event to the calendar.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home",
+      "health"
+    ],
+    "goals": [
+      "tracking",
+      "reminder"
+    ],
+    "phone_support": "any",
+    "extra_app": null,
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "How do you use NFC tags in your daily life! : r/NFC",
+    "source_url": "https://www.reddit.com/r/NFC/comments/1ukrfoz/how_do_you_use_nfc_tags_in_your_daily_life/",
+    "creator_name": "Pesci_09",
+    "timestamp": null,
+    "anchor_quote": "scan them when I take my meds which adds an item to my calendar",
+    "notes": null
+  },
+  {
+    "idea_title": "Office Door HomeKit Lamp Toggle",
+    "summary": "Toggles an office lamp connected to a HomeKit smart plug by tapping an NFC tag mounted on the office door.",
+    "how_it_works": "Door tag scan triggers an iOS Shortcuts automation to toggle the state of a HomeKit smart plug.",
+    "audience": [
+      "personal",
+      "workplace"
+    ],
+    "settings": [
+      "office",
+      "home"
+    ],
+    "goals": [
+      "automation"
+    ],
+    "phone_support": "iphone_only",
+    "extra_app": "iOS Shortcuts",
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "I just bought a 25 pack of NFC tags and just discovered this subreddit and am can't believe I slept so long on NFC tags; please read my first 3 NFC tag setups and recommend some more, please! : r/shortcuts",
+    "source_url": "https://www.reddit.com/r/shortcuts/comments/1qjlaym/i_just_bought_a_25_pack_of_nfc_tags_and_just/",
+    "creator_name": "NakedIanMalcolm",
+    "timestamp": null,
+    "anchor_quote": "turns on/off my office lamp that has a HomeKit smart plug",
+    "notes": null
+  },
+  {
+    "idea_title": "Pulse Oximeter Apple Health Logger",
+    "summary": "Opens Apple Health directly to the blood oxygen section after reading pulse oximeter results for fast manual data entry.",
+    "how_it_works": "Tag attached to pulse oximeter scanned with iPhone; opens Apple Health blood oxygen entry screen.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home",
+      "health"
+    ],
+    "goals": [
+      "tracking",
+      "automation"
+    ],
+    "phone_support": "iphone_only",
+    "extra_app": "iOS Shortcuts",
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "I just bought a 25 pack of NFC tags and just discovered this subreddit and am can't believe I slept so long on NFC tags; please read my first 3 NFC tag setups and recommend some more, please! : r/shortcuts",
+    "source_url": "https://www.reddit.com/r/shortcuts/comments/1qjlaym/i_just_bought_a_25_pack_of_nfc_tags_and_just/",
+    "creator_name": "NakedIanMalcolm",
+    "timestamp": null,
+    "anchor_quote": "affixed using double sided tape to my blood oxygen sensor",
+    "notes": null
+  },
+  {
+    "idea_title": "Blood Pressure Monitor Apple Health Logger",
+    "summary": "Opens Apple Health directly to the blood pressure entry page to quickly log readings from a portable blood pressure machine.",
+    "how_it_works": "Tag under blood pressure monitor scanned with phone; opens Apple Health blood pressure input section.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home",
+      "health"
+    ],
+    "goals": [
+      "tracking",
+      "automation"
+    ],
+    "phone_support": "iphone_only",
+    "extra_app": "iOS Shortcuts",
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "I just bought a 25 pack of NFC tags and just discovered this subreddit and am can't believe I slept so long on NFC tags; please read my first 3 NFC tag setups and recommend some more, please! : r/shortcuts",
+    "source_url": "https://www.reddit.com/r/shortcuts/comments/1qjlaym/i_just_bought_a_25_pack_of_nfc_tags_and_just/",
+    "creator_name": "NakedIanMalcolm",
+    "timestamp": null,
+    "anchor_quote": "underneath my electronic portable blood pressure machine",
+    "notes": null
+  },
+  {
+    "idea_title": "Garage Storage Box Digital Inventory Viewer",
+    "summary": "Displays a digital note listing stored contents and photos when scanning a tag attached to a garage storage box.",
+    "how_it_works": "Tag on storage box scanned; opens a specific note containing an itemized text inventory and photos.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home",
+      "warehouse"
+    ],
+    "goals": [
+      "tracking",
+      "share_info"
+    ],
+    "phone_support": "any",
+    "extra_app": null,
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "I just bought a 25 pack of NFC tags and just discovered this subreddit and am can't believe I slept so long on NFC tags; please read my first 3 NFC tag setups and recommend some more, please! : r/shortcuts",
+    "source_url": "https://www.reddit.com/r/shortcuts/comments/1qjlaym/i_just_bought_a_25_pack_of_nfc_tags_and_just/",
+    "creator_name": "NakedIanMalcolm",
+    "timestamp": null,
+    "anchor_quote": "storage boxes in the garage so when you tap on one, it pulls up a note with a list of what’s inside",
+    "notes": null
+  },
+  {
+    "idea_title": "Social Event Photo Selfie Icebreaker Tag",
+    "summary": "Preloads a friendly SMS prompt on another person's phone asking to take a selfie together as a social icebreaker.",
+    "how_it_works": "Tag scanned using NFC Tools opens an SMS draft on attendee's phone asking for a selfie.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "events"
+    ],
+    "goals": [
+      "share_info",
+      "marketing"
+    ],
+    "phone_support": "any",
+    "extra_app": "NFC Tools",
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "card",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "I just bought a 25 pack of NFC tags and just discovered this subreddit and am can't believe I slept so long on NFC tags; please read my first 3 NFC tag setups and recommend some more, please! : r/shortcuts",
+    "source_url": "https://www.reddit.com/r/shortcuts/comments/1qjlaym/i_just_bought_a_25_pack_of_nfc_tags_and_just/",
+    "creator_name": "NakedIanMalcolm",
+    "timestamp": null,
+    "anchor_quote": "preloads a text to my phone that prompts a person to take a selfie with me",
+    "notes": null
+  },
+  {
+    "idea_title": "Shelf Medication Reorder and Reminder Trigger",
+    "summary": "Initiates prescription reordering and schedules a follow-up reminder when medicine supply runs low on the shelf.",
+    "how_it_works": "Scanning a tag hidden near medicine shelf launches prescription reorder website and creates a reminder.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home",
+      "health"
+    ],
+    "goals": [
+      "reminder",
+      "automation"
+    ],
+    "phone_support": "iphone_only",
+    "extra_app": "iOS Shortcuts",
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "I just bought a 25 pack of NFC tags and just discovered this subreddit and am can't believe I slept so long on NFC tags; please read my first 3 NFC tag setups and recommend some more, please! : r/shortcuts",
+    "source_url": "https://www.reddit.com/r/shortcuts/comments/1qjlaym/i_just_bought_a_25_pack_of_nfc_tags_and_just/",
+    "creator_name": "NakedIanMalcolm",
+    "timestamp": null,
+    "anchor_quote": "shelf my medication sits on... start the process of reordering them",
+    "notes": null
+  },
+  {
+    "idea_title": "Doorbell Smart Lock Unlatch Trigger",
+    "summary": "Unlatches a smart front door lock keylessly when family members scan a sticker mounted beneath the doorbell switch.",
+    "how_it_works": "Sticker under doorbell switch scanned by phone triggers Aqara smart lock to unlatch door.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home"
+    ],
+    "goals": [
+      "access",
+      "security",
+      "automation"
+    ],
+    "phone_support": "any",
+    "extra_app": null,
+    "difficulty": "medium",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": true,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "I just bought a 25 pack of NFC tags and just discovered this subreddit and am can't believe I slept so long on NFC tags; please read my first 3 NFC tag setups and recommend some more, please! : r/shortcuts",
+    "source_url": "https://www.reddit.com/r/shortcuts/comments/1qjlaym/i_just_bought_a_25_pack_of_nfc_tags_and_just/",
+    "creator_name": "NakedIanMalcolm",
+    "timestamp": null,
+    "anchor_quote": "sticker beneath doorbell switch so when my familly members get in front of the main door just scans the NFC tag and door opens",
+    "notes": null
+  },
+  {
+    "idea_title": "Fridge Magnet Category Grocery List Builder",
+    "summary": "Tapping category-specific fridge magnets opens menus to add items like vegetables or detergent directly to a shopping list.",
+    "how_it_works": "Scanning 3D-printed fridge magnet tags opens a prompt to select items and append them to a grocery list.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home"
+    ],
+    "goals": [
+      "automation",
+      "reminder"
+    ],
+    "phone_support": "iphone_only",
+    "extra_app": "iOS Shortcuts",
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "I just bought a 25 pack of NFC tags and just discovered this subreddit and am can't believe I slept so long on NFC tags; please read my first 3 NFC tag setups and recommend some more, please! : r/shortcuts",
+    "source_url": "https://www.reddit.com/r/shortcuts/comments/1qjlaym/i_just_bought_a_25_pack_of_nfc_tags_and_just/",
+    "creator_name": "NakedIanMalcolm",
+    "timestamp": null,
+    "anchor_quote": "tags with magnets that I have on my fridge... puts them in my shopping list",
+    "notes": null
+  },
+  {
+    "idea_title": "Under Switch-Plate Dual Light Controller",
+    "summary": "Uses hidden NFC switches placed under wall light plates to turn room lights on above the flip switch and off below it.",
+    "how_it_works": "Upper tag under wall plate turns lights on; lower tag turns lights off when scanned.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home"
+    ],
+    "goals": [
+      "automation"
+    ],
+    "phone_support": "any",
+    "extra_app": null,
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "I just bought a 25 pack of NFC tags and just discovered this subreddit and am can't believe I slept so long on NFC tags; please read my first 3 NFC tag setups and recommend some more, please! : r/shortcuts",
+    "source_url": "https://www.reddit.com/r/shortcuts/comments/1qjlaym/i_just_bought_a_25_pack_of_nfc_tags_and_just/",
+    "creator_name": "NakedIanMalcolm",
+    "timestamp": null,
+    "anchor_quote": "NFC switches under the light switch plates",
+    "notes": null
+  },
+  {
+    "idea_title": "Cabinet Corner Tea and Toast Timers",
+    "summary": "Triggers countdown timers for tea or toast by scanning tags mounted under hanging kitchen cabinet corners.",
+    "how_it_works": "Tags placed under cabinet corners scanned with phone start specific countdown timers.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home"
+    ],
+    "goals": [
+      "automation",
+      "reminder"
+    ],
+    "phone_support": "any",
+    "extra_app": null,
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "I just bought a 25 pack of NFC tags and just discovered this subreddit and am can't believe I slept so long on NFC tags; please read my first 3 NFC tag setups and recommend some more, please! : r/shortcuts",
+    "source_url": "https://www.reddit.com/r/shortcuts/comments/1qjlaym/i_just_bought_a_25_pack_of_nfc_tags_and_just/",
+    "creator_name": "NakedIanMalcolm",
+    "timestamp": null,
+    "anchor_quote": "under several hanging cabinet corners in my kitchen, which trigger countdown timers",
+    "notes": null
+  },
+  {
+    "idea_title": "Multi-Container Daily Medication Alarm Disabler",
+    "summary": "Disables active reminders and alarms for morning, afternoon, or night when tapping individual daily pill containers.",
+    "how_it_works": "Tags on daily pill boxes check time of day and dismiss active Reminders and Alarms for that period.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home",
+      "health"
+    ],
+    "goals": [
+      "reminder",
+      "tracking",
+      "automation"
+    ],
+    "phone_support": "iphone_only",
+    "extra_app": "iOS Shortcuts",
+    "difficulty": "medium",
+    "cost_level": "5_to_50_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "I just bought a 25 pack of NFC tags and just discovered this subreddit and am can't believe I slept so long on NFC tags; please read my first 3 NFC tag setups and recommend some more, please! : r/shortcuts",
+    "source_url": "https://www.reddit.com/r/shortcuts/comments/1qjlaym/i_just_bought_a_25_pack_of_nfc_tags_and_just/",
+    "creator_name": "NakedIanMalcolm",
+    "timestamp": null,
+    "anchor_quote": "put NFC chips in each of the 42 separate pill containers",
+    "notes": null
+  },
+  {
+    "idea_title": "Displayed Album Sleeve Sonos Music Streamer",
+    "summary": "Streams music albums directly to Sonos speakers by tapping tags attached to displayed CD cases or vinyl record sleeves.",
+    "how_it_works": "Tag on displayed album case scanned with phone; streams album from Apple Music to Sonos speakers.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home"
+    ],
+    "goals": [
+      "automation"
+    ],
+    "phone_support": "iphone_only",
+    "extra_app": "iOS Shortcuts",
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "I just bought a 25 pack of NFC tags and just discovered this subreddit and am can't believe I slept so long on NFC tags; please read my first 3 NFC tag setups and recommend some more, please! : r/shortcuts",
+    "source_url": "https://www.reddit.com/r/shortcuts/comments/1qjlaym/i_just_bought_a_25_pack_of_nfc_tags_and_just/",
+    "creator_name": "NakedIanMalcolm",
+    "timestamp": null,
+    "anchor_quote": "record sleeves and cd cases on display... play on my Sonos speakers",
+    "notes": null
+  },
+  {
+    "idea_title": "Bedside Nighttime Volume Brightness and YouTube Launcher",
+    "summary": "Adjusts screen brightness and volume while opening YouTube when placing the phone on a bedside nightstand tag.",
+    "how_it_works": "Bedside tag scan adjusts display brightness, lowers volume, and opens YouTube.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home"
+    ],
+    "goals": [
+      "automation"
+    ],
+    "phone_support": "iphone_only",
+    "extra_app": "iOS Shortcuts",
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "I just bought a 25 pack of NFC tags and just discovered this subreddit and am can't believe I slept so long on NFC tags; please read my first 3 NFC tag setups and recommend some more, please! : r/shortcuts",
+    "source_url": "https://www.reddit.com/r/shortcuts/comments/1qjlaym/i_just_bought_a_25_pack_of_nfc_tags_and_just/",
+    "creator_name": "NakedIanMalcolm",
+    "timestamp": null,
+    "anchor_quote": "next to your bed... opens youtube and adjusts the brightness and volume",
+    "notes": null
+  },
+  {
+    "idea_title": "Front Door Travel Packing Checklist Opener",
+    "summary": "Opens a checklist of essential travel items and tasks to verify before leaving home on a business trip.",
+    "how_it_works": "Tag near front door scanned with phone opens a travel packing checklist in Reminders.",
+    "audience": [
+      "personal",
+      "workplace"
+    ],
+    "settings": [
+      "home",
+      "travel"
+    ],
+    "goals": [
+      "reminder",
+      "automation"
+    ],
+    "phone_support": "iphone_only",
+    "extra_app": "iOS Shortcuts",
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "I just bought a 25 pack of NFC tags and just discovered this subreddit and am can't believe I slept so long on NFC tags; please read my first 3 NFC tag setups and recommend some more, please! : r/shortcuts",
+    "source_url": "https://www.reddit.com/r/shortcuts/comments/1qjlaym/i_just_bought_a_25_pack_of_nfc_tags_and_just/",
+    "creator_name": "NakedIanMalcolm",
+    "timestamp": null,
+    "anchor_quote": "tag near the door that opens a list of reminders to bring and do",
+    "notes": null
+  },
+  {
+    "idea_title": "Nightly Safety Check Timestamp Logger",
+    "summary": "Appends timestamped log entries to a note when tapping tags at the stove and back door during evening safety checks.",
+    "how_it_works": "Tags at stove and back door append current date and time to a log note when tapped.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home"
+    ],
+    "goals": [
+      "security",
+      "tracking",
+      "reminder"
+    ],
+    "phone_support": "iphone_only",
+    "extra_app": "iOS Shortcuts",
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "I just bought a 25 pack of NFC tags and just discovered this subreddit and am can't believe I slept so long on NFC tags; please read my first 3 NFC tag setups and recommend some more, please! : r/shortcuts",
+    "source_url": "https://www.reddit.com/r/shortcuts/comments/1qjlaym/i_just_bought_a_25_pack_of_nfc_tags_and_just/",
+    "creator_name": "NakedIanMalcolm",
+    "timestamp": null,
+    "anchor_quote": "check to make sure the stove is off, back door is locked... add a log entry to a note with the date and time",
+    "notes": null
+  },
+  {
+    "idea_title": "Dishwasher Cycle Timer with Smart Speaker Alert",
+    "summary": "Presents a cycle selection menu, starts a timer, and announces completion through HomePods when the dishwasher finishes.",
+    "how_it_works": "Tag on dishwasher scanned with phone presents cycle menu, starts timer, and sends audio alert to HomePods when finished.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home"
+    ],
+    "goals": [
+      "automation",
+      "reminder"
+    ],
+    "phone_support": "iphone_only",
+    "extra_app": "iOS Shortcuts",
+    "difficulty": "medium",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": true,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "I just bought a 25 pack of NFC tags and just discovered this subreddit and am can't believe I slept so long on NFC tags; please read my first 3 NFC tag setups and recommend some more, please! : r/shortcuts",
+    "source_url": "https://www.reddit.com/r/shortcuts/comments/1qjlaym/i_just_bought_a_25_pack_of_nfc_tags_and_just/",
+    "creator_name": "NakedIanMalcolm",
+    "timestamp": null,
+    "anchor_quote": "dishwasher to run a shortcut that runs a menu that then sets a timer... announces through the HomePods",
+    "notes": null
+  },
+  {
+    "idea_title": "Golf Bag GolfShotPro App Launcher",
+    "summary": "Launches the GolfShotPro application immediately upon tapping a tag attached to a golf bag on the course.",
+    "how_it_works": "Tag on golf bag scanned with phone opens GolfShotPro app without navigating menus.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "outdoors"
+    ],
+    "goals": [
+      "automation"
+    ],
+    "phone_support": "any",
+    "extra_app": null,
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": true,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "I just bought a 25 pack of NFC tags and just discovered this subreddit and am can't believe I slept so long on NFC tags; please read my first 3 NFC tag setups and recommend some more, please! : r/shortcuts",
+    "source_url": "https://www.reddit.com/r/shortcuts/comments/1qjlaym/i_just_bought_a_25_pack_of_nfc_tags_and_just/",
+    "creator_name": "NakedIanMalcolm",
+    "timestamp": null,
+    "anchor_quote": "tag on my golf bag that while I'm playing, launches GolfShotPro",
+    "notes": null
+  },
+  {
+    "idea_title": "Children's Picture Card Audio Player",
+    "summary": "Allows kids to tap physical picture cards against an NFC reader to play songs or trigger smart home actions.",
+    "how_it_works": "NFC reader scans picture cards with embedded tags to trigger media playback in Home Assistant.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home"
+    ],
+    "goals": [
+      "automation",
+      "accessibility"
+    ],
+    "phone_support": "any",
+    "extra_app": null,
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "card",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "Looking for practical / long-term use cases for NFC tags : r/homeassistant",
+    "source_url": "https://www.reddit.com/r/homeassistant/comments/1mpzlqs/looking_for_practical_longterm_use_cases_for_nfc/",
+    "creator_name": "Novajesus",
+    "timestamp": null,
+    "anchor_quote": "kids to use picture cards to carry out actions, choose music",
+    "notes": null
+  },
+  {
+    "idea_title": "Dynamic Guest Network Wi-Fi Connector",
+    "summary": "Allows visiting guests to scan an NFC tag to connect easily to a guest Wi-Fi network without typing passwords.",
+    "how_it_works": "Wi-Fi network credentials written on tag; scanning tag connects guest devices automatically.",
+    "audience": [
+      "personal",
+      "business_customers"
+    ],
+    "settings": [
+      "home",
+      "office",
+      "shop"
+    ],
+    "goals": [
+      "share_info",
+      "access"
+    ],
+    "phone_support": "any",
+    "extra_app": null,
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "Looking for practical / long-term use cases for NFC tags : r/homeassistant",
+    "source_url": "https://www.reddit.com/r/homeassistant/comments/1mpzlqs/looking_for_practical_longterm_use_cases_for_nfc/",
+    "creator_name": "Novajesus",
+    "timestamp": null,
+    "anchor_quote": "guests can easily log onto my guest network",
+    "notes": null
+  },
+  {
+    "idea_title": "RGB Nightlight Task Indicator Reset",
+    "summary": "Tapping tags located at completed task areas (package box, laundry, server) resets RGB nightlight alert colors back to normal.",
+    "how_it_works": "Tags placed at task locations scanned with phone send Home Assistant commands resetting RGB nightlights.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home"
+    ],
+    "goals": [
+      "automation",
+      "reminder"
+    ],
+    "phone_support": "any",
+    "extra_app": null,
+    "difficulty": "medium",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "Looking for practical / long-term use cases for NFC tags : r/homeassistant",
+    "source_url": "https://www.reddit.com/r/homeassistant/comments/1mpzlqs/looking_for_practical_longterm_use_cases_for_nfc/",
+    "creator_name": "Novajesus",
+    "timestamp": null,
+    "anchor_quote": "open my package box there is an NFC tag in there that I hit and it resets the night lights",
+    "notes": null
+  },
+  {
+    "idea_title": "Phone Dock Computer Unlock and Lighting Switch",
+    "summary": "Switches on office lights and unlocks connected computer workstations when docking an unlocked smartphone.",
+    "how_it_works": "Placing unlocked phone into a desk dock with an NFC tag triggers Home Assistant to turn on lights and unlock PC.",
+    "audience": [
+      "workplace",
+      "personal"
+    ],
+    "settings": [
+      "office",
+      "home"
+    ],
+    "goals": [
+      "automation",
+      "access"
+    ],
+    "phone_support": "any",
+    "extra_app": null,
+    "difficulty": "medium",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "Looking for practical / long-term use cases for NFC tags : r/homeassistant",
+    "source_url": "https://www.reddit.com/r/homeassistant/comments/1mpzlqs/looking_for_practical_longterm_use_cases_for_nfc/",
+    "creator_name": "Novajesus",
+    "timestamp": null,
+    "anchor_quote": "Placing a phone in a dock with a nfc sticker that automatically switches the lights and computers on and unlocks them",
+    "notes": null
+  },
+  {
+    "idea_title": "Office Door Phone Unlock Trigger",
+    "summary": "Unlocks an office door keylessly by holding a phone against an NFC tag mounted at the entrance.",
+    "how_it_works": "Tag on office door scanned with phone sends Home Assistant signal to unlock door latch.",
+    "audience": [
+      "workplace",
+      "personal"
+    ],
+    "settings": [
+      "office",
+      "home"
+    ],
+    "goals": [
+      "access",
+      "security",
+      "automation"
+    ],
+    "phone_support": "any",
+    "extra_app": null,
+    "difficulty": "medium",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "Looking for practical / long-term use cases for NFC tags : r/homeassistant",
+    "source_url": "https://www.reddit.com/r/homeassistant/comments/1mpzlqs/looking_for_practical_longterm_use_cases_for_nfc/",
+    "creator_name": "Novajesus",
+    "timestamp": null,
+    "anchor_quote": "unlock my office door, just hold my phone at the tag super easy",
+    "notes": null
+  },
+  {
+    "idea_title": "Archive Room NFC Card Light Switch",
+    "summary": "Turns on lights in an archive room when staff members tap an NFC card against a wall reader.",
+    "how_it_works": "NFC card tapped on Home Assistant tag reader triggers room lights to turn on.",
+    "audience": [
+      "workplace"
+    ],
+    "settings": [
+      "office",
+      "warehouse"
+    ],
+    "goals": [
+      "automation",
+      "access"
+    ],
+    "phone_support": null,
+    "extra_app": null,
+    "difficulty": "medium",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "card",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "Looking for practical / long-term use cases for NFC tags : r/homeassistant",
+    "source_url": "https://www.reddit.com/r/homeassistant/comments/1mpzlqs/looking_for_practical_longterm_use_cases_for_nfc/",
+    "creator_name": "Novajesus",
+    "timestamp": null,
+    "anchor_quote": "HA tag reader and NFC card to turn on the lights in the archive room",
+    "notes": null
+  },
+  {
+    "idea_title": "Guest Automation Pause Toggle",
+    "summary": "Toggles off automated routines that should not execute while hosting visitors at home.",
+    "how_it_works": "Scanning tag toggles guest mode boolean variable in Home Assistant to disable automated routines.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home"
+    ],
+    "goals": [
+      "automation"
+    ],
+    "phone_support": "any",
+    "extra_app": null,
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "Looking for practical / long-term use cases for NFC tags : r/homeassistant",
+    "source_url": "https://www.reddit.com/r/homeassistant/comments/1mpzlqs/looking_for_practical_longterm_use_cases_for_nfc/",
+    "creator_name": "Novajesus",
+    "timestamp": null,
+    "anchor_quote": "toggle certain automations I don't want running when I have guests over",
+    "notes": null
+  },
+  {
+    "idea_title": "Record Sleeve Google Speaker Music Streamer",
+    "summary": "Streams vinyl albums through Google smart speakers by scanning tags placed inside record jackets.",
+    "how_it_works": "Tag placed inside vinyl record sleeve scanned with phone streams album to Google speakers.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home"
+    ],
+    "goals": [
+      "automation"
+    ],
+    "phone_support": "any",
+    "extra_app": null,
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "Looking for practical / long-term use cases for NFC tags : r/homeassistant",
+    "source_url": "https://www.reddit.com/r/homeassistant/comments/1mpzlqs/looking_for_practical_longterm_use_cases_for_nfc/",
+    "creator_name": "Novajesus",
+    "timestamp": null,
+    "anchor_quote": "inside my records to stream that album through my Google speakers",
+    "notes": null
+  },
+  {
+    "idea_title": "Sensor Battery Replacement Date Logger",
+    "summary": "Updates the battery replacement timestamp in Home Assistant when scanning tags on battery-powered smart sensors.",
+    "how_it_works": "Tag near battery sensor scanned with phone updates sensor battery replacement date entity in Home Assistant.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home"
+    ],
+    "goals": [
+      "tracking",
+      "reminder"
+    ],
+    "phone_support": "any",
+    "extra_app": null,
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "Looking for practical / long-term use cases for NFC tags : r/homeassistant",
+    "source_url": "https://www.reddit.com/r/homeassistant/comments/1mpzlqs/looking_for_practical_longterm_use_cases_for_nfc/",
+    "creator_name": "Novajesus",
+    "timestamp": null,
+    "anchor_quote": "around certain battery powered sensors that I scan to update the battery being replaced",
+    "notes": null
+  },
+  {
+    "idea_title": "Room-Specific Robot Vacuum Cleaner Dispatcher",
+    "summary": "Sends a robot vacuum cleaner directly to clean a specific room by scanning the tag located in that room.",
+    "how_it_works": "Room tag scanned with phone sends Home Assistant command instructing robot vacuum to clean that room zone.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home"
+    ],
+    "goals": [
+      "automation"
+    ],
+    "phone_support": "any",
+    "extra_app": null,
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "Looking for practical / long-term use cases for NFC tags : r/homeassistant",
+    "source_url": "https://www.reddit.com/r/homeassistant/comments/1mpzlqs/looking_for_practical_longterm_use_cases_for_nfc/",
+    "creator_name": "Novajesus",
+    "timestamp": null,
+    "anchor_quote": "One in each room to send the vacuum cleaner to clean that room",
+    "notes": null
+  },
+  {
+    "idea_title": "Detached Garage Trash Bin Alert Cancellation",
+    "summary": "Stops recurring reminders to take out trash bins once the bins are placed outside near a detached garage.",
+    "how_it_works": "Tag on detached garage scanned with phone cancels active trash bin notification automation.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home",
+      "outdoors"
+    ],
+    "goals": [
+      "reminder",
+      "automation"
+    ],
+    "phone_support": "any",
+    "extra_app": null,
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": true,
+      "waterproof": true,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "Looking for practical / long-term use cases for NFC tags : r/homeassistant",
+    "source_url": "https://www.reddit.com/r/homeassistant/comments/1mpzlqs/looking_for_practical_longterm_use_cases_for_nfc/",
+    "creator_name": "Novajesus",
+    "timestamp": null,
+    "anchor_quote": "detached garage to cancel a recurring alert when the bins need to go out",
+    "notes": null
+  },
+  {
+    "idea_title": "Departure Open Window Audio Safety Checker",
+    "summary": "Plays a text-to-speech announcement detailing any open home windows when scanning a front door tag before departing.",
+    "how_it_works": "Front door tag scan triggers Home Assistant script checking window sensor states and announcing open windows over speakers.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home"
+    ],
+    "goals": [
+      "security",
+      "automation",
+      "share_info"
+    ],
+    "phone_support": "any",
+    "extra_app": null,
+    "difficulty": "medium",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "Looking for practical / long-term use cases for NFC tags : r/homeassistant",
+    "source_url": "https://www.reddit.com/r/homeassistant/comments/1mpzlqs/looking_for_practical_longterm_use_cases_for_nfc/",
+    "creator_name": "Novajesus",
+    "timestamp": null,
+    "anchor_quote": "front door... plays a TTS on speakers to let us know which, if any, windows we left open",
+    "notes": null
+  },
+  {
+    "idea_title": "Motorbike and Helmet Riding Profile Switch",
+    "summary": "Switches smartphone into a riding profile, enables Bluetooth, and sets max volume when scanning tags on a helmet or motorbike.",
+    "how_it_works": "Tag on helmet or motorbike scanned with Tasker on Android; toggles riding system profile and Bluetooth state.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "car",
+      "outdoors"
+    ],
+    "goals": [
+      "automation"
+    ],
+    "phone_support": "android_only",
+    "extra_app": "Tasker",
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": true,
+      "waterproof": true,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "Looking for practical / long-term use cases for NFC tags : r/homeassistant",
+    "source_url": "https://www.reddit.com/r/homeassistant/comments/1mpzlqs/looking_for_practical_longterm_use_cases_for_nfc/",
+    "creator_name": "Novajesus",
+    "timestamp": null,
+    "anchor_quote": "motorbike + helmet which Tasker reads and switches the phone into a riding profile",
+    "notes": null
+  },
+  {
+    "idea_title": "Car Landscape Mode TomTom Navigation Launcher",
+    "summary": "Turns on phone landscape mode, sets media volume to 70%, and launches TomTom Go navigation when scanning a hidden car tag.",
+    "how_it_works": "Hidden tag in car scanned with Android Tasker; enables landscape orientation, sets volume, and launches TomTom Go.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "car",
+      "travel"
+    ],
+    "goals": [
+      "automation"
+    ],
+    "phone_support": "android_only",
+    "extra_app": "Tasker",
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "Looking for practical / long-term use cases for NFC tags : r/homeassistant",
+    "source_url": "https://www.reddit.com/r/homeassistant/comments/1mpzlqs/looking_for_practical_longterm_use_cases_for_nfc/",
+    "creator_name": "Novajesus",
+    "timestamp": null,
+    "anchor_quote": "hidden one in the car which, when scanned, switches the phone's landscape mode on, starts TomTom Go",
+    "notes": null
+  },
+  {
+    "idea_title": "Bluetooth Headphone and Speaker Selective Auto-Connect",
+    "summary": "Connects smartphone audio to specific Bluetooth headphones or speakers and adjusts default volume when scanning their tags.",
+    "how_it_works": "Scanning tag attached to headphones or speaker instructs phone via Tasker to connect Bluetooth and adjust volume.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home",
+      "office",
+      "outdoors"
+    ],
+    "goals": [
+      "automation"
+    ],
+    "phone_support": "android_only",
+    "extra_app": "Tasker",
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "Looking for practical / long-term use cases for NFC tags : r/homeassistant",
+    "source_url": "https://www.reddit.com/r/homeassistant/comments/1mpzlqs/looking_for_practical_longterm_use_cases_for_nfc/",
+    "creator_name": "Novajesus",
+    "timestamp": null,
+    "anchor_quote": "BT headphones and a couple different BT speakers. Scan the NFC and the phone will connect",
+    "notes": null
+  },
+  {
+    "idea_title": "Flower Pot Plant Health Dashboard Launcher",
+    "summary": "Displays soil moisture and plant health metrics on a mobile dashboard when scanning a tag attached to a flower pot.",
+    "how_it_works": "Tag on plant pot scanned with phone opens Home Assistant dashboard filtered for that specific plant's soil sensors.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home",
+      "outdoors"
+    ],
+    "goals": [
+      "tracking",
+      "share_info"
+    ],
+    "phone_support": "any",
+    "extra_app": null,
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": true,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "Looking for practical / long-term use cases for NFC tags : r/homeassistant",
+    "source_url": "https://www.reddit.com/r/homeassistant/comments/1mpzlqs/looking_for_practical_longterm_use_cases_for_nfc/",
+    "creator_name": "Novajesus",
+    "timestamp": null,
+    "anchor_quote": "stuck on every flower pot... get a dashboard for that specific plant using the other sensors",
+    "notes": null
+  },
+  {
+    "idea_title": "Outdoor Keypad Phone Garage Opener",
+    "summary": "Opens a garage door faster by tapping a phone to a tag mounted beside the keypad rather than typing PIN codes.",
+    "how_it_works": "Tag mounted next to garage door keypad scanned with phone triggers Home Assistant garage door toggle.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home",
+      "car",
+      "outdoors"
+    ],
+    "goals": [
+      "access",
+      "automation"
+    ],
+    "phone_support": "any",
+    "extra_app": null,
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": true,
+      "waterproof": true,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "Looking for practical / long-term use cases for NFC tags : r/homeassistant",
+    "source_url": "https://www.reddit.com/r/homeassistant/comments/1mpzlqs/looking_for_practical_longterm_use_cases_for_nfc/",
+    "creator_name": "Novajesus",
+    "timestamp": null,
+    "anchor_quote": "outside my garage next to the garage door keypad... hold it to the tag",
+    "notes": null
+  },
+  {
+    "idea_title": "Truck In-Cab Garage Door Opener",
+    "summary": "Toggles the garage door opener securely from inside a truck without leaving physical remote controls on visors.",
+    "how_it_works": "Tag in truck cab scanned with phone sends command to Home Assistant toggling garage door state.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "car",
+      "home"
+    ],
+    "goals": [
+      "access",
+      "security",
+      "automation"
+    ],
+    "phone_support": "any",
+    "extra_app": null,
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "Looking for practical / long-term use cases for NFC tags : r/homeassistant",
+    "source_url": "https://www.reddit.com/r/homeassistant/comments/1mpzlqs/looking_for_practical_longterm_use_cases_for_nfc/",
+    "creator_name": "Novajesus",
+    "timestamp": null,
+    "anchor_quote": "NFC tag in my truck to toggle the garage door opener",
+    "notes": null
+  },
+  {
+    "idea_title": "Side Table Rest Lighting Scene Trigger",
+    "summary": "Adjusts study room lighting to a relaxed scene whenever resting a phone on a marble side table.",
+    "how_it_works": "Tag mounted beneath side table scanned when placing phone down triggers Home Assistant lighting scene.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home",
+      "office"
+    ],
+    "goals": [
+      "automation"
+    ],
+    "phone_support": "any",
+    "extra_app": null,
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "Looking for practical / long-term use cases for NFC tags : r/homeassistant",
+    "source_url": "https://www.reddit.com/r/homeassistant/comments/1mpzlqs/looking_for_practical_longterm_use_cases_for_nfc/",
+    "creator_name": "Novajesus",
+    "timestamp": null,
+    "anchor_quote": "underneath my marble top side table in my study. It will set the lighting to a specific scene",
+    "notes": null
+  },
+  {
+    "idea_title": "Plant Pot Watering Schedule Reset Notification",
+    "summary": "Resets daily plant watering notifications upon scanning a pot's tag after giving water according to specific plant schedules.",
+    "how_it_works": "Tag on plant pot scanned with phone clears active watering reminder and resets watering timer.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home",
+      "outdoors"
+    ],
+    "goals": [
+      "reminder",
+      "tracking"
+    ],
+    "phone_support": "any",
+    "extra_app": null,
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": true,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "Looking for practical / long-term use cases for NFC tags : r/homeassistant",
+    "source_url": "https://www.reddit.com/r/homeassistant/comments/1mpzlqs/looking_for_practical_longterm_use_cases_for_nfc/",
+    "creator_name": "Novajesus",
+    "timestamp": null,
+    "anchor_quote": "scan the tag on the pot once I gave the plant water, that resets the timer",
+    "notes": null
+  },
+  {
+    "idea_title": "Garage Door Departure Walk and Close Trigger",
+    "summary": "Closes the garage door behind you when heading out for a walk and reopens it automatically upon return.",
+    "how_it_works": "Tag beside garage door scanned on way out closes garage door and enables return proximity trigger.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home",
+      "outdoors"
+    ],
+    "goals": [
+      "access",
+      "automation"
+    ],
+    "phone_support": "any",
+    "extra_app": null,
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": true,
+      "waterproof": true,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "Looking for practical / long-term use cases for NFC tags : r/homeassistant",
+    "source_url": "https://www.reddit.com/r/homeassistant/comments/1mpzlqs/looking_for_practical_longterm_use_cases_for_nfc/",
+    "creator_name": "Novajesus",
+    "timestamp": null,
+    "anchor_quote": "next to the garage door for walks. Tag it on the way out, and it closes the door behind me",
+    "notes": null
+  },
+  {
+    "idea_title": "Kitchen Timer Bixby Routine Trigger",
+    "summary": "Starts a preset kitchen cooking timer instantly using Bixby Routines without navigating phone menus.",
+    "how_it_works": "NFC tag in kitchen scanned with Samsung phone triggers a Bixby Routine timer action.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home"
+    ],
+    "goals": [
+      "automation",
+      "reminder"
+    ],
+    "phone_support": "android_only",
+    "extra_app": null,
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": "NTAG213"
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "Loving the NFC tagged routines. Need more ideas or suggestion to make full use of it. : r/Bixbyroutines",
+    "source_url": "https://www.reddit.com/r/Bixbyroutines/comments/1qr1la7/loving_the_nfc_tagged_routines_need_more_ideas_or/",
+    "creator_name": "creatine_whey",
+    "timestamp": null,
+    "anchor_quote": "Kitchen timer routine",
+    "notes": null
+  },
+  {
+    "idea_title": "Study Room Silent Mode Switch",
+    "summary": "Switches smartphone into silent mode upon tapping a tag in the study room to eliminate study distractions.",
+    "how_it_works": "Tag in study room scanned with phone triggers silent or do-not-disturb system mode.",
+    "audience": [
+      "personal",
+      "workplace"
+    ],
+    "settings": [
+      "office",
+      "home"
+    ],
+    "goals": [
+      "automation"
+    ],
+    "phone_support": "any",
+    "extra_app": null,
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "Loving the NFC tagged routines. Need more ideas or suggestion to make full use of it. : r/Bixbyroutines",
+    "source_url": "https://www.reddit.com/r/Bixbyroutines/comments/1qr1la7/loving_the_nfc_tagged_routines_need_more_ideas_or/",
+    "creator_name": "creatine_whey",
+    "timestamp": null,
+    "anchor_quote": "Put phone in silent mode in study room",
+    "notes": null
+  },
+  {
+    "idea_title": "Bathroom Speaker Bluetooth Audio Connector",
+    "summary": "Connects smartphone audio to a bathroom Bluetooth speaker instantly when tapping a tag located in the bathroom.",
+    "how_it_works": "Bathroom tag scanned with phone connects Bluetooth to bathroom speaker and plays audio.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home"
+    ],
+    "goals": [
+      "automation"
+    ],
+    "phone_support": "any",
+    "extra_app": null,
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": true,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "Loving the NFC tagged routines. Need more ideas or suggestion to make full use of it. : r/Bixbyroutines",
+    "source_url": "https://www.reddit.com/r/Bixbyroutines/comments/1qr1la7/loving_the_nfc_tagged_routines_need_more_ideas_or/",
+    "creator_name": "creatine_whey",
+    "timestamp": null,
+    "anchor_quote": "connect to speaker in bathroom when tapped on the tag there",
+    "notes": null
+  },
+  {
+    "idea_title": "Nightstand Bedtime Night Mode Trigger",
+    "summary": "Activates smartphone night mode and bedtime settings when resting the phone on a nightstand tag.",
+    "how_it_works": "Nightstand tag scanned with phone activates night mode, lowers brightness, and sets alarm.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home"
+    ],
+    "goals": [
+      "automation"
+    ],
+    "phone_support": "any",
+    "extra_app": null,
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "Loving the NFC tagged routines. Need more ideas or suggestion to make full use of it. : r/Bixbyroutines",
+    "source_url": "https://www.reddit.com/r/Bixbyroutines/comments/1qr1la7/loving_the_nfc_tagged_routines_need_more_ideas_or/",
+    "creator_name": "creatine_whey",
+    "timestamp": null,
+    "anchor_quote": "tag for night stand to trigger night time mode",
+    "notes": null
+  },
+  {
+    "idea_title": "Car Bluetooth Audio Routine Launcher",
+    "summary": "Activates phone Bluetooth and connects to car audio automatically when tapping an in-car tag.",
+    "how_it_works": "In-car tag scanned with phone enables Bluetooth and connects to car head unit.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "car"
+    ],
+    "goals": [
+      "automation"
+    ],
+    "phone_support": "any",
+    "extra_app": null,
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "Loving the NFC tagged routines. Need more ideas or suggestion to make full use of it. : r/Bixbyroutines",
+    "source_url": "https://www.reddit.com/r/Bixbyroutines/comments/1qr1la7/loving_the_nfc_tagged_routines_need_more_ideas_or/",
+    "creator_name": "creatine_whey",
+    "timestamp": null,
+    "anchor_quote": "trigger Bluetooth and beyond in the car from NFC",
+    "notes": null
+  },
+  {
+    "idea_title": "Physical CD Cover Wall Digital Music Player",
+    "summary": "Plays music albums on a phone or smart speaker by tapping printed physical CD covers with embedded tags.",
+    "how_it_works": "NFC tags stuck behind printed CD album covers trigger Apple Music or Spotify playback when scanned.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home"
+    ],
+    "goals": [
+      "automation"
+    ],
+    "phone_support": "iphone_only",
+    "extra_app": "iOS Shortcuts",
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "May have bought one too many nfc tags, any cool ideas or shortcuts you guys have to use with these? : r/shortcuts",
+    "source_url": "https://www.reddit.com/r/shortcuts/comments/lolnvw/may_have_bought_one_too_many_nfc_tags_any_cool/",
+    "creator_name": "namesare4scrubs",
+    "timestamp": null,
+    "anchor_quote": "printed out the covers of all my and my wife’s CD... tap our phone to a tag, and it’ll start playing",
+    "notes": null
+  },
+  {
+    "idea_title": "Ceiling Mario Brick Coin Sound Jump Game",
+    "summary": "Plays the iconic Super Mario brick and coin sound effect when jumping up to tap ceiling-mounted tags.",
+    "how_it_works": "Ceiling tag scanned with phone triggers shortcut that plays Mario coin sound.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home"
+    ],
+    "goals": [
+      "automation"
+    ],
+    "phone_support": "iphone_only",
+    "extra_app": "iOS Shortcuts",
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "May have bought one too many nfc tags, any cool ideas or shortcuts you guys have to use with these? : r/shortcuts",
+    "source_url": "https://www.reddit.com/r/shortcuts/comments/lolnvw/may_have_bought_one_too_many_nfc_tags_any_cool/",
+    "creator_name": "namesare4scrubs",
+    "timestamp": null,
+    "anchor_quote": "plays the Mario brick sound with coin and then place them all over your ceilings and jump up",
+    "notes": null
+  },
+  {
+    "idea_title": "Board Game Box Ambient Lighting and Playlist Setter",
+    "summary": "Sets thematic smart room lighting colors and starts matching ambient playlists when tapping the inside of board game box lids.",
+    "how_it_works": "Tag inside board game lid scanned with phone adjusts HomeKit/Hue light scenes and starts game playlist.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home",
+      "events"
+    ],
+    "goals": [
+      "automation"
+    ],
+    "phone_support": "iphone_only",
+    "extra_app": "iOS Shortcuts",
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "May have bought one too many nfc tags, any cool ideas or shortcuts you guys have to use with these? : r/shortcuts",
+    "source_url": "https://www.reddit.com/r/shortcuts/comments/lolnvw/may_have_bought_one_too_many_nfc_tags_any_cool/",
+    "creator_name": "namesare4scrubs",
+    "timestamp": null,
+    "anchor_quote": "NFC sticker inside the box lids, that when I touch the phone will set the lights for the game and start a playlist",
+    "notes": null
+  },
+  {
+    "idea_title": "Office Zoom Call Lighting Controller",
+    "summary": "Switches office lighting to bright white for video calls and reverts to dim lighting upon scanning again.",
+    "how_it_works": "Desk tag scan toggles office smart lights between bright video call scene and dim normal scene.",
+    "audience": [
+      "workplace",
+      "personal"
+    ],
+    "settings": [
+      "office",
+      "home"
+    ],
+    "goals": [
+      "automation"
+    ],
+    "phone_support": "iphone_only",
+    "extra_app": "iOS Shortcuts",
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "May have bought one too many nfc tags, any cool ideas or shortcuts you guys have to use with these? : r/shortcuts",
+    "source_url": "https://www.reddit.com/r/shortcuts/comments/lolnvw/may_have_bought_one_too_many_nfc_tags_any_cool/",
+    "creator_name": "namesare4scrubs",
+    "timestamp": null,
+    "anchor_quote": "lights in my office to a white bright mode for video/zoom calls and then scanning it again restores",
+    "notes": null
+  },
+  {
+    "idea_title": "HomePod Mini Playlist Streamer",
+    "summary": "Sends a selected music playlist directly to play on a HomePod mini speaker upon scanning a tag.",
+    "how_it_works": "Tag scan triggers iOS Shortcut sending selected Apple Music playlist to HomePod mini.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home"
+    ],
+    "goals": [
+      "automation"
+    ],
+    "phone_support": "iphone_only",
+    "extra_app": "iOS Shortcuts",
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "May have bought one too many nfc tags, any cool ideas or shortcuts you guys have to use with these? : r/shortcuts",
+    "source_url": "https://www.reddit.com/r/shortcuts/comments/lolnvw/may_have_bought_one_too_many_nfc_tags_any_cool/",
+    "creator_name": "namesare4scrubs",
+    "timestamp": null,
+    "anchor_quote": "Choosing a playlist and sending it to my Homepod mini",
+    "notes": null
+  },
+  {
+    "idea_title": "Leaving Car Playlist Starter and Garage Door Closer",
+    "summary": "Starts playing a driving playlist in the car and closes the garage door when tapping an in-car tag.",
+    "how_it_works": "In-car tag scan starts music playlist and sends HomeKit signal closing garage door if open.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "car",
+      "home"
+    ],
+    "goals": [
+      "automation"
+    ],
+    "phone_support": "iphone_only",
+    "extra_app": "iOS Shortcuts",
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "May have bought one too many nfc tags, any cool ideas or shortcuts you guys have to use with these? : r/shortcuts",
+    "source_url": "https://www.reddit.com/r/shortcuts/comments/lolnvw/may_have_bought_one_too_many_nfc_tags_any_cool/",
+    "creator_name": "namesare4scrubs",
+    "timestamp": null,
+    "anchor_quote": "in my car... starts playing a playlist in the car and if the garage door is open, it closes it",
+    "notes": null
+  },
+  {
+    "idea_title": "Desk Picture Frame Instant Message Sender",
+    "summary": "Sends a quick message to family members whenever tapping their framed photo placed on an office desk.",
+    "how_it_works": "Tag hidden behind desk photo frame scanned with phone opens or sends a text message.",
+    "audience": [
+      "personal",
+      "workplace"
+    ],
+    "settings": [
+      "office",
+      "home"
+    ],
+    "goals": [
+      "automation",
+      "share_info"
+    ],
+    "phone_support": "iphone_only",
+    "extra_app": "iOS Shortcuts",
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "May have bought one too many nfc tags, any cool ideas or shortcuts you guys have to use with these? : r/shortcuts",
+    "source_url": "https://www.reddit.com/r/shortcuts/comments/lolnvw/may_have_bought_one_too_many_nfc_tags_any_cool/",
+    "creator_name": "namesare4scrubs",
+    "timestamp": null,
+    "anchor_quote": "behind a picture of my wife on my desk, it now sends her a message every time I tap it",
+    "notes": null
+  },
+  {
+    "idea_title": "Bedside Context-Aware Alarm Switch",
+    "summary": "Toggles morning or evening phone alarms on and off based on the current time of day when tapping a bedside tag.",
+    "how_it_works": "Bedside tag scan checks time of day and toggles morning or evening alarms.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home"
+    ],
+    "goals": [
+      "reminder",
+      "automation"
+    ],
+    "phone_support": "iphone_only",
+    "extra_app": "iOS Shortcuts",
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "May have bought one too many nfc tags, any cool ideas or shortcuts you guys have to use with these? : r/shortcuts",
+    "source_url": "https://www.reddit.com/r/shortcuts/comments/lolnvw/may_have_bought_one_too_many_nfc_tags_any_cool/",
+    "creator_name": "namesare4scrubs",
+    "timestamp": null,
+    "anchor_quote": "bedside to turn alarms on and off, depending on the time of day",
+    "notes": null
+  },
+  {
+    "idea_title": "Raspberry Pi Roku TV Power and Channel Switcher",
+    "summary": "Runs a Raspberry Pi script to turn on a Roku TV and switch directly to a specific channel upon scanning.",
+    "how_it_works": "Tag scan triggers SSH command or webhook to Raspberry Pi, turning on Roku TV and setting channel.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home"
+    ],
+    "goals": [
+      "automation"
+    ],
+    "phone_support": "iphone_only",
+    "extra_app": "iOS Shortcuts",
+    "difficulty": "medium",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "May have bought one too many nfc tags, any cool ideas or shortcuts you guys have to use with these? : r/shortcuts",
+    "source_url": "https://www.reddit.com/r/shortcuts/comments/lolnvw/may_have_bought_one_too_many_nfc_tags_any_cool/",
+    "creator_name": "namesare4scrubs",
+    "timestamp": null,
+    "anchor_quote": "runs a script from my raspberry pi to power on a Roku TV and go to the right channel",
+    "notes": null
+  },
+  {
+    "idea_title": "Town Garbage Pickup Schedule Opener",
+    "summary": "Opens the local municipal garbage and recycling collection schedule web page when scanning a tag on trash cans.",
+    "how_it_works": "Tag on outdoor trash bin scanned with phone opens town garbage pickup schedule URL.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home",
+      "outdoors"
+    ],
+    "goals": [
+      "share_info",
+      "reminder"
+    ],
+    "phone_support": "any",
+    "extra_app": null,
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": true,
+      "waterproof": true,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "May have bought one too many nfc tags, any cool ideas or shortcuts you guys have to use with these? : r/shortcuts",
+    "source_url": "https://www.reddit.com/r/shortcuts/comments/lolnvw/may_have_bought_one_too_many_nfc_tags_any_cool/",
+    "creator_name": "namesare4scrubs",
+    "timestamp": null,
+    "anchor_quote": "garbage cans to open garbage pickup schedule from my town",
+    "notes": null
+  },
+  {
+    "idea_title": "Aeropress Coffee Brew Timer Launcher",
+    "summary": "Opens the Aeropress Timer app instantly when tapping a tag placed under the coffee maker.",
+    "how_it_works": "Tag under Aeropress coffee maker scanned with phone launches Aeropress Timer app.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home"
+    ],
+    "goals": [
+      "automation",
+      "reminder"
+    ],
+    "phone_support": "any",
+    "extra_app": null,
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "May have bought one too many nfc tags, any cool ideas or shortcuts you guys have to use with these? : r/shortcuts",
+    "source_url": "https://www.reddit.com/r/shortcuts/comments/lolnvw/may_have_bought_one_too_many_nfc_tags_any_cool/",
+    "creator_name": "namesare4scrubs",
+    "timestamp": null,
+    "anchor_quote": "bottom of my aeropress coffee maker to open up the Aeropress timer app",
+    "notes": null
+  },
+  {
+    "idea_title": "Bathroom Consumables Restock List Trigger",
+    "summary": "Adds items like toothpaste, soap, or vitamins to a shopping list as soon as they run low in the bathroom.",
+    "how_it_works": "Tags on bathroom consumables scanned with phone append item name to shopping list app.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home"
+    ],
+    "goals": [
+      "reminder",
+      "automation"
+    ],
+    "phone_support": "iphone_only",
+    "extra_app": "iOS Shortcuts",
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": true,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "May have bought one too many nfc tags, any cool ideas or shortcuts you guys have to use with these? : r/shortcuts",
+    "source_url": "https://www.reddit.com/r/shortcuts/comments/lolnvw/may_have_bought_one_too_many_nfc_tags_any_cool/",
+    "creator_name": "namesare4scrubs",
+    "timestamp": null,
+    "anchor_quote": "toothpaste, floss, vitamins, soap, shampoo set and as I run out I can tap to order or add to list",
+    "notes": null
+  },
+  {
+    "idea_title": "Pool Area Water Pump and Party Scene Trigger",
+    "summary": "Turns on pool pumps, sets outdoor party lighting, and plays music playlists upon tapping a pool area tag.",
+    "how_it_works": "Tag in pool area scanned with phone triggers pool pumps, outdoor lighting scenes, and playlist playback.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home",
+      "outdoors"
+    ],
+    "goals": [
+      "automation"
+    ],
+    "phone_support": "iphone_only",
+    "extra_app": "iOS Shortcuts",
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": true,
+      "waterproof": true,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "May have bought one too many nfc tags, any cool ideas or shortcuts you guys have to use with these? : r/shortcuts",
+    "source_url": "https://www.reddit.com/r/shortcuts/comments/lolnvw/may_have_bought_one_too_many_nfc_tags_any_cool/",
+    "creator_name": "namesare4scrubs",
+    "timestamp": null,
+    "anchor_quote": "Crank the pumps, select playlists and set outside lights. All nice if I could walk out",
+    "notes": null
+  },
+  {
+    "idea_title": "Hidden 'Use the Force' Prank Switch",
+    "summary": "Hides a tag out of sight to secretly trigger smart home devices, pretending to use Jedi mind control on guests.",
+    "how_it_works": "Hidden tag scanned discretely with phone triggers HomeKit device action to surprise guests.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home"
+    ],
+    "goals": [
+      "automation"
+    ],
+    "phone_support": "any",
+    "extra_app": null,
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "May have bought one too many nfc tags, any cool ideas or shortcuts you guys have to use with these? : r/shortcuts",
+    "source_url": "https://www.reddit.com/r/shortcuts/comments/lolnvw/may_have_bought_one_too_many_nfc_tags_any_cool/",
+    "creator_name": "namesare4scrubs",
+    "timestamp": null,
+    "anchor_quote": "Hide one somewhere and “use the force” to turn on devices and confuse people",
+    "notes": null
+  },
+  {
+    "idea_title": "Nightstand Charger Master All-Lights Shutdown",
+    "summary": "Turns off every smart light in the house automatically when placing the smartphone onto a bedside wireless charger.",
+    "how_it_works": "Tag next to wireless charger scanned when placing phone down triggers off command for all smart lights.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home"
+    ],
+    "goals": [
+      "automation"
+    ],
+    "phone_support": "iphone_only",
+    "extra_app": "iOS Shortcuts",
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "May have bought one too many nfc tags, any cool ideas or shortcuts you guys have to use with these? : r/shortcuts",
+    "source_url": "https://www.reddit.com/r/shortcuts/comments/lolnvw/may_have_bought_one_too_many_nfc_tags_any_cool/",
+    "creator_name": "namesare4scrubs",
+    "timestamp": null,
+    "anchor_quote": "nightstand positioned next to my wireless charger... every light in the house turns off",
+    "notes": null
+  },
+  {
+    "idea_title": "Kids' Room Bedtime and Wake-Up Scene Setter",
+    "summary": "Adjusts smart lights, sound machines, and fans in children's bedrooms for bedtime or morning wake-up routines.",
+    "how_it_works": "Tags on kids' bedroom doors scanned with phone adjust smart lights, fans, and sound machines.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home"
+    ],
+    "goals": [
+      "automation"
+    ],
+    "phone_support": "iphone_only",
+    "extra_app": "iOS Shortcuts",
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "May have bought one too many nfc tags, any cool ideas or shortcuts you guys have to use with these? : r/shortcuts",
+    "source_url": "https://www.reddit.com/r/shortcuts/comments/lolnvw/may_have_bought_one_too_many_nfc_tags_any_cool/",
+    "creator_name": "namesare4scrubs",
+    "timestamp": null,
+    "anchor_quote": "kids doors to set a nighttime scene and a wake up scene in the morning",
+    "notes": null
+  },
+  {
+    "idea_title": "Desk Morning Work Itinerary and Playlist Generator",
+    "summary": "Wakes a computer, creates a daily note with calendar events and tasks, and plays a customized Spotify playlist.",
+    "how_it_works": "Tag under desk scanned with phone wakes PC, compiles calendar events and Todoist tasks into Bear note, and starts Spotify playlist.",
+    "audience": [
+      "workplace",
+      "personal"
+    ],
+    "settings": [
+      "office",
+      "home"
+    ],
+    "goals": [
+      "automation",
+      "reminder"
+    ],
+    "phone_support": "iphone_only",
+    "extra_app": "iOS Shortcuts",
+    "difficulty": "advanced",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "May have bought one too many nfc tags, any cool ideas or shortcuts you guys have to use with these? : r/shortcuts",
+    "source_url": "https://www.reddit.com/r/shortcuts/comments/lolnvw/may_have_bought_one_too_many_nfc_tags_any_cool/",
+    "creator_name": "namesare4scrubs",
+    "timestamp": null,
+    "anchor_quote": "under my desk that triggers a morning routine that wakes my computer, creates a daily itinerary",
+    "notes": null
+  },
+  {
+    "idea_title": "Desk Zoom Meeting Audio and Video Configurator",
+    "summary": "Configures room lights, microphone inputs, and camera settings specifically for Zoom video calls.",
+    "how_it_works": "Desk tag scanned with phone sets room lights, audio inputs, and video settings for Zoom calls.",
+    "audience": [
+      "workplace",
+      "personal"
+    ],
+    "settings": [
+      "office",
+      "home"
+    ],
+    "goals": [
+      "automation"
+    ],
+    "phone_support": "iphone_only",
+    "extra_app": "iOS Shortcuts",
+    "difficulty": "medium",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "May have bought one too many nfc tags, any cool ideas or shortcuts you guys have to use with these? : r/shortcuts",
+    "source_url": "https://www.reddit.com/r/shortcuts/comments/lolnvw/may_have_bought_one_too_many_nfc_tags_any_cool/",
+    "creator_name": "namesare4scrubs",
+    "timestamp": null,
+    "anchor_quote": "desk that sets everything for zoom calls. Lights, microphones, inputs, etc.",
+    "notes": null
+  },
+  {
+    "idea_title": "Apartment Building Magnetic Lock Door Release",
+    "summary": "Releases the magnetic door lock at an apartment or office building entrance for swift keyless entry.",
+    "how_it_works": "Tag outside building main door scanned with phone releases magnetic door lock.",
+    "audience": [
+      "personal",
+      "workplace"
+    ],
+    "settings": [
+      "home",
+      "office"
+    ],
+    "goals": [
+      "access",
+      "security",
+      "automation"
+    ],
+    "phone_support": "iphone_only",
+    "extra_app": "iOS Shortcuts",
+    "difficulty": "medium",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": true,
+      "waterproof": true,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "May have bought one too many nfc tags, any cool ideas or shortcuts you guys have to use with these? : r/shortcuts",
+    "source_url": "https://www.reddit.com/r/shortcuts/comments/lolnvw/may_have_bought_one_too_many_nfc_tags_any_cool/",
+    "creator_name": "namesare4scrubs",
+    "timestamp": null,
+    "anchor_quote": "outside the apartment building to unlock the main door... release the magnetic lock door",
+    "notes": null
+  },
+  {
+    "idea_title": "Chairside Apple TV Power and Remote Launcher",
+    "summary": "Turns on the Apple TV and opens the remote control app on a smartphone when tapping a wall tag next to a chair.",
+    "how_it_works": "Tag on wall near armchair scanned with iPhone turns on Apple TV and launches Remote app.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home"
+    ],
+    "goals": [
+      "automation"
+    ],
+    "phone_support": "iphone_only",
+    "extra_app": "iOS Shortcuts",
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "May have bought one too many nfc tags, any cool ideas or shortcuts you guys have to use with these? : r/shortcuts",
+    "source_url": "https://www.reddit.com/r/shortcuts/comments/lolnvw/may_have_bought_one_too_many_nfc_tags_any_cool/",
+    "creator_name": "namesare4scrubs",
+    "timestamp": null,
+    "anchor_quote": "wall next to my chair... turns on my Apple TV and opens the remote control app",
+    "notes": null
+  },
+  {
+    "idea_title": "Pantry Depleted Item Shopping List Trigger",
+    "summary": "Appends a pantry item to a grocery shopping list when taking the last package from the shelf.",
+    "how_it_works": "Tag in pantry scanned with phone when taking last item adds product name to grocery list.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home"
+    ],
+    "goals": [
+      "reminder",
+      "automation"
+    ],
+    "phone_support": "iphone_only",
+    "extra_app": "iOS Shortcuts",
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "May have bought one too many nfc tags, any cool ideas or shortcuts you guys have to use with these? : r/shortcuts",
+    "source_url": "https://www.reddit.com/r/shortcuts/comments/lolnvw/may_have_bought_one_too_many_nfc_tags_any_cool/",
+    "creator_name": "namesare4scrubs",
+    "timestamp": null,
+    "anchor_quote": "in the Pantry, when you take the last item, touch the NFC, it puts the Item on your shopping list",
+    "notes": null
+  },
+  {
+    "idea_title": "Earbuds-to-AirPlay Speaker Audio Switcher",
+    "summary": "Switches audio output seamlessly from AirPods to a room AirPlay speaker upon returning home from work.",
+    "how_it_works": "Tag near AirPlay speaker scanned with iPhone switches active audio playback destination to AirPlay speaker.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home"
+    ],
+    "goals": [
+      "automation"
+    ],
+    "phone_support": "iphone_only",
+    "extra_app": "iOS Shortcuts",
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "May have bought one too many nfc tags, any cool ideas or shortcuts you guys have to use with these? : r/shortcuts",
+    "source_url": "https://www.reddit.com/r/shortcuts/comments/lolnvw/may_have_bought_one_too_many_nfc_tags_any_cool/",
+    "creator_name": "namesare4scrubs",
+    "timestamp": null,
+    "anchor_quote": "near my Airplay speaker to switch from my airpods to my speaker without having to do anything",
+    "notes": null
+  },
+  {
+    "idea_title": "Water Bottle Hydration Tracker",
+    "summary": "Logs exact fluid consumption automatically in the health app when scanning a tag attached to a water bottle.",
+    "how_it_works": "Tag on water bottle scanned with phone logs specific fluid volume sample in Apple Health.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home",
+      "office",
+      "health"
+    ],
+    "goals": [
+      "tracking",
+      "automation"
+    ],
+    "phone_support": "iphone_only",
+    "extra_app": "iOS Shortcuts",
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": true,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "May have bought one too many nfc tags, any cool ideas or shortcuts you guys have to use with these? : r/shortcuts",
+    "source_url": "https://www.reddit.com/r/shortcuts/comments/lolnvw/may_have_bought_one_too_many_nfc_tags_any_cool/",
+    "creator_name": "namesare4scrubs",
+    "timestamp": null,
+    "anchor_quote": "water bottle. Scan it and auto log water intake in health app",
+    "notes": null
+  },
+  {
+    "idea_title": "Bedhead Day and Night Routine Switcher",
+    "summary": "Toggles between a bedtime shutdown routine at night and a morning wake-up routine with news playback when tapped.",
+    "how_it_works": "Tag on bedhead scanned at night sets low brightness, turns off lights, and sets alarm; scanned in morning turns on lights and shows news.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home"
+    ],
+    "goals": [
+      "automation"
+    ],
+    "phone_support": "iphone_only",
+    "extra_app": "iOS Shortcuts",
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "May have bought one too many nfc tags, any cool ideas or shortcuts you guys have to use with these? : r/shortcuts",
+    "source_url": "https://www.reddit.com/r/shortcuts/comments/lolnvw/may_have_bought_one_too_many_nfc_tags_any_cool/",
+    "creator_name": "namesare4scrubs",
+    "timestamp": null,
+    "anchor_quote": "put on my bedhead. When I tap it at night... But if I tap it in the morning",
+    "notes": null
+  },
+  {
+    "idea_title": "Nintendo Amiibo Compatible Game Tag Generator",
+    "summary": "Programs NTAG215 tags with Amiibo data to unlock special in-game features on Nintendo Switch or 3DS consoles.",
+    "how_it_works": "NTAG215 tag programmed with Amiibo data scanned on Nintendo Switch controller to unlock in-game items.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home"
+    ],
+    "goals": [
+      "share_info"
+    ],
+    "phone_support": "any",
+    "extra_app": "Amiibomb",
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": "NTAG215"
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "May have bought one too many nfc tags, any cool ideas or shortcuts you guys have to use with these? : r/shortcuts",
+    "source_url": "https://www.reddit.com/r/shortcuts/comments/lolnvw/may_have_bought_one_too_many_nfc_tags_any_cool/",
+    "creator_name": "namesare4scrubs",
+    "timestamp": null,
+    "anchor_quote": "make amiibo-compatible tags that activate special features in certain games",
+    "notes": null
+  },
+  {
+    "idea_title": "Knitting Craft Light and Roku Remote Opener",
+    "summary": "Adjusts room lighting to a comfortable crafting tone and opens a Roku TV remote app when settling down to knit.",
+    "how_it_works": "Tag at knitting spot scanned with phone adjusts lighting scene for crafting and opens Roku remote app.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home"
+    ],
+    "goals": [
+      "automation"
+    ],
+    "phone_support": "iphone_only",
+    "extra_app": "iOS Shortcuts",
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "May have bought one too many nfc tags, any cool ideas or shortcuts you guys have to use with these? : r/shortcuts",
+    "source_url": "https://www.reddit.com/r/shortcuts/comments/lolnvw/may_have_bought_one_too_many_nfc_tags_any_cool/",
+    "creator_name": "namesare4scrubs",
+    "timestamp": null,
+    "anchor_quote": "Knitting Mode: Turns off all lights except for where I'm sitting... opens my roku remote app",
+    "notes": null
+  },
+  {
+    "idea_title": "Tea Steeping Alert and Timer",
+    "summary": "Sets a tea steeping timer and displays a visual alert on screen to prevent over-steeping tea bags.",
+    "how_it_works": "Tag scanned with phone sets timer, waits, and displays visual notification when tea is done.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home",
+      "office"
+    ],
+    "goals": [
+      "automation",
+      "reminder"
+    ],
+    "phone_support": "iphone_only",
+    "extra_app": "iOS Shortcuts",
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "May have bought one too many nfc tags, any cool ideas or shortcuts you guys have to use with these? : r/shortcuts",
+    "source_url": "https://www.reddit.com/r/shortcuts/comments/lolnvw/may_have_bought_one_too_many_nfc_tags_any_cool/",
+    "creator_name": "namesare4scrubs",
+    "timestamp": null,
+    "anchor_quote": "Tea Timers: I have several of these. The automation is timer, wait, display alert",
+    "notes": null
+  },
+  {
+    "idea_title": "Knitting Project Material and Pattern Viewer",
+    "summary": "Attaches tags to knitting projects so friends can scan and inspect yarn materials, inspiration, and pattern details.",
+    "how_it_works": "Tag attached to knitting project scanned with phone opens web link displaying materials and pattern info.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home",
+      "events"
+    ],
+    "goals": [
+      "share_info"
+    ],
+    "phone_support": "any",
+    "extra_app": null,
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "May have bought one too many nfc tags, any cool ideas or shortcuts you guys have to use with these? : r/shortcuts",
+    "source_url": "https://www.reddit.com/r/shortcuts/comments/lolnvw/may_have_bought_one_too_many_nfc_tags_any_cool/",
+    "creator_name": "namesare4scrubs",
+    "timestamp": null,
+    "anchor_quote": "Attaching the coin to some knitting projects so people can scan them to see the materials used",
+    "notes": null
+  },
+  {
+    "idea_title": "Closet Wardrobe Usage Tracker",
+    "summary": "Logs worn clothing items into a wardrobe app when scanning tags attached to garments to identify unused clothes.",
+    "how_it_works": "Tag attached to clothing item scanned with phone logs garment usage in Stylebook app.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home"
+    ],
+    "goals": [
+      "tracking"
+    ],
+    "phone_support": "iphone_only",
+    "extra_app": "Stylebook",
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": true,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "May have bought one too many nfc tags, any cool ideas or shortcuts you guys have to use with these? : r/shortcuts",
+    "source_url": "https://www.reddit.com/r/shortcuts/comments/lolnvw/may_have_bought_one_too_many_nfc_tags_any_cool/",
+    "creator_name": "namesare4scrubs",
+    "timestamp": null,
+    "anchor_quote": "Clothing tracker (via stylebook) to help figure out what I end up wearing most",
+    "notes": null
+  }
+]

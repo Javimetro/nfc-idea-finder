@@ -79,8 +79,11 @@ def present(idea, score, why, warnings, answers):
     for link in idea["sources"]:
         url, is_search = source_link(link)
         src = link["source"]
-        g = grouped.setdefault(src["id"], {
-            "creator": src["creator_name"], "title": src["title"], "type": src["type"],
+        g = grouped.setdefault((src["id"], link.get("credit")), {
+            "creator": ("u/" + link["credit"]) if link.get("credit")
+            else ("a member of " + src["title"].rsplit(" : ", 1)[-1]) if src["platform"] == "Reddit"
+            else src["creator_name"],
+            "title": src["title"], "type": src["type"],
             "platform": src["platform"], "url": url, "is_search": is_search, "quotes": [],
             "domain": PLATFORM_DOMAIN.get(src["platform"]),
             "start_seconds": link["start_seconds"]})

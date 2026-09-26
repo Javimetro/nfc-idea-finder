@@ -23,7 +23,7 @@ FACT_SETTINGS = {
     "desk_job": {"office"}, "work_from_home": {"office", "home"}, "student": {"office"},
     "drive": {"car"}, "travel_often": {"travel"}, "kids": {"home"}, "pets": {"pets"},
     "plants": {"outdoors", "home"}, "shared_home": {"home"}, "workout": {"health"},
-    "smart_home": {"home"}, "hub": {"home"}, "business_owner": {"shop", "restaurant", "events"},
+    "smart_home": {"home"}, "hub": {"home"}, "hobbies": {"home", "events"}, "business_owner": {"shop", "restaurant", "events"},
     "money": {"events", "shop"},
 }
 
@@ -31,8 +31,10 @@ FACT_SETTINGS = {
 def collect_needs(answers):
     """Returns {need_id: 'why' text} from ticked options and free-text keywords."""
     picked = {}
-    for q in ("mornings", "home", "work", "move", "health", "business"):
-        for need_id in answers.get(q) or []:
+    for q in questions.QUESTIONS:
+        if q["type"] != "multi" or q["id"] == "about":
+            continue
+        for need_id in answers.get(q["id"]) or []:
             if need_id in questions.NEEDS_BY_ID:
                 picked[need_id] = "You said " + questions.NEEDS_BY_ID[need_id]["you_said"] + "."
     text = (answers.get("text") or "").strip()
@@ -44,15 +46,12 @@ def collect_needs(answers):
     return picked
 
 
-def _smart_home_need(setup):
-    s = (setup or "").lower()
-    if "nfc tools" in s:                       # there's a way without smart home gear
+def _smart_home_need(idea):
+    """Does this idea need smart home gear? Uses the idea's setup type, not guesswork on text."""
+    if idea.get("setup_type") != "smarthome":
         return None
-    if s.startswith("home assistant") or s.startswith("home automation hub"):
-        return "hub"
-    if any(k in s for k in ("smart home", "smart lights", "home assistant", "alexa", "smart garage")):
-        return "some"
-    return None
+    s = (idea["setup_by_platform"] or "").lower()
+    return "hub" if s.startswith(("home assistant", "home automation hub")) else "some"
 
 
 def _feasibility(idea, a, facts):
@@ -80,10 +79,10 @@ def _feasibility(idea, a, facts):
         return None
 
     have = "hub" if "hub" in facts else ("some" if "smart_home" in facts else "none")
-    need = _smart_home_need(idea["setup_by_platform"])
+    need = _smart_home_need(idea)
     if need and have == "none":
         s -= 4
-        warnings.append("Works best with smart lights / plugs")
+        warnings.append("Needs smart home gear")
     elif need == "hub" and have == "some":
         s -= 2
         warnings.append("Needs a hub like Home Assistant")
