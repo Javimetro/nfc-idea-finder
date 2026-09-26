@@ -375,6 +375,20 @@ Still missing: **exact seconds in the videos.** That needs the video transcripts
 
 ![An idea with shop and app links](docs/img/26-idea-with-links.png)
 
+#### 18. A better "NFC in 20 seconds"
+
+the user found an explainer he liked (MuddleMend, "NFC Tags for ADHD"). It doesn't start with technology but with a moment everyone knows: standing at the door, sure you're forgetting something. It ends with one simple rule: **put the tag where the task happens**.
+
+The intro now follows the same structure, in our own words:
+1. **A tiny story**: "Monday, 8:05. You're at the door, keys in hand… you tap a sticker and your checklist pops up. That sticker is an NFC tag."
+2. **Three facts**: what it is (the same tech as tapping to pay or your bus card), no battery (your phone powers it), and your phone does the work (the tag just says "go").
+3. **The golden rule** in a dashed box, with three quick examples.
+4. **A credit link** to the original video for anyone who wants the 3-minute version.
+
+Lesson: explain a technology through a moment people recognise, not through how it works.
+
+![New intro](docs/img/27-intro-story.png)
+
 ---
 
 ## Open to-do list

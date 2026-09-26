@@ -74,9 +74,12 @@ function renderQuestion() {
   const val = state.answers[q.id];
   let body = "";
   if (q.type === "intro") {
-    body = `<div class="intro-points">${q.points.map((p) => `
+    body = `<div class="intro-story"><span class="story-ico" aria-hidden="true">🚪</span><p>${esc(q.story)}</p></div>
+      <div class="intro-points">${q.points.map((p) => `
       <div class="intro-point"><span class="ico">${p.icon}</span><div><b>${esc(p.title)}</b><span>${esc(p.text)}</span></div></div>`).join("")}</div>
-      <p class="intro-outro">${esc(q.outro)}</p>`;
+      <div class="intro-rule"><span aria-hidden="true">📍</span><p>${esc(q.rule)}</p></div>
+      <p class="intro-outro">${esc(q.outro)}</p>
+      ${q.more ? `<a class="intro-more" href="${esc(q.more.url)}" target="_blank" rel="noopener">▶ ${esc(q.more.label)} ↗</a>` : ""}`;
   } else if (q.type === "text") {
     body = `<textarea id="q-text" placeholder="${esc(q.placeholder)}">${esc(val || "")}</textarea>`;
   } else {

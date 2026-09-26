@@ -16,14 +16,17 @@ NEEDS_BY_ID = {n["id"]: n for n in NEEDS}
 INTRO = {
     "id": "intro", "type": "intro",
     "title": "NFC in 20 seconds",
-    "subtitle": "No tech knowledge needed. Here's all you need to know:",
+    "story": "Monday, 8:05. You're at the door, keys in hand, sure you're forgetting something. "
+             "You tap your phone on a little sticker by the door, and your \u201cbefore you go\u201d checklist pops up. "
+             "That sticker is an NFC tag.",
     "points": [
-        {"icon": "🏷️", "title": "A tiny sticker", "text": "NFC tags are stickers (or cards, keychains) that cost less than €1. No battery, they last for years."},
-        {"icon": "📱", "title": "Your phone reads it", "text": "Almost every phone can. Hold it near the sticker, like paying with your card."},
-        {"icon": "✨", "title": "Something happens", "text": "Open a page, start a timer, send a message, switch the lights off, share your wifi… you decide."},
-        {"icon": "🧠", "title": "The tag is just a trigger", "text": "The sticker itself can't record, beep or light up. It only tells your phone what to do, and your phone does the work with its own screen, speaker, microphone and apps."},
+        {"icon": "🏷️", "title": "What it is", "text": "A sticker, card or keychain with a tiny chip. The same tech as tapping to pay, your bus card or a hotel key."},
+        {"icon": "🔋", "title": "No battery", "text": "When your phone gets close, it powers the tag for a split second and reads it."},
+        {"icon": "📱", "title": "Your phone does the work", "text": "The tag just says \u201cgo\u201d. Your phone opens the app, starts the timer or shows the list you chose."},
     ],
+    "rule": "The golden rule: put the tag where the task happens. A laundry timer on the washer, a pill tracker on the pill bottle, the shopping list on the fridge.",
     "outro": "Now tell us a bit about your day, and we'll find the taps worth trying.",
+    "more": {"label": "Want the 3-minute version? Watch MuddleMend's explainer", "url": "https://www.youtube.com/watch?v=RnmuC79-1m0"},
 }
 
 

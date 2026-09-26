@@ -327,3 +327,16 @@ dialog label.check input { width: auto; }
 .step-link { display: inline-block; margin-top: .35rem; margin-right: .35rem; font-size: .78rem; font-weight: 650; padding: .2rem .55rem; border-radius: 999px;
   background: var(--surface); border: 1px solid var(--border); color: var(--text); text-decoration: none; }
 .step-link:hover { border-color: var(--accent); color: var(--accent-ink); }
+
+/* v7 intro: story -> 3 facts -> golden rule */
+.intro-story { display: flex; gap: .9rem; align-items: flex-start; background: var(--accent-soft); border-radius: var(--radius); padding: 1rem 1.15rem; margin-top: 1rem; }
+.intro-story p { margin: 0; font-size: 1.05rem; line-height: 1.55; }
+.story-ico { font-size: 1.8rem; line-height: 1; }
+.intro-points { grid-template-columns: repeat(3, 1fr); }
+.intro-point { flex-direction: column; gap: .5rem; }
+.intro-rule { display: flex; gap: .7rem; align-items: flex-start; border: 2px dashed var(--accent); border-radius: var(--radius); padding: .85rem 1rem; }
+.intro-rule span { font-size: 1.4rem; line-height: 1; }
+.intro-rule p { margin: 0; font-weight: 650; }
+.intro-more { display: inline-block; margin-top: .2rem; font-size: .88rem; color: var(--muted); }
+.intro-more:hover { color: var(--accent-ink); }
+@media (max-width: 640px) { .intro-points { grid-template-columns: 1fr; } .intro-point { flex-direction: row; } }
