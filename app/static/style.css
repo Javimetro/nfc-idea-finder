@@ -385,3 +385,18 @@ dialog label.check input { width: auto; }
   .bank-worlds { flex-wrap: nowrap; overflow-x: auto; margin-right: -1rem; padding-bottom: .3rem; scrollbar-width: none; }
   .world-chip { white-space: nowrap; }
 }
+
+/* ---------------------------------------------------------------- duplicate hints */
+.dupe-hint { background: var(--surface-2); border: 1px solid var(--border); border-radius: 12px; padding: .8rem .9rem; margin: -.3rem 0 .2rem; font-size: .88rem; }
+.dupe-hint > p:first-child { margin: 0 0 .4rem; font-weight: 650; }
+.dupe-hint ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: .5rem; }
+.dupe-hint li { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: .5rem .7rem; }
+.dupe-hint li b { display: block; font-size: .88rem; }
+.dupe-hint li span { display: block; color: var(--muted); font-size: .82rem; margin-top: .1rem; }
+.dupe-note { color: var(--muted); margin: .5rem 0 0; }
+
+.admin-dupes { margin: .8rem 0; }
+.admin-dupes summary { cursor: pointer; font-weight: 650; font-size: .9rem; color: var(--accent-ink); }
+.dupe-row { display: flex; align-items: center; justify-content: space-between; gap: .8rem; background: var(--surface-2); border-radius: 10px; padding: .5rem .8rem; margin-top: .4rem; }
+.dupe-row div b { font-size: .88rem; display: block; }
+.dupe-row div span { color: var(--muted); font-size: .78rem; }

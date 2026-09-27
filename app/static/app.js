@@ -300,9 +300,26 @@ function openSuggest(withContext) {
   sendContext = withContext;
   $("#suggest-form").hidden = false; $("#suggest-thanks").hidden = true;
   $("#suggest-form").reset(); $("#suggest-error").textContent = "";
+  $("#dupe-hint").hidden = true;
   $("#suggest").showModal();
   $("#suggest-form textarea").focus();
 }
+
+// heads-up while typing: "this might already be in the bank" (never blocks sending)
+let dupeTimer = null;
+$("#suggest-form textarea[name=description]").addEventListener("input", (e) => {
+  clearTimeout(dupeTimer);
+  const text = e.target.value;
+  if (text.trim().length < 8) { $("#dupe-hint").hidden = true; return; }
+  dupeTimer = setTimeout(async () => {
+    const { matches } = await fetch("/api/ideas/similar?q=" + encodeURIComponent(text)).then((r) => r.json());
+    if (!matches.length) { $("#dupe-hint").hidden = true; return; }
+    $("#dupe-hint").hidden = false;
+    $("#dupe-hint").innerHTML = `<p>🔍 Already close to what's in the bank:</p><ul>${matches.slice(0, 3).map((m) =>
+      `<li><b>${esc(m.title)}</b><span>${esc(m.summary)}</span></li>`).join("")}</ul>
+      <p class="dupe-note">Not quite it, or you'd do it differently? Send yours anyway — a different angle still helps.</p>`;
+  }, 400);
+});
 $("#suggest-form").addEventListener("submit", async (e) => {
   if (e.submitter && e.submitter.value === "cancel") return;       // Cancel closes the dialog
   e.preventDefault();

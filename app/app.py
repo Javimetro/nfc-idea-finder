@@ -4,6 +4,7 @@ Run locally:   python app/app.py            -> http://localhost:8000
 On the Pi:     see README (Docker)."""
 import hmac
 import os
+import re
 import sys
 from functools import wraps
 from urllib.parse import quote, quote_plus
@@ -40,6 +41,40 @@ def reload_catalog():
 
 
 reload_catalog()
+
+
+# ------------------------------------------------------------------ duplicate finder
+# No AI needed for this: just "how many of the same words do these two ideas use".
+# Good enough to catch "wifi on a coaster" vs "a sticker that shares your wifi password".
+STOPWORDS = set("""a an the and or but so to of in on at for with without from into onto
+your yours you my mine our their his her its it is are was were be being been do does did
+this that these those i we they he she them us can could should would will just when
+where what who how tag tags nfc sticker stickers phone phones each one instead its""".split())
+
+
+def _keywords(text):
+    return {w for w in re.findall(r"[a-z']+", (text or "").lower()) if len(w) > 2 and w not in STOPWORDS}
+
+
+def similar_ideas(text, limit=5, min_score=0.14):
+    """Ranks existing ideas by word overlap with `text`. Cheap, local, no API calls."""
+    qwords = _keywords(text)
+    if not qwords:
+        return []
+    scored = []
+    for i in CATALOG["ideas"]:
+        if i["status"] == "hidden":
+            continue
+        hay = " ".join(filter(None, [i["title"], i["hook"], i["summary"], i["place"], i["result"]]))
+        iwords = _keywords(hay)
+        if not iwords:
+            continue
+        score = len(qwords & iwords) / len(qwords | iwords)
+        if score >= min_score:
+            scored.append((score, i))
+    scored.sort(key=lambda x: -x[0])
+    return [{"id": i["id"], "title": i["hook"] or i["title"], "summary": i["summary"],
+              "community": bool(i.get("community")), "score": round(s, 2)} for s, i in scored[:limit]]
 
 MAIN_KINDS = {"diy", "business", "maker"}
 
@@ -259,6 +294,12 @@ def suggest():
     return jsonify(ok=True)
 
 
+@app.get("/api/ideas/similar")
+def similar():
+    """Used by the "Add an idea" form (heads-up) and the admin page (duplicate check)."""
+    return jsonify(matches=similar_ideas(request.args.get("q") or ""))
+
+
 @app.get("/api/ideas")
 def browse():
     """The bank: every idea, searchable, filterable by world, sorted by most used or newest."""
@@ -346,10 +387,11 @@ def approve(sub_id):
 @app.post("/api/admin/submissions/<int:sub_id>/status")
 @admin_only
 def set_status(sub_id):
-    status = (request.get_json(force=True) or {}).get("status")
+    d = request.get_json(force=True) or {}
+    status = d.get("status")
     if status not in ("pending", "rejected", "duplicate"):
         return jsonify(error="bad status"), 400
-    database.set_submission_status(sub_id, status)
+    database.set_submission_status(sub_id, status, d.get("linked_idea_id"))
     return jsonify(ok=True)
 
 

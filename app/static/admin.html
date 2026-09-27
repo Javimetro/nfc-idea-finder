@@ -51,7 +51,7 @@ async function load() {
     const who = s.submitter_name ? `${esc(s.submitter_name)}${s.credit_ok ? "" : " (doesn't want credit)"}` : "anonymous";
     return `<form class="sub ${pending ? "" : "done"}" data-id="${s.id}">
       <div style="display:flex;gap:.5rem;align-items:center;flex-wrap:wrap">
-        <span class="pill">#${s.id}</span><span class="pill">${esc(s.status)}${s.linked_idea_id ? " → " + esc(s.linked_idea_id) : ""}</span>
+        <span class="pill">#${s.id}</span><span class="pill">${esc(s.status)}${s.linked_idea_id ? (s.status === "duplicate" ? " of " : " → ") + esc(s.linked_idea_id) : ""}</span>
         <span class="muted" style="font-size:.85rem">${esc(s.submitted_at)} · from ${who}${s.email ? " · " + esc(s.email) : ""}</span>
       </div>
       <div class="raw">${esc(s.description)}${s.place ? `\n📍 Tag goes: ${esc(s.place)}` : ""}${s.source_url ? `\n🔗 <a href="${esc(s.source_url)}" target="_blank" rel="noopener">${esc(s.source_url)}</a>` : ""}</div>
@@ -67,15 +67,38 @@ async function load() {
         <label>Phone <select name="phone_support"><option value="any">Any phone</option><option value="iphone_only">iPhone only</option><option value="android_only">Android only</option></select></label>
         <div class="full"><label>Which everyday needs does it solve? (so the quiz can suggest it)</label><div class="needs">${needsHtml()}</div></div>
       </div>
+      <div class="admin-dupes" id="dupes-${s.id}" hidden><summary></summary></div>
       <p class="error" role="alert"></p>
       <div class="actions">
         <button class="btn primary" value="approve">Approve → into the bank</button>
-        <button class="btn ghost" value="duplicate">Already in the bank</button>
+        <button class="btn ghost" value="duplicate">Already in the bank (no match below)</button>
         <button class="btn ghost" value="rejected">Reject</button>
       </div>` : ""}
     </form>`;
   }).join("") : `<p class="muted">No ideas yet.</p>`;
+  for (const s of subs) if (s.status === "pending") checkDupes(s.id, s.description);
 }
+
+async function checkDupes(id, text) {
+  const box = $(`#dupes-${id}`);
+  if (!box) return;
+  const { matches } = await fetch("/api/ideas/similar?q=" + encodeURIComponent(text)).then((r) => r.json());
+  if (!matches.length) return;
+  box.hidden = false;
+  box.innerHTML = `<b>🔍 ${matches.length} idea${matches.length > 1 ? "s" : ""} already close to this one:</b>` +
+    matches.map((m) => `<div class="dupe-row">
+      <div><b>${esc(m.title)}${m.community ? " 🌱" : ""}</b><span>${esc(m.summary)}</span></div>
+      <button type="button" class="btn ghost" data-dupe-of="${esc(m.id)}" data-sub="${id}">Mark as duplicate of this</button>
+    </div>`).join("");
+}
+
+document.addEventListener("click", async (e) => {
+  const b = e.target.closest("[data-dupe-of]");
+  if (!b) return;
+  const res = await fetch(`/api/admin/submissions/${b.dataset.sub}/status`, { method: "POST",
+    headers: { "Content-Type": "application/json" }, body: JSON.stringify({ status: "duplicate", linked_idea_id: b.dataset.dupeOf }) });
+  if (res.ok) load();
+});
 
 document.addEventListener("submit", async (e) => {
   e.preventDefault();

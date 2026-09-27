@@ -420,6 +420,18 @@ Lesson: a site grows when giving back is as easy as taking, and when people can 
 ![Browsing the bank, with a shared idea](docs/img/29-bank-browse.png)
 ![Admin page to approve ideas](docs/img/30-admin.png)
 
+#### 21. Catching duplicate ideas without an account system
+
+Right after step 20 shipped, the user raised the obvious problem: **visitors don't know the whole database.** Someone will describe an idea that's basically already there, just in different words ("a tag that shares wifi" vs "guest wifi without typing the password"). Nobody wants to review the same idea five times.
+
+No AI model needed for this — a simple trick does most of the job: **count how many of the same meaningful words two descriptions share** (ignoring tiny words like "a", "the", "tap"). It runs instantly on the Pi, no API calls, no cost.
+
+Two places use it:
+1. **While someone is typing their idea**, a small box appears under the text box: *"Already close to what's in the bank: …"* with the closest 1–3 matches. It never blocks sending — "Not quite it? Send yours anyway, a different angle still helps."
+2. **On the admin page**, every pending idea now shows its closest matches with a **"Mark as duplicate of this"** button. One click marks it as a duplicate *and* links it to the existing idea, no retyping.
+
+Lesson: you don't always need an AI model for "are these the same" — word overlap is fast, free, and good enough to flag likely duplicates for a human to confirm.
+
 ---
 
 ## Open to-do list
