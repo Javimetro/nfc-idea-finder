@@ -4,20 +4,14 @@
 
 ### First time (once)
 
-1. Give the Pi a read-only key for this private repo:
+1. The Pi is logged in to GitHub with the GitHub CLI (`gh auth login` + `gh auth setup-git`),
+   so it can pull and push over HTTPS. All projects live in `~/projects`
+   (the whole Pi setup is explained in `~/projects/SETUP.md`).
 
-       sudo apt install -y git
-       ssh-keygen -t ed25519 -C "hwpi" -f ~/.ssh/github_nfc -N ""
-       cat ~/.ssh/github_nfc.pub
+2. Download the project:
 
-   Copy the line it prints. On GitHub: repo **Settings → Deploy keys → Add deploy key**,
-   paste it, leave "Allow write access" OFF, save.
-
-2. Tell the Pi to use that key for GitHub, then download the project:
-
-       printf 'Host github.com\n  IdentityFile ~/.ssh/github_nfc\n' >> ~/.ssh/config
-       git clone git@github.com:Javimetro/nfc-idea-finder.git
-       cd nfc-idea-finder
+       git clone https://github.com/Javimetro/nfc-idea-finder.git ~/projects/nfc-idea-finder
+       cd ~/projects/nfc-idea-finder
 
 3. Build and start:
 
@@ -36,7 +30,7 @@ Open in your laptop's browser:
 
 ### Every update after that
 
-    cd ~/nfc-idea-finder
+    cd ~/projects/nfc-idea-finder
     git pull
     docker build -t tapwise .
     docker rm -f tapwise
