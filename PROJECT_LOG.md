@@ -12,7 +12,7 @@ NFC is the tech that lets you pay by tapping your phone. It also works with tiny
 
 ## Who built it, and how
 
-Built by **the user** (ICT engineering student), working together with AI the whole time:
+Built by **the user** (ICT engineer), working together with AI the whole time:
 
 - **Claude (chat and Claude Code, by Anthropic)**: planning, architecture, database design, writing prompts, cleaning data, and writing code with the user.
 - **NotebookLM (by Google)**: reading all the source videos/articles and pulling ideas out of them.

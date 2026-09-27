@@ -20,7 +20,7 @@ A Flask + SQLite website ("Tapwise") that asks visitors questions about their ev
 
 ## Working style (important)
 
-- the user is not a professional developer — he's an ICT engineering student building this for his portfolio. **Explain things simply** ("like I'm 14") when describing what you did or what he needs to do, especially anything involving the terminal or Docker.
+- the user is an ICT engineer and developer who builds with AI rather than hand-coding. Keep reports to him short: what was done and what he needs to decide or do. (PROJECT_LOG.md is different: it's written for a general audience, simply enough for a curious 14-year-old.)
 - Move fast: skip formal test suites, ship working code, verify with a quick manual check (curl / a Playwright screenshot) rather than writing test files.
 - **After any meaningful change**, add a new numbered entry to `PROJECT_LOG.md` (same style as the existing entries: what changed, why, a short lesson). This file becomes the public README's story, so write for a general audience, not just the user.
 - the user cares about being transparent that this was built together with Claude — keep that framing in the log and README, don't erase it.
