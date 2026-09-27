@@ -1,4 +1,5 @@
-// Tapwise front-end: landing page (+ explore) -> intro -> questions about your day -> results.
+// Tapwise front-end: the NFC idea bank.
+// Landing page -> (quiz about your day -> results) or (browse the bank). Anyone can add an idea.
 const $ = (s, el = document) => el.querySelector(s);
 const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
 
@@ -23,6 +24,7 @@ function show(view) {
   document.querySelectorAll(".view").forEach((v) => v.classList.toggle("active", v.id === "view-" + view));
   window.scrollTo({ top: 0, behavior: "smooth" });
   if (view === "quiz") renderQuestion();
+  if (view === "bank") loadBank();
 }
 document.addEventListener("click", (e) => {
   const go = e.target.closest("[data-go]");
@@ -35,10 +37,12 @@ document.addEventListener("click", (e) => {
 async function init() {
   const [meta, explore] = await Promise.all([fetch("/api/meta").then((r) => r.json()), fetch("/api/explore").then((r) => r.json())]);
   state.questions = meta.questions;
+  state.worlds = meta.worlds;
   $("#stats").innerHTML = `
-    <div class="stat"><b>${meta.stats.ideas}</b><span>NFC ideas</span></div>
-    <div class="stat"><b>${meta.stats.creators}</b><span>creators credited</span></div>
-    <div class="stat"><b>${meta.stats.sources}</b><span>videos & books</span></div>`;
+    <div class="stat"><b>${meta.stats.ideas}</b><span>ideas in the bank</span></div>
+    <div class="stat"><b>${meta.stats.creators}</b><span>people credited</span></div>
+    <div class="stat"><b>${meta.stats.uses}</b><span>times someone said “I use this”</span></div>`;
+  renderWorlds();
   $("#engine").innerHTML = meta.engines.map((e) =>
     `<option value="${e.name}" ${e.available ? "" : "disabled"}>${esc(e.label)}${e.available ? "" : " (not set up)"}</option>`).join("");
   $("#engine").addEventListener("change", () => { if (state.lastResult) submit(); });
@@ -155,6 +159,7 @@ async function submit() {
 function sourceIcon(s) {
   if (s.type === "editorial") return `<span class="src-ico">✍️</span>`;
   if (s.type === "book") return `<span class="src-ico">📖</span>`;
+  if (s.type === "community") return `<span class="src-ico">🌱</span>`;
   if (s.domain) return `<img class="src-ico" src="https://www.google.com/s2/favicons?domain=${s.domain}&sz=64" alt="${esc(s.platform)}" loading="lazy" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'src-ico',textContent:'▶'}))">`;
   return `<span class="src-ico">🔗</span>`;
 }
@@ -172,6 +177,8 @@ function renderIdea(idea, open) {
     idea.setup_time ? `⏱ ${esc(idea.setup_time)}` : "",
     idea.tag ? `🏷️ ${esc(idea.tag.price_hint.replace(/^about /, ""))}` : "",
     idea.why.length ? `<span class="for-you">For you</span>` : "",
+    idea.community ? `<span class="shared-by">🌱 Shared by ${esc(idea.contributor)}</span>` : "",
+    idea.uses ? `<span class="uses-pill">✓ ${usesText(idea.uses)}</span>` : "",
   ].filter(Boolean).join(`<span class="dot-sep">·</span>`);
 
   const why = idea.why.map((w) => `
@@ -189,18 +196,20 @@ function renderIdea(idea, open) {
 
   const sources = idea.sources.map((s) => `
     <li>${sourceIcon(s)}<div>${s.url ? `<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.creator || "Unknown")}</a>` : `<b>${esc(s.creator || "Unknown")}</b>`}
-      <span class="quote">${s.type === "editorial" ? "Written for Tapwise from general knowledge" : esc(s.title)}${s.quotes.length ? ` · listen for: “${esc(s.quotes[0])}”` : ""}${s.is_search ? " · (search link)" : ""}</span></div></li>`).join("");
+      <span class="quote">${s.type === "editorial" ? "Written for Tapwise from general knowledge" : s.type === "community" ? "Shared in the Tapwise idea bank" : esc(s.title)}${s.quotes.length ? ` · listen for: “${esc(s.quotes[0])}”` : ""}${s.is_search ? " · (search link)" : ""}</span></div></li>`).join("");
 
   return `<details class="idea" ${open ? "open" : ""}>
     <summary><div class="idea-head"><span class="hook">${esc(idea.hook || idea.title)}</span>
       <span class="meta">${meta}</span></div><span class="chev" aria-hidden="true"></span></summary>
     <div class="idea-body">
+      ${idea.community ? `<div class="community-note">🌱 <b>${esc(idea.contributor)}</b> added this idea to the bank. Try it, and if it works for you, say so below.</div>` : ""}
       ${why ? `<div class="why">${why}</div>` : `<p>${esc(idea.summary)}</p>`}
       ${warn}${business}
       <h4>How to set it up</h4>${steps}
       <details class="more"><summary>More details</summary><p>${esc(idea.how_it_works)}</p>${idea.setup ? `<p><b>Apps:</b> ${esc(idea.setup)}</p>` : ""}</details>
       <h4>See it explained by ${idea.sources.length} creator${idea.sources.length > 1 ? "s" : ""}</h4>
       <ul class="sources">${sources}</ul>
+      ${useRow(idea)}
     </div></details>`;
 }
 
@@ -237,6 +246,53 @@ document.addEventListener("click", async (e) => {
   catch { b.textContent = "Select & copy"; }
   setTimeout(() => (b.textContent = "Copy"), 1500);
 });
+
+// ---------------------------------------------------------------- "I use this"
+const usesText = (n) => n === 1 ? "1 person uses it" : `${n} people use it`;
+function usedSet() {                     // remembered on this device, so one person counts once
+  try { return new Set(JSON.parse(localStorage.getItem("tapwise-used") || "[]")); } catch { return new Set(); }
+}
+function useRow(idea) {
+  const done = usedSet().has(idea.id);
+  return `<div class="use-row">
+    <button class="use-btn ${done ? "done" : ""}" data-use="${esc(idea.id)}" ${done ? "disabled" : ""}>${done ? "✓ You use this" : "✓ I use this"}</button>
+    <small data-uses-for="${esc(idea.id)}">${idea.uses ? usesText(idea.uses) + ". " : ""}${done ? "Thanks for helping it climb the bank!" : "Tried it and kept it? Tap so it climbs for the next person."}</small>
+  </div>`;
+}
+document.addEventListener("click", async (e) => {
+  const b = e.target.closest("[data-use]");
+  if (!b || b.disabled) return;
+  b.disabled = true;
+  const res = await fetch(`/api/ideas/${encodeURIComponent(b.dataset.use)}/use`, { method: "POST" });
+  if (!res.ok) { b.disabled = false; return; }
+  const { uses } = await res.json();
+  const set = usedSet(); set.add(b.dataset.use);
+  try { localStorage.setItem("tapwise-used", JSON.stringify([...set])); } catch {}
+  document.querySelectorAll(`[data-use="${CSS.escape(b.dataset.use)}"]`).forEach((x) => { x.classList.add("done"); x.disabled = true; x.textContent = "✓ You use this"; });
+  document.querySelectorAll(`[data-uses-for="${CSS.escape(b.dataset.use)}"]`).forEach((x) => (x.textContent = `${usesText(uses)}. Thanks for helping it climb the bank!`));
+});
+
+// ---------------------------------------------------------------- the bank (browse everything)
+const bank = { world: "", timer: null };
+function renderWorlds() {
+  const chips = [{ key: "", label: "All" }, { key: "community", label: "🌱 Shared by visitors" }, ...state.worlds];
+  $("#bank-worlds").innerHTML = chips.map((w) =>
+    `<button class="world-chip" data-world="${w.key}" aria-pressed="${w.key === bank.world}">${esc(w.label)}</button>`).join("");
+}
+$("#bank-worlds").addEventListener("click", (e) => {
+  const c = e.target.closest("[data-world]"); if (!c) return;
+  bank.world = c.dataset.world; renderWorlds(); loadBank();
+});
+$("#bank-q").addEventListener("input", () => { clearTimeout(bank.timer); bank.timer = setTimeout(loadBank, 250); });
+$("#bank-sort").addEventListener("change", loadBank);
+async function loadBank() {
+  const p = new URLSearchParams({ q: $("#bank-q").value, world: bank.world, sort: $("#bank-sort").value });
+  if (state.answers.phone) p.set("phone", state.answers.phone);
+  const d = await fetch("/api/ideas?" + p).then((r) => r.json());
+  $("#bank-sub").textContent = `${d.total} idea${d.total === 1 ? "" : "s"}${d.total > d.ideas.length ? `, showing the first ${d.ideas.length}` : ""}. Open one to see how to set it up and who shared it.`;
+  $("#bank-list").innerHTML = d.ideas.length ? d.ideas.map((x) => renderIdea(x, false)).join("")
+    : `<div class="empty">Nothing here yet. Be the first to add one!</div>`;
+}
 
 // ---------------------------------------------------------------- suggest dialog
 let sendContext = false;

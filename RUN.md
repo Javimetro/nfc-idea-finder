@@ -26,6 +26,7 @@
        docker run -d --name tapwise --restart unless-stopped \
          -p 8080:8000 \
          -v tapwise_data:/srv/app/data \
+         -e ADMIN_PASSWORD='pick-a-password' \
          tapwise
 
 Open in your laptop's browser:
@@ -42,10 +43,15 @@ Open in your laptop's browser:
     docker run -d --name tapwise --restart unless-stopped \
       -p 8080:8000 \
       -v tapwise_data:/srv/app/data \
+      -e ADMIN_PASSWORD='pick-a-password' \
       tapwise
 
-Visitor suggestions are kept in the `tapwise_data` volume, so rebuilding never deletes them.
-See them at http://PI-LOCAL-IP:8080/api/suggestions
+Visitor ideas, approved community ideas and "I use this" counts are kept in the `tapwise_data` volume,
+so rebuilding never deletes them.
+
+**Admin page** (approve ideas into the bank): http://PI-LOCAL-IP:8080/admin
+The browser asks for a login: any username, and the password you put in `ADMIN_PASSWORD`.
+No `ADMIN_PASSWORD` = the admin page is switched off.
 
 ## On any computer, without Docker
 

@@ -110,6 +110,8 @@ def rank(catalog, answers):
         why = []
         for need_id, said in needs.items():
             pitch = questions.NEEDS_BY_ID[need_id]["ideas"].get(idea["id"])
+            if not pitch and need_id in (idea.get("needs") or []):
+                pitch = idea["summary"]                  # community idea linked to this need by the admin
             if pitch:
                 score += 10
                 why.append({"need": need_id, "you_said": said, "pitch": pitch})

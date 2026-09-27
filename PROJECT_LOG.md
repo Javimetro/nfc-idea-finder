@@ -398,6 +398,28 @@ What happened:
 
 Lesson: be honest about where each idea comes from. Real creators get credit and a link; ideas we wrote ourselves say so.
 
+#### 20. From "idea finder" to an idea bank
+
+the user wanted the site to feel open: a place where people **take** ideas, **try** them, and **give back** their own, so the collection keeps growing. He liked the word *bank*. (What this kind of site is called: a **community knowledge base**, or a **crowdsourced library**. Think of a recipe site where anyone can add a recipe, but for NFC taps.)
+
+So Tapwise is now **"the NFC idea bank"**. The full loop:
+
+1. **Share.** "+ Add an idea" is in the top bar on every page. The form asks simple things: *What does the tap do? Where does the tag go?* (plus an optional link and your name, ticked by default to show it on the idea).
+2. **Quick check.** the user opens `/admin` (password protected), tidies the text, gives it a curious title, and ticks which everyday needs it solves, so the quiz can suggest it too. One click on **Approve** and it's live, no restart.
+3. **In the bank, with your name.** The idea shows a green **🌱 Shared by Anna** badge and a note at the top.
+4. **Others use it.** Every idea has a **✓ I use this** button. Taps are counted, and the bank sorts by "most used first", so the ideas that really work rise to the top.
+5. **Browse everything.** A new **Browse the bank** page: search box, filters by part of life (mornings, car, pets…, or only "Shared by visitors") and sort by most used or newest.
+
+The home page now explains this in three steps: **Take · Try · Give back**, and the numbers say *ideas in the bank · people credited · times someone said "I use this"*.
+
+Under the hood: two new tables in SQLite (`community_ideas`, `idea_uses`) that are never wiped when the curated JSON is reloaded. Community ideas look exactly like curated ones to the rest of the app, so the matching, tag picker and setup steps all just work. The old public `/api/suggestions` (which showed visitors' emails) is now behind the admin password.
+
+Lesson: a site grows when giving back is as easy as taking, and when people can see their contribution helped someone.
+
+![Home page as an idea bank](docs/img/28-bank-home.png)
+![Browsing the bank, with a shared idea](docs/img/29-bank-browse.png)
+![Admin page to approve ideas](docs/img/30-admin.png)
+
 ---
 
 ## Open to-do list
@@ -416,8 +438,9 @@ Lesson: be honest about where each idea comes from. Real creators get credit and
 
 Visitor suggestions flow: pending → the user gets notified (n8n) → review on a password-protected admin page → approved ideas cleaned up like NotebookLM ones → published with "Suggested by …" credit if allowed.
 
-- [ ] Lock `/api/suggestions` (currently readable by anyone who can reach the site, including emails)
-- [ ] Admin review page behind a password (approve / reject / duplicate)
+- [x] Lock `/api/suggestions` (now behind the admin password)
+- [x] Admin review page behind a password (approve / reject / duplicate) → `/admin`
+- [ ] Rate limit on "I use this" (now: one per browser, easy to cheat)
 - [ ] Notification of new suggestions via n8n (already running on the Pi)
 - [ ] Cloudflare Turnstile + rate limit per visitor on the suggestion form
 - [ ] Privacy note next to the form (what is stored, why, for how long); delete emails after replying

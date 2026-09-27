@@ -2,23 +2,44 @@
 
 Run locally:   python app/app.py            -> http://localhost:8000
 On the Pi:     see README (Docker)."""
+import hmac
 import os
 import sys
+from functools import wraps
 from urllib.parse import quote, quote_plus
 
-from flask import Flask, jsonify, request, send_from_directory
+from flask import Flask, Response, jsonify, request, send_from_directory
 
 sys.path.insert(0, os.path.dirname(__file__))
 import database                                   # noqa: E402
 from engines import ENGINES, available_engines   # noqa: E402
-from questions import QUESTIONS                   # noqa: E402
+from questions import NEEDS, QUESTIONS, WORLDS     # noqa: E402
 from tags import pick_tag                         # noqa: E402
 
 app = Flask(__name__, static_folder="static", static_url_path="/static")
 
 database.load_content()                  # JSON -> SQLite on every start
-CATALOG = database.get_catalog()
-TAGS = {t["id"]: t for t in CATALOG["tags"]}
+CATALOG, TAGS, IDEAS_BY_ID, WORLD_OF = {}, {}, {}, {}
+
+
+def reload_catalog():
+    """(Re)read everything from SQLite. Called at start and after an idea is approved."""
+    global CATALOG, TAGS, IDEAS_BY_ID, WORLD_OF
+    CATALOG = database.get_catalog()
+    TAGS = {t["id"]: t for t in CATALOG["tags"]}
+    IDEAS_BY_ID = {i["id"]: i for i in CATALOG["ideas"]}
+    need_world = {n["id"]: n["question"] for n in NEEDS}
+    WORLD_OF = {}
+    for n in NEEDS:
+        for idea_id in n["ideas"]:
+            WORLD_OF.setdefault(idea_id, set()).add(n["question"])
+    for i in CATALOG["ideas"]:
+        for need_id in i.get("needs") or []:
+            if need_id in need_world:
+                WORLD_OF.setdefault(i["id"], set()).add(need_world[need_id])
+
+
+reload_catalog()
 
 MAIN_KINDS = {"diy", "business", "maker"}
 
@@ -29,6 +50,8 @@ def source_link(link):
     src = link["source"]
     if src["type"] == "editorial":          # written by the site's creator: nothing to link to
         return None, False
+    if src["type"] == "community":          # shared on Tapwise: link only if they gave one
+        return src["url"] or None, False
     if src["url"]:
         url = src["url"]
         if link["start_seconds"] and "youtu" in url:
@@ -137,6 +160,9 @@ def present(idea, score, why, warnings, answers):
         "tag": {"id": tag["id"], "name": tag["name"], "search_term": tag["search_term"], "shop_url": shop_url(tag),
                 "price_hint": tag["price_hint"], "why": tag_why} if tag else None,
         "sources": list(grouped.values()),
+        "uses": CATALOG["uses"].get(idea["id"], 0),
+        "community": bool(idea.get("community")),
+        "contributor": idea["sources"][0]["source"]["creator_name"] if idea.get("community") else None,
     }
 
 
@@ -163,10 +189,14 @@ def index():
 
 @app.get("/api/meta")
 def meta():
-    visible = [i for i in CATALOG["ideas"] if i["status"] != "hidden"]
+    visible = [i for i in CATALOG["ideas"] if i["status"] != "hidden" and i["kind"] in MAIN_KINDS]
     creators = {s["creator_name"] for s in CATALOG["sources"].values() if s["creator_name"]}
+    community = [i for i in visible if i.get("community")]
+    creators |= {i["sources"][0]["source"]["creator_name"] for i in community}
     return jsonify(questions=QUESTIONS, engines=available_engines(),
-                   stats={"ideas": len(visible), "creators": len(creators), "sources": len(CATALOG["sources"])})
+                   worlds=[{"key": k, "label": t} for k, t, _, _ in WORLDS],
+                   stats={"ideas": len(visible), "creators": len(creators), "sources": len(CATALOG["sources"]),
+                          "community": len(community), "uses": sum(CATALOG["uses"].values())})
 
 
 # hand-picked, so people who "don't know what NFC is for" see the best examples first
@@ -177,7 +207,6 @@ EXPLORE = [
     ("health", "\U0001F4AA Health & habits", ["i028", "i027", "i030", "i024"]),
     ("business", "\u2615 Business", ["i049", "i050", "i043", "i052"]),
 ]
-IDEAS_BY_ID = {i["id"]: i for i in CATALOG["ideas"]}
 
 
 @app.get("/api/explore")
@@ -230,9 +259,98 @@ def suggest():
     return jsonify(ok=True)
 
 
+@app.get("/api/ideas")
+def browse():
+    """The bank: every idea, searchable, filterable by world, sorted by most used or newest."""
+    q = (request.args.get("q") or "").lower().strip()
+    world = request.args.get("world") or ""
+    sort = request.args.get("sort") or "popular"
+    phone = request.args.get("phone")
+    out = []
+    for i in CATALOG["ideas"]:
+        if i["status"] == "hidden" or i["kind"] not in MAIN_KINDS:
+            continue
+        if world == "community" and not i.get("community"):
+            continue
+        if world and world != "community" and world not in WORLD_OF.get(i["id"], set()):
+            continue
+        if q and q not in " ".join(filter(None, [i["title"], i["hook"], i["summary"], i["place"], i["result"]])).lower():
+            continue
+        out.append(i)
+    if sort == "new":
+        out.sort(key=lambda i: (i.get("approved_at") or "", i["id"]), reverse=True)
+    else:
+        out.sort(key=lambda i: (-CATALOG["uses"].get(i["id"], 0), not i.get("community"), i["id"]))
+    return jsonify(total=len(out), ideas=[present(i, 0, [], [], {"phone": phone}) for i in out[:200]])
+
+
+@app.post("/api/ideas/<idea_id>/use")
+def use_idea(idea_id):
+    """Someone says "I use this": the idea climbs in the bank and the creator sees it helped."""
+    if idea_id not in IDEAS_BY_ID:
+        return jsonify(error="unknown idea"), 404
+    n = database.add_use(idea_id)
+    CATALOG["uses"][idea_id] = n
+    return jsonify(uses=n)
+
+
+# ------------------------------------------------------------------ admin (only you)
+ADMIN_PASSWORD = os.environ.get("ADMIN_PASSWORD")
+
+
+def admin_only(f):
+    """Browser asks for a password. No ADMIN_PASSWORD set = admin is switched off."""
+    @wraps(f)
+    def wrapper(*a, **kw):
+        auth = request.authorization
+        if not ADMIN_PASSWORD:
+            return jsonify(error="Admin is off. Start the app with ADMIN_PASSWORD=..."), 403
+        if not auth or not hmac.compare_digest(auth.password or "", ADMIN_PASSWORD):
+            return Response("Login needed", 401, {"WWW-Authenticate": 'Basic realm="Tapwise admin"'})
+        return f(*a, **kw)
+    return wrapper
+
+
+@app.get("/admin")
+@admin_only
+def admin_page():
+    return send_from_directory(app.static_folder, "admin.html")
+
+
 @app.get("/api/suggestions")
+@app.get("/api/admin/submissions")
+@admin_only
 def suggestions():
-    return jsonify(database.list_submissions())
+    return jsonify(submissions=database.list_submissions(),
+                   needs=[{"id": n["id"], "label": n.get("short") or n["label"], "world": n["question"]} for n in NEEDS],
+                   worlds=[{"key": k, "label": t} for k, t, _, _ in WORLDS])
+
+
+@app.post("/api/admin/submissions/<int:sub_id>/approve")
+@admin_only
+def approve(sub_id):
+    sub = database.get_submission(sub_id)
+    if not sub:
+        return jsonify(error="not found"), 404
+    f = request.get_json(force=True) or {}
+    if not (f.get("title") and f.get("summary")):
+        return jsonify(error="Title and summary are needed."), 400
+    if "contributor" not in f:
+        f["contributor"] = sub["submitter_name"] if sub["credit_ok"] else None
+    f.setdefault("source_url", sub["source_url"])
+    cid = database.add_community_idea(sub_id, f)
+    reload_catalog()
+    return jsonify(ok=True, id=cid)
+
+
+@app.post("/api/admin/submissions/<int:sub_id>/status")
+@admin_only
+def set_status(sub_id):
+    status = (request.get_json(force=True) or {}).get("status")
+    if status not in ("pending", "rejected", "duplicate"):
+        return jsonify(error="bad status"), 400
+    database.set_submission_status(sub_id, status)
+    return jsonify(ok=True)
 
 
 if __name__ == "__main__":

@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Tapwise · NFC idea finder</title>
+  <title>Tapwise · the NFC idea bank</title>
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><circle cx='16' cy='16' r='5' fill='%23ff6a3d'/><circle cx='16' cy='16' r='10' fill='none' stroke='%23ff6a3d' stroke-width='2' opacity='.5'/><circle cx='16' cy='16' r='15' fill='none' stroke='%23ff6a3d' stroke-width='2' opacity='.25'/></svg>">
   <link rel="stylesheet" href="/static/style.css">
 </head>
@@ -12,20 +12,24 @@
     <a class="brand" href="#" data-go="home">
       <span class="brand-dot"></span> Tapwise
     </a>
-    <button class="link-btn" data-open="suggest">Got an NFC idea? <strong>Share it</strong></button>
+    <nav class="topnav">
+      <a href="#" class="nav-link" data-go="bank"><span class="wide-only">Browse the </span>bank</a>
+      <button class="btn primary small" data-open="suggest">+ Add<span class="wide-only"> an idea</span></button>
+    </nav>
   </header>
 
   <!-- ============ HOME ============ -->
   <main id="view-home" class="view active">
     <section class="hero">
       <div class="hero-text">
-        <p class="eyebrow">NFC idea finder</p>
+        <p class="eyebrow">The NFC idea bank</p>
         <h1>Tap your phone.<br><span class="accent">Make something happen.</span></h1>
-        <p class="lede">A sticker that costs less than €1 can share your wifi, start your bedtime routine or get your café more reviews. You don't need to know anything about NFC. Tell us about your day, and we'll show you which taps are worth trying, and why.</p>
+        <p class="lede">A sticker that costs less than €1 can share your wifi, start your bedtime routine or get your café more reviews. Tapwise is a shared bank of these ideas: <b>take one that fits your day, leave one that works for you.</b> Every idea credits the person who came up with it.</p>
         <div class="cta-row">
           <button class="btn primary big" data-go="quiz">Find my NFC ideas</button>
-          <span class="cta-note">2 minutes · no signup</span>
+          <button class="btn ghost big" data-go="bank">Browse the bank</button>
         </div>
+        <p class="cta-note">2-minute quiz · no signup · free</p>
         <ul class="chips-preview">
           <li>☕ Mornings</li><li>🚗 Car</li><li>💻 Desk</li><li>🏠 Home</li><li>🏪 Business</li>
         </ul>
@@ -36,9 +40,18 @@
           <img class="hero-img" src="/static/hero.jpg" alt="A small apartment and a car with orange NFC stickers on the kettle, pill bottle, front door, nightstand, desk and car dashboard. Bubbles show what each tap does: a timer, a checkmark, lights off, sleep mode, wifi and a map pin. A hand taps a sticker with a phone." width="1024" height="1024">
         </picture>
       </div>
-      </div>
     </section>
     <section class="stats" id="stats"></section>
+    <section class="how-bank">
+      <p class="eyebrow">How the bank works</p>
+      <h2>Take an idea. Leave an idea.</h2>
+      <div class="bank-steps">
+        <div class="bank-step"><span class="bank-ico">🔍</span><b>Take</b><p>Answer a few questions about your day, or browse the bank. Every idea shows how to set it up and who shared it.</p></div>
+        <div class="bank-step"><span class="bank-ico">✨</span><b>Try</b><p>Stick a tag where the task happens. If it earns its place, tap <em>“I use this”</em> so it climbs up for the next person.</p></div>
+        <div class="bank-step"><span class="bank-ico">🌱</span><b>Give back</b><p>Found your own trick? Add it. After a quick check it goes into the bank with your name on it.</p></div>
+      </div>
+      <div class="explore-cta"><button class="btn primary" data-open="suggest">+ Add your idea to the bank</button></div>
+    </section>
     <section class="explore">
       <p class="eyebrow">Not sure what NFC is good for?</p>
       <h2>See what one tap can do</h2>
@@ -48,6 +61,34 @@
         <p class="muted">These are just examples. The quiz asks about <em>your</em> day and picks what fits.</p>
         <button class="btn primary" data-go="quiz">Find the ones for me</button>
       </div>
+    </section>
+  </main>
+
+  <!-- ============ BANK ============ -->
+  <main id="view-bank" class="view">
+    <div class="results-head">
+      <div>
+        <p class="eyebrow">The idea bank</p>
+        <h2>Every NFC idea, shared by real people</h2>
+        <p class="muted" id="bank-sub"></p>
+      </div>
+      
+    </div>
+    <div class="bank-tools">
+      <input id="bank-q" type="search" placeholder="Search: keys, plants, wifi, gym…" aria-label="Search the bank">
+      <select id="bank-sort" aria-label="Sort">
+        <option value="popular">Most used first</option>
+        <option value="new">Newest first</option>
+      </select>
+    </div>
+    <div class="bank-worlds" id="bank-worlds"></div>
+    <section id="bank-list" class="idea-list"></section>
+    <section class="suggest-cta">
+      <div>
+        <h3>Your tap could be someone's favourite</h3>
+        <p class="muted">Share what works for you. It goes into the bank with your name on it.</p>
+      </div>
+      <button class="btn primary" data-open="suggest">+ Add your idea</button>
     </section>
   </main>
 
@@ -75,6 +116,7 @@
       </div>
       <div class="results-actions">
         <button class="btn ghost" data-go="quiz">Change answers</button>
+        <button class="btn ghost" data-go="bank">Browse the whole bank</button>
       </div>
     </div>
     <section id="results" class="idea-list"></section>
@@ -83,15 +125,15 @@
     <section id="also" class="also"></section>
     <section class="suggest-cta">
       <div>
-        <h3>Didn't see your use case?</h3>
-        <p class="muted">Tell us, and it may become an idea for the next person.</p>
+        <h3>Your turn: leave an idea in the bank</h3>
+        <p class="muted">Missing a use case, or have a trick of your own? Add it and help the next person, with your name on it.</p>
       </div>
-      <button class="btn primary" data-open="suggest" data-with-context="1">Suggest an idea</button>
+      <button class="btn primary" data-open="suggest" data-with-context="1">+ Add your idea</button>
     </section>
   </main>
 
   <footer class="footer">
-    <span>Ideas from real creators. Watch their videos and give them credit ✨</span>
+    <span>An open bank of NFC ideas. Every idea credits the person who shared it ✨</span>
     <label class="engine">Ranking engine
       <select id="engine"></select>
     </label>
@@ -100,34 +142,37 @@
   <!-- ============ SUGGEST DIALOG ============ -->
   <dialog id="suggest">
     <form id="suggest-form" method="dialog" novalidate>
-      <h3>Share an NFC idea</h3>
-      <p class="muted">Seen a clever use, or have one yourself? Ideas are checked by hand before they're added.</p>
-      <label>The idea <span class="req">*</span>
-        <textarea name="description" rows="4" placeholder="e.g. A tag on my bike lock that logs where I parked"></textarea>
+      <h3>🌱 Add your idea to the bank</h3>
+      <p class="muted">Your tap could be exactly what someone else needs. After a quick check, it goes into the bank with your name on it.</p>
+      <label>What does the tap do? <span class="req">*</span>
+        <textarea name="description" rows="3" placeholder="e.g. I tap it and my phone logs where I parked my bike"></textarea>
       </label>
-      <label>Where did you see it? <span class="opt">optional</span>
-        <input name="source_url" type="url" placeholder="Link to a video or article">
+      <label>Where does the tag go? <span class="opt">optional</span>
+        <input name="place" placeholder="e.g. On my bike lock">
+      </label>
+      <label>Seen it somewhere? <span class="opt">optional</span>
+        <input name="source_url" type="url" placeholder="Link to a video, post or article">
       </label>
       <div class="row">
         <label>Your name <span class="opt">optional</span>
-          <input name="submitter_name" placeholder="For credit">
+          <input name="submitter_name" placeholder="Shown on your idea">
         </label>
         <label>Email <span class="opt">optional</span>
-          <input name="email" type="email" placeholder="Only to reply to you">
+          <input name="email" type="email" placeholder="Only to tell you it's live">
         </label>
       </div>
-      <label class="check"><input type="checkbox" name="credit_ok"> Credit me by name if it's added</label>
+      <label class="check"><input type="checkbox" name="credit_ok" checked> Show my name on the idea</label>
       <input class="hp" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
       <p class="error" id="suggest-error" role="alert"></p>
       <div class="dialog-actions">
         <button class="btn ghost" value="cancel" formnovalidate>Cancel</button>
-        <button class="btn primary" id="suggest-send" type="submit">Send idea</button>
+        <button class="btn primary" id="suggest-send" type="submit">Add to the bank</button>
       </div>
     </form>
     <div id="suggest-thanks" class="thanks" hidden>
       <div class="big-check">✓</div>
-      <h3>Thanks!</h3>
-      <p class="muted">Your idea is in the review queue.</p>
+      <h3>Thank you! 🌱</h3>
+      <p class="muted">Your idea is on its way. After a quick check it goes into the bank with your name, and you'll see how many people use it.</p>
       <button class="btn primary" id="suggest-close">Close</button>
     </div>
   </dialog>
