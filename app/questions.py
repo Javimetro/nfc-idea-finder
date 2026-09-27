@@ -16,6 +16,7 @@ NEEDS_BY_ID = {n["id"]: n for n in NEEDS}
 INTRO = {
     "id": "intro", "type": "intro",
     "title": "NFC in 20 seconds",
+    "story_title": "A use example",
     "story": "Monday, 8:05. You're at the door, keys in hand, sure you're forgetting something. "
              "You tap your phone on a little sticker by the door, and your \u201cbefore you go\u201d checklist pops up. "
              "That sticker is an NFC tag.",
@@ -26,7 +27,6 @@ INTRO = {
     ],
     "rule": "The golden rule: put the tag where the task happens. A laundry timer on the washer, a pill tracker on the pill bottle, the shopping list on the fridge.",
     "outro": "Now tell us a bit about your day, and we'll find the taps worth trying.",
-    "more": {"label": "Want the 3-minute version? Watch MuddleMend's explainer", "url": "https://www.youtube.com/watch?v=RnmuC79-1m0"},
 }
 
 

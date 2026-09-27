@@ -432,6 +432,14 @@ Two places use it:
 
 Lesson: you don't always need an AI model for "are these the same" — word overlap is fast, free, and good enough to flag likely duplicates for a human to confirm.
 
+#### 22. Facts first, then an example
+
+the user reordered the "NFC in 20 seconds" screen. The little door story ("Monday, 8:05…") used to open the screen; now it comes **after** the three facts and the golden rule, under a heading **"A use example"**. The order is now: what it is → the one rule to remember → a real moment where it helps. The link to the MuddleMend video at the bottom was removed to keep the screen short, and so the first thing a visitor might click isn't a way off the site. (The idea of opening with a story came from that explainer, as step 18 says.)
+
+Lesson: the same pieces can tell a different story depending on their order. Try it both ways and keep the one that reads best to you.
+
+![Intro with the example below the rule](docs/img/31-intro-example.png)
+
 ---
 
 ## Open to-do list
