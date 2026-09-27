@@ -27,6 +27,8 @@ MAIN_KINDS = {"diy", "business", "maker"}
 def source_link(link):
     """Best link we have for a source: real URL (+ timestamp) or a search as fallback."""
     src = link["source"]
+    if src["type"] == "editorial":          # written by the site's creator: nothing to link to
+        return None, False
     if src["url"]:
         url = src["url"]
         if link["start_seconds"] and "youtu" in url:

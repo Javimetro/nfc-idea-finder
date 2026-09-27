@@ -1,5 +1,19 @@
 [
   {
+    "id": "s00",
+    "notebooklm_no": null,
+    "title": "Written by the Tapwise creator",
+    "url": null,
+    "type": "editorial",
+    "platform": null,
+    "creator_name": "the user (Tapwise creator)",
+    "creator_url": null,
+    "language": "en",
+    "published_date": null,
+    "date_added": "2026-09-26",
+    "notes": null
+  },
+  {
     "id": "s01",
     "notebooklm_no": 1,
     "title": "10 NEW ADVANCED WAYS to USE NFC Tags For Automation Ideas",
@@ -210,20 +224,6 @@
     "notes": null
   },
   {
-    "id": "s18",
-    "notebooklm_no": 18,
-    "title": "NFC For Dummies (Mueller & Sabella, Wiley, 2016, ISBN 9781119182924)",
-    "url": null,
-    "type": "book",
-    "platform": null,
-    "creator_name": "Robert P. Sabella and John Paul Mueller",
-    "creator_url": null,
-    "language": "en",
-    "published_date": null,
-    "date_added": "2026-09-26",
-    "notes": "Published 2016: phone-compatibility details may be outdated. Cite the book (publisher/store page), never the file it was read from."
-  },
-  {
     "id": "s19",
     "notebooklm_no": 19,
     "title": "Qué se Puede Hacer con una Tarjeta o Etiqueta NFC en una Casa",
@@ -306,20 +306,6 @@
     "published_date": null,
     "date_added": "2026-09-26",
     "notes": null
-  },
-  {
-    "id": "s26",
-    "notebooklm_no": 26,
-    "title": "Near Field Communication (NFC) for Embedded Applications (Agus Kurniawan, PE Press, 2015)",
-    "url": null,
-    "type": "book",
-    "platform": null,
-    "creator_name": "Agus Kurniawan",
-    "creator_url": null,
-    "language": "en",
-    "published_date": null,
-    "date_added": "2026-09-26",
-    "notes": "Published 2015, maker/embedded book. Cite the book itself, never the file it was read from."
   },
   {
     "id": "s27",

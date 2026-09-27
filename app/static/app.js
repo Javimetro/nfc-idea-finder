@@ -153,6 +153,7 @@ async function submit() {
 
 // Source icon: the site's own favicon (YouTube, Reddit…), a book for books, a link icon otherwise
 function sourceIcon(s) {
+  if (s.type === "editorial") return `<span class="src-ico">✍️</span>`;
   if (s.type === "book") return `<span class="src-ico">📖</span>`;
   if (s.domain) return `<img class="src-ico" src="https://www.google.com/s2/favicons?domain=${s.domain}&sz=64" alt="${esc(s.platform)}" loading="lazy" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'src-ico',textContent:'▶'}))">`;
   return `<span class="src-ico">🔗</span>`;
@@ -187,8 +188,8 @@ function renderIdea(idea, open) {
       ${esc(LABELS.model[idea.business.model] || idea.business.model)} · customers: ${esc(idea.business.who_pays)} · startup cost: ${esc(idea.business.startup_cost)}</div>` : "";
 
   const sources = idea.sources.map((s) => `
-    <li>${sourceIcon(s)}<div><a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.creator || "Unknown")}</a>
-      <span class="quote">${esc(s.title)}${s.quotes.length ? ` · listen for: “${esc(s.quotes[0])}”` : ""}${s.is_search ? " · (search link)" : ""}</span></div></li>`).join("");
+    <li>${sourceIcon(s)}<div>${s.url ? `<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.creator || "Unknown")}</a>` : `<b>${esc(s.creator || "Unknown")}</b>`}
+      <span class="quote">${s.type === "editorial" ? "Written for Tapwise from general knowledge" : esc(s.title)}${s.quotes.length ? ` · listen for: “${esc(s.quotes[0])}”` : ""}${s.is_search ? " · (search link)" : ""}</span></div></li>`).join("");
 
   return `<details class="idea" ${open ? "open" : ""}>
     <summary><div class="idea-head"><span class="hook">${esc(idea.hook || idea.title)}</span>

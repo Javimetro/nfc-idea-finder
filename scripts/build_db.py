@@ -27,7 +27,6 @@ S = [
     (15, "More NFC content because I love yall. The easy to do vs. usefullness factor here if very high", "video", "YouTube", "Brett Tech", "en"),
     (16, "NFC Stickers #shorts #adhd #nfc", "video", "YouTube", "Olivia Lutfallah", "en"),
     (17, "NFC Stickers streamline your life! Get yours today!", "video", "YouTube", "Nexvolt", "en"),
-    (18, "NFC For Dummies (Mueller & Sabella, Wiley, 2016, ISBN 9781119182924)", "book", None, "Robert P. Sabella and John Paul Mueller", "en"),
     (19, "Qué se Puede Hacer con una Tarjeta o Etiqueta NFC en una Casa", "video", "YouTube", "PLUYU", "es"),
     (21, "Stickers NFC: todo lo que puedes hacer con ellos", "video", "YouTube", "Binata", "es"),
     (22, "This is why you NEED NFC Tags! (NFC Tasks Automation)", "video", "YouTube", "Bren Maartens", "en"),
@@ -35,16 +34,17 @@ S = [
     (24, "how I use NFC tags around my apartment (the ones that actually stuck)", "video", "YouTube", "Caitlin's Corner", "en"),
     # added in batch 6 (2026-09-26 evening)
     (25, "15 NEW Shortcuts YOU Requested - Alarms, NFC Tags, Photos & More!", "video", "YouTube", "Stephen Robles", "en"),
-    (26, "Near Field Communication (NFC) for Embedded Applications (Agus Kurniawan, PE Press, 2015)", "book", None, "Agus Kurniawan", "en"),
 ]
 sources = [{
     "id": f"s{n:02d}", "notebooklm_no": n, "title": t, "url": None, "type": ty,
     "platform": p, "creator_name": c, "creator_url": None, "language": l,
     "published_date": None, "date_added": "2026-09-26",
-    "notes": ("Published 2016: phone-compatibility details may be outdated. "
-              "Cite the book (publisher/store page), never the file it was read from.") if n == 18 else
-             ("Published 2015, maker/embedded book. Cite the book itself, never the file it was read from.") if n == 26 else None,
+    "notes": None,
 } for n, t, ty, p, c, l in S]
+# s00: ideas written by the site's creator from general knowledge (no external source)
+sources.insert(0, {"id": "s00", "notebooklm_no": None, "title": "Written by the Tapwise creator", "url": None,
+                   "type": "editorial", "platform": None, "creator_name": "the user (Tapwise creator)", "creator_url": None,
+                   "language": "en", "published_date": None, "date_added": "2026-09-26", "notes": None})
 
 # ---------------------------------------------------------------- ideas
 # kind: diy = visitor can do it with a tag + phone
@@ -407,15 +407,14 @@ idea("i045", "Your saved links behind a picture",
 idea("i046", "Lost & found tag for kids, pets and belongings",
      "Whoever finds a lost pet, child or bag can tap the tag and see how to contact you.",
      "Tag on a collar, hat or bag links to a page with your contact details (and pet info).",
-     [(18, "Tappy NFC hat... someone just needs to tap the child's hat to discover how to contact you"),
-      (18, "Anyone can read the chip using an NFC-enabled device... PetHub")],
+     [],
      settings=("pets", "outdoors", "travel"), goals=("share_info", "security"), setup="NFC Tools (any phone).",
      tag_needs=tag(form="epoxy_disc", waterproof=True),
-     flags=["Privacy: link to a page you control and can edit, not your raw phone number. Examples in the book are from 2016."])
+     flags=["Privacy: link to a page you control and can edit, not your raw phone number."])
 idea("i047", "A gift that plays a message",
-     "Jewellery, a keepsake or a 3D print that opens a voice message, photo or video when tapped.",
-     "Tag inside the object links to a private media page.",
-     [(18, "artistic pearl called Momento... contains an NFC chip that you can encode with a message")],
+     "Hide a tag inside a keepsake, a piece of jewellery or a 3D-printed gift. When the person taps it, your voice message, a photo or a video opens.",
+     "Record the message, upload it somewhere private, and write that link onto the tag hidden in the gift.",
+     [(0, None)],
      audience=("personal", "nfc_as_business"), settings=("home", "events"), goals=("share_info",),
      setup="NFC Tools (any phone).", tag_needs=tag(form="epoxy_disc"),
      business={"model": "custom_product", "who": "gift buyers", "cost": "medium"})
@@ -456,13 +455,11 @@ idea("i052", "Follow us / visit our website sign",
      kind="business", audience=("business_customers", "nfc_as_business"), settings=("shop", "events"),
      goals=("marketing",), business={"model": "one_time_sale", "who": "market vendors, small shops", "cost": "low"})
 idea("i053", "Smart posters and print ads",
-     "Posters, flyers or magazine ads with a tap spot that opens a video, coupon or event page.",
-     "Tags behind the print link to campaign content.",
-     [(18, "SmartPosters can appear in all sorts of places, such as bus shelters, malls, and airports"),
-      (18, "place your phone on the magazine to test-drive the Lexus Enform App Suite")],
+     "Put a tap spot on a poster, flyer or menu board. Passers-by tap it and get the video, discount code or event page right away, no typing a web address.",
+     "A tag behind the printed 'tap here' spot links to the campaign page, which you can change without reprinting.",
+     [(0, None)],
      kind="business", audience=("business_customers", "nfc_as_business"), settings=("shop", "events", "travel"),
-     goals=("marketing",), business={"model": "custom_product", "who": "advertisers, venues, event organisers", "cost": "low"},
-     flags=["2016 examples; look for a recent source too."])
+     goals=("marketing",), business={"model": "custom_product", "who": "advertisers, venues, event organisers", "cost": "low"})
 idea("i054", "Branded NFC promo items (pens, merch)",
      "Promotional pens or merch that open a demo video, booking page or product launch page when tapped.",
      "NFC chip in the item links to a page you keep updating (teaser -> launch -> follow-up).",
@@ -473,71 +470,71 @@ idea("i054", "Branded NFC promo items (pens, merch)",
      business={"model": "custom_product", "who": "companies at trade shows, product launches", "cost": "low"},
      flags=["Source is a seller of NFC pens: commercial bias."])
 idea("i055", "Interactive restaurant tables for kids",
-     "Tags under the table turn it into a game board kids play with a phone while waiting for food.",
-     "Several tags under the table trigger actions in a game app.",
-     [(18, "Happy Table actually looks like a whole lot of fun... turning a static piece of furniture (a table) into an interactive digital experience")],
+     "Hidden tags under a family restaurant's table turn it into a game: kids tap spots with a phone to play while the food is on its way.",
+     "Several tags under the table surface each trigger a different step or reward in a simple game web app.",
+     [(0, None)],
      kind="business", audience=("business_customers",), settings=("restaurant",), goals=("marketing",),
      difficulty="advanced", cost="5_to_50_eur",
      business={"model": "custom_product", "who": "family restaurants", "cost": "medium"},
-     flags=["Needs a custom app; 2016 example."])
+     flags=["Needs a small custom web app."])
 idea("i056", "For-sale sign with listing info",
-     "Passers-by tap the estate agent's yard sign to see the listing.",
-     "Tag on the sign links to the property page.",
-     [(18, "use NFC on For Sale yard signs so that prospective buyers can quickly and easily get the information")],
+     "Put a tag on a 'for sale' or 'for rent' sign. People walking past tap it and see the photos, price and viewing times, even when the agent isn't there.",
+     "A weatherproof tag on the sign links to the listing page.",
+     [(0, None)],
      kind="business", audience=("workplace", "business_customers"), settings=("outdoors",), goals=("marketing", "share_info"),
      tag_needs=tag(waterproof=True))
 
 # --- Workplace ---------------------------------------------------------------
 idea("i057", "Guard patrol checkpoints",
-     "Guards tap tags along their route to prove each checkpoint was visited, with time stamps.",
-     "Patrol app logs each tag scan; missed checkpoints raise an alert.",
-     [(18, "guards can log in to show that they actually did make their required rounds by tapping tags")],
+     "Security staff tap a tag at each checkpoint on their round. Every tap is time-stamped, so there's proof the round was done, and a missed stop is easy to spot.",
+     "A patrol app records each tag with the time; the manager sees the log and gets alerted about skipped checkpoints.",
+     [(0, None)],
      audience=("workplace", "nfc_as_business"), settings=("office", "warehouse"), goals=("tracking", "security"),
      difficulty="medium", tag_needs=tag(on_metal=True, waterproof=True, secure=True),
      business={"model": "service", "who": "security companies, facility managers", "cost": "medium"})
 idea("i058", "Cleaning rounds and supply reordering",
-     "Cleaners tap tags to confirm a room was cleaned, check equipment in and out, and reorder supplies.",
-     "Each tag = one room, tool or supply; the app logs the tap.",
-     [(18, "Workers can tap to check out and check back in equipment used for the day")],
+     "A tag in each room, on shared tools and on supply shelves. Cleaners tap to mark a room done, borrow or return equipment, and flag supplies that are running low.",
+     "Each tag stands for one room, tool or supply; a simple app or sheet logs every tap.",
+     [(0, None)],
      audience=("workplace", "nfc_as_business"), settings=("office", "warehouse", "shop"), goals=("tracking",),
      difficulty="medium", tag_needs=tag(waterproof=True),
      business={"model": "service", "who": "cleaning companies, facility managers", "cost": "medium"})
 idea("i059", "Vehicle inspection checklist",
-     "Drivers tap tags on each part of the truck to prove the pre-trip check was done.",
-     "Tags placed around the vehicle open the right checklist item in an inspection app.",
-     [(18, "adding NFC tags to various locations on a vehicle, a driver can indicate they inspected the area")],
+     "Tags on the tyres, lights and cargo area of a van or truck. The driver taps each one during the check, so every point is really looked at, not just ticked.",
+     "Each tag opens its item in the inspection checklist and records the time.",
+     [(0, None)],
      audience=("workplace",), settings=("car", "warehouse", "outdoors"), goals=("tracking",), difficulty="medium",
      tag_needs=tag(form="epoxy_disc", on_metal=True, waterproof=True))
 
-# --- Industry examples & built-in NFC (inspiration, not DIY) ----------------
-for i, (title, summary, quote, settings, goals) in enumerate([
-    ("Hospital patient wristbands", "Nurses tap a patient's wristband to pull up records and check medication.", "medical professional can read the wristband with an NFC-enabled tablet... to identify the patient", ("health",), ("tracking", "security")),
-    ("Medication verification in hospitals", "Scanning wristband + medicine confirms right patient, right dose.", "scans the patient's NFC tag and uses the medical record obtained to get a list of medications", ("health",), ("tracking", "security")),
-    ("Anti-counterfeit medicine packaging", "Tap a medicine box to check it is genuine and see instructions.", "tap the tag on a medication bottle and learn more about it on your NFC-enabled smartphone", ("health", "shop"), ("security", "share_info")),
-    ("Cold-chain temperature logger", "Shipping tags record temperature; tap to read the history.", "credit card-sized device incorporates LEDs... tells you whether the package has experienced temperatures outside the desired range", ("warehouse",), ("tracking",)),
-    ("Transit cards", "Tap card or phone at the gate to pay the fare.", "Oyster card... capability to tap their card to gain access to the required transportation services", ("travel",), ("payments", "access")),
-    ("Campus ID on the phone", "Students open doors, pay and borrow books with their phone.", "relying on NFC to provide campus credentials makes sense", ("office",), ("access", "payments")),
-    ("Hotel room key on the phone", "Guests unlock their room with their phone.", "hotel can place the key to a room on an NFC-enabled phone", ("travel",), ("access",)),
-    ("Phone as car key", "Tap to unlock the car; seat and mirrors adjust to the driver.", "tap your phone against the door... tap a tag to automate tasks such as adjusting your seat position", ("car",), ("access",)),
-    ("NFC driving licence", "ID cards with a chip that authorities can read.", "French drivers now have multifunction NFC-enabled driver's licenses", ("car", "travel"), ("security",)),
+# --- NFC in the real world & built-in NFC (inspiration, not DIY) ------------
+# Written by the site's creator from general knowledge (source s00).
+for i, (title, summary, settings, goals) in enumerate([
+    ("Hospital patient wristbands", "Many hospitals put a chip in the patient's wristband. A nurse taps it to see who the patient is and what they need, which cuts mix-ups.", ("health",), ("tracking", "security")),
+    ("Right patient, right medicine", "Scanning the wristband and then the medicine package lets the system confirm it's the right patient and the right dose before it's given.", ("health",), ("tracking", "security")),
+    ("Is this medicine genuine?", "Some medicine and luxury packaging carries a secure chip: tap it to check the product is genuine and read the instructions.", ("health", "shop"), ("security", "share_info")),
+    ("Temperature log on a parcel", "Sensitive shipments such as vaccines or food can carry a tag that logs the temperature on the way. Tap it on arrival to see if it ever got too warm.", ("warehouse",), ("tracking",)),
+    ("Bus and metro cards", "Your travel card is NFC too: tap the card, or your phone or watch, at the gate and the fare is paid.", ("travel",), ("payments", "access")),
+    ("Student and staff ID on the phone", "Some campuses and offices put the ID card in the phone: open doors, pay in the canteen and borrow books with one tap.", ("office",), ("access", "payments")),
+    ("Hotel room key on the phone", "Some hotels send the room key to the guest's phone, so you skip the front desk and unlock the door with a tap.", ("travel",), ("access",)),
+    ("Phone as car key", "Several car makers let the phone (or a key card) unlock and start the car with a tap, and can set the seat for the driver.", ("car",), ("access",)),
+    ("Chips in ID documents", "Passports and many ID cards have a chip that border control can read securely. Some countries also put a chip in driving licences.", ("car", "travel"), ("security",)),
 ], start=60):
     idea(f"i{i:03d}", title, summary, "Built by organisations with secure, dedicated systems; shown as inspiration.",
-         [(18, quote)], kind="industry_example", audience=("workplace",), settings=settings, goals=goals,
+         [(0, None)], kind="industry_example", audience=("workplace",), settings=settings, goals=goals,
          difficulty="advanced", cost=None, tag_needs=tag(form="card", secure=True),
-         flags=["Not DIY. Show only as 'NFC in the real world' inspiration. 2016 examples."])
+         flags=["Not DIY. Show only as 'NFC in the real world' inspiration."])
 
-for i, (title, summary, quote) in enumerate([
-    ("Tap to pair a Bluetooth speaker", "Many speakers and headphones pair when you touch your phone to them.", "tap your portable speakers, and the music currently playing on your smartphone starts playing"),
-    ("Tap to mirror your phone on a TV", "Some TVs start screen sharing when you touch them with your phone.", "single tap is enough to make a connection with your smartphone so that you can see"),
-    ("Tap to print", "Some printers accept a print job when you touch them with your phone.", "simply place your NFC-enabled device against the printer and tell it to send the files"),
-    ("Accessible appliances", "Blind users set a microwave from an accessible phone app and tap to send the settings.", "people who are blind may not be able to interact with the touch panel of a microwave... putting the settings into their smartphone"),
-    ("Phone-to-phone sharing", "Touch two phones together to share contacts or files.", "tapping your phone with that of a potential client creates the connection that transfers the presentation"),
+for i, (title, summary) in enumerate([
+    ("Tap to pair a Bluetooth speaker", "Many speakers and headphones pair when you touch your phone to them."),
+    ("Tap to share your screen on a TV", "Some TVs start screen sharing when you touch the remote or the TV's NFC spot with your phone."),
+    ("Tap to print", "Some printers have an NFC spot: touch your phone to it to connect and print, without setting up wifi printing."),
+    ("Accessible appliances", "An appliance with an NFC spot can be set from an accessible phone app and then tapped to send the settings, which helps people who can't use a touch panel."),
+    ("Share with a tap between phones", "Some phones can start sharing a contact or file when you hold them back to back; the transfer itself then happens over Bluetooth or wifi."),
 ], start=69):
-    idea(f"i{i:03d}", title, summary, "NFC is built into the device; no tag to buy.", [(18, quote)],
+    idea(f"i{i:03d}", title, summary, "NFC is built into the device; no tag to buy.", [(0, None)],
          kind="product_feature", goals=("share_info", "automation"), cost=None, tag_needs=None,
-         flags=["No tag needed; results page should say 'check if your device supports this'.",
-                "Phone-to-phone (Android Beam) was removed from Android in 2019." if "Phone-to-phone" in title else "2016 source; check current devices."])
-# i069/i073 also have a second source
+         flags=["No tag needed; results page should say 'check if your device supports this'."])
+# i069 also has a video source
 links.append({"idea_id": "i069", "source_id": "s22", "start_seconds": None, "end_seconds": None,
               "anchor_quote": "pair your phone with a Bluetooth speaker or even transfer files between two devices", "credit": None})
 
@@ -546,16 +543,15 @@ MAKER = "Reader module (e.g. PN532) on a Raspberry Pi or Arduino, plus a small p
 idea("i079", "Tap-in attendance logger",
      "Members tap their card on a reader at the door and the system logs who came and when. Good for clubs, classes, small offices or a coworking space.",
      "A PN532 reader on a Raspberry Pi or Arduino reads each card's ID and a small program matches it to a person and saves the time.",
-     [(26, "Register NFC cards to specific person When NFC card is swapped, a program will send data to computer")],
+     [(0, None)],
      kind="maker", audience=("workplace", "nfc_as_business"), settings=("office", "events"), goals=("tracking",),
      phone=None, setup=MAKER, difficulty="advanced", cost="5_to_50_eur", tag_needs=tag(form="card"),
      business={"model": "service", "who": "clubs, gyms, schools, coworking spaces", "cost": "low"},
-     flags=["NotebookLM listed PN532 as the tag chip; it is the reader module. Cards: MIFARE Classic or NTAG.",
-            "Card IDs can be copied: fine for attendance, not for security."])
+     flags=["Card IDs can be copied: fine for attendance, not for security."])
 idea("i080", "Prepaid card for a club kiosk or canteen",
      "Members top up credit and pay at a club kiosk, school canteen or event bar by tapping a card.",
      "A reader on a Raspberry Pi reads the card ID, looks up the balance, subtracts the price and saves the new balance.",
-     [(26, "Each NFC card is registered and pointed to a person with deposit amount")],
+     [(0, None)],
      kind="maker", audience=("business_customers", "workplace", "nfc_as_business"), settings=("shop", "restaurant", "events"),
      goals=("payments",), phone=None, setup=MAKER, difficulty="advanced", cost="5_to_50_eur", tag_needs=tag(form="card", secure=True),
      business={"model": "service", "who": "clubs, event organisers, small canteens", "cost": "medium"},
@@ -748,6 +744,15 @@ for x in sources:
         x["url"] = _urls[x["id"]]["url"]
         if _urls[x["id"]].get("check"):
             x["notes"] = ((x["notes"] or "") + " URL check: " + _urls[x["id"]]["check"]).strip()
+
+# Two books were in the first batches and were later removed from the sources
+# (we only keep sources everyone can check and link to). Their links go, and so
+# does any idea that no remaining source explains.
+_known = {x["id"] for x in sources}
+links[:] = [l for l in links if l["source_id"] in _known]
+_linked = {l["idea_id"] for l in links}
+REMOVED_WITH_BOOKS = [i["id"] for i in ideas if i["id"] not in _linked]
+ideas[:] = [i for i in ideas if i["id"] in _linked]
 
 # threads whose ideas haven't been extracted yet stay out until they have ideas
 _used = {l["source_id"] for l in links}

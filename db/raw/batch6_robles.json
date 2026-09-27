@@ -1,0 +1,108 @@
+[
+  {
+    "idea_title": "Smart Home Good Night Scene Control",
+    "summary": "Tapping an NFC sticker on a nightstand triggers a smart home good night scene that automatically turns off all home lights.",
+    "how_it_works": "An NFC sticker is scanned with an iPhone and named 'nightstand'. In iOS Shortcuts automations, setting the trigger to this NFC tag executes the HomeKit 'Good Night' scene to turn off all connected lights.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home"
+    ],
+    "goals": [
+      "automation"
+    ],
+    "phone_support": "iphone_only",
+    "extra_app": "iOS Shortcuts",
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "15 NEW Shortcuts YOU Requested - Alarms, NFC Tags, Photos & More!",
+    "source_url": null,
+    "creator_name": "Stephen Robles",
+    "timestamp": null,
+    "anchor_quote": "run my smart home good night scene to turn off all the lights",
+    "notes": null
+  },
+  {
+    "idea_title": "Add Item to Reminders List",
+    "summary": "Scanning an NFC sticker attached to household items like paper towels automatically adds that specific item to a designated Apple Reminders list.",
+    "how_it_works": "An NFC sticker is assigned an iOS Shortcuts automation that runs immediately upon scan. The automation executes the 'Add New Reminder' action with the item title set to 'paper towels' in a selected list.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home"
+    ],
+    "goals": [
+      "automation",
+      "reminder"
+    ],
+    "phone_support": "iphone_only",
+    "extra_app": "iOS Shortcuts",
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "15 NEW Shortcuts YOU Requested - Alarms, NFC Tags, Photos & More!",
+    "source_url": null,
+    "creator_name": "Stephen Robles",
+    "timestamp": null,
+    "anchor_quote": "running the automation which adds it to my reminders",
+    "notes": null
+  },
+  {
+    "idea_title": "Play Music on Smart Speaker",
+    "summary": "Tapping an NFC tag initiates music playback from an Apple Music library and routes audio to an AirPlay 2 speaker, HomePod, or Sonos system.",
+    "how_it_works": "Scanning the tag triggers an iOS Shortcuts automation running the 'Play Music' action for a chosen playlist or album, followed by a playback destination action specifying an AirPlay 2 or HomePod target.",
+    "audience": [
+      "personal"
+    ],
+    "settings": [
+      "home"
+    ],
+    "goals": [
+      "automation"
+    ],
+    "phone_support": "iphone_only",
+    "extra_app": "iOS Shortcuts",
+    "difficulty": "easy",
+    "cost_level": "under_5_eur",
+    "tag_needs": {
+      "form_factor": "sticker",
+      "on_metal": null,
+      "waterproof": null,
+      "rewritable": true,
+      "secure_anti_clone": null,
+      "chip_mentioned": null
+    },
+    "business_model": null,
+    "who_pays": null,
+    "startup_cost_level": null,
+    "source_title": "15 NEW Shortcuts YOU Requested - Alarms, NFC Tags, Photos & More!",
+    "source_url": null,
+    "creator_name": "Stephen Robles",
+    "timestamp": null,
+    "anchor_quote": "when you scan an NFC tag you can have it start playing music",
+    "notes": null
+  }
+]

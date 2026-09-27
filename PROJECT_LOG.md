@@ -103,7 +103,7 @@ the user's idea: a small corner link on every page, and a bigger prompt on the r
 
 #### 6. Collecting the ideas: source search + NotebookLM
 
-1. the user searched YouTube and elsewhere for NFC idea videos and added them to a **NotebookLM** notebook (24 sources: 22 videos, mostly English, 2 in Spanish, plus the book *NFC For Dummies*, 2016).
+1. the user searched YouTube and elsewhere for NFC idea videos and added them to a **NotebookLM** notebook (24 sources: 22 videos, mostly English, 2 in Spanish, plus a book; the books were later removed, see step 19).
    📸 *Screenshot: the NotebookLM notebook with its sources.*
 2. Claude wrote two prompts for NotebookLM (below). The trick was asking for **strict JSON** (a data format computers can read) with fixed field names, so the output could go straight into the database.
 3. the user ran **step 1** once, then **step 2** in batches of ~5 sources. Why batches? With everything at once, NotebookLM cut answers short and mixed sources up.
@@ -168,8 +168,7 @@ Rules:
 |---|---|
 | 3 videos were added to the notebook twice | Skipped the copies (24 → 21 unique sources) |
 | All URLs empty | Will look them up from title + channel, then the user confirms |
-| The book was loaded from a shadow-library file | Cite the book itself (publisher, ISBN), never that file |
-| The book is from 2016 | Treat phone-compatibility info as possibly outdated |
+| The book was from 2016 | Treat phone-compatibility info as possibly outdated (the books were later removed, step 19) |
 | 2 Spanish videos | Asked NotebookLM to write in English, but keep quotes in Spanish |
 
 #### 7. Cleaning the data (Claude + Python)
@@ -199,7 +198,7 @@ Result files (`db/`): `sources.json` (21), `ideas.json` (78), `idea_sources.json
 
 #### 8. Two more sources (evening)
 
-the user added a Shortcuts video by **Stephen Robles** and the book *Near Field Communication (NFC) for Embedded Applications* (Agus Kurniawan, 2015).
+the user added a Shortcuts video by **Stephen Robles** and a book about NFC for embedded projects (later removed, see step 19).
 
 - The video's 3 ideas were all already in the database (bedtime scene, grocery list, play music), so they became **extra links** to existing ideas, not new ideas. This is the merge system working as planned.
 - The book added a new **kind** of idea: **maker projects**, where you build your own NFC reader with a Raspberry Pi or Arduino (a tap-in attendance logger and a prepaid card for a club kiosk). Great for people who like building things.
@@ -311,7 +310,7 @@ What happened to them (`scripts/batch_reddit.py`):
 - **Credit goes to the right person.** On Reddit the idea often comes from a commenter, not whoever started the thread, so each link stores the commenter's name and the site shows "u/name". Deleted accounts are shown as "a member of r/…".
 - **Popular ideas are now clearly popular**: "did I take my pills?" is explained by 9 people, which is useful for ranking.
 
-Database now: **108 ideas (101 shown), 45 sources, 436 idea–source links, 74 everyday problems ("needs")**. The last 4 threads came in a second run (55 entries): 2 new ideas (check the pet cam as you leave; pay with a ring or keychain) and 3 more left out (copying game figures, a cider dispenser, cloning a work access card).
+Database now: **108 ideas (101 shown), 44 sources after step 19, 436 idea–source links, 74 everyday problems ("needs")**. The last 4 threads came in a second run (55 entries): 2 new ideas (check the pet cam as you leave; pay with a ring or keychain) and 3 more left out (copying game figures, a cider dispenser, cloning a work access card).
 
 **The quiz became branching**, as planned in step 12's follow-up: screen 1 asks about your life, and each "world" only appears if it's relevant:
 
@@ -369,7 +368,7 @@ the user's feedback: the small text on the quiz tiles was cut off, and results s
 - **Tag links.** In "why it's worth trying", the first mention of a sticker or tag (e.g. "Put **an NFC sticker** on the jars…") links to a shop search for the exact tag recommended. Step 1, "Get the tag", has a "See it in shops" button.
 - **App-store links in "Set it up"**, matching the visitor's phone: Shortcuts on iPhone; NFC Tools Pro and MacroDroid on Android; NFC Tools for simple links; Home Assistant for smart-home ideas.
 - **Reddit links jump to the comment.** They use a *text fragment* (`#:~:text=…`), a browser feature that scrolls to and highlights a quote on the page. We already had the right quote for each idea (the "anchor quote" from the NotebookLM prompt), so it pays off here.
-- **Real YouTube links.** Claude searched each video by title and channel and found **19 of 21** (`db/source_urls.json`); one is marked "check" because its title changed. The other two, and the books, still use a search link.
+- **Real YouTube links.** Claude searched each video by title and channel and found **19 of 21** (`db/source_urls.json`); one is marked "check" because its title changed. The other two still use a search link.
 
 Still missing: **exact seconds in the videos.** That needs the video transcripts. The "listen for: …" quote shown next to each video tells you what to look for in the meantime.
 
@@ -388,6 +387,16 @@ The intro now follows the same structure, in our own words:
 Lesson: explain a technology through a moment people recognise, not through how it works.
 
 ![New intro](docs/img/27-intro-story.png)
+
+#### 19. Only sources everyone can check
+
+Two books were part of the first batches. the user decided to drop them as sources: the site should only point to things anyone can open and check (videos, public threads), and the books didn't meet that bar.
+
+What happened:
+- **The books are gone** from the sources, the raw NotebookLM files and the code, together with every quote taken from them.
+- **The ideas stayed.** the user didn't want to lose 22 good ideas (NFC in hospitals, transit cards, hotel keys, patrol checkpoints, a gift that plays a message, the Raspberry Pi attendance logger…). They're general knowledge about NFC, not something only one book knows, so they were **rewritten from scratch in new words** and are now credited to a new source: **"Written by the Tapwise creator – the user"**. On the site they show a ✍️ icon and "Written for Tapwise from general knowledge" instead of a link.
+
+Lesson: be honest about where each idea comes from. Real creators get credit and a link; ideas we wrote ourselves say so.
 
 ---
 

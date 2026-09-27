@@ -1773,7 +1773,7 @@
     "who_pays": null,
     "startup_cost_level": null,
     "review_flags": [
-      "Privacy: link to a page you control and can edit, not your raw phone number. Examples in the book are from 2016."
+      "Privacy: link to a page you control and can edit, not your raw phone number."
     ],
     "hook": "Help lost things find their way home",
     "place": "on a collar, bag or keys",
@@ -1785,8 +1785,8 @@
     "id": "i047",
     "title": "A gift that plays a message",
     "kind": "diy",
-    "summary": "Jewellery, a keepsake or a 3D print that opens a voice message, photo or video when tapped.",
-    "how_it_works": "Tag inside the object links to a private media page.",
+    "summary": "Hide a tag inside a keepsake, a piece of jewellery or a 3D-printed gift. When the person taps it, your voice message, a photo or a video opens.",
+    "how_it_works": "Record the message, upload it somewhere private, and write that link onto the tag hidden in the gift.",
     "audience": [
       "personal",
       "nfc_as_business"
@@ -2022,8 +2022,8 @@
     "id": "i053",
     "title": "Smart posters and print ads",
     "kind": "business",
-    "summary": "Posters, flyers or magazine ads with a tap spot that opens a video, coupon or event page.",
-    "how_it_works": "Tags behind the print link to campaign content.",
+    "summary": "Put a tap spot on a poster, flyer or menu board. Passers-by tap it and get the video, discount code or event page right away, no typing a web address.",
+    "how_it_works": "A tag behind the printed 'tap here' spot links to the campaign page, which you can change without reprinting.",
     "audience": [
       "business_customers",
       "nfc_as_business"
@@ -2051,14 +2051,12 @@
     "business_model": "custom_product",
     "who_pays": "advertisers, venues, event organisers",
     "startup_cost_level": "low",
-    "review_flags": [
-      "2016 examples; look for a recent source too."
-    ],
+    "review_flags": [],
     "hook": "Posters people can tap",
     "place": "behind the poster or flyer",
     "result": "a video, coupon or event page opens",
     "setup_type": "link",
-    "status": "needs_review"
+    "status": "ok"
   },
   {
     "id": "i054",
@@ -2106,8 +2104,8 @@
     "id": "i055",
     "title": "Interactive restaurant tables for kids",
     "kind": "business",
-    "summary": "Tags under the table turn it into a game board kids play with a phone while waiting for food.",
-    "how_it_works": "Several tags under the table trigger actions in a game app.",
+    "summary": "Hidden tags under a family restaurant's table turn it into a game: kids tap spots with a phone to play while the food is on its way.",
+    "how_it_works": "Several tags under the table surface each trigger a different step or reward in a simple game web app.",
     "audience": [
       "business_customers"
     ],
@@ -2133,7 +2131,7 @@
     "who_pays": "family restaurants",
     "startup_cost_level": "medium",
     "review_flags": [
-      "Needs a custom app; 2016 example."
+      "Needs a small custom web app."
     ],
     "hook": "Tables that entertain kids while they wait",
     "place": "under the table",
@@ -2145,8 +2143,8 @@
     "id": "i056",
     "title": "For-sale sign with listing info",
     "kind": "business",
-    "summary": "Passers-by tap the estate agent's yard sign to see the listing.",
-    "how_it_works": "Tag on the sign links to the property page.",
+    "summary": "Put a tag on a 'for sale' or 'for rent' sign. People walking past tap it and see the photos, price and viewing times, even when the agent isn't there.",
+    "how_it_works": "A weatherproof tag on the sign links to the listing page.",
     "audience": [
       "workplace",
       "business_customers"
@@ -2184,8 +2182,8 @@
     "id": "i057",
     "title": "Guard patrol checkpoints",
     "kind": "diy",
-    "summary": "Guards tap tags along their route to prove each checkpoint was visited, with time stamps.",
-    "how_it_works": "Patrol app logs each tag scan; missed checkpoints raise an alert.",
+    "summary": "Security staff tap a tag at each checkpoint on their round. Every tap is time-stamped, so there's proof the round was done, and a missed stop is easy to spot.",
+    "how_it_works": "A patrol app records each tag with the time; the manager sees the log and gets alerted about skipped checkpoints.",
     "audience": [
       "workplace",
       "nfc_as_business"
@@ -2224,8 +2222,8 @@
     "id": "i058",
     "title": "Cleaning rounds and supply reordering",
     "kind": "diy",
-    "summary": "Cleaners tap tags to confirm a room was cleaned, check equipment in and out, and reorder supplies.",
-    "how_it_works": "Each tag = one room, tool or supply; the app logs the tap.",
+    "summary": "A tag in each room, on shared tools and on supply shelves. Cleaners tap to mark a room done, borrow or return equipment, and flag supplies that are running low.",
+    "how_it_works": "Each tag stands for one room, tool or supply; a simple app or sheet logs every tap.",
     "audience": [
       "workplace",
       "nfc_as_business"
@@ -2264,8 +2262,8 @@
     "id": "i059",
     "title": "Vehicle inspection checklist",
     "kind": "diy",
-    "summary": "Drivers tap tags on each part of the truck to prove the pre-trip check was done.",
-    "how_it_works": "Tags placed around the vehicle open the right checklist item in an inspection app.",
+    "summary": "Tags on the tyres, lights and cargo area of a van or truck. The driver taps each one during the check, so every point is really looked at, not just ticked.",
+    "how_it_works": "Each tag opens its item in the inspection checklist and records the time.",
     "audience": [
       "workplace"
     ],
@@ -2303,7 +2301,7 @@
     "id": "i060",
     "title": "Hospital patient wristbands",
     "kind": "industry_example",
-    "summary": "Nurses tap a patient's wristband to pull up records and check medication.",
+    "summary": "Many hospitals put a chip in the patient's wristband. A nurse taps it to see who the patient is and what they need, which cuts mix-ups.",
     "how_it_works": "Built by organisations with secure, dedicated systems; shown as inspiration.",
     "audience": [
       "workplace"
@@ -2331,7 +2329,7 @@
     "who_pays": null,
     "startup_cost_level": null,
     "review_flags": [
-      "Not DIY. Show only as 'NFC in the real world' inspiration. 2016 examples."
+      "Not DIY. Show only as 'NFC in the real world' inspiration."
     ],
     "hook": "Hospital patient wristbands",
     "place": null,
@@ -2341,9 +2339,9 @@
   },
   {
     "id": "i061",
-    "title": "Medication verification in hospitals",
+    "title": "Right patient, right medicine",
     "kind": "industry_example",
-    "summary": "Scanning wristband + medicine confirms right patient, right dose.",
+    "summary": "Scanning the wristband and then the medicine package lets the system confirm it's the right patient and the right dose before it's given.",
     "how_it_works": "Built by organisations with secure, dedicated systems; shown as inspiration.",
     "audience": [
       "workplace"
@@ -2371,9 +2369,9 @@
     "who_pays": null,
     "startup_cost_level": null,
     "review_flags": [
-      "Not DIY. Show only as 'NFC in the real world' inspiration. 2016 examples."
+      "Not DIY. Show only as 'NFC in the real world' inspiration."
     ],
-    "hook": "Medication verification in hospitals",
+    "hook": "Right patient, right medicine",
     "place": null,
     "result": null,
     "setup_type": null,
@@ -2381,9 +2379,9 @@
   },
   {
     "id": "i062",
-    "title": "Anti-counterfeit medicine packaging",
+    "title": "Is this medicine genuine?",
     "kind": "industry_example",
-    "summary": "Tap a medicine box to check it is genuine and see instructions.",
+    "summary": "Some medicine and luxury packaging carries a secure chip: tap it to check the product is genuine and read the instructions.",
     "how_it_works": "Built by organisations with secure, dedicated systems; shown as inspiration.",
     "audience": [
       "workplace"
@@ -2412,9 +2410,9 @@
     "who_pays": null,
     "startup_cost_level": null,
     "review_flags": [
-      "Not DIY. Show only as 'NFC in the real world' inspiration. 2016 examples."
+      "Not DIY. Show only as 'NFC in the real world' inspiration."
     ],
-    "hook": "Anti-counterfeit medicine packaging",
+    "hook": "Is this medicine genuine?",
     "place": null,
     "result": null,
     "setup_type": null,
@@ -2422,9 +2420,9 @@
   },
   {
     "id": "i063",
-    "title": "Cold-chain temperature logger",
+    "title": "Temperature log on a parcel",
     "kind": "industry_example",
-    "summary": "Shipping tags record temperature; tap to read the history.",
+    "summary": "Sensitive shipments such as vaccines or food can carry a tag that logs the temperature on the way. Tap it on arrival to see if it ever got too warm.",
     "how_it_works": "Built by organisations with secure, dedicated systems; shown as inspiration.",
     "audience": [
       "workplace"
@@ -2451,9 +2449,9 @@
     "who_pays": null,
     "startup_cost_level": null,
     "review_flags": [
-      "Not DIY. Show only as 'NFC in the real world' inspiration. 2016 examples."
+      "Not DIY. Show only as 'NFC in the real world' inspiration."
     ],
-    "hook": "Cold-chain temperature logger",
+    "hook": "Temperature log on a parcel",
     "place": null,
     "result": null,
     "setup_type": null,
@@ -2461,9 +2459,9 @@
   },
   {
     "id": "i064",
-    "title": "Transit cards",
+    "title": "Bus and metro cards",
     "kind": "industry_example",
-    "summary": "Tap card or phone at the gate to pay the fare.",
+    "summary": "Your travel card is NFC too: tap the card, or your phone or watch, at the gate and the fare is paid.",
     "how_it_works": "Built by organisations with secure, dedicated systems; shown as inspiration.",
     "audience": [
       "workplace"
@@ -2491,9 +2489,9 @@
     "who_pays": null,
     "startup_cost_level": null,
     "review_flags": [
-      "Not DIY. Show only as 'NFC in the real world' inspiration. 2016 examples."
+      "Not DIY. Show only as 'NFC in the real world' inspiration."
     ],
-    "hook": "Transit cards",
+    "hook": "Bus and metro cards",
     "place": null,
     "result": null,
     "setup_type": null,
@@ -2501,9 +2499,9 @@
   },
   {
     "id": "i065",
-    "title": "Campus ID on the phone",
+    "title": "Student and staff ID on the phone",
     "kind": "industry_example",
-    "summary": "Students open doors, pay and borrow books with their phone.",
+    "summary": "Some campuses and offices put the ID card in the phone: open doors, pay in the canteen and borrow books with one tap.",
     "how_it_works": "Built by organisations with secure, dedicated systems; shown as inspiration.",
     "audience": [
       "workplace"
@@ -2531,9 +2529,9 @@
     "who_pays": null,
     "startup_cost_level": null,
     "review_flags": [
-      "Not DIY. Show only as 'NFC in the real world' inspiration. 2016 examples."
+      "Not DIY. Show only as 'NFC in the real world' inspiration."
     ],
-    "hook": "Campus ID on the phone",
+    "hook": "Student and staff ID on the phone",
     "place": null,
     "result": null,
     "setup_type": null,
@@ -2543,7 +2541,7 @@
     "id": "i066",
     "title": "Hotel room key on the phone",
     "kind": "industry_example",
-    "summary": "Guests unlock their room with their phone.",
+    "summary": "Some hotels send the room key to the guest's phone, so you skip the front desk and unlock the door with a tap.",
     "how_it_works": "Built by organisations with secure, dedicated systems; shown as inspiration.",
     "audience": [
       "workplace"
@@ -2570,7 +2568,7 @@
     "who_pays": null,
     "startup_cost_level": null,
     "review_flags": [
-      "Not DIY. Show only as 'NFC in the real world' inspiration. 2016 examples."
+      "Not DIY. Show only as 'NFC in the real world' inspiration."
     ],
     "hook": "Hotel room key on the phone",
     "place": null,
@@ -2582,7 +2580,7 @@
     "id": "i067",
     "title": "Phone as car key",
     "kind": "industry_example",
-    "summary": "Tap to unlock the car; seat and mirrors adjust to the driver.",
+    "summary": "Several car makers let the phone (or a key card) unlock and start the car with a tap, and can set the seat for the driver.",
     "how_it_works": "Built by organisations with secure, dedicated systems; shown as inspiration.",
     "audience": [
       "workplace"
@@ -2609,7 +2607,7 @@
     "who_pays": null,
     "startup_cost_level": null,
     "review_flags": [
-      "Not DIY. Show only as 'NFC in the real world' inspiration. 2016 examples."
+      "Not DIY. Show only as 'NFC in the real world' inspiration."
     ],
     "hook": "Phone as car key",
     "place": null,
@@ -2619,9 +2617,9 @@
   },
   {
     "id": "i068",
-    "title": "NFC driving licence",
+    "title": "Chips in ID documents",
     "kind": "industry_example",
-    "summary": "ID cards with a chip that authorities can read.",
+    "summary": "Passports and many ID cards have a chip that border control can read securely. Some countries also put a chip in driving licences.",
     "how_it_works": "Built by organisations with secure, dedicated systems; shown as inspiration.",
     "audience": [
       "workplace"
@@ -2649,9 +2647,9 @@
     "who_pays": null,
     "startup_cost_level": null,
     "review_flags": [
-      "Not DIY. Show only as 'NFC in the real world' inspiration. 2016 examples."
+      "Not DIY. Show only as 'NFC in the real world' inspiration."
     ],
-    "hook": "NFC driving licence",
+    "hook": "Chips in ID documents",
     "place": null,
     "result": null,
     "setup_type": null,
@@ -2682,8 +2680,7 @@
     "who_pays": null,
     "startup_cost_level": null,
     "review_flags": [
-      "No tag needed; results page should say 'check if your device supports this'.",
-      "2016 source; check current devices."
+      "No tag needed; results page should say 'check if your device supports this'."
     ],
     "hook": "Tap to pair a Bluetooth speaker",
     "place": null,
@@ -2693,9 +2690,9 @@
   },
   {
     "id": "i070",
-    "title": "Tap to mirror your phone on a TV",
+    "title": "Tap to share your screen on a TV",
     "kind": "product_feature",
-    "summary": "Some TVs start screen sharing when you touch them with your phone.",
+    "summary": "Some TVs start screen sharing when you touch the remote or the TV's NFC spot with your phone.",
     "how_it_works": "NFC is built into the device; no tag to buy.",
     "audience": [
       "personal"
@@ -2716,10 +2713,9 @@
     "who_pays": null,
     "startup_cost_level": null,
     "review_flags": [
-      "No tag needed; results page should say 'check if your device supports this'.",
-      "2016 source; check current devices."
+      "No tag needed; results page should say 'check if your device supports this'."
     ],
-    "hook": "Tap to mirror your phone on a TV",
+    "hook": "Tap to share your screen on a TV",
     "place": null,
     "result": null,
     "setup_type": null,
@@ -2729,7 +2725,7 @@
     "id": "i071",
     "title": "Tap to print",
     "kind": "product_feature",
-    "summary": "Some printers accept a print job when you touch them with your phone.",
+    "summary": "Some printers have an NFC spot: touch your phone to it to connect and print, without setting up wifi printing.",
     "how_it_works": "NFC is built into the device; no tag to buy.",
     "audience": [
       "personal"
@@ -2750,8 +2746,7 @@
     "who_pays": null,
     "startup_cost_level": null,
     "review_flags": [
-      "No tag needed; results page should say 'check if your device supports this'.",
-      "2016 source; check current devices."
+      "No tag needed; results page should say 'check if your device supports this'."
     ],
     "hook": "Tap to print",
     "place": null,
@@ -2763,7 +2758,7 @@
     "id": "i072",
     "title": "Accessible appliances",
     "kind": "product_feature",
-    "summary": "Blind users set a microwave from an accessible phone app and tap to send the settings.",
+    "summary": "An appliance with an NFC spot can be set from an accessible phone app and then tapped to send the settings, which helps people who can't use a touch panel.",
     "how_it_works": "NFC is built into the device; no tag to buy.",
     "audience": [
       "personal"
@@ -2784,8 +2779,7 @@
     "who_pays": null,
     "startup_cost_level": null,
     "review_flags": [
-      "No tag needed; results page should say 'check if your device supports this'.",
-      "2016 source; check current devices."
+      "No tag needed; results page should say 'check if your device supports this'."
     ],
     "hook": "Accessible appliances",
     "place": null,
@@ -2795,9 +2789,9 @@
   },
   {
     "id": "i073",
-    "title": "Phone-to-phone sharing",
+    "title": "Share with a tap between phones",
     "kind": "product_feature",
-    "summary": "Touch two phones together to share contacts or files.",
+    "summary": "Some phones can start sharing a contact or file when you hold them back to back; the transfer itself then happens over Bluetooth or wifi.",
     "how_it_works": "NFC is built into the device; no tag to buy.",
     "audience": [
       "personal"
@@ -2818,10 +2812,9 @@
     "who_pays": null,
     "startup_cost_level": null,
     "review_flags": [
-      "No tag needed; results page should say 'check if your device supports this'.",
-      "Phone-to-phone (Android Beam) was removed from Android in 2019."
+      "No tag needed; results page should say 'check if your device supports this'."
     ],
-    "hook": "Phone-to-phone sharing",
+    "hook": "Share with a tap between phones",
     "place": null,
     "result": null,
     "setup_type": null,
@@ -2860,7 +2853,6 @@
     "who_pays": "clubs, gyms, schools, coworking spaces",
     "startup_cost_level": "low",
     "review_flags": [
-      "NotebookLM listed PN532 as the tag chip; it is the reader module. Cards: MIFARE Classic or NTAG.",
       "Card IDs can be copied: fine for attendance, not for security."
     ],
     "hook": "Check-ins without a paper list",
