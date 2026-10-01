@@ -31,16 +31,13 @@ Open in your laptop's browser:
 
 ### Every update after that
 
-    cd ~/projects/nfc-idea-finder
-    git pull
-    docker build -t tapwise .
-    docker rm -f tapwise
-    docker run -d --name tapwise --restart unless-stopped \
-      -p 8080:8000 \
-      -v tapwise_data:/srv/app/data \
-      -e ADMIN_PASSWORD='pick-a-password' \
-      -e ANTHROPIC_API_KEY='sk-ant-...' \
-      tapwise
+    ~/projects/nfc-idea-finder/scripts/deploy.sh
+
+It pulls, rebuilds and restarts the container, then checks the site answers. Claude runs it itself after
+each change. It reads the secrets from `~/tapwise.env` (outside the repo, never committed), created once:
+
+    printf 'ADMIN_PASSWORD=pick-a-password\nANTHROPIC_API_KEY=sk-ant-...\n' > ~/tapwise.env
+    chmod 600 ~/tapwise.env
 
 Visitor ideas, approved community ideas and "I use this" counts are kept in the `tapwise_data` volume,
 so rebuilding never deletes them.

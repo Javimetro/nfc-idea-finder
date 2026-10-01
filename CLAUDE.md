@@ -33,7 +33,7 @@ A Flask + SQLite website ("Tapwise") that asks visitors questions about their ev
 - Move fast: skip formal test suites, ship working code, verify with a quick manual check (curl / a Playwright screenshot) rather than writing test files.
 - **After any meaningful change**, add a new numbered entry to `PROJECT_LOG.md` (same style as the existing entries: what changed, why, a short lesson). This file becomes the public README's story, so write for a general audience, not just the user.
 - the user cares about being transparent that this was built together with Claude — keep that framing in the log and README, don't erase it.
-- Commit and push when done; the Pi deploys by `git pull` + Docker rebuild (see RUN.md), it does not auto-deploy.
+- Commit and push when done, then deploy on the Pi yourself with `scripts/deploy.sh` (pull + Docker rebuild + health check; secrets come from `~/tapwise.env`, which only the user edits). If that file is missing, tell the user the one-time command in RUN.md.
 
 ## Data & credit rules (don't break these)
 
