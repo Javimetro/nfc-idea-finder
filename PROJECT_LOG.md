@@ -466,6 +466,20 @@ Two smaller fixes from the same test:
 
 Lesson: always show people that their click worked. If nothing changes on screen, they'll click again.
 
+#### 25. Letting the AI make the call
+
+Step 23 had the AI file only the ideas it was *sure* about; everything else still waited for a human. the user's answer after seeing it work: he doesn't want to review ideas at all. So now **the AI's verdict is final**:
+
+- **New idea** → it goes straight into the bank, using the AI's cleaned-up draft, credited to the visitor.
+- **Duplicate** → filed as a copy of the existing idea.
+- **Not a real idea** → rejected.
+
+The admin page became a log rather than a to-do list: every decision is there with the AI's reason and an **Undo** button (for an approved idea, "take it out of the bank"). If the AI can't answer (no key, an outage, or the daily limit), ideas just wait and get reviewed automatically on the next try.
+
+One bug showed up along the way: the site runs as two copies of the program at once (so one slow visitor doesn't block another). When one copy added an idea, the other copy didn't know. Now every change to the bank bumps a little version number in the database, and each copy reloads when it sees a new number.
+
+Lesson: automation is fine when every decision is visible and easy to undo. This is safe today because the site is private (home network + Tailscale only); before going public, the AI's judgement on spam and unsafe ideas would deserve a closer look.
+
 ---
 
 ## Open to-do list
@@ -486,7 +500,7 @@ Visitor suggestions flow: pending → the user gets notified (n8n) → review on
 - [x] Lock `/api/suggestions` (now behind the admin password)
 - [x] Admin review page behind a password (approve / reject / duplicate) → `/admin`
 - [ ] Rate limit on "I use this" (now: one per browser, easy to cheat)
-- [x] AI first review of every suggestion: duplicates, spam, pre-filled approve form (step 23)
+- [x] AI reviews every suggestion and decides by itself, with undo on /admin (steps 23, 25)
 - [ ] Notification of new suggestions via n8n (already running on the Pi)
 - [ ] Cloudflare Turnstile + rate limit per visitor on the suggestion form
 - [ ] Privacy note next to the form (what is stored, why, for how long); delete emails after replying

@@ -53,6 +53,9 @@ CREATE TABLE IF NOT EXISTS community_ideas (
     approved_at TEXT DEFAULT (datetime('now'))
 );
 -- "I use this" counter per idea
+-- small counters, e.g. catalog_version: bumped whenever a community idea is added or removed,
+-- so every worker process knows to reload its copy of the catalog
+CREATE TABLE IF NOT EXISTS meta (key TEXT PRIMARY KEY, value INTEGER);
 CREATE TABLE IF NOT EXISTS idea_uses (
     idea_id TEXT PRIMARY KEY, uses INTEGER DEFAULT 0
 );
@@ -173,10 +176,29 @@ def list_submissions():
 
 def ai_reviews_today():
     con = connect()
-    n = con.execute("SELECT COUNT(*) FROM submissions WHERE ai_review IS NOT NULL"
-                    " AND submitted_at >= datetime('now', 'start of day')").fetchone()[0]
+    n = con.execute("SELECT COUNT(*) FROM submissions WHERE json_extract(ai_review, '$.reviewed_at')"
+                    " >= datetime('now', 'start of day')").fetchone()[0]
     con.close()
     return n
+
+
+def pending_without_ai_review():
+    con = connect()
+    ids = [r[0] for r in con.execute("SELECT id FROM submissions WHERE status = 'pending' AND ai_review IS NULL ORDER BY id")]
+    con.close()
+    return ids
+
+
+def catalog_version():
+    con = connect()
+    r = con.execute("SELECT value FROM meta WHERE key = 'catalog_version'").fetchone()
+    con.close()
+    return r[0] if r else 0
+
+
+def _bump_catalog_version(con):
+    con.execute("INSERT INTO meta (key, value) VALUES ('catalog_version', 1) "
+                "ON CONFLICT(key) DO UPDATE SET value = value + 1")
 
 
 def set_ai_review(sub_id, review):
@@ -203,7 +225,7 @@ def set_submission_status(sub_id, status, linked_idea_id=None):
 def add_community_idea(sub_id, f):
     """Turn an approved submission into a live idea. Returns its new id (c001, c002...)."""
     con = connect()
-    n = con.execute("SELECT COUNT(*) FROM community_ideas").fetchone()[0] + 1
+    n = con.execute("SELECT COALESCE(MAX(CAST(SUBSTR(id, 2) AS INTEGER)), 0) FROM community_ideas").fetchone()[0] + 1
     cid = f"c{n:03d}"
     con.execute(
         "INSERT INTO community_ideas (id, submission_id, title, hook, summary, how_it_works, place, result, setup_type,"
@@ -215,9 +237,23 @@ def add_community_idea(sub_id, f):
          json.dumps(f.get("goals") or []), json.dumps(f.get("needs") or []), f.get("contributor") or None,
          f.get("source_url") or None))
     con.execute("UPDATE submissions SET status = 'approved', linked_idea_id = ? WHERE id = ?", (cid, sub_id))
+    _bump_catalog_version(con)
     con.commit()
     con.close()
     return cid
+
+
+def remove_community_idea(sub_id):
+    """Take an approved idea out of the bank again (the submission becomes 'rejected')."""
+    con = connect()
+    r = con.execute("SELECT linked_idea_id FROM submissions WHERE id = ? AND status = 'approved'", (sub_id,)).fetchone()
+    if r:
+        con.execute("DELETE FROM community_ideas WHERE id = ?", (r[0],))
+        con.execute("UPDATE submissions SET status = 'rejected', linked_idea_id = NULL WHERE id = ?", (sub_id,))
+        _bump_catalog_version(con)
+        con.commit()
+    con.close()
+    return bool(r)
 
 
 def add_use(idea_id):

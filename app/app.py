@@ -4,9 +4,11 @@ Run locally:   python app/app.py            -> http://localhost:8000
 On the Pi:     see README (Docker)."""
 import hmac
 import os
+import fcntl
 import re
 import sys
 import threading
+from datetime import datetime, timezone
 from functools import wraps
 from urllib.parse import quote, quote_plus
 
@@ -23,11 +25,13 @@ app = Flask(__name__, static_folder="static", static_url_path="/static")
 
 database.load_content()                  # JSON -> SQLite on every start
 CATALOG, TAGS, IDEAS_BY_ID, WORLD_OF = {}, {}, {}, {}
+CATALOG_VERSION = None
 
 
 def reload_catalog():
-    """(Re)read everything from SQLite. Called at start and after an idea is approved."""
-    global CATALOG, TAGS, IDEAS_BY_ID, WORLD_OF
+    """(Re)read everything from SQLite. Called at start and whenever the bank changed."""
+    global CATALOG, TAGS, IDEAS_BY_ID, WORLD_OF, CATALOG_VERSION
+    CATALOG_VERSION = database.catalog_version()
     CATALOG = database.get_catalog()
     TAGS = {t["id"]: t for t in CATALOG["tags"]}
     IDEAS_BY_ID = {i["id"]: i for i in CATALOG["ideas"]}
@@ -43,6 +47,13 @@ def reload_catalog():
 
 
 reload_catalog()
+
+
+@app.before_request
+def catalog_fresh():
+    # The app runs as several processes; if another one added or removed an idea, catch up.
+    if database.catalog_version() != CATALOG_VERSION:
+        reload_catalog()
 
 
 # ------------------------------------------------------------------ duplicate finder
@@ -296,17 +307,19 @@ def suggest():
         return jsonify(ok=True)
     d["submitter_name"] = (d.get("submitter_name") or "").strip() or None
     d["credit_ok"] = bool(d.get("credit_ok") and d["submitter_name"])
-    sub_id = database.add_submission({**d, "description": desc[:2000]})
-    if ai_review.enabled() and database.ai_reviews_today() < AI_DAILY_LIMIT:
-        threading.Thread(target=run_ai_review, args=(sub_id,), daemon=True).start()   # visitor doesn't wait
+    database.add_submission({**d, "description": desc[:2000]})
+    start_ai_sweep()                                         # in the background: the visitor doesn't wait
     return jsonify(ok=True)
 
 
-# ------------------------------------------------------------------ AI first review
-# Each new suggestion gets one Claude call (see ai_review.py). When the AI is sure, it
-# files the suggestion itself (duplicate / not an idea); the admin can undo that.
-# Everything else stays pending, with the AI's verdict and a pre-filled approve form.
+# ------------------------------------------------------------------ AI review (fully automatic)
+# Every suggestion gets one Claude call (see ai_review.py) and the AI's verdict is final:
+#   new -> straight into the bank (from the AI's cleaned-up draft), credited to the visitor
+#   duplicate -> filed as a duplicate of the existing idea;  not_an_idea -> rejected
+# Nobody has to review anything. /admin shows every decision with an undo button.
+# Without an API key (or when the AI fails / the daily limit is hit) ideas simply wait as "pending".
 AI_DAILY_LIMIT = int(os.environ.get("TAPWISE_AI_DAILY_LIMIT", 50))   # caps the bill if someone floods the form
+AI_LOCK = database.DB_PATH.parent / "ai-review.lock"
 
 
 def run_ai_review(sub_id):
@@ -319,15 +332,47 @@ def run_ai_review(sub_id):
     r = ai_review.review(sub["description"], sub.get("place"), ideas, needs)
     if not r:
         return None
-    if sub["status"] == "pending" and r["confidence"] == "high":
+    r["reviewed_at"] = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M:%S")
+    if sub["status"] == "pending":
         if r["verdict"] == "duplicate":
             database.set_submission_status(sub_id, "duplicate", r["duplicate_of"])
             r["auto"] = "duplicate"
         elif r["verdict"] == "not_an_idea":
             database.set_submission_status(sub_id, "rejected")
             r["auto"] = "rejected"
+        elif r["draft"]:
+            database.add_community_idea(sub_id, {
+                **r["draft"], "contributor": sub["submitter_name"] if sub["credit_ok"] else None,
+                "source_url": sub["source_url"]})
+            reload_catalog()
+            r["auto"] = "approved"
     database.set_ai_review(sub_id, r)
     return r
+
+
+def ai_sweep():
+    """Review every pending idea that has no AI review yet. One sweep at a time across all processes."""
+    database.DB_PATH.parent.mkdir(parents=True, exist_ok=True)
+    with open(AI_LOCK, "w") as lock:
+        try:
+            fcntl.flock(lock, fcntl.LOCK_EX | fcntl.LOCK_NB)
+        except BlockingIOError:
+            return                                          # another process is already on it
+        tried = set()
+        while database.ai_reviews_today() < AI_DAILY_LIMIT:
+            todo = [i for i in database.pending_without_ai_review() if i not in tried]
+            if not todo:
+                break
+            tried.add(todo[0])
+            run_ai_review(todo[0])
+
+
+def start_ai_sweep():
+    if ai_review.enabled():
+        threading.Thread(target=ai_sweep, daemon=True).start()
+
+
+start_ai_sweep()            # catch up on anything sent while the AI was off or failing
 
 
 @app.get("/api/ideas/similar")
@@ -428,6 +473,16 @@ def ai_review_now(sub_id):
         return jsonify(error="AI is off. Start the app with ANTHROPIC_API_KEY=..."), 400
     r = run_ai_review(sub_id)
     return jsonify(ok=bool(r), review=r) if r else (jsonify(error="The AI didn't answer, try again later."), 502)
+
+
+@app.post("/api/admin/submissions/<int:sub_id>/unpublish")
+@admin_only
+def unpublish(sub_id):
+    """Undo for an idea the AI approved: take it out of the bank again."""
+    if not database.remove_community_idea(sub_id):
+        return jsonify(error="That idea isn't in the bank."), 400
+    reload_catalog()
+    return jsonify(ok=True)
 
 
 @app.post("/api/admin/submissions/<int:sub_id>/status")
