@@ -5,6 +5,7 @@ COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 COPY db ./db
 COPY app ./app
+COPY scripts ./scripts
 # The SQLite file (incl. visitor suggestions) lives in /srv/app/data -> mount a volume there
 VOLUME /srv/app/data
 EXPOSE 8000

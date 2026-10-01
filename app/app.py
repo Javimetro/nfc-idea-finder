@@ -326,8 +326,8 @@ def run_ai_review(sub_id):
     sub = database.get_submission(sub_id)
     if not sub:
         return None
-    ideas = [{"id": i["id"], "title": i["title"], "summary": i["summary"]}
-             for i in CATALOG["ideas"] if i["status"] != "hidden"]
+    ideas = [{"id": i["id"], "title": i["title"], "summary": i["summary"], "place": i.get("place"),
+              "result": i.get("result")} for i in CATALOG["ideas"] if i["status"] != "hidden"]
     needs = [{"id": n["id"], "label": n["label"]} for n in NEEDS]
     r = ai_review.review(sub["description"], sub.get("place"), ideas, needs)
     if not r:

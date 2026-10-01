@@ -49,10 +49,10 @@ No `ADMIN_PASSWORD` = the admin page is switched off.
 **AI review** (optional): with `ANTHROPIC_API_KEY` set, every new visitor idea gets one Claude call and the AI
 decides by itself: new ideas go straight into the bank, duplicates and spam are filed away. `/admin` lists every
 decision with an Undo button. Without the key, ideas wait on `/admin` for a human.
-Jev (TypeSafe) as the decision maker: add `TYPESAFE_API_KEY=...` and `TAPWISE_REVIEWER=hybrid` to `~/tapwise.env`.
-Jev then decides (spam / duplicate / needs) and Claude only writes the text of new ideas. Compare the two first with
-`docker exec -i -w /srv/app tapwise python - < scripts/compare_reviewers.py`.
-Optional extras: `-e TAPWISE_AI_MODEL=...` (default `claude-opus-5`) and `-e TAPWISE_AI_DAILY_LIMIT=50`
+**Jev for duplicates** (recommended): also add `TYPESAFE_API_KEY=...` to `~/tapwise.env`. Then Jev checks every idea
+for duplicates and Claude (`claude-haiku-4-5`) only checks and writes up the ideas that are new. Without it, one bigger
+Claude call (`claude-opus-5`) does everything. Test it: `docker exec tapwise python /srv/scripts/eval_review.py dupes dev`.
+Optional extras: `TAPWISE_WRITER_MODEL=...` (default `claude-haiku-4-5`), `TAPWISE_AI_MODEL=...` (fallback, default `claude-opus-5`) and `-e TAPWISE_AI_DAILY_LIMIT=50`
 (max AI reviews per day, so a flood of spam can't run up the bill).
 
 ## On any computer, without Docker

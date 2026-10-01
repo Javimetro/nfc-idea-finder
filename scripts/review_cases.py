@@ -24,7 +24,9 @@ DEV = [
     # new ideas (not in the bank)
     ("a tag inside each book I lend out, tap it to record who borrowed it and when", "new", None),
     ("tag on each wine bottle in my rack, tap to see when I bought it and when it's best to drink", "new", None),
-    ("sticker on the dishwasher, tap it to mark the dishes inside as clean or dirty so everyone knows", "new", None),
+    # first labelled "new"; on a second look the bank's "Family chores you tick off" names the dishwasher and
+    # "everyone sees it", so a fair reviewer could call it a duplicate. Moved to borderline (not scored).
+    ("sticker on the dishwasher, tap it to mark the dishes inside as clean or dirty so everyone knows", "?", "i090"),
     ("tag on the meeting room door at the office, tap to book the room for the next 30 minutes", "new", None),
     ("tag on my piano that starts a metronome at my practice tempo and logs my practice minutes", "new", None),
     # spam, nonsense, off-topic, unsafe
