@@ -165,7 +165,9 @@ KINDS = {
     "real_idea": "A real, safe idea for using an NFC tag, sticker or card",
     "spam_or_ad": "Spam, advertising or self-promotion",
     "nonsense": "Nonsense, a test message, or not about NFC tags at all",
-    "unsafe": "Unsafe advice, e.g. putting passwords, PINs, crypto keys or a door-unlock link on a tag anyone could scan",
+    # Jev reads literally: without the wifi note it called "share guest wifi" unsafe (it mentions a password)
+    "unsafe": ("Unsafe advice that puts something secret on a tag anyone could scan: a bank PIN, a personal "
+               "password, a crypto key, or a link that unlocks a door. (Sharing guest wifi on purpose is fine.)"),
 }
 SETUP_TYPES = {
     "automation": "A phone automation (Shortcuts on iPhone, MacroDroid or similar on Android) runs when the tag is tapped",
@@ -237,7 +239,7 @@ def jev_decide(description, place, ideas, needs):
     if kind["choice"] != "real_idea":
         verdict, dup, conf = "not_an_idea", None, kind["confidence"]
         reason = f"Jev: looks like {kind['choice'].replace('_', ' ')} ({kind['probabilities'][kind['choice']]:.0%})."
-    elif same["choice"] != "none":
+    elif same["choice"] != "none" and same["confidence"] >= 0.5:   # unsure "duplicate" = probably new
         verdict, dup, conf = "duplicate", same["choice"], same["confidence"]
         reason = f"Jev: same idea as \"{titles[dup]}\" ({same['probabilities'][dup]:.0%})."
     else:
