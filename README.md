@@ -57,6 +57,44 @@ Same accuracy on this test, about **175× cheaper** for each duplicate. A new id
 
 **Honest limits.** 23 test ideas is a small test, and one dev case turned out to be genuinely debatable (we moved it to "borderline" and say so in the log). Jev reads questions literally. And it can't write, which is why Claude stays in the pipeline.
 
+## What it costs: Jev vs Claude
+
+AI models charge per **token** (roughly ¾ of a word): once for what they read (input) and once for what they write (output).
+
+**The price lists** (US dollars per million tokens, October 2026):
+
+| Model | Reading (input) | Writing (output) |
+|---|---|---|
+| **Jev** (TypeSafe) | **$0.042** | **free** (it only returns short answers, no text) |
+| Claude Haiku 4.5 | $1 | $5 |
+| Claude Sonnet 5 | $2 | $10 |
+| Claude Opus 5 | $5 | $25 |
+
+Reading costs about **24× less with Jev than with Haiku**, Claude's cheapest model, and **119× less than with Opus**. Jev also charges nothing for its answers.
+
+**One duplicate check, measured** (average over the test ideas):
+
+| | Tokens read | Tokens written | Cost | Time |
+|---|---|---|---|---|
+| **Jev** (shortlist + 3 side-by-side checks) | ~6,300 | answers only (free) | **$0.00026** | 0.7 s |
+| Claude Opus 5 (the whole bank in one prompt) | ~8,300 | ~150 | $0.046 | 3.4 s |
+
+Both models read about the same amount, because both have to look at the whole idea bank. The difference is almost entirely the **price per token**: same accuracy on our test, **about 175× cheaper**.
+
+**Per 1,000 visitor ideas**, assuming half are duplicates:
+
+| Setup | Cost |
+|---|---|
+| Claude Opus 5 does everything | **$46** |
+| Today's setup: Jev checks all 1,000 for duplicates, Claude Sonnet 5 checks and writes up the 500 that aren't | **≈ $4** (Jev $0.26 + Sonnet $3.80) |
+| The duplicate check on its own: Jev vs Opus 5 | **$0.26** vs $46 |
+
+What's left of the bill is Claude doing what Jev can't: judging whether an idea is real and safe, and writing it up. For that we picked the cheapest Claude that passed the test (Sonnet 5; Haiku 4.5 was cheaper but rejected a good idea).
+
+**What building and testing this cost** (1 October 2026, all test runs together): about **$2.50 on Claude**, most of it Opus 5 runs used as the comparison baseline, and about **$0.03 on Jev** for roughly 800,000 tokens.
+
+Prices change; check [Anthropic's pricing](https://www.anthropic.com/pricing) and [TypeSafe's models page](https://docs.typesafe.ai/models) for current ones. Costs here are calculated from the token counts our test scripts recorded.
+
 ## More
 
 - **The whole story, step by step** (every decision, mistake and lesson): [PROJECT_LOG.md](PROJECT_LOG.md)
