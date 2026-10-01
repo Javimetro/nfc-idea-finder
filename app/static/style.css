@@ -1,3 +1,5 @@
+[hidden] { display: none !important; }   /* beats display:grid etc., so hidden really hides */
+
 :root {
   --bg: #faf7f2;
   --surface: #ffffff;

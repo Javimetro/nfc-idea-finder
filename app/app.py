@@ -292,6 +292,10 @@ def suggest():
     desc = (d.get("description") or "").strip()
     if len(desc) < 10:
         return jsonify(error="Please describe the idea in a sentence or two."), 400
+    if database.recent_duplicate_submission(desc[:2000]):   # same text again within minutes = a double click
+        return jsonify(ok=True)
+    d["submitter_name"] = (d.get("submitter_name") or "").strip() or None
+    d["credit_ok"] = bool(d.get("credit_ok") and d["submitter_name"])
     sub_id = database.add_submission({**d, "description": desc[:2000]})
     if ai_review.enabled() and database.ai_reviews_today() < AI_DAILY_LIMIT:
         threading.Thread(target=run_ai_review, args=(sub_id,), daemon=True).start()   # visitor doesn't wait

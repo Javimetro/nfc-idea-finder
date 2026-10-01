@@ -454,6 +454,18 @@ Two safety nets: the site works exactly the same without an AI key (you just rev
 
 Lesson: let the AI do the boring first pass, but keep a human able to see and undo every decision it made.
 
+#### 24. The "Add your idea" button that seemed to do nothing
+
+the user tested the form himself: he pressed "Add to the bank" and... nothing seemed to happen. So he pressed it again. And again. **13 copies** of his idea arrived.
+
+The cause was one line of CSS. The "Thank you!" message and the form are switched on and off with the browser's `hidden` setting, but a style rule (`display: grid`) quietly overrode it. So the thank-you was *always* showing under the form, even before sending, and the form never went away. Nothing looked different after pressing the button. One global rule (`[hidden] { display: none !important; }`) fixed it.
+
+Two smaller fixes from the same test:
+- "Show my name on the idea" was ticked with no name typed. Now that box only appears once you type a name, and the thank-you message says exactly how you'll be credited.
+- The same text sent again within 10 minutes is now ignored, so a double click can't create copies.
+
+Lesson: always show people that their click worked. If nothing changes on screen, they'll click again.
+
 ---
 
 ## Open to-do list

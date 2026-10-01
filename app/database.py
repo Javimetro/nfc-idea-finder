@@ -154,6 +154,14 @@ def add_submission(d):
     return sub_id
 
 
+def recent_duplicate_submission(description, minutes=10):
+    con = connect()
+    hit = con.execute("SELECT 1 FROM submissions WHERE description = ? AND submitted_at >= datetime('now', ?)",
+                      (description, f"-{minutes} minutes")).fetchone()
+    con.close()
+    return bool(hit)
+
+
 def list_submissions():
     con = connect()
     rows = [dict(r) for r in con.execute("SELECT * FROM submissions ORDER BY submitted_at DESC")]

@@ -300,7 +300,7 @@ function openSuggest(withContext) {
   sendContext = withContext;
   $("#suggest-form").hidden = false; $("#suggest-thanks").hidden = true;
   $("#suggest-form").reset(); $("#suggest-error").textContent = "";
-  $("#dupe-hint").hidden = true;
+  $("#dupe-hint").hidden = true; $("#credit-row").hidden = true;
   $("#suggest").showModal();
   $("#suggest-form textarea").focus();
 }
@@ -325,17 +325,25 @@ $("#suggest-form").addEventListener("submit", async (e) => {
   e.preventDefault();
   const f = new FormData(e.target);
   const body = Object.fromEntries(f.entries());
-  body.credit_ok = f.has("credit_ok");
+  body.submitter_name = (body.submitter_name || "").trim();
+  body.credit_ok = !!body.submitter_name && f.has("credit_ok");
   if ((body.description || "").trim().length < 10) { $("#suggest-error").textContent = "Describe the idea in a sentence or two."; return; }
   if (body.email && !e.target.email.checkValidity()) { $("#suggest-error").textContent = "That email doesn't look right."; return; }
   if (sendContext) body.context = state.answers;
-  $("#suggest-send").disabled = true;
-  const res = await fetch("/api/suggest", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(body) });
-  $("#suggest-send").disabled = false;
-  if (!res.ok) { $("#suggest-error").textContent = (await res.json()).error || "Couldn't send. Try again."; return; }
+  const send = $("#suggest-send");
+  send.disabled = true; send.textContent = "Sending…";
+  const res = await fetch("/api/suggest", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(body) })
+    .catch(() => null);
+  send.disabled = false; send.textContent = "Add to the bank";
+  if (!res || !res.ok) { $("#suggest-error").textContent = (res && (await res.json()).error) || "Couldn't send. Check your connection and try again."; return; }
+  const credit = body.credit_ok ? `with your name, ${esc(body.submitter_name)},` : `credited to "A Tapwise visitor"`;
+  $("#thanks-text").innerHTML = `We got it. After a quick check it goes into the bank ${credit} and you'll see how many people use it.`
+    + (body.email ? ` We'll email you when it's live.` : "");
   $("#suggest-form").hidden = true; $("#suggest-thanks").hidden = false;
 });
 $("#suggest-form textarea").addEventListener("input", () => ($("#suggest-error").textContent = ""));
+// "Show my name" only makes sense once there is a name
+$("#suggest-form input[name=submitter_name]").addEventListener("input", (e) => ($("#credit-row").hidden = !e.target.value.trim()));
 $("#suggest-close").addEventListener("click", () => $("#suggest").close());
 
 init();

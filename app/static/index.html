@@ -162,7 +162,7 @@
           <input name="email" type="email" placeholder="Only to tell you it's live">
         </label>
       </div>
-      <label class="check"><input type="checkbox" name="credit_ok" checked> Show my name on the idea</label>
+      <label class="check" id="credit-row" hidden><input type="checkbox" name="credit_ok" checked> Show my name on the idea</label>
       <input class="hp" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
       <p class="error" id="suggest-error" role="alert"></p>
       <div class="dialog-actions">
@@ -173,7 +173,7 @@
     <div id="suggest-thanks" class="thanks" hidden>
       <div class="big-check">✓</div>
       <h3>Thank you! 🌱</h3>
-      <p class="muted">Your idea is on its way. After a quick check it goes into the bank with your name, and you'll see how many people use it.</p>
+      <p class="muted" id="thanks-text"></p>
       <button class="btn primary" id="suggest-close">Close</button>
     </div>
   </dialog>
