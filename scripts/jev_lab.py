@@ -2,6 +2,7 @@
 
     collect TUNE|TEST   ask Jev everything once, save to scripts/lab_results/<set>.json (no decisions)
     analyse TUNE|TEST   score many decision rules on the saved answers (no API calls)
+    final NEAR          score the named versions (v1, v2, v3) on the saved answers
 
 Run in the container so it has the TypeSafe key and the idea bank (Claude is never called here):
     docker run --rm --env-file ~/tapwise.env -e ANTHROPIC_API_KEY= -v $PWD/scripts:/srv/scripts \
@@ -167,6 +168,44 @@ def analyse(name):
     return results
 
 
+# the versions that went (or could go) live, on the same saved answers
+def v2_rule(rec, need_problem=False):
+    c = [(k, p) for k, p in rec["short"]["C"].items() if k != "none" and k in rec["pairs"]][:3]
+    ok = [(k, rec["pairs"][k]["covers"]) for k, p in c if p >= 0.45 and rec["pairs"][k]["covers"] >= 0.55
+          and (not need_problem or rec["pairs"][k]["same_problem"] >= 0.5)]
+    return max(ok, key=lambda x: x[1])[0] if ok else None
+
+
+VERSIONS = {
+    "v1 (step 27: same idea + same problem)": lambda rec: decide(rec, CURRENT),
+    "v2 (covers, both steps agree)": v2_rule,
+    "v3 (v2 + same problem >= 0.5)": lambda rec: v2_rule(rec, need_problem=True),
+}
+
+
+def final(name):
+    recs = json.load(open(os.path.join(OUT, f"{name}.json")))
+    for label, fn in VERSIONS.items():
+        r = {"right": 0, "n": 0, "false_dup": 0, "missed": 0, "wrong_id": 0}
+        wrong = []
+        for rec in recs:
+            if rec["expected"] == "?":
+                continue
+            got = fn(rec)
+            r["n"] += 1
+            if rec["expected"] == "duplicate":
+                key = "right" if got in rec["ids"].split("|") else "missed" if got is None else "wrong_id"
+            else:
+                key = "right" if got is None else "false_dup"
+            r[key] += 1
+            if key != "right":
+                wrong.append(f"{key}: {rec['text'][:60]} -> {got}")
+        weighted = 2 * r["false_dup"] + r["missed"] + r["wrong_id"]
+        print(f"{label}: {r} | weighted mistakes {weighted}")
+        for w in wrong:
+            print("    " + w)
+
+
 if __name__ == "__main__":
     cmd, name = sys.argv[1], sys.argv[2]
-    collect(name) if cmd == "collect" else analyse(name)
+    {"collect": collect, "analyse": analyse, "final": final}[cmd](name)

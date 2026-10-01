@@ -3,6 +3,7 @@
 Run locally:   python app/app.py            -> http://localhost:8000
 On the Pi:     see README (Docker)."""
 import hmac
+import json
 import os
 import fcntl
 import re
@@ -17,6 +18,7 @@ from flask import Flask, Response, jsonify, request, send_from_directory
 sys.path.insert(0, os.path.dirname(__file__))
 import ai_review                                  # noqa: E402
 import database                                   # noqa: E402
+import similar                                    # noqa: E402
 from engines import ENGINES, available_engines   # noqa: E402
 from questions import NEEDS, QUESTIONS, WORLDS     # noqa: E402
 from tags import pick_tag                         # noqa: E402
@@ -25,14 +27,16 @@ app = Flask(__name__, static_folder="static", static_url_path="/static")
 
 database.load_content()                  # JSON -> SQLite on every start
 CATALOG, TAGS, IDEAS_BY_ID, WORLD_OF = {}, {}, {}, {}
-CATALOG_VERSION = None
+VERSIONS = {}
+SIMILAR = None
 
 
 def reload_catalog():
     """(Re)read everything from SQLite. Called at start and whenever the bank changed."""
-    global CATALOG, TAGS, IDEAS_BY_ID, WORLD_OF, CATALOG_VERSION
-    CATALOG_VERSION = database.catalog_version()
+    global CATALOG, TAGS, IDEAS_BY_ID, WORLD_OF, VERSIONS, SIMILAR
+    VERSIONS = database.versions()
     CATALOG = database.get_catalog()
+    SIMILAR = similar.Index([i for i in CATALOG["ideas"] if i["status"] != "hidden"])
     TAGS = {t["id"]: t for t in CATALOG["tags"]}
     IDEAS_BY_ID = {i["id"]: i for i in CATALOG["ideas"]}
     need_world = {n["id"]: n["question"] for n in NEEDS}
@@ -51,43 +55,28 @@ reload_catalog()
 
 @app.before_request
 def catalog_fresh():
-    # The app runs as several processes; if another one added or removed an idea, catch up.
-    if database.catalog_version() != CATALOG_VERSION:
+    # The app runs as several processes; if another one changed the bank or the "I use this"
+    # counts, catch up. One tiny query per API/page request (static files skip it).
+    if request.path.startswith("/static/"):
+        return
+    now = database.versions()
+    if now.get("catalog_version") != VERSIONS.get("catalog_version"):
         reload_catalog()
+    elif now.get("uses_version") != VERSIONS.get("uses_version"):
+        CATALOG["uses"] = database.get_uses()
+        VERSIONS["uses_version"] = now.get("uses_version")
 
 
-# ------------------------------------------------------------------ duplicate finder
-# No AI needed for this: just "how many of the same words do these two ideas use".
-# Good enough to catch "wifi on a coaster" vs "a sticker that shares your wifi password".
-STOPWORDS = set("""a an the and or but so to of in on at for with without from into onto
-your yours you my mine our their his her its it is are was were be being been do does did
-this that these those i we they he she them us can could should would will just when
-where what who how tag tags nfc sticker stickers phone phones each one instead its""".split())
-
-
-def _keywords(text):
-    return {w for w in re.findall(r"[a-z']+", (text or "").lower()) if len(w) > 2 and w not in STOPWORDS}
-
-
-def similar_ideas(text, limit=5, min_score=0.14):
-    """Ranks existing ideas by word overlap with `text`. Cheap, local, no API calls."""
-    qwords = _keywords(text)
-    if not qwords:
-        return []
-    scored = []
-    for i in CATALOG["ideas"]:
-        if i["status"] == "hidden":
-            continue
-        hay = " ".join(filter(None, [i["title"], i["hook"], i["summary"], i["place"], i["result"]]))
-        iwords = _keywords(hay)
-        if not iwords:
-            continue
-        score = len(qwords & iwords) / len(qwords | iwords)
-        if score >= min_score:
-            scored.append((score, i))
-    scored.sort(key=lambda x: -x[0])
+def similar_ideas(text, limit=5):
+    """The "already in the bank?" hint: TF-IDF word matching (see similar.py). Free, local, instant."""
     return [{"id": i["id"], "title": i["hook"] or i["title"], "summary": i["summary"],
-              "community": bool(i.get("community")), "score": round(s, 2)} for s, i in scored[:limit]]
+             "community": bool(i.get("community")), "score": round(s, 2)} for s, i in SIMILAR.search(text, limit)]
+
+
+def safe_url(url):
+    """Only plain web links. Visitor links end up clickable on the site, so no javascript: and friends."""
+    url = (url or "").strip()
+    return url if re.match(r"^https?://[^\s<>\"']+$", url, re.I) and len(url) <= 500 else None
 
 MAIN_KINDS = {"diy", "business", "maker"}
 
@@ -262,7 +251,7 @@ def explore():
     """A few great ideas per place, for people who want to browse before answering."""
     out = []
     for key, label, ids in EXPLORE:
-        ideas = [IDEAS_BY_ID[x] for x in ids if IDEAS_BY_ID[x]["status"] != "hidden"]
+        ideas = [IDEAS_BY_ID[x] for x in ids if x in IDEAS_BY_ID and IDEAS_BY_ID[x]["status"] != "hidden"]
         out.append({"key": key, "label": label,
                     "ideas": [{"title": i["title"], "summary": i["summary"],
                                "setup_time": SETUP_TIME.get(i["difficulty"]),
@@ -303,17 +292,23 @@ def suggest():
     desc = (d.get("description") or "").strip()
     if len(desc) < 10:
         return jsonify(error="Please describe the idea in a sentence or two."), 400
+    if (d.get("source_url") or "").strip() and not safe_url(d.get("source_url")):
+        return jsonify(error="The link should start with http:// or https://"), 400
     if database.recent_duplicate_submission(desc[:2000]):   # same text again within minutes = a double click
         return jsonify(ok=True)
-    d["submitter_name"] = (d.get("submitter_name") or "").strip() or None
-    d["credit_ok"] = bool(d.get("credit_ok") and d["submitter_name"])
-    database.add_submission({**d, "description": desc[:2000]})
+    clean = lambda k, n: ((d.get(k) or "").strip()[:n] or None) if isinstance(d.get(k), (str, type(None))) else None
+    context = d.get("context") if isinstance(d.get("context"), dict) else None
+    database.add_submission({
+        "description": desc[:2000], "place": clean("place", 200), "source_url": safe_url(d.get("source_url")),
+        "submitter_name": clean("submitter_name", 80), "email": clean("email", 200),
+        "credit_ok": bool(d.get("credit_ok") and clean("submitter_name", 80)),
+        "context": context if context and len(json.dumps(context)) <= 4000 else None})
     start_ai_sweep()                                         # in the background: the visitor doesn't wait
     return jsonify(ok=True)
 
 
 # ------------------------------------------------------------------ AI review (fully automatic)
-# Every suggestion gets one Claude call (see ai_review.py) and the AI's verdict is final:
+# Every suggestion is reviewed by the AI (Jev, then Claude if needed; see ai_review.py) and the verdict is final:
 #   new -> straight into the bank (from the AI's cleaned-up draft), credited to the visitor
 #   duplicate -> filed as a duplicate of the existing idea;  not_an_idea -> rejected
 # Nobody has to review anything. /admin shows every decision with an undo button.
@@ -328,6 +323,7 @@ def run_ai_review(sub_id):
         return None
     ideas = [{"id": i["id"], "title": i["title"], "summary": i["summary"], "place": i.get("place"),
               "result": i.get("result")} for i in CATALOG["ideas"] if i["status"] != "hidden"]
+    # (only the idea text goes to the AI services, never names or emails)
     needs = [{"id": n["id"], "label": n["label"]} for n in NEEDS]
     r = ai_review.review(sub["description"], sub.get("place"), ideas, needs)
     if not r:
@@ -343,7 +339,7 @@ def run_ai_review(sub_id):
         elif r["draft"]:
             database.add_community_idea(sub_id, {
                 **r["draft"], "contributor": sub["submitter_name"] if sub["credit_ok"] else None,
-                "source_url": sub["source_url"]})
+                "source_url": safe_url(sub["source_url"])})
             reload_catalog()
             r["auto"] = "approved"
     database.set_ai_review(sub_id, r)
@@ -413,6 +409,7 @@ def use_idea(idea_id):
         return jsonify(error="unknown idea"), 404
     n = database.add_use(idea_id)
     CATALOG["uses"][idea_id] = n
+    VERSIONS["uses_version"] = database.versions().get("uses_version")
     return jsonify(uses=n)
 
 
@@ -444,6 +441,7 @@ def admin_page():
 @admin_only
 def suggestions():
     return jsonify(submissions=database.list_submissions(), ai_enabled=ai_review.enabled(),
+                   titles={i["id"]: i["title"] for i in CATALOG["ideas"]},
                    needs=[{"id": n["id"], "label": n.get("short") or n["label"], "world": n["question"]} for n in NEEDS],
                    worlds=[{"key": k, "label": t} for k, t, _, _ in WORLDS])
 
@@ -459,7 +457,7 @@ def approve(sub_id):
         return jsonify(error="Title and summary are needed."), 400
     if "contributor" not in f:
         f["contributor"] = sub["submitter_name"] if sub["credit_ok"] else None
-    f.setdefault("source_url", sub["source_url"])
+    f["source_url"] = safe_url(f.get("source_url", sub["source_url"]))
     cid = database.add_community_idea(sub_id, f)
     reload_catalog()
     return jsonify(ok=True, id=cid)

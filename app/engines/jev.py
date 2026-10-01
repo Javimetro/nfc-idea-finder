@@ -7,14 +7,15 @@ score. Only quiz answers are sent, never names or emails.
 To finish: read the official API reference (https://docs.typesafe.ai), put the key
 in the environment as TYPESAFE_API_KEY, and implement `score_fit` below.
 """
-import os
 
 NAME = "jev"
 LABEL = "Jev (TypeSafe AI)"
 
 
 def available():
-    return bool(os.environ.get("TYPESAFE_API_KEY"))
+    # Not wired yet (score_fit below). Reporting "available" just because a TypeSafe key exists
+    # let visitors pick it in the footer and get an error, so it stays off until it's built.
+    return False
 
 
 def score_fit(answers, ideas):

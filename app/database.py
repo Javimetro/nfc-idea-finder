@@ -6,6 +6,8 @@ restart, and the site is up to date.
 
 Visitor suggestions live only in SQLite and are never overwritten.
 """
+import fcntl
+import hashlib
 import json
 import sqlite3
 from pathlib import Path
@@ -52,9 +54,9 @@ CREATE TABLE IF NOT EXISTS community_ideas (
     contributor TEXT, source_url TEXT,
     approved_at TEXT DEFAULT (datetime('now'))
 );
--- "I use this" counter per idea
--- small counters, e.g. catalog_version: bumped whenever a community idea is added or removed,
--- so every worker process knows to reload its copy of the catalog
+-- "I use this" counter per idea is idea_uses, below
+-- small counters that tell every worker process to refresh its copy: catalog_version (an idea was
+-- added or removed), uses_version (someone tapped "I use this")
 CREATE TABLE IF NOT EXISTS meta (key TEXT PRIMARY KEY, value INTEGER);
 CREATE TABLE IF NOT EXISTS idea_uses (
     idea_id TEXT PRIMARY KEY, uses INTEGER DEFAULT 0
@@ -69,38 +71,77 @@ def connect():
     return con
 
 
-def load_content():
-    """Replace all curated tables with the current JSON files (submissions untouched)."""
-    load = lambda name: json.loads((JSON_DIR / f"{name}.json").read_text(encoding="utf-8"))
-    con = connect()
-    # curated tables are rebuilt from scratch (so new columns just work); submissions are kept
-    for table in ("sources", "ideas", "idea_sources", "tag_profiles"):
-        con.execute(f"DROP TABLE IF EXISTS {table}")
-    con.executescript(SCHEMA)
-    for col in ("place TEXT", "ai_review TEXT"):     # older databases: add the newer columns
-        try:
-            con.execute(f"ALTER TABLE submissions ADD COLUMN {col}")
-        except sqlite3.OperationalError:
-            pass
+CURATED = ("sources", "ideas", "idea_sources", "tag_profiles")
 
-    con.executemany(
-        "INSERT INTO sources VALUES (:id,:title,:url,:type,:platform,:creator_name,:creator_url,:language,:notes)",
-        load("sources"))
-    for i in load("ideas"):
-        row = {**i}
-        for k in ("audience", "settings", "goals", "tag_needs", "review_flags"):
-            row[k] = json.dumps(i.get(k))
-        con.execute(
-            "INSERT INTO ideas VALUES (:id,:title,:kind,:status,:summary,:how_it_works,:setup_by_platform,"
-            ":phone_support,:difficulty,:cost_level,:audience,:settings,:goals,:tag_needs,:review_flags,"
-            ":business_model,:who_pays,:startup_cost_level,:hook,:place,:result,:setup_type)", row)
-    con.executemany(
-        "INSERT INTO idea_sources VALUES (:idea_id,:source_id,:start_seconds,:end_seconds,:anchor_quote,:credit)",
-        load("idea_sources"))
-    con.executemany("INSERT INTO tag_profiles VALUES (?, ?)",
-                    [(t["id"], json.dumps(t)) for t in load("tag_profiles")])
-    con.commit()
-    con.close()
+
+def _statements():
+    """SCHEMA as separate statements (comments removed), so they can run inside one transaction."""
+    lines = [l.split("--")[0] for l in SCHEMA.splitlines()]
+    return [st.strip() for st in "\n".join(lines).split(";") if st.strip()]
+
+
+def load_content():
+    """Put the curated JSON files into SQLite (visitor submissions and community ideas untouched).
+
+    The web server starts several processes at once, so this is careful:
+    - one process at a time (file lock), and the whole rebuild is ONE transaction, so another
+      process reading the bank sees the old tables or the new ones, never missing tables;
+    - if the JSON files (and the schema) haven't changed since the last load, nothing is rebuilt."""
+    DB_PATH.parent.mkdir(parents=True, exist_ok=True)
+    with open(DB_PATH.parent / "load.lock", "w") as lock:
+        fcntl.flock(lock, fcntl.LOCK_EX)
+        _load_content()
+
+
+def _load_content():
+    raw = {name: (JSON_DIR / f"{name}.json").read_text(encoding="utf-8") for name in CURATED}
+    digest = int(hashlib.sha256((SCHEMA + "".join(raw.values())).encode()).hexdigest()[:12], 16)
+    con = connect()
+    con.isolation_level = None                      # we manage the transaction ourselves
+    try:
+        con.execute("BEGIN IMMEDIATE")
+        for st in _statements():                    # CREATE TABLE IF NOT EXISTS ...
+            con.execute(st)
+        for col in ("place TEXT", "ai_review TEXT"):  # older databases: add the newer columns
+            try:
+                con.execute(f"ALTER TABLE submissions ADD COLUMN {col}")
+            except sqlite3.OperationalError:
+                pass
+        same = con.execute("SELECT value FROM meta WHERE key = 'content_hash'").fetchone()
+        if same and same[0] == digest:
+            con.execute("COMMIT")
+            return
+        # curated tables are rebuilt from scratch (so new columns just work)
+        for table in CURATED:
+            con.execute(f"DROP TABLE IF EXISTS {table}")
+        for st in _statements():
+            con.execute(st)
+        load = lambda name: json.loads(raw[name])
+        con.executemany(
+            "INSERT INTO sources VALUES (:id,:title,:url,:type,:platform,:creator_name,:creator_url,:language,:notes)",
+            load("sources"))
+        for i in load("ideas"):
+            row = {**i}
+            for k in ("audience", "settings", "goals", "tag_needs", "review_flags"):
+                row[k] = json.dumps(i.get(k))
+            con.execute(
+                "INSERT INTO ideas VALUES (:id,:title,:kind,:status,:summary,:how_it_works,:setup_by_platform,"
+                ":phone_support,:difficulty,:cost_level,:audience,:settings,:goals,:tag_needs,:review_flags,"
+                ":business_model,:who_pays,:startup_cost_level,:hook,:place,:result,:setup_type)", row)
+        con.executemany(
+            "INSERT INTO idea_sources VALUES (:idea_id,:source_id,:start_seconds,:end_seconds,:anchor_quote,:credit)",
+            load("idea_sources"))
+        con.executemany("INSERT INTO tag_profiles VALUES (?, ?)",
+                        [(t["id"], json.dumps(t)) for t in load("tag_profiles")])
+        con.execute("INSERT INTO meta (key, value) VALUES ('content_hash', ?) "
+                    "ON CONFLICT(key) DO UPDATE SET value = excluded.value", (digest,))
+        _bump_catalog_version(con)                  # tell running processes to reload
+        con.execute("COMMIT")
+    except Exception:
+        con.execute("ROLLBACK")
+        raise
+    finally:
+        con.close()
 
 
 def get_catalog():
@@ -189,16 +230,27 @@ def pending_without_ai_review():
     return ids
 
 
-def catalog_version():
+def versions():
+    """{'catalog_version': n, 'uses_version': n}: one tiny query, run before each request."""
     con = connect()
-    r = con.execute("SELECT value FROM meta WHERE key = 'catalog_version'").fetchone()
+    v = {r[0]: r[1] for r in con.execute("SELECT key, value FROM meta")}
     con.close()
-    return r[0] if r else 0
+    return v
+
+
+def _bump(con, key):
+    con.execute("INSERT INTO meta (key, value) VALUES (?, 1) ON CONFLICT(key) DO UPDATE SET value = value + 1", (key,))
 
 
 def _bump_catalog_version(con):
-    con.execute("INSERT INTO meta (key, value) VALUES ('catalog_version', 1) "
-                "ON CONFLICT(key) DO UPDATE SET value = value + 1")
+    _bump(con, "catalog_version")
+
+
+def get_uses():
+    con = connect()
+    uses = {r["idea_id"]: r["uses"] for r in con.execute("SELECT * FROM idea_uses")}
+    con.close()
+    return uses
 
 
 def set_ai_review(sub_id, review):
@@ -261,6 +313,7 @@ def add_use(idea_id):
     con.execute("INSERT INTO idea_uses (idea_id, uses) VALUES (?, 1) "
                 "ON CONFLICT(idea_id) DO UPDATE SET uses = uses + 1", (idea_id,))
     uses = con.execute("SELECT uses FROM idea_uses WHERE idea_id = ?", (idea_id,)).fetchone()[0]
+    _bump(con, "uses_version")
     con.commit()
     con.close()
     return uses

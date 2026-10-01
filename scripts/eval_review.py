@@ -3,6 +3,7 @@
 Run inside the container (it has the keys and the idea bank):
     docker exec tapwise python /srv/scripts/eval_review.py dupes  dev|holdout|tune|test   # Jev duplicate check
     docker exec tapwise python /srv/scripts/eval_review.py writer dev|holdout claude-haiku-4-5,claude-sonnet-5
+    docker exec tapwise python /srv/scripts/eval_review.py route  near             # Jev only: what goes to Claude
     docker exec tapwise python /srv/scripts/eval_review.py claude dev|holdout     # old way: Claude does everything
 
 Tune only on dev. Run holdout once, at the end."""
@@ -17,7 +18,7 @@ import ai_review              # noqa: E402
 import database               # noqa: E402
 from questions import NEEDS   # noqa: E402
 from review_cases import DEV, HOLDOUT   # noqa: E402
-from review_cases_big import TEST, TUNE   # noqa: E402
+from review_cases_big import NEAR, TEST, TUNE   # noqa: E402
 
 PRICE = {  # $ per million tokens (input, output)
     "claude-haiku-4-5": (1, 5), "claude-sonnet-5": (2, 10), "claude-opus-5": (5, 25), "jev": (0.042, 0),
@@ -63,6 +64,28 @@ def dupes(cases, ideas):
           + ", ".join(f"{k} {v[0]}/{v[1]}" for k, v in sorted(tally.items()))
           + f" | {(time.time() - t0) / n:.1f}s per idea | {tokens / n:.0f} tokens per idea"
           f" = ${tokens / n / 1e6 * PRICE['jev'][0]:.5f} per idea")
+
+
+def route(cases, ideas):
+    """Jev only (no Claude calls): which ideas Jev files alone, which go to Claude for a second look."""
+    tally = {}
+    for case in cases:
+        text, verdict, ids = case[:3]
+        if verdict not in ("duplicate", "new"):
+            continue
+        d = ai_review.jev_find_duplicate(text, None, ideas)
+        if not d:
+            continue
+        if d["duplicate_of"] and d["sure"]:
+            path = "Jev files it alone" + ("" if verdict == "duplicate" and d["duplicate_of"] in ids.split("|") else " (WRONG)")
+        elif d["duplicate_of"]:
+            path = "Jev unsure -> Claude decides"
+        else:
+            path = "not a duplicate -> Claude writes it up"
+        key = f"{verdict:<9} | {path}"
+        tally[key] = tally.get(key, 0) + 1
+    for k, v in sorted(tally.items()):
+        print(f"{v:4}  {k}")
 
 
 def writer(cases, models):
@@ -112,10 +135,12 @@ NEEDS_SHORT = [{"id": n["id"], "label": n["label"]} for n in NEEDS]
 
 if __name__ == "__main__":
     part, which = sys.argv[1], sys.argv[2]
-    cases = {"dev": DEV, "holdout": HOLDOUT, "tune": TUNE, "test": TEST}[which]
+    cases = {"dev": DEV, "holdout": HOLDOUT, "tune": TUNE, "test": TEST, "near": NEAR}[which]
     if part == "dupes":
         dupes(cases, bank())
     elif part == "writer":
         writer(cases, sys.argv[3].split(",") if len(sys.argv) > 3 else [ai_review.WRITER_MODEL])
+    elif part == "route":
+        route(cases, bank())
     elif part == "claude":
         claude(cases, bank())

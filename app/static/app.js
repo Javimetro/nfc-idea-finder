@@ -2,6 +2,8 @@
 // Landing page -> (quiz about your day -> results) or (browse the bank). Anyone can add an idea.
 const $ = (s, el = document) => el.querySelector(s);
 const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+// links that came from visitors are only clickable if they're plain web links (no javascript: etc.)
+const safeHref = (u) => (/^https?:\/\//i.test(String(u || "")) ? u : null);
 
 const state = { questions: [], step: 0, answers: {}, lastResult: null };
 
@@ -46,6 +48,8 @@ async function init() {
   $("#engine").innerHTML = meta.engines.map((e) =>
     `<option value="${e.name}" ${e.available ? "" : "disabled"}>${esc(e.label)}${e.available ? "" : " (not set up)"}</option>`).join("");
   $("#engine").addEventListener("change", () => { if (state.lastResult) submit(); });
+  // only worth showing when there's a real choice
+  $("#engine-row").hidden = meta.engines.filter((e) => e.available).length < 2;
   renderExplore(explore);
 }
 
@@ -195,7 +199,7 @@ function renderIdea(idea, open) {
       ${esc(LABELS.model[idea.business.model] || idea.business.model)} · customers: ${esc(idea.business.who_pays)} · startup cost: ${esc(idea.business.startup_cost)}</div>` : "";
 
   const sources = idea.sources.map((s) => `
-    <li>${sourceIcon(s)}<div>${s.url ? `<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.creator || "Unknown")}</a>` : `<b>${esc(s.creator || "Unknown")}</b>`}
+    <li>${sourceIcon(s)}<div>${safeHref(s.url) ? `<a href="${esc(s.url)}" target="_blank" rel="noopener nofollow">${esc(s.creator || "Unknown")}</a>` : `<b>${esc(s.creator || "Unknown")}</b>`}
       <span class="quote">${s.type === "editorial" ? "Written for Tapwise from general knowledge" : s.type === "community" ? "Shared in the Tapwise idea bank" : esc(s.title)}${s.quotes.length ? ` · listen for: “${esc(s.quotes[0])}”` : ""}${s.is_search ? " · (search link)" : ""}</span></div></li>`).join("");
 
   return `<details class="idea" ${open ? "open" : ""}>
@@ -331,6 +335,7 @@ $("#suggest-form").addEventListener("submit", async (e) => {
   if (body.email && !e.target.email.checkValidity()) { $("#suggest-error").textContent = "That email doesn't look right."; return; }
   if (sendContext) body.context = state.answers;
   const send = $("#suggest-send");
+  $("#suggest-error").textContent = "";
   send.disabled = true; send.textContent = "Sending…";
   const res = await fetch("/api/suggest", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(body) })
     .catch(() => null);

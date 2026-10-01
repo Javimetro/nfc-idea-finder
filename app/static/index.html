@@ -134,7 +134,7 @@
 
   <footer class="footer">
     <span>An open bank of NFC ideas. Every idea credits the person who shared it ✨</span>
-    <label class="engine">Ranking engine
+    <label class="engine" id="engine-row">Ranking engine
       <select id="engine"></select>
     </label>
   </footer>
@@ -144,21 +144,21 @@
     <form id="suggest-form" method="dialog" novalidate>
       <h3>🌱 Add your idea to the bank</h3>
       <p class="muted">Your tap could be exactly what someone else needs. After a quick check, it goes into the bank with your name on it.</p>
-      <label>What does the tap do? <span class="req">*</span>
+      <label><span class="lbl">What does the tap do? <span class="req">*</span></span>
         <textarea name="description" rows="3" placeholder="e.g. I tap it and my phone logs where I parked my bike"></textarea>
       </label>
       <div id="dupe-hint" class="dupe-hint" hidden></div>
-      <label>Where does the tag go? <span class="opt">optional</span>
+      <label><span class="lbl">Where does the tag go? <span class="opt">optional</span></span>
         <input name="place" placeholder="e.g. On my bike lock">
       </label>
-      <label>Seen it somewhere? <span class="opt">optional</span>
+      <label><span class="lbl">Seen it somewhere? <span class="opt">optional</span></span>
         <input name="source_url" type="url" placeholder="Link to a video, post or article">
       </label>
       <div class="row">
-        <label>Your name <span class="opt">optional</span>
+        <label><span class="lbl">Your name <span class="opt">optional</span></span>
           <input name="submitter_name" placeholder="Shown on your idea">
         </label>
-        <label>Email <span class="opt">optional</span>
+        <label><span class="lbl">Email <span class="opt">optional</span></span>
           <input name="email" type="email" placeholder="Only to tell you it's live">
         </label>
       </div>
