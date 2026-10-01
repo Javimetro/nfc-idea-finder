@@ -4,8 +4,9 @@ Two models, each doing the job it's best value for (the comparison is in PROJECT
 
   1. Jev (TypeSafe) - "is this already in the bank?"
      A decision model: no text, just calibrated probabilities, very cheap and fast.
-     Step 1: one Choice question over the whole bank shortlists the closest ideas.
-     Step 2: each shortlisted idea is compared side by side with small yes/no questions.
+     Step 1: one Choice question over the whole bank: "which idea already covers this?"
+     Step 2: each likely match is put side by side with the suggestion: "does it already cover it?"
+     (Tuned with scripts/jev_lab.py on 100 test ideas, scored on 82 others; see PROJECT_LOG step 28.)
      Duplicates are filed right here; Claude is never called for them.
 
   2. Claude Sonnet 5 - only for ideas that aren't duplicates: is it a real, safe NFC idea?
@@ -35,11 +36,13 @@ WRITER_MODEL = os.environ.get("TAPWISE_WRITER_MODEL", "claude-sonnet-5")      # 
 JEV_URL = "https://api.typesafe.ai/v1/systemone"
 JEV_MODEL = os.environ.get("TAPWISE_JEV_MODEL", "jev-latest")
 
-# Duplicate rule (tuned on the DEV cases in scripts/review_cases.py only):
-SHORTLIST = 3          # step 2 compares the 3 closest ideas from step 1
-PICK_MIN = 0.5         # duplicate if step 1 picked it with >= 50% ...
-AGREE_MIN = 0.5        # ... and the side-by-side check agrees (both questions >= 0.5)
-STRONG_MIN = 0.8       # or the side-by-side check alone is very sure (both >= 0.8)
+# Duplicate rule (tuned on the TUNE half of scripts/review_cases_big.py only):
+# Both steps must agree. On the tuning ideas, real duplicates scored >= 0.53 in step 1 and >= 0.61
+# in step 2; look-alike new ideas scored <= 0.38 in step 1 (e.g. "beehive inspection log" vs
+# "guard patrol checkpoints", which step 2 alone wrongly thinks is covered). Thresholds sit in the gaps.
+SHORTLIST = 3          # step 2 looks at up to 3 ideas from step 1 ...
+PICK_MIN = 0.45        # ... the ones step 1 gave at least 45% (usually just one: fewer requests)
+COVERS_MIN = 0.55      # duplicate if the side-by-side check says "already covers it" with >= 55%
 CHUNK = 200            # a Choice question takes up to 255 options; bigger banks are split
 
 
@@ -146,36 +149,40 @@ def _jev(state, questions):
             raise
 
 
+def _option(idea):
+    """How an existing idea is described to Jev: title, summary, and where the tag goes / what happens."""
+    t = f"{idea['title']}. {idea['summary']}"
+    if idea.get("place") and idea.get("result"):
+        t += f" (Tag goes: {idea['place']}. When tapped: {idea['result']}.)"
+    return t
+
+
 def _shortlist(text, ideas):
     """Step 1: one Choice question per chunk of the bank (all in one request). Returns [(id, probability)]."""
     chunks = [ideas[i:i + CHUNK] for i in range(0, len(ideas), CHUNK)]
-    questions = {f"same_as_{n}": {
+    questions = {f"covered_by_{n}": {
         "type": "choice",
-        "criteria": {**{i["id"]: f"{i['title']}. {i['summary']}" for i in chunk}, "none": "None of these is the same idea"},
-        "instructions": "Which existing idea is the same idea as the visitor_suggestion: the tag is used in the same "
-                        "situation and the user gets the same result, even if it's worded differently? "
-                        "Choose none if no existing idea is the same idea."} for n, chunk in enumerate(chunks)}
+        "criteria": {**{i["id"]: _option(i) for i in chunk}, "none": "None of these"},
+        "instructions": "Which existing idea already covers the visitor_suggestion, so adding the suggestion to the "
+                        "idea bank would repeat it? Choose none if the suggestion would add something genuinely new."}
+        for n, chunk in enumerate(chunks)}
     out = _jev({"visitor_suggestion": text}, questions)
     probs = [(k, p) for a in out["answers"].values() for k, p in a["probabilities"].items() if k != "none"]
-    return sorted(probs, key=lambda x: -x[1])[:SHORTLIST], out.get("model"), out.get("usage", {}).get("input_tokens", 0)
+    top = sorted(probs, key=lambda x: -x[1])[:SHORTLIST]
+    return top, out.get("model"), out.get("usage", {}).get("input_tokens", 0)
 
 
 def _side_by_side(text, idea):
-    """Step 2: the suggestion and one existing idea next to each other, two small yes/no questions."""
+    """Step 2: the suggestion and one existing idea next to each other, one yes/no question."""
     existing = {"title": idea["title"], "summary": idea["summary"]}
     if idea.get("place"):
         existing["where_the_tag_goes"] = idea["place"]
     if idea.get("result"):
         existing["what_happens_when_tapped"] = idea["result"]
-    out = _jev({"new_idea": text, "existing_idea": existing}, {
-        "same_idea": {"type": "noul",
-                      "instructions": "The new_idea is the same NFC idea as the existing_idea, just worded differently"},
-        "same_problem": {"type": "noul",
-                         "instructions": "The new_idea and the existing_idea solve the same everyday problem"},
-    })
-    a = out["answers"]
-    return {"same_idea": a["same_idea"]["noul"], "same_problem": a["same_problem"]["noul"]}, \
-        out.get("usage", {}).get("input_tokens", 0)
+    out = _jev({"new_idea": text, "existing_idea": existing}, {"covers": {
+        "type": "noul",
+        "instructions": "The existing_idea already covers the new_idea, even if the new_idea is one specific example of it"}})
+    return out["answers"]["covers"]["noul"], out.get("usage", {}).get("input_tokens", 0)
 
 
 def jev_find_duplicate(description, place, ideas):
@@ -184,28 +191,25 @@ def jev_find_duplicate(description, place, ideas):
     by_id = {i["id"]: i for i in ideas}
     try:
         shortlist, model, tokens = _shortlist(text, ideas)
-        with cf.ThreadPoolExecutor(SHORTLIST) as ex:
-            checks = list(ex.map(lambda c: _side_by_side(text, by_id[c[0]]), shortlist))
+        likely = [(iid, p) for iid, p in shortlist if p >= PICK_MIN]
+        with cf.ThreadPoolExecutor(max(len(likely), 1)) as ex:
+            checks = list(ex.map(lambda c: _side_by_side(text, by_id[c[0]]), likely))
     except Exception as e:
         print("Jev failed:", type(e).__name__, e, flush=True)
         return None
     tokens += sum(t for _, t in checks)
-    rows = [{"id": iid, "pick": round(p, 3), **{k: round(v, 3) for k, v in c.items()}}
-            for (iid, p), (c, _) in zip(shortlist, checks)]
-    best = None
-    for r in sorted(rows, key=lambda r: -(r["same_idea"] + r["same_problem"])):
-        agrees = min(r["same_idea"], r["same_problem"])
-        if (r["pick"] >= PICK_MIN and agrees >= AGREE_MIN) or agrees >= STRONG_MIN:
-            best = r
-            break
+    rows = [{"id": iid, "pick": round(p, 3), "covers": round(c, 3)} for (iid, p), (c, _) in zip(likely, checks)]
+    rows += [{"id": iid, "pick": round(p, 3), "covers": None} for iid, p in shortlist if p < PICK_MIN]
     details = {"shortlist": rows, "input_tokens": tokens}
+    best = max((r for r in rows if r["covers"] is not None and r["covers"] >= COVERS_MIN),
+               key=lambda r: r["covers"], default=None)
     if not best:
-        return {"duplicate_of": None, "confidence": "medium", "reason": "Jev: not the same as anything in the bank.",
+        return {"duplicate_of": None, "confidence": "medium", "reason": "Jev: nothing in the bank covers this yet.",
                 "model": model, "details": details}
-    sure = best["pick"] >= 0.9 and min(best["same_idea"], best["same_problem"]) >= STRONG_MIN
+    sure = best["pick"] >= 0.9 and best["covers"] >= 0.8
     return {"duplicate_of": best["id"], "confidence": "high" if sure else "medium",
-            "reason": f"Jev: same idea as \"{by_id[best['id']]['title']}\" "
-                      f"(picked {best['pick']:.0%}, same idea {best['same_idea']:.0%}, same problem {best['same_problem']:.0%}).",
+            "reason": f"Jev: already covered by \"{by_id[best['id']]['title']}\" "
+                      f"(picked {best['pick']:.0%}, covers it {best['covers']:.0%}).",
             "model": model, "details": details}
 
 

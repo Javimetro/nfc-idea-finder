@@ -1,7 +1,7 @@
 """Score the AI review on the made-up ideas in review_cases.py. Nothing is saved; it only prints.
 
 Run inside the container (it has the keys and the idea bank):
-    docker exec tapwise python /srv/scripts/eval_review.py dupes  dev|holdout     # Jev duplicate check
+    docker exec tapwise python /srv/scripts/eval_review.py dupes  dev|holdout|tune|test   # Jev duplicate check
     docker exec tapwise python /srv/scripts/eval_review.py writer dev|holdout claude-haiku-4-5,claude-sonnet-5
     docker exec tapwise python /srv/scripts/eval_review.py claude dev|holdout     # old way: Claude does everything
 
@@ -17,6 +17,7 @@ import ai_review              # noqa: E402
 import database               # noqa: E402
 from questions import NEEDS   # noqa: E402
 from review_cases import DEV, HOLDOUT   # noqa: E402
+from review_cases_big import TEST, TUNE   # noqa: E402
 
 PRICE = {  # $ per million tokens (input, output)
     "claude-haiku-4-5": (1, 5), "claude-sonnet-5": (2, 10), "claude-opus-5": (5, 25), "jev": (0.042, 0),
@@ -31,31 +32,37 @@ def bank():
 
 
 def dupes(cases, ideas):
+    """Jev duplicate check only (no Claude). Cases: (text, expected, ids, [style]); ids may be "i015|i081"."""
     by_id = {i["id"]: i for i in ideas}
-    right = graded = tokens = 0
-    t0 = time.time()
-    for text, verdict, dup in cases:
+    tally, tokens, t0, n = {}, 0, time.time(), 0
+    for case in cases:
+        text, verdict, ids = case[:3]
+        style = case[3] if len(case) > 3 else "plain"
         if verdict not in ("duplicate", "new", "?"):
             continue
+        n += 1
         d = ai_review.jev_find_duplicate(text, None, ideas)
         if not d:
             print("FAILED:", text)
             continue
         tokens += d["details"]["input_tokens"]
         got = d["duplicate_of"]
-        ok = (got == dup) if verdict == "duplicate" else (got is None) if verdict == "new" else None
+        ok = (got in ids.split("|")) if verdict == "duplicate" else (got is None) if verdict == "new" else None
         if ok is not None:
-            graded += 1
-            right += ok
-        want = f"duplicate {dup}" if verdict == "duplicate" else verdict
-        print(f"{'✓' if ok else '✗' if ok is False else ' '} {text[:72]:<72} want {want:<15} got {got or 'new'}")
-        if ok is False or ok is None:
+            t = tally.setdefault(style, [0, 0])
+            t[0] += ok
+            t[1] += 1
+        want = f"duplicate {ids}" if verdict == "duplicate" else verdict if verdict == "new" else f"? ({ids})"
+        print(f"{'✓' if ok else '✗' if ok is False else ' '} {text[:72]:<72} want {want:<18} got {got or 'new'}")
+        if ok is False:
             for r in d["details"]["shortlist"]:
-                print(f"      {r['id']} {by_id[r['id']]['title'][:38]:<38} pick {r['pick']:.2f}  "
-                      f"same idea {r['same_idea']:.2f}  same problem {r['same_problem']:.2f}")
-    n = sum(1 for c in cases if c[1] in ("duplicate", "new", "?"))
-    print(f"\nJev duplicate check: {right}/{graded} right | {(time.time() - t0) / n:.1f}s per idea | "
-          f"{tokens / n:.0f} tokens per idea = ${tokens / n / 1e6 * PRICE['jev'][0]:.5f} per idea")
+                cov = "-" if r["covers"] is None else f"{r['covers']:.2f}"
+                print(f"      {r['id']} {by_id[r['id']]['title'][:40]:<40} pick {r['pick']:.2f}  covers {cov}")
+    right, graded = sum(t[0] for t in tally.values()), sum(t[1] for t in tally.values())
+    print(f"\nJev duplicate check: {right}/{graded} right | by style: "
+          + ", ".join(f"{k} {v[0]}/{v[1]}" for k, v in sorted(tally.items()))
+          + f" | {(time.time() - t0) / n:.1f}s per idea | {tokens / n:.0f} tokens per idea"
+          f" = ${tokens / n / 1e6 * PRICE['jev'][0]:.5f} per idea")
 
 
 def writer(cases, models):
@@ -105,7 +112,7 @@ NEEDS_SHORT = [{"id": n["id"], "label": n["label"]} for n in NEEDS]
 
 if __name__ == "__main__":
     part, which = sys.argv[1], sys.argv[2]
-    cases = {"dev": DEV, "holdout": HOLDOUT}[which]
+    cases = {"dev": DEV, "holdout": HOLDOUT, "tune": TUNE, "test": TEST}[which]
     if part == "dupes":
         dupes(cases, bank())
     elif part == "writer":
