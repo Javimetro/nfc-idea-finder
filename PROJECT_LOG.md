@@ -529,12 +529,53 @@ The result: a duplicate now costs about **$0.0003** (Jev only, ~175× cheaper th
 
 Lesson: a second, untouched test is what tells you the truth. It confirmed Jev, and it caught Haiku, which the first test had missed.
 
+#### 28. A Jev lab: 228 test ideas and a better duplicate check
+
+the user's brief: no more Claude API for this session; make Jev's duplicate check as good as possible for Tapwise, with much more test data.
+
+**More test data, written before tuning.** 182 new made-up ideas: at least one reworded copy of *every* idea in the bank (plain, chatty, typos, three-word versions, and a few in Spanish, Finnish and German), 35 new ideas, and 22 honest "could go either way" cases that are never scored. A fixed rule splits them in two: **TUNE** (100, for improving) and **TEST** (82, for scoring once at the end). Both were committed to git before any tuning, so the history proves it.
+
+**A lab instead of guesswork.** A script asks Jev every candidate question once (3 ways to word the shortlist question, 7 different side-by-side questions) and saves the raw answers. Trying a new rule then costs nothing: 1,700+ rules were scored on the saved answers in seconds. The whole lab cost about $0.15 on Jev.
+
+**What the lab found.** The winning question was *"which existing idea already covers this?"* instead of *"which idea is the same?"*. People often send one specific example of an idea that's already in the bank (a toothbrushing timer, when the bank has "one-tap timers for kettle, oven, toothbrushing…"), and "covers" catches that. Both steps must agree: the shortlist step at ≥ 45% and the side-by-side "covers" check at ≥ 55%. The thresholds sit in the middle of clear gaps in the tuning data.
+
+| Duplicate check | TUNE | TEST (3 runs) | Cost per idea |
+|---|---|---|---|
+| Step 27's version | 86/89 | 66/71 | $0.00026 |
+| **New version** | **89/89** | **70–71/71** | $0.00030 |
+
+**Then a weak spot showed up.** The older small test set got slightly *worse* (21/23): "Finnish flashcards" was filed as a copy of "picture cards that play stories", and "a shared tool library" as a copy of "cleaning rounds". A generous "covers" question lets broad ideas swallow new ones that merely look similar. We didn't tweak the thresholds to fix those two (that would be tuning on the test). Instead we wrote a third set, **NEAR**: 26 look-alike new ideas and 20 "specific example" duplicates. We also wrote down the rule for choosing *before* scoring: fewest mistakes wins, and throwing away a good idea counts double.
+
+| On NEAR (unseen) | Right | Good ideas thrown away | Duplicates let through |
+|---|---|---|---|
+| Step 27's version | 36/46 | 3 | 7 |
+| **New version** | **40/46** | 5 | 1 |
+| New version + "same problem" check | 39/46 | 5 | 2 |
+
+**The fix: confidence routing**, a pattern from Jev's own docs. Jev files a duplicate alone only when it's very sure. When it isn't, the idea goes to Claude, which is called for new ideas anyway, together with Jev's suggested match, and Claude makes the call. Measured with Jev only (no Claude calls): every duplicate Jev filed alone was right, **77 of 77** across the unseen sets. About 14% of duplicates go to Claude. All 7 look-alike ideas that used to be thrown away now go to Claude instead. The "very sure" bar was picked after looking at NEAR, and Claude's second opinion hasn't been measured yet (no Claude calls this session); both are said openly.
+
+Lesson: when a cheap model is right most of the time, don't force it to be right all the time. Let it say "not sure" and hand those cases to a stronger model.
+
+#### 29. A code review, and walking through the site in a real browser
+
+the user also asked for a look over the whole code. A browser was set up in Docker (the Pi itself couldn't run one without admin rights). Then every screen was clicked through on desktop and phone sizes, screenshotting each step and logging any errors. What was found and fixed:
+
+- **A security hole.** The "Seen it somewhere?" link accepted anything, including `javascript:` links that run code when clicked. Now that the AI publishes ideas without a human, such a link could have ended up on the public site. Now only `http(s)://` links are accepted, and the site and admin page refuse to make anything else clickable. The other form fields got length limits too.
+- **A crash at startup.** The server runs two copies of the program, and both rebuilt the database tables at the same moment. One could delete a table while the other was reading it, and the site failed to start. It happened once during testing. Now the rebuild happens in one go behind a lock, and it's skipped when nothing changed. 5 of 5 stress-test starts with 4 copies were clean.
+- **A broken menu option.** Once a TypeSafe key existed, the footer offered visitors "Jev" as a ranking engine. That engine is still a placeholder, so choosing it gave an error. It's now off, and the menu hides when there's no real choice.
+- **"I use this" counts disagreed** between the two copies of the program. They're now kept in sync.
+- **The "already in the bank?" hint** missed obvious matches ("a sticker by the door so guests join the wifi" found nothing). It now weighs rare, telling words more (TF-IDF): it shows the right idea for 120 of 145 test duplicates, up from 100. Still free and instant, no AI.
+- **Small things:** the `*` and "optional" no longer drop onto their own line on phones. The admin page now shows idea titles next to ids, Jev's numbers for each decision, and which models decided.
+
+Lesson: click through your own site after every big change. Two of these bugs only appeared when the pieces were put together: the auto-approve made the link field dangerous, and the new API key switched on a half-built feature.
+
 ---
 
 ## Open to-do list
 
 - [ ] Review the flagged curated ideas (the ones marked "unverified" on the site)
-- [ ] Prototype matching: Jev vs. a small general AI model, on the same test personas
+- [ ] Prototype matching: Jev vs. a small general AI model, on the same test personas (the quiz's Jev engine is still a placeholder)
+- [ ] Measure Claude's second opinion on unsure duplicates (`eval_review.py`, needs a short Claude test run)
 - [x] Find the URL of each source (all found except Slay Tag, whose ideas are now credited to the creator, step 22)
 - [x] ~~Find timestamps~~ skipped on purpose (step 22)
 - [x] Write the **tag profiles** table (the buying guide)

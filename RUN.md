@@ -51,7 +51,8 @@ decides by itself: new ideas go straight into the bank, duplicates and spam are 
 decision with an Undo button. Without the key, ideas wait on `/admin` for a human.
 **Jev for duplicates** (recommended): also add `TYPESAFE_API_KEY=...` to `~/tapwise.env`. Then Jev checks every idea
 for duplicates and Claude (`claude-sonnet-5`) only checks and writes up the ideas that are new. Without it, one bigger
-Claude call (`claude-opus-5`) does everything. Test it: `docker exec tapwise python /srv/scripts/eval_review.py dupes dev`.
+Claude call (`claude-opus-5`) does everything. Test it (Jev only, no Claude calls): `docker exec tapwise python /srv/scripts/eval_review.py dupes test` or `... route near`.
+The Jev lab (`scripts/jev_lab.py`) records Jev's raw answers once and tries decision rules offline; see its docstring.
 Optional extras: `TAPWISE_WRITER_MODEL=...` (default `claude-sonnet-5`), `TAPWISE_AI_MODEL=...` (fallback, default `claude-opus-5`) and `-e TAPWISE_AI_DAILY_LIMIT=50`
 (max AI reviews per day, so a flood of spam can't run up the bill).
 
