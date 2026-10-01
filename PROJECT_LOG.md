@@ -499,6 +499,36 @@ Decision: Claude stays in charge for now, and the Jev team-up is built and ready
 
 Lesson: test on your own data before switching. And beware of tuning on the test you score with: 23/24 after fixes is a bit flattering, because the fixes were made looking at those same 25 ideas.
 
+#### 27. Making Jev good enough, and testing it honestly
+
+After step 26, the user's call was clear: Jev is so cheap that it's worth making it work. And this project's real goal became **showing a human in the AI loop choosing the right model for each job**, with Jev as the headline. The NFC idea bank is the vehicle.
+
+So we split the job: **Jev only checks for duplicates; Claude only checks and writes up ideas that aren't duplicates.**
+
+**A fairer test first.** In step 26 we fixed Jev while looking at the same 25 ideas we scored it on, which flatters the result. So before changing any code we wrote a second set of 29 made-up ideas, the **holdout**, and committed it to git (so the history proves it came first). Tuning happened only on the first set (**dev**). The holdout was scored once, at the very end.
+
+**Redesigning the Jev check.** Jev's own docs say: ask small, specific questions and combine the answers in code. So instead of one big "which idea is this the same as?" question, there are now two steps:
+1. One question over the whole bank shortlists the 3 closest ideas.
+2. The new idea and each shortlisted idea sit side by side, and Jev answers two yes/no questions: *same idea, just worded differently?* and *same everyday problem?*
+
+Plain code makes the call from those numbers. Looking at Jev's raw answers made the pattern obvious: real duplicates scored around 1.00 in step 1 and passed both yes/no questions, while the wrong matches were weaker on both.
+
+One honest correction along the way: "mark the dishwasher as clean or dirty" was labelled *new* in step 26. On a second look, the bank's "Family chores you tick off" idea names the dishwasher and says everyone sees it. A fair reviewer could call it a duplicate, so it's now marked "borderline" and not scored.
+
+**Picking the cheapest Claude that's good enough** for checking and writing: Haiku 4.5 (cheapest) vs Sonnet 5.
+
+| Test | Jev duplicate check | Claude Opus 5 (old way, does everything) | Haiku 4.5 writer | Sonnet 5 writer |
+|---|---|---|---|---|
+| Dev | 16/16 | 24/24 | 11/11 | 11/11 |
+| **Holdout** (unseen) | **23/23** | 23/23 | **14/15** | 15/15 |
+| Cost per idea | **$0.00026** | $0.046 | $0.003 | $0.008 |
+
+Haiku looked perfect on dev, then on the holdout it **rejected a good idea**: medical info on a bike helmet for paramedics. With the AI deciding on its own, that's exactly the mistake to avoid, so the writer is **Sonnet 5**. We didn't tweak Haiku's instructions to fix it, because that would be tuning on the test.
+
+The result: a duplicate now costs about **$0.0003** (Jev only, ~175× cheaper than before) and a new idea about **$0.008** (~6× cheaper). If Jev is ever unavailable, the old Claude-only review takes over automatically.
+
+Lesson: a second, untouched test is what tells you the truth. It confirmed Jev, and it caught Haiku, which the first test had missed.
+
 ---
 
 ## Open to-do list

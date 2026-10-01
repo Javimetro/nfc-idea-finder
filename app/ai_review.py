@@ -8,9 +8,9 @@ Two models, each doing the job it's best value for (the comparison is in PROJECT
      Step 2: each shortlisted idea is compared side by side with small yes/no questions.
      Duplicates are filed right here; Claude is never called for them.
 
-  2. Claude - only for ideas that aren't duplicates: is it a real, safe NFC idea? If so,
-     write it up (titles, summary, needs) so it can go live. A small, cheap Claude model
-     is enough for this (WRITER_MODEL).
+  2. Claude Sonnet 5 - only for ideas that aren't duplicates: is it a real, safe NFC idea?
+     If so, write it up (titles, summary, needs) so it can go live. (Haiku 4.5 is cheaper and
+     looked perfect on the DEV cases, but rejected a good idea on the HOLDOUT ones.)
 
 Without a TypeSafe key (or if Jev fails) one bigger Claude call does everything (claude_review).
 Without any key the AI review is off; ideas wait on /admin. Only the idea text is sent to
@@ -31,7 +31,7 @@ except ImportError:                        # running without the AI extras: AI r
     BaseModel = object
 
 MODEL = os.environ.get("TAPWISE_AI_MODEL", "claude-opus-5")                    # fallback: does everything
-WRITER_MODEL = os.environ.get("TAPWISE_WRITER_MODEL", "claude-haiku-4-5")     # only writes new ideas
+WRITER_MODEL = os.environ.get("TAPWISE_WRITER_MODEL", "claude-sonnet-5")      # only checks + writes new ideas
 JEV_URL = "https://api.typesafe.ai/v1/systemone"
 JEV_MODEL = os.environ.get("TAPWISE_JEV_MODEL", "jev-latest")
 

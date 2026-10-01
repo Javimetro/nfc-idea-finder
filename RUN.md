@@ -50,9 +50,9 @@ No `ADMIN_PASSWORD` = the admin page is switched off.
 decides by itself: new ideas go straight into the bank, duplicates and spam are filed away. `/admin` lists every
 decision with an Undo button. Without the key, ideas wait on `/admin` for a human.
 **Jev for duplicates** (recommended): also add `TYPESAFE_API_KEY=...` to `~/tapwise.env`. Then Jev checks every idea
-for duplicates and Claude (`claude-haiku-4-5`) only checks and writes up the ideas that are new. Without it, one bigger
+for duplicates and Claude (`claude-sonnet-5`) only checks and writes up the ideas that are new. Without it, one bigger
 Claude call (`claude-opus-5`) does everything. Test it: `docker exec tapwise python /srv/scripts/eval_review.py dupes dev`.
-Optional extras: `TAPWISE_WRITER_MODEL=...` (default `claude-haiku-4-5`), `TAPWISE_AI_MODEL=...` (fallback, default `claude-opus-5`) and `-e TAPWISE_AI_DAILY_LIMIT=50`
+Optional extras: `TAPWISE_WRITER_MODEL=...` (default `claude-sonnet-5`), `TAPWISE_AI_MODEL=...` (fallback, default `claude-opus-5`) and `-e TAPWISE_AI_DAILY_LIMIT=50`
 (max AI reviews per day, so a flood of spam can't run up the bill).
 
 ## On any computer, without Docker

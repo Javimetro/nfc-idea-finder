@@ -13,15 +13,23 @@ Tapwise stays private until the user explicitly says "go public". Until then:
 - Don't build Turnstile, rate limits or other public-launch work unless the user asks. Mentioning it is fine.
 - If a task would make the site reachable from the internet, stop and ask the user first.
 
+## The main goal (more important than the idea bank itself)
+
+the user's main goal for this repo: **show a human staying in the AI loop and picking the right model for each task**, with measured evidence (accuracy, cost, speed) behind every choice. The NFC idea bank is the vehicle for that.
+- **Jev (TypeSafe) gets special prominence** in the README and log: the user chose it for the duplicate check because it's very cheap for that job, and wanted to try an innovative model. Keep that story front and centre.
+- Any change of model, or of how a model is used, gets measured first with `scripts/eval_review.py` on `scripts/review_cases.py` (tune on DEV, score HOLDOUT once), and the numbers go in PROJECT_LOG.md and the README's model table.
+- Default to the cheapest model that measures "good enough" for the task, and say why.
+
 ## What this project is
 
-A Flask + SQLite website ("Tapwise") that asks visitors questions about their everyday life and suggests NFC tag ideas that fit, with credit to whoever shared the idea (YouTube/Reddit creators, or other visitors), a link to buy the right tag, and setup steps. It's also a growing **community idea bank**: visitors can add their own ideas via a suggestion form, an admin (the user) reviews and approves them at `/admin`, and approved ideas show up credited with the visitor's name. People can also mark an idea "I use this" to help good ideas rise to the top.
+A Flask + SQLite website ("Tapwise") that asks visitors questions about their everyday life and suggests NFC tag ideas that fit, with credit to whoever shared the idea (YouTube/Reddit creators, or other visitors), a link to buy the right tag, and setup steps. It's also a growing **community idea bank**: visitors can add their own ideas via a suggestion form, AI reviews them automatically (Jev checks for duplicates, Claude checks and writes up new ones; `app/ai_review.py`), every decision is listed at `/admin` with undo, and approved ideas show up credited with the visitor's name. People can also mark an idea "I use this" to help good ideas rise to the top.
 
 ## Architecture, quick version
 
 - `app/app.py` — Flask app: routes, matching, admin (HTTP basic auth via `ADMIN_PASSWORD` env var), duplicate-idea detection.
 - `app/database.py` — SQLite. Curated content (`db/*.json`) is dropped & reloaded into SQLite on every start; visitor submissions and approved community ideas live only in SQLite and are never touched by that reload.
-- `app/engines/` — the idea-ranking engines (`rules.py` is the one in use; `jev.py` is a placeholder for a hosted AI model, not usable on the Pi).
+- `app/ai_review.py` — the AI review of visitor ideas: Jev (duplicates) + Claude Sonnet 5 (real/safe? write it up); Claude-only fallback.
+- `app/engines/` — the idea-ranking engines for the quiz (`rules.py` is the one in use; `jev.py` is a placeholder).
 - `app/questions.py` — the branching quiz ("worlds" of everyday life).
 - `app/tags.py` — matches an idea to which physical NFC tag to buy.
 - `app/static/` — plain HTML/CSS/JS frontend (`index.html`, `app.js`, `style.css`, `admin.html`). No build step, no framework.
