@@ -4,6 +4,15 @@ Read these two files before doing anything else:
 - **PROJECT_LOG.md** — the whole story so far, in order, step by step, written simply. This is the real source of truth for *why* things are the way they are.
 - **RUN.md** — how to run it locally and how it's deployed on the user's Raspberry Pi (Docker).
 
+## Private until the user says "go public" (hard rule)
+
+Tapwise stays private until the user explicitly says "go public". Until then:
+- Don't publish it anywhere: no domain, no Cloudflare Tunnel, no port forwarding, no public hosting.
+- It's only reachable on the user's home network and over Tailscale.
+- The GitHub repo stays private.
+- Don't build Turnstile, rate limits or other public-launch work unless the user asks. Mentioning it is fine.
+- If a task would make the site reachable from the internet, stop and ask the user first.
+
 ## What this project is
 
 A Flask + SQLite website ("Tapwise") that asks visitors questions about their everyday life and suggests NFC tag ideas that fit, with credit to whoever shared the idea (YouTube/Reddit creators, or other visitors), a link to buy the right tag, and setup steps. It's also a growing **community idea bank**: visitors can add their own ideas via a suggestion form, an admin (the user) reviews and approves them at `/admin`, and approved ideas show up credited with the visitor's name. People can also mark an idea "I use this" to help good ideas rise to the top.
