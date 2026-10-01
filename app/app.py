@@ -6,12 +6,14 @@ import hmac
 import os
 import re
 import sys
+import threading
 from functools import wraps
 from urllib.parse import quote, quote_plus
 
 from flask import Flask, Response, jsonify, request, send_from_directory
 
 sys.path.insert(0, os.path.dirname(__file__))
+import ai_review                                  # noqa: E402
 import database                                   # noqa: E402
 from engines import ENGINES, available_engines   # noqa: E402
 from questions import NEEDS, QUESTIONS, WORLDS     # noqa: E402
@@ -290,8 +292,38 @@ def suggest():
     desc = (d.get("description") or "").strip()
     if len(desc) < 10:
         return jsonify(error="Please describe the idea in a sentence or two."), 400
-    database.add_submission({**d, "description": desc[:2000]})
+    sub_id = database.add_submission({**d, "description": desc[:2000]})
+    if ai_review.enabled() and database.ai_reviews_today() < AI_DAILY_LIMIT:
+        threading.Thread(target=run_ai_review, args=(sub_id,), daemon=True).start()   # visitor doesn't wait
     return jsonify(ok=True)
+
+
+# ------------------------------------------------------------------ AI first review
+# Each new suggestion gets one Claude call (see ai_review.py). When the AI is sure, it
+# files the suggestion itself (duplicate / not an idea); the admin can undo that.
+# Everything else stays pending, with the AI's verdict and a pre-filled approve form.
+AI_DAILY_LIMIT = int(os.environ.get("TAPWISE_AI_DAILY_LIMIT", 50))   # caps the bill if someone floods the form
+
+
+def run_ai_review(sub_id):
+    sub = database.get_submission(sub_id)
+    if not sub:
+        return None
+    ideas = [{"id": i["id"], "title": i["title"], "summary": i["summary"]}
+             for i in CATALOG["ideas"] if i["status"] != "hidden"]
+    needs = [{"id": n["id"], "label": n["label"]} for n in NEEDS]
+    r = ai_review.review(sub["description"], sub.get("place"), ideas, needs)
+    if not r:
+        return None
+    if sub["status"] == "pending" and r["confidence"] == "high":
+        if r["verdict"] == "duplicate":
+            database.set_submission_status(sub_id, "duplicate", r["duplicate_of"])
+            r["auto"] = "duplicate"
+        elif r["verdict"] == "not_an_idea":
+            database.set_submission_status(sub_id, "rejected")
+            r["auto"] = "rejected"
+    database.set_ai_review(sub_id, r)
+    return r
 
 
 @app.get("/api/ideas/similar")
@@ -362,7 +394,7 @@ def admin_page():
 @app.get("/api/admin/submissions")
 @admin_only
 def suggestions():
-    return jsonify(submissions=database.list_submissions(),
+    return jsonify(submissions=database.list_submissions(), ai_enabled=ai_review.enabled(),
                    needs=[{"id": n["id"], "label": n.get("short") or n["label"], "world": n["question"]} for n in NEEDS],
                    worlds=[{"key": k, "label": t} for k, t, _, _ in WORLDS])
 
@@ -382,6 +414,16 @@ def approve(sub_id):
     cid = database.add_community_idea(sub_id, f)
     reload_catalog()
     return jsonify(ok=True, id=cid)
+
+
+@app.post("/api/admin/submissions/<int:sub_id>/ai-review")
+@admin_only
+def ai_review_now(sub_id):
+    """Admin button: (re)run the AI review, e.g. for ideas sent before the AI was switched on."""
+    if not ai_review.enabled():
+        return jsonify(error="AI is off. Start the app with ANTHROPIC_API_KEY=..."), 400
+    r = run_ai_review(sub_id)
+    return jsonify(ok=bool(r), review=r) if r else (jsonify(error="The AI didn't answer, try again later."), 502)
 
 
 @app.post("/api/admin/submissions/<int:sub_id>/status")

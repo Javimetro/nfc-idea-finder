@@ -74,10 +74,11 @@ def load_content():
     for table in ("sources", "ideas", "idea_sources", "tag_profiles"):
         con.execute(f"DROP TABLE IF EXISTS {table}")
     con.executescript(SCHEMA)
-    try:                                              # older databases: add the new column
-        con.execute("ALTER TABLE submissions ADD COLUMN place TEXT")
-    except sqlite3.OperationalError:
-        pass
+    for col in ("place TEXT", "ai_review TEXT"):     # older databases: add the newer columns
+        try:
+            con.execute(f"ALTER TABLE submissions ADD COLUMN {col}")
+        except sqlite3.OperationalError:
+            pass
 
     con.executemany(
         "INSERT INTO sources VALUES (:id,:title,:url,:type,:platform,:creator_name,:creator_url,:language,:notes)",
@@ -142,20 +143,39 @@ def get_catalog():
 
 def add_submission(d):
     con = connect()
-    con.execute(
+    cur = con.execute(
         "INSERT INTO submissions (description, place, source_url, start_seconds, submitter_name, credit_ok, email, context)"
         " VALUES (?,?,?,?,?,?,?,?)",
         (d["description"], d.get("place"), d.get("source_url"), d.get("start_seconds"), d.get("submitter_name"),
          1 if d.get("credit_ok") else 0, d.get("email"), json.dumps(d.get("context")) if d.get("context") else None))
+    sub_id = cur.lastrowid
     con.commit()
     con.close()
+    return sub_id
 
 
 def list_submissions():
     con = connect()
     rows = [dict(r) for r in con.execute("SELECT * FROM submissions ORDER BY submitted_at DESC")]
     con.close()
+    for r in rows:
+        r["ai_review"] = json.loads(r["ai_review"]) if r.get("ai_review") else None
     return rows
+
+
+def ai_reviews_today():
+    con = connect()
+    n = con.execute("SELECT COUNT(*) FROM submissions WHERE ai_review IS NOT NULL"
+                    " AND submitted_at >= datetime('now', 'start of day')").fetchone()[0]
+    con.close()
+    return n
+
+
+def set_ai_review(sub_id, review):
+    con = connect()
+    con.execute("UPDATE submissions SET ai_review = ? WHERE id = ?", (json.dumps(review), sub_id))
+    con.commit()
+    con.close()
 
 
 def get_submission(sub_id):

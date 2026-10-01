@@ -21,6 +21,8 @@
     .needs input { width: auto; margin: 0; }
     .actions { display: flex; gap: .6rem; margin-top: 1rem; flex-wrap: wrap; }
     .pill { font-size: .75rem; padding: .15rem .55rem; border-radius: 999px; background: var(--surface-2); color: var(--muted); }
+    .ai { border-left: 3px solid var(--accent, #6b5bd6); background: var(--surface-2); border-radius: 0 10px 10px 0; padding: .6rem .9rem; margin: 0 0 1rem; font-size: .9rem; }
+    .ai .btn { margin-top: .5rem; }
     @media (max-width: 600px) { .grid { grid-template-columns: 1fr; } }
   </style>
 </head>
@@ -28,7 +30,7 @@
   <div class="wrap">
     <p class="eyebrow">Tapwise admin</p>
     <h2>Ideas waiting for the bank</h2>
-    <p class="muted">Clean up each idea, link it to the everyday needs it solves (so the quiz can suggest it), then approve. It goes live right away, credited to the visitor.</p>
+    <p class="muted">The AI gives every new idea a first look: it files sure duplicates and spam by itself (you can undo) and pre-fills the form for new ones. Check it, link it to the everyday needs it solves (so the quiz can suggest it), then approve. It goes live right away, credited to the visitor.</p>
     <p><a href="/">← Back to the site</a></p>
     <div id="list"></div>
   </div>
@@ -41,31 +43,38 @@ const SETUP = [["automation", "Phone automation (Shortcuts / MacroDroid)"], ["li
 async function load() {
   const d = await fetch("/api/admin/submissions").then((r) => r.json());
   const worlds = Object.fromEntries(d.worlds.map((w) => [w.key, w.label]));
-  const needsHtml = (id) => Object.keys(worlds).map((wk) => {
+  const opts = (list, sel) => list.map(([v, l]) => `<option value="${v}"${sel === v ? " selected" : ""}>${l}</option>`).join("");
+  const needsHtml = (picked) => Object.keys(worlds).map((wk) => {
     const ns = d.needs.filter((n) => n.world === wk);
-    return ns.length ? `<b>${esc(worlds[wk])}</b>` + ns.map((n) => `<label><input type="checkbox" name="needs" value="${n.id}">${esc(n.label)}</label>`).join("") : "";
+    return ns.length ? `<b>${esc(worlds[wk])}</b>` + ns.map((n) => `<label><input type="checkbox" name="needs" value="${n.id}"${picked.includes(n.id) ? " checked" : ""}>${esc(n.label)}</label>`).join("") : "";
   }).join("");
   const subs = d.submissions.sort((a, b) => (a.status !== "pending") - (b.status !== "pending"));
   $("#list").innerHTML = subs.length ? subs.map((s) => {
     const pending = s.status === "pending";
+    const ai = s.ai_review, dr = (ai && ai.draft) || {};
+    const verdict = ai ? { new: "🆕 New idea", duplicate: "🔁 Duplicate of " + esc(ai.duplicate_of), not_an_idea: "🚫 Not a real idea" }[ai.verdict] : "";
+    const aiBox = ai ? `<div class="ai"><b>🤖 AI: ${verdict}</b> <span class="muted">(${esc(ai.confidence)} confidence)</span><br>${esc(ai.reason)}
+        ${ai.auto && !pending ? `<br><button type="button" class="btn ghost" data-undo="${s.id}">Undo: the AI filed this as ${esc(ai.auto)}, put it back</button>` : ""}</div>`
+      : pending && d.ai_enabled ? `<div class="ai">🤖 No AI review yet. <button type="button" class="btn ghost" data-ai="${s.id}">Ask the AI</button></div>` : "";
     const who = s.submitter_name ? `${esc(s.submitter_name)}${s.credit_ok ? "" : " (doesn't want credit)"}` : "anonymous";
     return `<form class="sub ${pending ? "" : "done"}" data-id="${s.id}">
       <div style="display:flex;gap:.5rem;align-items:center;flex-wrap:wrap">
         <span class="pill">#${s.id}</span><span class="pill">${esc(s.status)}${s.linked_idea_id ? (s.status === "duplicate" ? " of " : " → ") + esc(s.linked_idea_id) : ""}</span>
         <span class="muted" style="font-size:.85rem">${esc(s.submitted_at)} · from ${who}${s.email ? " · " + esc(s.email) : ""}</span>
       </div>
+      ${aiBox}
       <div class="raw">${esc(s.description)}${s.place ? `\n📍 Tag goes: ${esc(s.place)}` : ""}${s.source_url ? `\n🔗 <a href="${esc(s.source_url)}" target="_blank" rel="noopener">${esc(s.source_url)}</a>` : ""}</div>
       ${pending ? `<div class="grid">
-        <label>Short curious title (the hook) <input name="hook" placeholder="e.g. The Bike Lock That Remembers"></label>
-        <label>Plain title <input name="title" placeholder="e.g. Log where you parked your bike"></label>
-        <label class="full">Summary (one or two sentences, shown to visitors) <textarea name="summary" rows="2">${esc(s.description)}</textarea></label>
-        <label>Where the tag goes <input name="place" value="${esc(s.place || "")}" placeholder="on your bike lock"></label>
-        <label>What happens when you tap <input name="result" placeholder="your phone saves your location"></label>
-        <label>How it's set up <select name="setup_type">${SETUP.map(([v, l]) => `<option value="${v}">${l}</option>`).join("")}</select></label>
-        <label>Difficulty <select name="difficulty"><option value="easy">Easy</option><option value="medium">Medium</option><option value="advanced">Advanced</option></select></label>
+        <label>Short curious title (the hook) <input name="hook" value="${esc(dr.hook || "")}" placeholder="e.g. The Bike Lock That Remembers"></label>
+        <label>Plain title <input name="title" value="${esc(dr.title || "")}" placeholder="e.g. Log where you parked your bike"></label>
+        <label class="full">Summary (one or two sentences, shown to visitors) <textarea name="summary" rows="2">${esc(dr.summary || s.description)}</textarea></label>
+        <label>Where the tag goes <input name="place" value="${esc(dr.place || s.place || "")}" placeholder="on your bike lock"></label>
+        <label>What happens when you tap <input name="result" value="${esc(dr.result || "")}" placeholder="your phone saves your location"></label>
+        <label>How it's set up <select name="setup_type">${SETUP.map(([v, l]) => `<option value="${v}"${dr.setup_type === v ? " selected" : ""}>${l}</option>`).join("")}</select></label>
+        <label>Difficulty <select name="difficulty">${opts([["easy", "Easy"], ["medium", "Medium"], ["advanced", "Advanced"]], dr.difficulty)}</select></label>
         <label>Credit as <input name="contributor" value="${esc(s.credit_ok ? s.submitter_name || "" : "")}" placeholder="empty = A Tapwise visitor"></label>
-        <label>Phone <select name="phone_support"><option value="any">Any phone</option><option value="iphone_only">iPhone only</option><option value="android_only">Android only</option></select></label>
-        <div class="full"><label>Which everyday needs does it solve? (so the quiz can suggest it)</label><div class="needs">${needsHtml()}</div></div>
+        <label>Phone <select name="phone_support">${opts([["any", "Any phone"], ["iphone_only", "iPhone only"], ["android_only", "Android only"]], dr.phone_support)}</select></label>
+        <div class="full"><label>Which everyday needs does it solve? (so the quiz can suggest it)</label><div class="needs">${needsHtml(dr.needs || [])}</div></div>
       </div>
       <div class="admin-dupes" id="dupes-${s.id}" hidden><summary></summary></div>
       <p class="error" role="alert"></p>
@@ -93,6 +102,18 @@ async function checkDupes(id, text) {
 }
 
 document.addEventListener("click", async (e) => {
+  const undo = e.target.closest("[data-undo]"), ask = e.target.closest("[data-ai]");
+  if (undo) {
+    await fetch(`/api/admin/submissions/${undo.dataset.undo}/status`, { method: "POST",
+      headers: { "Content-Type": "application/json" }, body: JSON.stringify({ status: "pending" }) });
+    return load();
+  }
+  if (ask) {
+    ask.disabled = true; ask.textContent = "Thinking…";
+    const res = await fetch(`/api/admin/submissions/${ask.dataset.ai}/ai-review`, { method: "POST" });
+    if (!res.ok) { ask.textContent = (await res.json()).error || "Failed"; return; }
+    return load();
+  }
   const b = e.target.closest("[data-dupe-of]");
   if (!b) return;
   const res = await fetch(`/api/admin/submissions/${b.dataset.sub}/status`, { method: "POST",

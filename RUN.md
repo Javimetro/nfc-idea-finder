@@ -21,6 +21,7 @@
          -p 8080:8000 \
          -v tapwise_data:/srv/app/data \
          -e ADMIN_PASSWORD='pick-a-password' \
+         -e ANTHROPIC_API_KEY='sk-ant-...' \
          tapwise
 
 Open in your laptop's browser:
@@ -38,6 +39,7 @@ Open in your laptop's browser:
       -p 8080:8000 \
       -v tapwise_data:/srv/app/data \
       -e ADMIN_PASSWORD='pick-a-password' \
+      -e ANTHROPIC_API_KEY='sk-ant-...' \
       tapwise
 
 Visitor ideas, approved community ideas and "I use this" counts are kept in the `tapwise_data` volume,
@@ -47,7 +49,13 @@ so rebuilding never deletes them.
 The browser asks for a login: any username, and the password you put in `ADMIN_PASSWORD`.
 No `ADMIN_PASSWORD` = the admin page is switched off.
 
+**AI first review** (optional): with `ANTHROPIC_API_KEY` set, every new visitor idea gets one Claude call that
+spots duplicates and spam (filed automatically when it's sure, with an Undo button on `/admin`) and pre-fills the
+approve form for new ideas. Without the key everything still works; you just review by hand.
+Optional extras: `-e TAPWISE_AI_MODEL=...` (default `claude-opus-5`) and `-e TAPWISE_AI_DAILY_LIMIT=50`
+(max AI reviews per day, so a flood of spam can't run up the bill).
+
 ## On any computer, without Docker
 
-    pip install flask
+    pip install -r requirements.txt     # or just `pip install flask` (AI review then stays off)
     python app/app.py                  # -> http://localhost:8000

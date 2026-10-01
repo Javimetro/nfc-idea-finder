@@ -432,18 +432,39 @@ Two places use it:
 
 Lesson: you don't always need an AI model for "are these the same" — word overlap is fast, free, and good enough to flag likely duplicates for a human to confirm.
 
+#### 22. Two sources fixed, and the rule for "no source"
+
+The last two videos without a link: Andilynn's Amazing Reviews was found (now linked). Slay Tag's "Top 5 NFC tag creative ideas" could not be found again anywhere. A credit nobody can click is not much of a credit, so its five ideas (caffeine log, focus mode, voice notes, journaling, "send my location") are now credited to **the Tapwise creator**, like the other ideas written from general NFC know-how. The rule from now on: link the real source if there is one; if there isn't, say honestly that we wrote it, never invent one.
+
+We also decided to **skip video timestamps**. Finding the exact second in 20+ videos is a lot of work for a small gain: the link to the video is what matters.
+
+Lesson: honest "we wrote this" beats a credit nobody can check.
+
+#### 23. An AI first look at every visitor idea
+
+The duplicate finder from step 21 only *flags* likely duplicates: a human still had to read every suggestion. the user doesn't have time for that, so now **Claude gives each new idea a first review**, right after it's sent (the visitor doesn't wait for it):
+
+- **Duplicate?** The AI reads the whole idea bank and decides whether the suggestion is the same idea in different words ("a tag that shares wifi" = "guest wifi without typing the password"), and which one.
+- **Real idea?** Spam, ads, nonsense and unsafe advice (like storing passwords on a tag anyone can scan) get caught.
+- **New?** It writes a clean draft for the approve form: titles, summary, where the tag goes, and which everyday needs it helps with.
+
+When the AI is **sure**, it files duplicates and spam by itself; anything less than sure stays for a human. Nothing is lost: the admin page shows what the AI decided and why, with an **Undo** button. Approving a new idea is now mostly reading the pre-filled form and clicking once.
+
+Two safety nets: the site works exactly the same without an AI key (you just review by hand), and there's a **daily limit** on AI reviews, so if someone floods the form with junk the bill can't run away.
+
+Lesson: let the AI do the boring first pass, but keep a human able to see and undo every decision it made.
+
 ---
 
 ## Open to-do list
 
-- [ ] the user reviews the 43 flagged ideas
+- [ ] Review the flagged curated ideas (the ones marked "unverified" on the site)
 - [ ] Prototype matching: Jev vs. a small general AI model, on the same test personas
-- [x] Find the URL of each source (19/21 videos found; Andilynn's Amazing Reviews and Slay Tag still missing)
-- [ ] Find timestamps using the anchor quotes (needs YouTube transcripts)
-- [ ] Write the **tag profiles** table (the buying guide)
-- [ ] Design the interview questions
-- [ ] Prototype the AI matching with test answers, before building any UI
-- [ ] Build the site; decide hosting
+- [x] Find the URL of each source (all found except Slay Tag, whose ideas are now credited to the creator, step 22)
+- [x] ~~Find timestamps~~ skipped on purpose (step 22)
+- [x] Write the **tag profiles** table (the buying guide)
+- [x] Design the interview questions
+- [x] Build the site (runs on the Pi); decide public hosting
 - [ ] Add more sources (the database is home-heavy; few business and workplace ideas yet)
 
 ## Before going public (checklist)
@@ -453,6 +474,7 @@ Visitor suggestions flow: pending → the user gets notified (n8n) → review on
 - [x] Lock `/api/suggestions` (now behind the admin password)
 - [x] Admin review page behind a password (approve / reject / duplicate) → `/admin`
 - [ ] Rate limit on "I use this" (now: one per browser, easy to cheat)
+- [x] AI first review of every suggestion: duplicates, spam, pre-filled approve form (step 23)
 - [ ] Notification of new suggestions via n8n (already running on the Pi)
 - [ ] Cloudflare Turnstile + rate limit per visitor on the suggestion form
 - [ ] Privacy note next to the form (what is stored, why, for how long); delete emails after replying

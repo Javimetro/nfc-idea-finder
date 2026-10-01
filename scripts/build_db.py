@@ -745,6 +745,15 @@ for x in sources:
         if _urls[x["id"]].get("check"):
             x["notes"] = ((x["notes"] or "") + " URL check: " + _urls[x["id"]]["check"]).strip()
 
+# Slay Tag's video (s23) could not be found online again, so there is no link anyone
+# can check. Its ideas are general NFC know-how, so they are credited to the
+# Tapwise creator (s00) instead of an uncheckable source.
+UNFINDABLE_SOURCES = {"s23"}
+for l in links:
+    if l["source_id"] in UNFINDABLE_SOURCES:
+        l["source_id"], l["anchor_quote"] = "s00", None
+sources = [x for x in sources if x["id"] not in UNFINDABLE_SOURCES]
+
 # Two books were in the first batches and were later removed from the sources
 # (we only keep sources everyone can check and link to). Their links go, and so
 # does any idea that no remaining source explains.
