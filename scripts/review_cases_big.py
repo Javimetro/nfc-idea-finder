@@ -203,6 +203,62 @@ CASES = [
 ]
 
 
+# ------------------------------------------------------------------ NEAR: a third set, written after scoring TEST
+# TEST showed the weak spot: look-alike new ideas. This set targets it, written before scoring any fix on it.
+# Pre-registered decision: the version with fewer mistakes wins, a false duplicate counting double
+# (it silently throws away someone's idea; a missed duplicate only adds a near-copy to the bank).
+NEAR = [
+    # look-alike new ideas: same object or mechanism as a bank idea, clearly different purpose
+    ("tag on the kettle that tells my partner I'm making tea and asks if they want a cup", "new", None, "near"),
+    ("tag on my nightstand that logs what time I went to bed, to track my sleep schedule", "new", None, "near"),
+    ("sticker on the car dashboard that opens my insurance and roadside assistance numbers", "new", None, "near"),
+    ("tag on the guest room door that shows guests where the towels are and the breakfast times", "new", None, "near"),
+    ("tag on a library bookshelf that shows which books arrived this month", "new", None, "near"),
+    ("tag on the pet carrier that opens my cat's vaccination record and pet passport", "new", None, "near"),
+    ("tag on the office coffee machine that tells facilities it needs descaling", "new", None, "near"),
+    ("tags on train seats so passengers can report a broken seat", "new", None, "near"),
+    ("tag on my car key fob that opens the page to book the next car service", "new", None, "near"),
+    ("tag on my e-reader case that starts reading the book out loud", "new", None, "near"),
+    ("tag on my tennis bag that starts keeping score of my match", "new", None, "near"),
+    ("tag on the window that starts a guided breathing exercise", "new", None, "near"),
+    ("tag in my wallet that shows my blood donor card and donation history", "new", None, "near"),
+    ("tag on the plant pot in my meditation corner that plays calming nature sounds", "new", None, "near"),
+    ("tag on the stairs that counts how many times I climbed them today", "new", None, "near"),
+    ("tag on a shared office desk: tap to book that desk for the day", "new", None, "near"),
+    ("tag on the fridge that starts a video call with grandma", "new", None, "near"),
+    ("tag on the car seat that reminds me there's a baby in the back when I leave the car", "new", None, "near"),
+    ("tag on the bike rack at work that logs my cycling days for the company challenge", "new", None, "near"),
+    ("tag on my laptop that locks the screen when I walk away", "new", None, "near"),
+    ("tag on the wedding guest book that opens a page to record a video message for the couple", "new", None, "near"),
+    ("tag on the wardrobe that suggests an outfit based on today's weather", "new", None, "near"),
+    ("tag on a tree in the park that tells walkers what species it is", "new", None, "near"),
+    ("tag on my keyboard that switches my computer between work and gaming profiles", "new", None, "near"),
+    ("tag on the door of a public toilet to report that it needs cleaning", "new", None, "near"),
+    ("tag on the kids' piggy bank that shows how much they've saved towards their goal", "new", None, "near"),
+    # "one specific example" of a broader bank idea: these should stay duplicates
+    ("tag on the shower wall that starts a 5-minute timer to save water", "duplicate", "i006", "plain"),
+    ("tag on the speaker that plays a different radio station for each family member", "duplicate", "i016", "plain"),
+    ("tag on my desk that turns on a 'do not disturb' light so the kids know I'm in a call", "duplicate", "i103|i031", "plain"),
+    ("tag on the washing machine that shows the right program for each fabric", "duplicate", "i020", "plain"),
+    ("tag on the medicine box that shows the leaflet in large print for my grandma", "duplicate", "i051|i020", "plain"),
+    ("tag on my contact lens case to remember when I opened the new pair", "duplicate", "i004", "plain"),
+    ("tag on the dog's water bowl so the family knows someone refilled it", "duplicate", "i092|i090", "plain"),
+    ("tag on the fridge door that adds milk to the shopping list", "duplicate", "i022", "plain"),
+    ("tag in my running jacket: tap after a run to keep my habit streak going", "duplicate", "i091", "plain"),
+    ("tag on the coffee table that switches the lights to movie mode", "duplicate", "i014", "plain"),
+    ("tag on the guitar amp that starts my practice playlist", "duplicate", "i016|i035", "plain"),
+    ("tag on my headphone case that connects the headphones to my phone", "duplicate", "i088|i069", "plain"),
+    ("sticker on the router so visitors can join the wifi", "duplicate", "i043", "short"),
+    ("tag at the door that tells me if the back window is still open before I leave", "duplicate", "i084", "plain"),
+    ("tag in my car that texts my wife I'm on my way home", "duplicate", "i041", "plain"),
+    ("tag on the baby monitor that opens its manual", "duplicate", "i020", "short"),
+    ("tag on the kids' bedroom door that starts a bedtime story on the speaker", "duplicate", "i012|i081", "plain"),
+    ("tap the printer to print without setting it up", "duplicate", "i071", "short"),
+    ("tag in my wallet that calls my sister if I have an emergency", "duplicate", "i095", "plain"),
+    ("tag on each jar of homemade jam that shows the recipe and when I made it", "duplicate", "i105|i051", "plain"),
+]
+
+
 def split(text):
     """TUNE or TEST, decided by a hash of the text: fixed, random-looking, about half each."""
     return "TEST" if int(hashlib.sha256(text.encode()).hexdigest(), 16) % 2 else "TUNE"
