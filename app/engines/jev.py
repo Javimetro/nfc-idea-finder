@@ -5,7 +5,7 @@ SCORE how well each remaining idea fits the visitor's answers, and re-rank by th
 score. Only quiz answers are sent, never names or emails.
 
 To finish: read the official API reference (https://docs.typesafe.ai), put the key
-in the environment as JEV_API_KEY, and implement `score_fit` below.
+in the environment as TYPESAFE_API_KEY, and implement `score_fit` below.
 """
 import os
 
@@ -14,7 +14,7 @@ LABEL = "Jev (TypeSafe AI)"
 
 
 def available():
-    return bool(os.environ.get("JEV_API_KEY"))
+    return bool(os.environ.get("TYPESAFE_API_KEY"))
 
 
 def score_fit(answers, ideas):
