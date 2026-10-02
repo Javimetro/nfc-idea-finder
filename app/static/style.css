@@ -403,3 +403,8 @@ dialog label .lbl { display: block; }
 .dupe-row { display: flex; align-items: center; justify-content: space-between; gap: .8rem; background: var(--surface-2); border-radius: 10px; padding: .5rem .8rem; margin-top: .4rem; }
 .dupe-row div b { font-size: .88rem; display: block; }
 .dupe-row div span { color: var(--muted); font-size: .78rem; }
+
+/* a community idea's original words, shown on request under the tidied-up version */
+.original-btn { font: inherit; font-size: .85rem; background: none; border: 0; padding: 0; color: var(--accent-ink); text-decoration: underline; cursor: pointer; margin: .2rem 0 .6rem; }
+.original-text { margin: 0 0 1rem; padding: .7rem 1rem; border-left: 3px solid var(--border); background: var(--surface-2); border-radius: 0 10px 10px 0; white-space: pre-wrap; font-style: italic; }
+.small-note { font-size: .8rem; margin: 0; }

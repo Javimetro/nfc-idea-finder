@@ -18,7 +18,7 @@ from flask import Flask, Response, jsonify, request, send_from_directory
 sys.path.insert(0, os.path.dirname(__file__))
 import ai_review                                  # noqa: E402
 import database                                   # noqa: E402
-import similar                                    # noqa: E402
+import similar as similar_search                   # noqa: E402  (not "similar": a route below has that name)
 from engines import ENGINES, available_engines   # noqa: E402
 from questions import NEEDS, QUESTIONS, WORLDS     # noqa: E402
 from tags import pick_tag                         # noqa: E402
@@ -36,7 +36,7 @@ def reload_catalog():
     global CATALOG, TAGS, IDEAS_BY_ID, WORLD_OF, VERSIONS, SIMILAR
     VERSIONS = database.versions()
     CATALOG = database.get_catalog()
-    SIMILAR = similar.Index([i for i in CATALOG["ideas"] if i["status"] != "hidden"])
+    SIMILAR = similar_search.Index([i for i in CATALOG["ideas"] if i["status"] != "hidden"])
     TAGS = {t["id"]: t for t in CATALOG["tags"]}
     IDEAS_BY_ID = {i["id"]: i for i in CATALOG["ideas"]}
     need_world = {n["id"]: n["question"] for n in NEEDS}
@@ -200,6 +200,7 @@ def present(idea, score, why, warnings, answers):
         "uses": CATALOG["uses"].get(idea["id"], 0),
         "community": bool(idea.get("community")),
         "contributor": idea["sources"][0]["source"]["creator_name"] if idea.get("community") else None,
+        "original": idea.get("original_text") if idea.get("community") else None,
     }
 
 
@@ -302,6 +303,7 @@ def suggest():
         "description": desc[:2000], "place": clean("place", 200), "source_url": safe_url(d.get("source_url")),
         "submitter_name": clean("submitter_name", 80), "email": clean("email", 200),
         "credit_ok": bool(d.get("credit_ok") and clean("submitter_name", 80)),
+        "show_original": bool(d.get("show_original")),
         "context": context if context and len(json.dumps(context)) <= 4000 else None})
     start_ai_sweep()                                         # in the background: the visitor doesn't wait
     return jsonify(ok=True)
@@ -315,6 +317,13 @@ def suggest():
 # Without an API key (or when the AI fails / the daily limit is hit) ideas simply wait as "pending".
 AI_DAILY_LIMIT = int(os.environ.get("TAPWISE_AI_DAILY_LIMIT", 50))   # caps the bill if someone floods the form
 AI_LOCK = database.DB_PATH.parent / "ai-review.lock"
+
+
+def original_text(sub):
+    """The visitor's own words, published under the rewritten idea only if they ticked that box."""
+    if not sub.get("show_original"):
+        return None
+    return sub["description"] + (f"\n(Tag goes: {sub['place']})" if sub.get("place") else "")
 
 
 def run_ai_review(sub_id):
@@ -339,7 +348,7 @@ def run_ai_review(sub_id):
         elif r["draft"]:
             database.add_community_idea(sub_id, {
                 **r["draft"], "contributor": sub["submitter_name"] if sub["credit_ok"] else None,
-                "source_url": safe_url(sub["source_url"])})
+                "source_url": safe_url(sub["source_url"]), "original_text": original_text(sub)})
             reload_catalog()
             r["auto"] = "approved"
     database.set_ai_review(sub_id, r)
@@ -458,6 +467,7 @@ def approve(sub_id):
     if "contributor" not in f:
         f["contributor"] = sub["submitter_name"] if sub["credit_ok"] else None
     f["source_url"] = safe_url(f.get("source_url", sub["source_url"]))
+    f["original_text"] = original_text(sub)
     cid = database.add_community_idea(sub_id, f)
     reload_catalog()
     return jsonify(ok=True, id=cid)

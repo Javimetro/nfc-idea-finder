@@ -66,6 +66,7 @@ async function load() {
     return `<form class="sub ${pending ? "" : "done"}" data-id="${s.id}">
       <div style="display:flex;gap:.5rem;align-items:center;flex-wrap:wrap">
         <span class="pill">#${s.id}</span><span class="pill">${esc(s.status)}${s.linked_idea_id ? (s.status === "duplicate" ? " of " : " → ") + title(s.linked_idea_id) : ""}</span>
+        ${s.show_original ? `<span class="pill">original words public</span>` : ""}
         <span class="muted" style="font-size:.85rem">${esc(s.submitted_at)} · from ${who}${s.email ? " · " + esc(s.email) : ""}</span>
       </div>
       ${aiBox}

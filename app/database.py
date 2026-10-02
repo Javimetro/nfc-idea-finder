@@ -52,6 +52,7 @@ CREATE TABLE IF NOT EXISTS community_ideas (
     setup_type TEXT, setup_by_platform TEXT, phone_support TEXT DEFAULT 'any', difficulty TEXT DEFAULT 'easy',
     settings TEXT, goals TEXT, needs TEXT,            -- JSON arrays
     contributor TEXT, source_url TEXT,
+    original_text TEXT,                              -- the visitor's own words, only if they chose to publish them
     approved_at TEXT DEFAULT (datetime('now'))
 );
 -- "I use this" counter per idea is idea_uses, below
@@ -102,9 +103,11 @@ def _load_content():
         con.execute("BEGIN IMMEDIATE")
         for st in _statements():                    # CREATE TABLE IF NOT EXISTS ...
             con.execute(st)
-        for col in ("place TEXT", "ai_review TEXT"):  # older databases: add the newer columns
+        for table, col in (("submissions", "place TEXT"), ("submissions", "ai_review TEXT"),
+                           ("submissions", "show_original INTEGER DEFAULT 0"),
+                           ("community_ideas", "original_text TEXT")):   # older databases: add the newer columns
             try:
-                con.execute(f"ALTER TABLE submissions ADD COLUMN {col}")
+                con.execute(f"ALTER TABLE {table} ADD COLUMN {col}")
             except sqlite3.OperationalError:
                 pass
         same = con.execute("SELECT value FROM meta WHERE key = 'content_hash'").fetchone()
@@ -177,6 +180,7 @@ def get_catalog():
             "review_flags": [], "business_model": None, "who_pays": None, "startup_cost_level": None,
             "hook": c["hook"] or c["title"], "place": c["place"], "result": c["result"], "setup_type": c["setup_type"] or "automation",
             "needs": json.loads(c["needs"] or "[]"), "community": True, "approved_at": c["approved_at"],
+            "original_text": c.get("original_text"),
             "sources": [{"idea_id": c["id"], "source_id": src["id"], "start_seconds": None, "end_seconds": None,
                          "anchor_quote": None, "credit": None, "source": src}],
         })
@@ -188,10 +192,11 @@ def get_catalog():
 def add_submission(d):
     con = connect()
     cur = con.execute(
-        "INSERT INTO submissions (description, place, source_url, start_seconds, submitter_name, credit_ok, email, context)"
-        " VALUES (?,?,?,?,?,?,?,?)",
+        "INSERT INTO submissions (description, place, source_url, start_seconds, submitter_name, credit_ok, email, context,"
+        " show_original) VALUES (?,?,?,?,?,?,?,?,?)",
         (d["description"], d.get("place"), d.get("source_url"), d.get("start_seconds"), d.get("submitter_name"),
-         1 if d.get("credit_ok") else 0, d.get("email"), json.dumps(d.get("context")) if d.get("context") else None))
+         1 if d.get("credit_ok") else 0, d.get("email"), json.dumps(d.get("context")) if d.get("context") else None,
+         1 if d.get("show_original") else 0))
     sub_id = cur.lastrowid
     con.commit()
     con.close()
@@ -281,13 +286,13 @@ def add_community_idea(sub_id, f):
     cid = f"c{n:03d}"
     con.execute(
         "INSERT INTO community_ideas (id, submission_id, title, hook, summary, how_it_works, place, result, setup_type,"
-        " setup_by_platform, phone_support, difficulty, settings, goals, needs, contributor, source_url)"
-        " VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)",
+        " setup_by_platform, phone_support, difficulty, settings, goals, needs, contributor, source_url, original_text)"
+        " VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)",
         (cid, sub_id, f["title"], f.get("hook") or f["title"], f["summary"], f.get("how_it_works") or f["summary"],
          f.get("place"), f.get("result"), f.get("setup_type") or "automation", f.get("setup_by_platform"),
          f.get("phone_support") or "any", f.get("difficulty") or "easy", json.dumps(f.get("settings") or []),
          json.dumps(f.get("goals") or []), json.dumps(f.get("needs") or []), f.get("contributor") or None,
-         f.get("source_url") or None))
+         f.get("source_url") or None, f.get("original_text") or None))
     con.execute("UPDATE submissions SET status = 'approved', linked_idea_id = ? WHERE id = ?", (cid, sub_id))
     _bump_catalog_version(con)
     con.commit()

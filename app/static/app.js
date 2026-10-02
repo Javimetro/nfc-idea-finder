@@ -208,6 +208,8 @@ function renderIdea(idea, open) {
     <div class="idea-body">
       ${idea.community ? `<div class="community-note">🌱 <b>${esc(idea.contributor)}</b> added this idea to the bank. Try it, and if it works for you, say so below.</div>` : ""}
       ${why ? `<div class="why">${why}</div>` : `<p>${esc(idea.summary)}</p>`}
+      ${idea.original ? `<button type="button" class="original-btn" data-original aria-expanded="false">${idea.contributor && idea.contributor !== "A Tapwise visitor" ? `Show ${esc(idea.contributor)}'s original words` : "Show the creator's original words"}</button>
+      <blockquote class="original-text" hidden>${esc(idea.original)}</blockquote>` : ""}
       ${warn}${business}
       <h4>How to set it up</h4>${steps}
       <details class="more"><summary>More details</summary><p>${esc(idea.how_it_works)}</p>${idea.setup ? `<p><b>Apps:</b> ${esc(idea.setup)}</p>` : ""}</details>
@@ -249,6 +251,17 @@ document.addEventListener("click", async (e) => {
   try { await navigator.clipboard.writeText(b.dataset.copy); b.textContent = "Copied ✓"; }
   catch { b.textContent = "Select & copy"; }
   setTimeout(() => (b.textContent = "Copy"), 1500);
+});
+
+// "Show the original words" under a community idea (only there if the contributor chose to publish them)
+document.addEventListener("click", (e) => {
+  const b = e.target.closest("[data-original]");
+  if (!b) return;
+  const box = b.nextElementSibling, open = box.hidden;
+  b.dataset.label = b.dataset.label || b.textContent;      // remember "Show …'s original words"
+  box.hidden = !open;
+  b.setAttribute("aria-expanded", open);
+  b.textContent = open ? "Hide the original words" : b.dataset.label;
 });
 
 // ---------------------------------------------------------------- "I use this"
@@ -331,6 +344,7 @@ $("#suggest-form").addEventListener("submit", async (e) => {
   const body = Object.fromEntries(f.entries());
   body.submitter_name = (body.submitter_name || "").trim();
   body.credit_ok = !!body.submitter_name && f.has("credit_ok");
+  body.show_original = f.has("show_original");
   if ((body.description || "").trim().length < 10) { $("#suggest-error").textContent = "Describe the idea in a sentence or two."; return; }
   if (body.email && !e.target.email.checkValidity()) { $("#suggest-error").textContent = "That email doesn't look right."; return; }
   if (sendContext) body.context = state.answers;
@@ -343,6 +357,7 @@ $("#suggest-form").addEventListener("submit", async (e) => {
   if (!res || !res.ok) { $("#suggest-error").textContent = (res && (await res.json()).error) || "Couldn't send. Check your connection and try again."; return; }
   const credit = body.credit_ok ? `with your name, ${esc(body.submitter_name)},` : `credited to "A Tapwise visitor"`;
   $("#thanks-text").innerHTML = `We got it. After a quick check it goes into the bank ${credit} and you'll see how many people use it.`
+    + (body.show_original ? ` Your original words will be shown under the tidied-up version.` : "")
     + (body.email ? ` We'll email you when it's live.` : "");
   $("#suggest-form").hidden = true; $("#suggest-thanks").hidden = false;
 });

@@ -569,6 +569,18 @@ the user also asked for a look over the whole code. A browser was set up in Dock
 
 Lesson: click through your own site after every big change. Two of these bugs only appeared when the pieces were put together: the auto-approve made the link field dangerous, and the new API key switched on a half-built feature.
 
+#### 30. "Show the original words"
+
+The AI tidies up every visitor idea before it goes into the bank: titles, a short summary, setup steps. the user wanted contributors to be able to keep their own voice too. The "Add your idea" form now has two separate choices:
+- **Also publish my original words, under the tidied-up version** (off unless ticked)
+- **Show my name on the idea** (appears once you type a name)
+
+If the contributor said yes, the idea in the bank gets a small button under the tidied-up text: *"Show Ana's original words"*, or *"Show the creator's original words"* if they stayed anonymous. It opens their text exactly as they wrote it. If they said no, there's no button.
+
+Testing it in a real browser also caught a **serious bug from step 29**. The new "already in the bank?" search module was called `similar`, and so was an existing web route in the same file. The route quietly replaced the module, so the first time any idea was approved, the site crashed and kept failing until a restart. No idea had been approved since that release, so visitors never saw it. It's fixed now.
+
+Lesson: test the whole journey (send an idea, approve it, look at the bank), not just each piece. This bug only showed up two steps after the change that caused it.
+
 ---
 
 ## Open to-do list
