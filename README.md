@@ -8,6 +8,35 @@ Built by the user together with Claude (Anthropic), NotebookLM (Google) and Jev 
 
 ![Home](docs/img/10-app-home.png)
 
+## Two AI models, two jobs: a filter and a writer
+
+When a visitor adds an idea to the bank, two different AI models handle it, one after the other.
+
+**1. Jev (TypeSafe) is the filter: "is this already in the bank?"**
+Jev compares the new idea with every idea in the bank and answers with probabilities, not text. Most suggestions repeat something the bank already has, so this filter sees every idea, and it has to be cheap and fast. Jev costs about **$0.0003 per idea** and answers in under a second.
+- If Jev is **sure** it's a repeat, the idea is filed as a duplicate right there. No other model is called.
+- If Jev **isn't sure**, or the idea is new, the idea passes the filter and goes to step 2. When Jev wasn't sure, it also sends along the idea it suspects is the original.
+
+**2. Claude Sonnet 5 (Anthropic) is the writer: "add the new idea to the bank".**
+Only ideas that pass the filter reach Claude. Claude:
+- **checks** that the idea is real and safe (no spam, no "put your PIN on a sticker"),
+- **makes the final call** when Jev wasn't sure whether it's a repeat,
+- **writes it up** for the site: a catchy title, a plain title, a short summary, where the tag goes, what happens when you tap, how hard it is to set up, which phones it works on, and which everyday problems it solves.
+
+The idea then goes live, credited to the visitor. Jev can't do this step, because it doesn't write text. Claude can, but it would be wasteful as the filter: Claude Opus 5 doing the whole review costs about 150 times more per idea than Jev.
+
+### Choosing the most efficient Claude for the writer job
+
+"Most efficient" means **the cheapest Claude that does the job right**, because a mistake here is costly: the AI publishes ideas with no human checking them. This choice was made from tests that had already been run (step 27 in the log), with no new Claude API calls: the same 15 unseen test ideas, 9 good ideas and 6 bad ones, given to each candidate.
+
+| Claude model | Got right | Cost per idea | Speed | Verdict |
+|---|---|---|---|---|
+| Claude Haiku 4.5 (cheapest) | 14/15: **rejected a good idea** (medical info on a bike helmet, for paramedics) | $0.003 | 2.3 s | ✗ cheapest, but it throws away good ideas |
+| **Claude Sonnet 5** | **15/15** | **$0.008** | 3.8 s | ✓ **chosen**: the cheapest model that got everything right |
+| Claude Opus 5 | not run as the writer (it got everything right as the all-in-one reviewer) | ≈ $0.02 (estimate, about 2.5× Sonnet's price) | slower | ✗ more power than the job needs |
+
+Sonnet 5 costs about half a cent more per new idea than Haiku 4.5. That's the price of not losing good ideas. Its write-ups were also cleaner, and it picked more fitting "everyday problems". It runs at low "effort" (a setting that limits how much the model thinks before answering), which is enough for a short write-up. If a future test shows a cheaper model doing as well, switching is one setting: `TAPWISE_WRITER_MODEL`.
+
 ## Which model does what, and why
 
 | Job | Model | Why this one | Measured |
