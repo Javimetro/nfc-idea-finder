@@ -614,6 +614,17 @@ One small honest detail: the brief expected Jev's "none of these" answer to win 
 
 Lesson: when you show how an AI system works, show its real evidence. A pretty mock-up proves nothing, while real numbers from the real system are both more honest and more convincing.
 
+#### 34. Less text, more pictures
+
+the user watched the animation and found it too wordy: every step had a sentence, and it was hard to follow. The first version was saved on its own branch (`animation-v1`), and a second one was made with the same real data but almost no words:
+
+- Ideas ride a **conveyor belt**. Each idea is two little icons: what it's on, and what it does (kettle + timer, shower + timer, beehive + logbook).
+- **Jev** looks at the shelf (a dotted line shows which idea it compares with) and thinks in **two bars**, "match" and "same". There's a "sure" line on the second bar. Past the line, Jev drops the card into the **DUPLICATES** bin itself.
+- If it doesn't pass, the card rides on to **Claude**, who wakes up. Claude either shows "this = that, duplicate", or ticks real / safe / new and types the new title. The card then hops onto the **idea bank** shelf, and the counter goes +1.
+- The only words left are labels, numbers, costs, and the visitor's own idea along the bottom.
+
+Lesson: an explainer has to be easy to follow, not just correct. If a picture can say it, drop the sentence.
+
 ---
 
 ## Open to-do list

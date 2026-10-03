@@ -8,9 +8,9 @@ Built by the user together with Claude (Anthropic), NotebookLM (Google) and Jev 
 
 ![Home](docs/img/10-app-home.png)
 
-![Three visitor ideas go through the review: Jev files a sure duplicate on its own, hands an unsure one to Claude, and Claude writes up a new one](docs/img/32-pipeline.gif)
+![Three visitor ideas ride a conveyor belt: Jev drops a sure duplicate in the bin on its own, passes an unsure one to Claude, and Claude writes up a new one for the idea bank](docs/img/32-pipeline.gif)
 
-*Real numbers: Jev's recorded answers from the lab, Claude Sonnet 5's real reply. ([How this animation was made](#how-this-animation-was-made))*
+*Every idea goes past Jev first. If Jev is sure it's a repeat, it goes straight to the bin. If not, Claude decides, and new ideas are written up and added to the bank. Real numbers: Jev's recorded answers from the lab, Claude Sonnet 5's real reply. ([How this animation was made](#how-this-animation-was-made))*
 
 ### The AI toolbox at a glance
 
@@ -191,6 +191,8 @@ So the animation is driven by data, not drawn by hand:
 - **If the data doesn't back something up, nothing gets drawn.** The page checks the data first and refuses to draw anything it can't back up.
 
 Rebuilding it is one command ([`scripts/render_animation.py`](scripts/render_animation.py)). A headless browser on the Raspberry Pi renders all 336 frames, offline, and turns them into the GIF.
+
+**Second version, less to read.** The first animation explained every step in words, and the user found it hard to follow. The new one tells the same story with pictures instead: a conveyor belt, a bin for duplicates and a shelf for the idea bank. Jev thinks in two bars, and each idea is drawn as two icons (kettle + timer, beehive + logbook). Words are kept to labels, numbers and the visitor's own sentence. The first version is kept on the [`animation-v1`](../../tree/animation-v1) branch.
 
 ### Why Claude Opus 5.5 for this job
 

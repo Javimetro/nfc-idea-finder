@@ -56,6 +56,42 @@
       "source_location": "L51"
     },
     {
+      "id": "app_ai_review_enabled",
+      "label": "enabled()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "app.py",
+      "file_type": "code",
+      "norm_label": "enabled()",
+      "source_file": "app/ai_review.py",
+      "source_location": "L118"
+    },
+    {
+      "id": "app_app_admin_only",
+      "label": "admin_only()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "app.py",
+      "file_type": "code",
+      "norm_label": "admin_only()",
+      "source_file": "app/app.py",
+      "source_location": "L429"
+    },
+    {
+      "id": "app_app_admin_only_wrapper",
+      "label": "wrapper()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "app.py",
+      "file_type": "code",
+      "norm_label": "wrapper()",
+      "source_file": "app/app.py",
+      "source_location": "L432"
+    },
+    {
       "id": "app_app_admin_page",
       "label": "admin_page()",
       "_callable": true,
@@ -66,6 +102,18 @@
       "norm_label": "admin_page()",
       "source_file": "app/app.py",
       "source_location": "L444"
+    },
+    {
+      "id": "app_app_ai_review_now",
+      "label": "ai_review_now()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "app.py",
+      "file_type": "code",
+      "norm_label": "ai_review_now()",
+      "source_file": "app/app.py",
+      "source_location": "L478"
     },
     {
       "id": "app_app_apps",
@@ -188,6 +236,30 @@
       "source_location": "L85"
     },
     {
+      "id": "app_app_start_ai_sweep",
+      "label": "start_ai_sweep()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "app.py",
+      "file_type": "code",
+      "norm_label": "start_ai_sweep()",
+      "source_file": "app/app.py",
+      "source_location": "L375"
+    },
+    {
+      "id": "app_app_suggestions",
+      "label": "suggestions()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "app.py",
+      "file_type": "code",
+      "norm_label": "suggestions()",
+      "source_file": "app/app.py",
+      "source_location": "L451"
+    },
+    {
       "id": "app_app_tips_for",
       "label": "tips_for()",
       "_callable": true,
@@ -198,6 +270,18 @@
       "norm_label": "tips_for()",
       "source_file": "app/app.py",
       "source_location": "L207"
+    },
+    {
+      "id": "app_database_list_submissions",
+      "label": "list_submissions()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "app.py",
+      "file_type": "code",
+      "norm_label": "list_submissions()",
+      "source_file": "app/database.py",
+      "source_location": "L214"
     },
     {
       "id": "app_engines_init_available_engines",
@@ -222,54 +306,6 @@
       "norm_label": "pick_tag()",
       "source_file": "app/tags.py",
       "source_location": "L7"
-    },
-    {
-      "id": "app_ai_review_enabled",
-      "label": "enabled()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "database.py",
-      "file_type": "code",
-      "norm_label": "enabled()",
-      "source_file": "app/ai_review.py",
-      "source_location": "L118"
-    },
-    {
-      "id": "app_app_admin_only",
-      "label": "admin_only()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "database.py",
-      "file_type": "code",
-      "norm_label": "admin_only()",
-      "source_file": "app/app.py",
-      "source_location": "L429"
-    },
-    {
-      "id": "app_app_admin_only_wrapper",
-      "label": "wrapper()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "database.py",
-      "file_type": "code",
-      "norm_label": "wrapper()",
-      "source_file": "app/app.py",
-      "source_location": "L432"
-    },
-    {
-      "id": "app_app_ai_review_now",
-      "label": "ai_review_now()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "database.py",
-      "file_type": "code",
-      "norm_label": "ai_review_now()",
-      "source_file": "app/app.py",
-      "source_location": "L478"
     },
     {
       "id": "app_app_ai_sweep",
@@ -368,18 +404,6 @@
       "source_location": "L498"
     },
     {
-      "id": "app_app_start_ai_sweep",
-      "label": "start_ai_sweep()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "database.py",
-      "file_type": "code",
-      "norm_label": "start_ai_sweep()",
-      "source_file": "app/app.py",
-      "source_location": "L375"
-    },
-    {
       "id": "app_app_suggest",
       "label": "suggest()",
       "_callable": true,
@@ -390,18 +414,6 @@
       "norm_label": "suggest()",
       "source_file": "app/app.py",
       "source_location": "L289"
-    },
-    {
-      "id": "app_app_suggestions",
-      "label": "suggestions()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "database.py",
-      "file_type": "code",
-      "norm_label": "suggestions()",
-      "source_file": "app/app.py",
-      "source_location": "L451"
     },
     {
       "id": "app_app_unpublish",
@@ -546,18 +558,6 @@
       "norm_label": "get_uses()",
       "source_file": "app/database.py",
       "source_location": "L254"
-    },
-    {
-      "id": "app_database_list_submissions",
-      "label": "list_submissions()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "database.py",
-      "file_type": "code",
-      "norm_label": "list_submissions()",
-      "source_file": "app/database.py",
-      "source_location": "L214"
     },
     {
       "id": "app_database_load_content",
@@ -1764,6 +1764,28 @@
       "source_location": "L391"
     },
     {
+      "id": "app_app_rationale_430",
+      "label": "Browser asks for a password. No ADMIN_PASSWORD set = admin is switched off.",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "app.py",
+      "file_type": "rationale",
+      "norm_label": "browser asks for a password. no admin_password set = admin is switched off.",
+      "source_file": "app/app.py",
+      "source_location": "L430"
+    },
+    {
+      "id": "app_app_rationale_479",
+      "label": "Admin button: (re)run the AI review, e.g. for ideas sent before the AI was\u2026",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "app.py",
+      "file_type": "rationale",
+      "norm_label": "admin button: (re)run the ai review, e.g. for ideas sent before the ai was...",
+      "source_file": "app/app.py",
+      "source_location": "L479"
+    },
+    {
       "id": "app_app_rationale_86",
       "label": "Best link we have for a source: real URL (+ timestamp) or a search as fallback.",
       "_origin": "ast",
@@ -1861,28 +1883,6 @@
       "norm_label": "someone says \"i use this\": the idea climbs in the bank and the creator sees it...",
       "source_file": "app/app.py",
       "source_location": "L416"
-    },
-    {
-      "id": "app_app_rationale_430",
-      "label": "Browser asks for a password. No ADMIN_PASSWORD set = admin is switched off.",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "database.py",
-      "file_type": "rationale",
-      "norm_label": "browser asks for a password. no admin_password set = admin is switched off.",
-      "source_file": "app/app.py",
-      "source_location": "L430"
-    },
-    {
-      "id": "app_app_rationale_479",
-      "label": "Admin button: (re)run the AI review, e.g. for ideas sent before the AI was\u2026",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "database.py",
-      "file_type": "rationale",
-      "norm_label": "admin button: (re)run the ai review, e.g. for ideas sent before the ai was...",
-      "source_file": "app/app.py",
-      "source_location": "L479"
     },
     {
       "id": "app_app_rationale_489",
@@ -2513,6 +2513,18 @@
       "source_location": "L602"
     },
     {
+      "id": "project_log_34_less_text_more_pictures",
+      "label": "34. Less text, more pictures",
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "Day 1: Saturday 26 September 2026",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "34. less text, more pictures",
+      "source_file": "PROJECT_LOG.md",
+      "source_location": "L617"
+    },
+    {
       "id": "project_log_3_what_the_database_looks_like",
       "label": "3. What the database looks like",
       "_origin": "ast",
@@ -2972,7 +2984,7 @@
       "node_kind": "heading",
       "norm_label": "before going public (checklist)",
       "source_file": "PROJECT_LOG.md",
-      "source_location": "L631"
+      "source_location": "L642"
     },
     {
       "id": "project_log_lessons_so_far",
@@ -2984,7 +2996,7 @@
       "node_kind": "heading",
       "norm_label": "lessons so far",
       "source_file": "PROJECT_LOG.md",
-      "source_location": "L656"
+      "source_location": "L667"
     },
     {
       "id": "project_log_nfc_idea_finder_project_log",
@@ -3008,7 +3020,7 @@
       "node_kind": "heading",
       "norm_label": "open to-do list",
       "source_file": "PROJECT_LOG.md",
-      "source_location": "L619"
+      "source_location": "L630"
     },
     {
       "id": "project_log_screenshot_checklist_for_the_readme",
@@ -3020,7 +3032,7 @@
       "node_kind": "heading",
       "norm_label": "screenshot checklist (for the readme)",
       "source_file": "PROJECT_LOG.md",
-      "source_location": "L645"
+      "source_location": "L656"
     },
     {
       "id": "project_log_the_idea_in_one_paragraph",
@@ -3116,7 +3128,7 @@
       "node_kind": "heading",
       "norm_label": "more",
       "source_file": "README.md",
-      "source_location": "L207"
+      "source_location": "L209"
     },
     {
       "id": "readme_tapwise_nfc_ideas_reviewed_by_jev_claude",
@@ -3188,7 +3200,7 @@
       "node_kind": "heading",
       "norm_label": "why claude opus 5.5 for this job",
       "source_file": "README.md",
-      "source_location": "L195"
+      "source_location": "L197"
     },
     {
       "id": "run",
@@ -8428,6 +8440,17 @@
     },
     {
       "source": "project_log_day_1_saturday_26_september_2026",
+      "target": "project_log_34_less_text_more_pictures",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "PROJECT_LOG.md",
+      "source_location": "L617",
+      "weight": 1.0
+    },
+    {
+      "source": "project_log_day_1_saturday_26_september_2026",
       "target": "project_log_3_what_the_database_looks_like",
       "relation": "contains",
       "_origin": "ast",
@@ -8489,7 +8512,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "PROJECT_LOG.md",
-      "source_location": "L619",
+      "source_location": "L630",
       "weight": 1.0
     },
     {
@@ -8500,7 +8523,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "PROJECT_LOG.md",
-      "source_location": "L631",
+      "source_location": "L642",
       "weight": 1.0
     },
     {
@@ -8511,7 +8534,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "PROJECT_LOG.md",
-      "source_location": "L645",
+      "source_location": "L656",
       "weight": 1.0
     },
     {
@@ -8522,7 +8545,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "PROJECT_LOG.md",
-      "source_location": "L656",
+      "source_location": "L667",
       "weight": 1.0
     },
     {
@@ -8566,7 +8589,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "README.md",
-      "source_location": "L195",
+      "source_location": "L197",
       "weight": 1.0
     },
     {
@@ -8621,7 +8644,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "README.md",
-      "source_location": "L207",
+      "source_location": "L209",
       "weight": 1.0
     },
     {
@@ -9732,7 +9755,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "README.md",
-      "source_location": "L209",
+      "source_location": "L211",
       "weight": 1.0
     },
     {
@@ -9743,7 +9766,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "README.md",
-      "source_location": "L210",
+      "source_location": "L212",
       "weight": 1.0
     },
     {
@@ -9904,5 +9927,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "b028b0eeaa1fc76d58219c52f50bcfb5c2a0c1fa"
+  "built_at_commit": "6a5cc874b1336599693074c65ca892481a606237"
 }
