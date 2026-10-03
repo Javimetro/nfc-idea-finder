@@ -848,42 +848,6 @@
       "source_location": "L172"
     },
     {
-      "id": "scripts_render_animation_capture",
-      "label": "capture()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 15,
-      "community_name": "render_animation.py",
-      "file_type": "code",
-      "norm_label": "capture()",
-      "source_file": "scripts/render_animation.py",
-      "source_location": "L72"
-    },
-    {
-      "id": "scripts_render_animation_embed",
-      "label": "embed()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 15,
-      "community_name": "render_animation.py",
-      "file_type": "code",
-      "norm_label": "embed()",
-      "source_file": "scripts/render_animation.py",
-      "source_location": "L61"
-    },
-    {
-      "id": "scripts_render_animation_main",
-      "label": "main()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 15,
-      "community_name": "render_animation.py",
-      "file_type": "code",
-      "norm_label": "main()",
-      "source_file": "scripts/render_animation.py",
-      "source_location": "L78"
-    },
-    {
       "id": "app_app_similar",
       "label": "similar()",
       "_callable": true,
@@ -1597,7 +1561,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 9,
-      "community_name": "rules.py",
+      "community_name": "render_animation.py",
       "file_type": "code",
       "norm_label": "available()",
       "source_file": "app/engines/jev.py",
@@ -1609,7 +1573,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 9,
-      "community_name": "rules.py",
+      "community_name": "render_animation.py",
       "file_type": "code",
       "norm_label": "rank()",
       "source_file": "app/engines/jev.py",
@@ -1621,7 +1585,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 9,
-      "community_name": "rules.py",
+      "community_name": "render_animation.py",
       "file_type": "code",
       "norm_label": "score_fit()",
       "source_file": "app/engines/jev.py",
@@ -1633,7 +1597,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 9,
-      "community_name": "rules.py",
+      "community_name": "render_animation.py",
       "file_type": "code",
       "norm_label": "collect_needs()",
       "source_file": "app/engines/rules.py",
@@ -1645,7 +1609,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 9,
-      "community_name": "rules.py",
+      "community_name": "render_animation.py",
       "file_type": "code",
       "norm_label": "_feasibility()",
       "source_file": "app/engines/rules.py",
@@ -1657,7 +1621,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 9,
-      "community_name": "rules.py",
+      "community_name": "render_animation.py",
       "file_type": "code",
       "norm_label": "rank()",
       "source_file": "app/engines/rules.py",
@@ -1669,11 +1633,47 @@
       "_callable": true,
       "_origin": "ast",
       "community": 9,
-      "community_name": "rules.py",
+      "community_name": "render_animation.py",
       "file_type": "code",
       "norm_label": "_smart_home_need()",
       "source_file": "app/engines/rules.py",
       "source_location": "L49"
+    },
+    {
+      "id": "scripts_render_animation_capture",
+      "label": "capture()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 9,
+      "community_name": "render_animation.py",
+      "file_type": "code",
+      "norm_label": "capture()",
+      "source_file": "scripts/render_animation.py",
+      "source_location": "L72"
+    },
+    {
+      "id": "scripts_render_animation_embed",
+      "label": "embed()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 9,
+      "community_name": "render_animation.py",
+      "file_type": "code",
+      "norm_label": "embed()",
+      "source_file": "scripts/render_animation.py",
+      "source_location": "L61"
+    },
+    {
+      "id": "scripts_render_animation_main",
+      "label": "main()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 9,
+      "community_name": "render_animation.py",
+      "file_type": "code",
+      "norm_label": "main()",
+      "source_file": "scripts/render_animation.py",
+      "source_location": "L78"
     },
     {
       "id": "app_app",
@@ -2199,28 +2199,6 @@
       "norm_label": "apply one rule to the saved answers. returns a bank id or none (= new).",
       "source_file": "scripts/jev_lab.py",
       "source_location": "L103"
-    },
-    {
-      "id": "scripts_render_animation",
-      "label": "render_animation.py",
-      "_origin": "ast",
-      "community": 15,
-      "community_name": "render_animation.py",
-      "file_type": "code",
-      "norm_label": "render_animation.py",
-      "source_file": "scripts/render_animation.py",
-      "source_location": "L1"
-    },
-    {
-      "id": "scripts_render_animation_rationale_1",
-      "label": "Render docs/anim/pipeline.html to docs/img/32-pipeline.gif (800x450, 12 fps,\u2026",
-      "_origin": "ast",
-      "community": 15,
-      "community_name": "render_animation.py",
-      "file_type": "rationale",
-      "norm_label": "render docs/anim/pipeline.html to docs/img/32-pipeline.gif (800x450, 12 fps,...",
-      "source_file": "scripts/render_animation.py",
-      "source_location": "L1"
     },
     {
       "id": "project_log_10_new_direction_local_first_on_a_raspberry_pi",
@@ -3138,7 +3116,7 @@
       "node_kind": "heading",
       "norm_label": "more",
       "source_file": "README.md",
-      "source_location": "L195"
+      "source_location": "L207"
     },
     {
       "id": "readme_tapwise_nfc_ideas_reviewed_by_jev_claude",
@@ -3199,6 +3177,18 @@
       "norm_label": "which model does what, and why",
       "source_file": "README.md",
       "source_location": "L59"
+    },
+    {
+      "id": "readme_why_claude_opus_5_5_for_this_job",
+      "label": "Why Claude Opus 5.5 for this job",
+      "_origin": "ast",
+      "community": 6,
+      "community_name": "Tapwise: NFC ideas, reviewed by Jev + Claude",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "why claude opus 5.5 for this job",
+      "source_file": "README.md",
+      "source_location": "L195"
     },
     {
       "id": "run",
@@ -3376,7 +3366,7 @@
       "label": "jev.py",
       "_origin": "ast",
       "community": 9,
-      "community_name": "rules.py",
+      "community_name": "render_animation.py",
       "file_type": "code",
       "norm_label": "jev.py",
       "source_file": "app/engines/jev.py",
@@ -3387,10 +3377,21 @@
       "label": "rules.py",
       "_origin": "ast",
       "community": 9,
-      "community_name": "rules.py",
+      "community_name": "render_animation.py",
       "file_type": "code",
       "norm_label": "rules.py",
       "source_file": "app/engines/rules.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "scripts_render_animation",
+      "label": "render_animation.py",
+      "_origin": "ast",
+      "community": 9,
+      "community_name": "render_animation.py",
+      "file_type": "code",
+      "norm_label": "render_animation.py",
+      "source_file": "scripts/render_animation.py",
       "source_location": "L1"
     },
     {
@@ -3398,7 +3399,7 @@
       "label": "Jev engine (TypeSafe AI) \u2014 placeholder. Plan: keep the rules engine's filters\u2026",
       "_origin": "ast",
       "community": 9,
-      "community_name": "rules.py",
+      "community_name": "render_animation.py",
       "file_type": "rationale",
       "norm_label": "jev engine (typesafe ai) \u2014 placeholder. plan: keep the rules engine's filters...",
       "source_file": "app/engines/jev.py",
@@ -3409,7 +3410,7 @@
       "label": "Rules engine: no AI, free, instant, offline. The baseline every AI engine has\u2026",
       "_origin": "ast",
       "community": 9,
-      "community_name": "rules.py",
+      "community_name": "render_animation.py",
       "file_type": "rationale",
       "norm_label": "rules engine: no ai, free, instant, offline. the baseline every ai engine has...",
       "source_file": "app/engines/rules.py",
@@ -3420,7 +3421,7 @@
       "label": "Returns {need_id: 'why' text} from ticked options and free-text keywords.",
       "_origin": "ast",
       "community": 9,
-      "community_name": "rules.py",
+      "community_name": "render_animation.py",
       "file_type": "rationale",
       "norm_label": "returns {need_id: 'why' text} from ticked options and free-text keywords.",
       "source_file": "app/engines/rules.py",
@@ -3431,7 +3432,7 @@
       "label": "Does this idea need smart home gear? Uses the idea's setup type, not guesswork\u2026",
       "_origin": "ast",
       "community": 9,
-      "community_name": "rules.py",
+      "community_name": "render_animation.py",
       "file_type": "rationale",
       "norm_label": "does this idea need smart home gear? uses the idea's setup type, not guesswork...",
       "source_file": "app/engines/rules.py",
@@ -3442,7 +3443,7 @@
       "label": "Returns (score adjustment, warnings) or None if the idea can't work for this\u2026",
       "_origin": "ast",
       "community": 9,
-      "community_name": "rules.py",
+      "community_name": "render_animation.py",
       "file_type": "rationale",
       "norm_label": "returns (score adjustment, warnings) or none if the idea can't work for this...",
       "source_file": "app/engines/rules.py",
@@ -3453,11 +3454,22 @@
       "label": "Returns a list of (score, idea, why, warnings), best first. `why` is a list of\u2026",
       "_origin": "ast",
       "community": 9,
-      "community_name": "rules.py",
+      "community_name": "render_animation.py",
       "file_type": "rationale",
       "norm_label": "returns a list of (score, idea, why, warnings), best first. `why` is a list of...",
       "source_file": "app/engines/rules.py",
       "source_location": "L93"
+    },
+    {
+      "id": "scripts_render_animation_rationale_1",
+      "label": "Render docs/anim/pipeline.html to docs/img/32-pipeline.gif (800x450, 12 fps,\u2026",
+      "_origin": "ast",
+      "community": 9,
+      "community_name": "render_animation.py",
+      "file_type": "rationale",
+      "norm_label": "render docs/anim/pipeline.html to docs/img/32-pipeline.gif (800x450, 12 fps,...",
+      "source_file": "scripts/render_animation.py",
+      "source_location": "L1"
     },
     {
       "id": "datetime",
@@ -3748,21 +3760,10 @@
       "type": "external"
     },
     {
-      "id": "re",
-      "label": "re",
-      "_origin": "semantic",
-      "community": 9,
-      "community_name": "rules.py",
-      "external": true,
-      "file_type": "concept",
-      "norm_label": "re",
-      "source_file": "",
-      "type": "external"
-    },
-    {
       "id": "argparse",
       "label": "argparse",
-      "community": 15,
+      "_origin": "semantic",
+      "community": 9,
       "community_name": "render_animation.py",
       "external": true,
       "file_type": "concept",
@@ -3771,9 +3772,22 @@
       "type": "external"
     },
     {
+      "id": "re",
+      "label": "re",
+      "_origin": "semantic",
+      "community": 9,
+      "community_name": "render_animation.py",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "re",
+      "source_file": "",
+      "type": "external"
+    },
+    {
       "id": "shutil",
       "label": "shutil",
-      "community": 15,
+      "_origin": "semantic",
+      "community": 9,
       "community_name": "render_animation.py",
       "external": true,
       "file_type": "concept",
@@ -3784,7 +3798,8 @@
     {
       "id": "subprocess",
       "label": "subprocess",
-      "community": 15,
+      "_origin": "semantic",
+      "community": 9,
       "community_name": "render_animation.py",
       "external": true,
       "file_type": "concept",
@@ -3795,7 +3810,8 @@
     {
       "id": "tempfile",
       "label": "tempfile",
-      "community": 15,
+      "_origin": "semantic",
+      "community": 9,
       "community_name": "render_animation.py",
       "external": true,
       "file_type": "concept",
@@ -8543,6 +8559,17 @@
       "weight": 1.0
     },
     {
+      "source": "readme_how_this_animation_was_made",
+      "target": "readme_why_claude_opus_5_5_for_this_job",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": "L195",
+      "weight": 1.0
+    },
+    {
       "source": "readme_tapwise_nfc_ideas_reviewed_by_jev_claude",
       "target": "readme_what_it_costs_jev_vs_claude",
       "relation": "contains",
@@ -8594,7 +8621,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "README.md",
-      "source_location": "L195",
+      "source_location": "L207",
       "weight": 1.0
     },
     {
@@ -9705,7 +9732,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "README.md",
-      "source_location": "L197",
+      "source_location": "L209",
       "weight": 1.0
     },
     {
@@ -9716,7 +9743,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "README.md",
-      "source_location": "L198",
+      "source_location": "L210",
       "weight": 1.0
     },
     {
@@ -9877,5 +9904,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "a8ccda5bed009e2bacb5119a1f73aa171bcac347"
+  "built_at_commit": "b028b0eeaa1fc76d58219c52f50bcfb5c2a0c1fa"
 }

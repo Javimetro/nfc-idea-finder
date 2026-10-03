@@ -192,6 +192,18 @@ So the animation is driven by data, not drawn by hand:
 
 Rebuilding it is one command ([`scripts/render_animation.py`](scripts/render_animation.py)). A headless browser on the Raspberry Pi renders all 336 frames, offline, and turns them into the GIF.
 
+### Why Claude Opus 5.5 for this job
+
+Like every other choice in this project, the model was picked for the job. The idea came from a [DotCSV video](https://www.youtube.com/watch?v=j906Pf7n7Sg) about the newest models taking a big leap in visual work: pixel art, motion graphics and animations built *with code*. The video showed Opus 5.5 leading that leap, with good taste and rigour. One example animated a neural network the AI had actually trained, so every number was true. That's exactly the kind of honesty this README needed.
+
+What made Opus 5.5 a good fit, judging by how this animation was actually made:
+- **It draws with code, not with a picture generator.** An image or video model would have *imitated* pixel art, and could have invented numbers that look plausible. Here, every pixel is placed by a program, so it lines up perfectly on the pixel grid, and the numbers come straight from the data file.
+- **It's a strong programmer *and* has a sense of design.** The same model wrote the drawing code, invented the two characters (Jev as a little decision robot, Claude as a spark-headed writer at a typewriter), hand-made a pixel font, and timed a 28-second story so it reads without sound.
+- **It looks at its own work and fixes it.** Opus 5.5 can see images, so it rendered still frames from every scene, looked at them, and spotted problems like a human reviewer would: Claude's reply was cut off, a label covered a card, text ran outside a box. It fixed them and checked again.
+- **It keeps the rigour.** It pulled the real numbers from the lab results and checked them against the live code's rules. It also noticed when the brief and the data disagreed (the brief expected "none of these" to win for the beehive idea; the data says otherwise) and followed the data.
+
+**The human part:** the user chose the story and the style, wrote the brief with its "nothing made up" rule, and approved the plan before anything was built. That's the same pattern as the rest of the project: the person decides, and each AI does the job it's best at.
+
 ## More
 
 - **The whole story, step by step** (every decision, mistake and lesson): [PROJECT_LOG.md](PROJECT_LOG.md)
