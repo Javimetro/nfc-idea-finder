@@ -60,4 +60,5 @@ Rules:
 - After modifying code, run `graphify update .` to keep the graph current (AST-only, no API cost).
 - **Before every commit that gets pushed, run `graphify update .` and include `graphify-out/graph.json` + `GRAPH_REPORT.md` in the commit**, so the graph on GitHub always matches the code.
 - the user won't type graphify commands. Use graphify on your own whenever it helps answer his questions (how something works, what a change would affect, where something lives), and answer in plain words.
+- To show the user the map, give him `graphify-out/graph-offline.html` (local only, ignored by git): a copy of `graph.html` with the vis-network script from unpkg inlined, because his viewer blocks outside scripts. Rebuild it from the current `graph.html` first.
 - If the map changes a lot, refresh the README screenshot `docs/img/31-graphify-map.png` (Playwright in Docker, image `tapwise-ui`, open `graphify-out/graph.html`, wait ~20 s, 1600×1000).
