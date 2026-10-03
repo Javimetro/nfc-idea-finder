@@ -581,6 +581,16 @@ Testing it in a real browser also caught a **serious bug from step 29**. The new
 
 Lesson: test the whole journey (send an idea, approve it, look at the bank), not just each piece. This bug only showed up two steps after the change that caused it.
 
+#### 31. A map of the code for Claude (graphify)
+
+The project has grown: Flask app, database, two AI models, test scripts, a long log. To find its way around, Claude Code used to search and read files one by one. **[graphify](https://github.com/Graphify-Labs/graphify)** turns the whole repo into a *knowledge graph*: every function, file and README section becomes a node, linked to what it calls or mentions. Claude can then ask the graph ("how does a visitor idea get reviewed?") and read only the parts that matter.
+
+- The graph of the code is built **on the Pi itself, in 3 seconds, with no AI and nothing sent anywhere**: 302 nodes, 493 links, 14 groups. It parses the code's structure directly (tree-sitter).
+- Claude Code now has the graphify skill, and a hook reminds it to check the graph before searching files.
+- After code changes, `graphify update .` refreshes the graph, for free.
+
+Lesson: the AI that writes the code also needs good tools to *read* the code, especially as a project grows.
+
 ---
 
 ## Open to-do list

@@ -48,3 +48,13 @@ A Flask + SQLite website ("Tapwise") that asks visitors questions about their ev
 - Every curated idea must credit a real, checkable source (a real video/thread URL, or `s00` "Written by the Tapwise creator" for ideas written from general knowledge — never an invented source).
 - Community (visitor-submitted) ideas are credited to the visitor by name (or "A Tapwise visitor" if they didn't opt in to credit).
 - No content sourced from pirated/questionable sources (books from Anna's Archive were deliberately removed for this reason — see PROJECT_LOG.md step 19).
+
+## graphify
+
+This project has a knowledge graph at graphify-out/ with god nodes, community structure, and cross-file relationships.
+
+Rules:
+- For codebase questions, first run `graphify query "<question>"` when graphify-out/graph.json exists. Use `graphify path "<A>" "<B>"` for relationships and `graphify explain "<concept>"` for focused concepts. These return a scoped subgraph, usually much smaller than GRAPH_REPORT.md or raw grep output.
+- If graphify-out/wiki/index.md exists, use it for broad navigation instead of raw source browsing.
+- Read graphify-out/GRAPH_REPORT.md only for broad architecture review or when query/path/explain do not surface enough context.
+- After modifying code, run `graphify update .` to keep the graph current (AST-only, no API cost).
