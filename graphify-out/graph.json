@@ -49,35 +49,11 @@
       "_callable_class": true,
       "_origin": "ast",
       "community": 7,
-      "community_name": "similar.py",
+      "community_name": "draw_hero.py",
       "file_type": "code",
       "norm_label": "index",
       "source_file": "app/similar.py",
       "source_location": "L51"
-    },
-    {
-      "id": "app_app_admin_only",
-      "label": "admin_only()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "app.py",
-      "file_type": "code",
-      "norm_label": "admin_only()",
-      "source_file": "app/app.py",
-      "source_location": "L429"
-    },
-    {
-      "id": "app_app_admin_only_wrapper",
-      "label": "wrapper()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "app.py",
-      "file_type": "code",
-      "norm_label": "wrapper()",
-      "source_file": "app/app.py",
-      "source_location": "L432"
     },
     {
       "id": "app_app_admin_page",
@@ -90,18 +66,6 @@
       "norm_label": "admin_page()",
       "source_file": "app/app.py",
       "source_location": "L444"
-    },
-    {
-      "id": "app_app_ai_review_now",
-      "label": "ai_review_now()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "app.py",
-      "file_type": "code",
-      "norm_label": "ai_review_now()",
-      "source_file": "app/app.py",
-      "source_location": "L478"
     },
     {
       "id": "app_app_apps",
@@ -224,18 +188,6 @@
       "source_location": "L85"
     },
     {
-      "id": "app_app_suggestions",
-      "label": "suggestions()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "app.py",
-      "file_type": "code",
-      "norm_label": "suggestions()",
-      "source_file": "app/app.py",
-      "source_location": "L451"
-    },
-    {
       "id": "app_app_tips_for",
       "label": "tips_for()",
       "_callable": true,
@@ -246,30 +198,6 @@
       "norm_label": "tips_for()",
       "source_file": "app/app.py",
       "source_location": "L207"
-    },
-    {
-      "id": "app_app_unpublish",
-      "label": "unpublish()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "app.py",
-      "file_type": "code",
-      "norm_label": "unpublish()",
-      "source_file": "app/app.py",
-      "source_location": "L488"
-    },
-    {
-      "id": "app_database_list_submissions",
-      "label": "list_submissions()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "app.py",
-      "file_type": "code",
-      "norm_label": "list_submissions()",
-      "source_file": "app/database.py",
-      "source_location": "L214"
     },
     {
       "id": "app_engines_init_available_engines",
@@ -294,6 +222,54 @@
       "norm_label": "pick_tag()",
       "source_file": "app/tags.py",
       "source_location": "L7"
+    },
+    {
+      "id": "app_ai_review_enabled",
+      "label": "enabled()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 1,
+      "community_name": "database.py",
+      "file_type": "code",
+      "norm_label": "enabled()",
+      "source_file": "app/ai_review.py",
+      "source_location": "L118"
+    },
+    {
+      "id": "app_app_admin_only",
+      "label": "admin_only()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 1,
+      "community_name": "database.py",
+      "file_type": "code",
+      "norm_label": "admin_only()",
+      "source_file": "app/app.py",
+      "source_location": "L429"
+    },
+    {
+      "id": "app_app_admin_only_wrapper",
+      "label": "wrapper()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 1,
+      "community_name": "database.py",
+      "file_type": "code",
+      "norm_label": "wrapper()",
+      "source_file": "app/app.py",
+      "source_location": "L432"
+    },
+    {
+      "id": "app_app_ai_review_now",
+      "label": "ai_review_now()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 1,
+      "community_name": "database.py",
+      "file_type": "code",
+      "norm_label": "ai_review_now()",
+      "source_file": "app/app.py",
+      "source_location": "L478"
     },
     {
       "id": "app_app_ai_sweep",
@@ -414,6 +390,30 @@
       "norm_label": "suggest()",
       "source_file": "app/app.py",
       "source_location": "L289"
+    },
+    {
+      "id": "app_app_suggestions",
+      "label": "suggestions()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 1,
+      "community_name": "database.py",
+      "file_type": "code",
+      "norm_label": "suggestions()",
+      "source_file": "app/app.py",
+      "source_location": "L451"
+    },
+    {
+      "id": "app_app_unpublish",
+      "label": "unpublish()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 1,
+      "community_name": "database.py",
+      "file_type": "code",
+      "norm_label": "unpublish()",
+      "source_file": "app/app.py",
+      "source_location": "L488"
     },
     {
       "id": "app_app_use_idea",
@@ -548,6 +548,18 @@
       "source_location": "L254"
     },
     {
+      "id": "app_database_list_submissions",
+      "label": "list_submissions()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 1,
+      "community_name": "database.py",
+      "file_type": "code",
+      "norm_label": "list_submissions()",
+      "source_file": "app/database.py",
+      "source_location": "L214"
+    },
+    {
       "id": "app_database_load_content",
       "label": "load_content()",
       "_callable": true,
@@ -656,42 +668,6 @@
       "source_location": "L238"
     },
     {
-      "id": "scripts_draw_hero_box",
-      "label": "box()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 10,
-      "community_name": "draw_hero_pixel.py",
-      "file_type": "code",
-      "norm_label": "box()",
-      "source_file": "scripts/draw_hero.py",
-      "source_location": "L27"
-    },
-    {
-      "id": "scripts_draw_hero_bubble",
-      "label": "bubble()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 10,
-      "community_name": "draw_hero_pixel.py",
-      "file_type": "code",
-      "norm_label": "bubble()",
-      "source_file": "scripts/draw_hero.py",
-      "source_location": "L51"
-    },
-    {
-      "id": "scripts_draw_hero_p",
-      "label": "P()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 10,
-      "community_name": "draw_hero_pixel.py",
-      "file_type": "code",
-      "norm_label": "p()",
-      "source_file": "scripts/draw_hero.py",
-      "source_location": "L18"
-    },
-    {
       "id": "scripts_draw_hero_pixel_box",
       "label": "box()",
       "_callable": true,
@@ -776,28 +752,136 @@
       "source_location": "L45"
     },
     {
-      "id": "scripts_draw_hero_poly",
-      "label": "poly()",
+      "id": "scripts_jev_lab_analyse",
+      "label": "analyse()",
       "_callable": true,
       "_origin": "ast",
-      "community": 10,
-      "community_name": "draw_hero_pixel.py",
+      "community": 14,
+      "community_name": "jev_lab.py",
       "file_type": "code",
-      "norm_label": "poly()",
-      "source_file": "scripts/draw_hero.py",
-      "source_location": "L22"
+      "norm_label": "analyse()",
+      "source_file": "scripts/jev_lab.py",
+      "source_location": "L148"
     },
     {
-      "id": "scripts_draw_hero_sticker",
-      "label": "sticker()",
+      "id": "scripts_jev_lab_collect",
+      "label": "collect()",
       "_callable": true,
       "_origin": "ast",
-      "community": 10,
-      "community_name": "draw_hero_pixel.py",
+      "community": 14,
+      "community_name": "jev_lab.py",
       "file_type": "code",
-      "norm_label": "sticker()",
-      "source_file": "scripts/draw_hero.py",
-      "source_location": "L34"
+      "norm_label": "collect()",
+      "source_file": "scripts/jev_lab.py",
+      "source_location": "L56"
+    },
+    {
+      "id": "scripts_jev_lab_collect_one",
+      "label": "one()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 14,
+      "community_name": "jev_lab.py",
+      "file_type": "code",
+      "norm_label": "one()",
+      "source_file": "scripts/jev_lab.py",
+      "source_location": "L64"
+    },
+    {
+      "id": "scripts_jev_lab_decide",
+      "label": "decide()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 14,
+      "community_name": "jev_lab.py",
+      "file_type": "code",
+      "norm_label": "decide()",
+      "source_file": "scripts/jev_lab.py",
+      "source_location": "L102"
+    },
+    {
+      "id": "scripts_jev_lab_final",
+      "label": "final()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 14,
+      "community_name": "jev_lab.py",
+      "file_type": "code",
+      "norm_label": "final()",
+      "source_file": "scripts/jev_lab.py",
+      "source_location": "L186"
+    },
+    {
+      "id": "scripts_jev_lab_option_text",
+      "label": "option_text()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 14,
+      "community_name": "jev_lab.py",
+      "file_type": "code",
+      "norm_label": "option_text()",
+      "source_file": "scripts/jev_lab.py",
+      "source_location": "L49"
+    },
+    {
+      "id": "scripts_jev_lab_score",
+      "label": "score()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 14,
+      "community_name": "jev_lab.py",
+      "file_type": "code",
+      "norm_label": "score()",
+      "source_file": "scripts/jev_lab.py",
+      "source_location": "L121"
+    },
+    {
+      "id": "scripts_jev_lab_v2_rule",
+      "label": "v2_rule()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 14,
+      "community_name": "jev_lab.py",
+      "file_type": "code",
+      "norm_label": "v2_rule()",
+      "source_file": "scripts/jev_lab.py",
+      "source_location": "L172"
+    },
+    {
+      "id": "scripts_render_animation_capture",
+      "label": "capture()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 15,
+      "community_name": "render_animation.py",
+      "file_type": "code",
+      "norm_label": "capture()",
+      "source_file": "scripts/render_animation.py",
+      "source_location": "L72"
+    },
+    {
+      "id": "scripts_render_animation_embed",
+      "label": "embed()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 15,
+      "community_name": "render_animation.py",
+      "file_type": "code",
+      "norm_label": "embed()",
+      "source_file": "scripts/render_animation.py",
+      "source_location": "L61"
+    },
+    {
+      "id": "scripts_render_animation_main",
+      "label": "main()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 15,
+      "community_name": "render_animation.py",
+      "file_type": "code",
+      "norm_label": "main()",
+      "source_file": "scripts/render_animation.py",
+      "source_location": "L78"
     },
     {
       "id": "app_app_similar",
@@ -882,18 +966,6 @@
       "norm_label": "_effort()",
       "source_file": "app/ai_review.py",
       "source_location": "L236"
-    },
-    {
-      "id": "app_ai_review_enabled",
-      "label": "enabled()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "ai_review.py",
-      "file_type": "code",
-      "norm_label": "enabled()",
-      "source_file": "app/ai_review.py",
-      "source_location": "L118"
     },
     {
       "id": "app_ai_review_jev",
@@ -985,7 +1057,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 4,
-      "community_name": "jev_lab.py",
+      "community_name": "eval_review.py",
       "file_type": "code",
       "norm_label": "_need_options()",
       "source_file": "app/questions.py",
@@ -997,11 +1069,47 @@
       "_callable": true,
       "_origin": "ast",
       "community": 4,
-      "community_name": "jev_lab.py",
+      "community_name": "eval_review.py",
       "file_type": "code",
       "norm_label": "_world_question()",
       "source_file": "app/questions.py",
       "source_location": "L57"
+    },
+    {
+      "id": "scripts_anim_cases_fail",
+      "label": "fail()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "eval_review.py",
+      "file_type": "code",
+      "norm_label": "fail()",
+      "source_file": "scripts/anim_cases.py",
+      "source_location": "L31"
+    },
+    {
+      "id": "scripts_anim_cases_jev_decision",
+      "label": "jev_decision()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "eval_review.py",
+      "file_type": "code",
+      "norm_label": "jev_decision()",
+      "source_file": "scripts/anim_cases.py",
+      "source_location": "L35"
+    },
+    {
+      "id": "scripts_anim_cases_main",
+      "label": "main()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "eval_review.py",
+      "file_type": "code",
+      "norm_label": "main()",
+      "source_file": "scripts/anim_cases.py",
+      "source_location": "L55"
     },
     {
       "id": "scripts_build_db_idea",
@@ -1009,7 +1117,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 4,
-      "community_name": "jev_lab.py",
+      "community_name": "eval_review.py",
       "file_type": "code",
       "norm_label": "idea()",
       "source_file": "scripts/build_db.py",
@@ -1021,107 +1129,71 @@
       "_callable": true,
       "_origin": "ast",
       "community": 4,
-      "community_name": "jev_lab.py",
+      "community_name": "eval_review.py",
       "file_type": "code",
       "norm_label": "tag()",
       "source_file": "scripts/build_db.py",
       "source_location": "L57"
     },
     {
-      "id": "scripts_jev_lab_analyse",
-      "label": "analyse()",
+      "id": "scripts_eval_review_bank",
+      "label": "bank()",
       "_callable": true,
       "_origin": "ast",
       "community": 4,
-      "community_name": "jev_lab.py",
+      "community_name": "eval_review.py",
       "file_type": "code",
-      "norm_label": "analyse()",
-      "source_file": "scripts/jev_lab.py",
-      "source_location": "L148"
+      "norm_label": "bank()",
+      "source_file": "scripts/eval_review.py",
+      "source_location": "L28"
     },
     {
-      "id": "scripts_jev_lab_collect",
-      "label": "collect()",
+      "id": "scripts_eval_review_claude",
+      "label": "claude()",
       "_callable": true,
       "_origin": "ast",
       "community": 4,
-      "community_name": "jev_lab.py",
+      "community_name": "eval_review.py",
       "file_type": "code",
-      "norm_label": "collect()",
-      "source_file": "scripts/jev_lab.py",
-      "source_location": "L56"
+      "norm_label": "claude()",
+      "source_file": "scripts/eval_review.py",
+      "source_location": "L117"
     },
     {
-      "id": "scripts_jev_lab_collect_one",
-      "label": "one()",
+      "id": "scripts_eval_review_dupes",
+      "label": "dupes()",
       "_callable": true,
       "_origin": "ast",
       "community": 4,
-      "community_name": "jev_lab.py",
+      "community_name": "eval_review.py",
       "file_type": "code",
-      "norm_label": "one()",
-      "source_file": "scripts/jev_lab.py",
-      "source_location": "L64"
+      "norm_label": "dupes()",
+      "source_file": "scripts/eval_review.py",
+      "source_location": "L35"
     },
     {
-      "id": "scripts_jev_lab_decide",
-      "label": "decide()",
+      "id": "scripts_eval_review_route",
+      "label": "route()",
       "_callable": true,
       "_origin": "ast",
       "community": 4,
-      "community_name": "jev_lab.py",
+      "community_name": "eval_review.py",
       "file_type": "code",
-      "norm_label": "decide()",
-      "source_file": "scripts/jev_lab.py",
-      "source_location": "L102"
+      "norm_label": "route()",
+      "source_file": "scripts/eval_review.py",
+      "source_location": "L69"
     },
     {
-      "id": "scripts_jev_lab_final",
-      "label": "final()",
+      "id": "scripts_eval_review_writer",
+      "label": "writer()",
       "_callable": true,
       "_origin": "ast",
       "community": 4,
-      "community_name": "jev_lab.py",
+      "community_name": "eval_review.py",
       "file_type": "code",
-      "norm_label": "final()",
-      "source_file": "scripts/jev_lab.py",
-      "source_location": "L186"
-    },
-    {
-      "id": "scripts_jev_lab_option_text",
-      "label": "option_text()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 4,
-      "community_name": "jev_lab.py",
-      "file_type": "code",
-      "norm_label": "option_text()",
-      "source_file": "scripts/jev_lab.py",
-      "source_location": "L49"
-    },
-    {
-      "id": "scripts_jev_lab_score",
-      "label": "score()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 4,
-      "community_name": "jev_lab.py",
-      "file_type": "code",
-      "norm_label": "score()",
-      "source_file": "scripts/jev_lab.py",
-      "source_location": "L121"
-    },
-    {
-      "id": "scripts_jev_lab_v2_rule",
-      "label": "v2_rule()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 4,
-      "community_name": "jev_lab.py",
-      "file_type": "code",
-      "norm_label": "v2_rule()",
-      "source_file": "scripts/jev_lab.py",
-      "source_location": "L172"
+      "norm_label": "writer()",
+      "source_file": "scripts/eval_review.py",
+      "source_location": "L91"
     },
     {
       "id": "app_static_app_activequestions",
@@ -1393,7 +1465,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 7,
-      "community_name": "similar.py",
+      "community_name": "draw_hero.py",
       "file_type": "code",
       "norm_label": ".__init__()",
       "source_file": "app/similar.py",
@@ -1405,7 +1477,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 7,
-      "community_name": "similar.py",
+      "community_name": "draw_hero.py",
       "file_type": "code",
       "norm_label": ".search()",
       "source_file": "app/similar.py",
@@ -1417,7 +1489,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 7,
-      "community_name": "similar.py",
+      "community_name": "draw_hero.py",
       "file_type": "code",
       "norm_label": "._vector()",
       "source_file": "app/similar.py",
@@ -1429,7 +1501,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 7,
-      "community_name": "similar.py",
+      "community_name": "draw_hero.py",
       "file_type": "code",
       "norm_label": "_stem()",
       "source_file": "app/similar.py",
@@ -1441,71 +1513,71 @@
       "_callable": true,
       "_origin": "ast",
       "community": 7,
-      "community_name": "similar.py",
+      "community_name": "draw_hero.py",
       "file_type": "code",
       "norm_label": "tokens()",
       "source_file": "app/similar.py",
       "source_location": "L40"
     },
     {
-      "id": "scripts_eval_review_bank",
-      "label": "bank()",
+      "id": "scripts_draw_hero_box",
+      "label": "box()",
       "_callable": true,
       "_origin": "ast",
-      "community": 8,
-      "community_name": "eval_review.py",
+      "community": 7,
+      "community_name": "draw_hero.py",
       "file_type": "code",
-      "norm_label": "bank()",
-      "source_file": "scripts/eval_review.py",
-      "source_location": "L28"
+      "norm_label": "box()",
+      "source_file": "scripts/draw_hero.py",
+      "source_location": "L27"
     },
     {
-      "id": "scripts_eval_review_claude",
-      "label": "claude()",
+      "id": "scripts_draw_hero_bubble",
+      "label": "bubble()",
       "_callable": true,
       "_origin": "ast",
-      "community": 8,
-      "community_name": "eval_review.py",
+      "community": 7,
+      "community_name": "draw_hero.py",
       "file_type": "code",
-      "norm_label": "claude()",
-      "source_file": "scripts/eval_review.py",
-      "source_location": "L117"
+      "norm_label": "bubble()",
+      "source_file": "scripts/draw_hero.py",
+      "source_location": "L51"
     },
     {
-      "id": "scripts_eval_review_dupes",
-      "label": "dupes()",
+      "id": "scripts_draw_hero_p",
+      "label": "P()",
       "_callable": true,
       "_origin": "ast",
-      "community": 8,
-      "community_name": "eval_review.py",
+      "community": 7,
+      "community_name": "draw_hero.py",
       "file_type": "code",
-      "norm_label": "dupes()",
-      "source_file": "scripts/eval_review.py",
-      "source_location": "L35"
+      "norm_label": "p()",
+      "source_file": "scripts/draw_hero.py",
+      "source_location": "L18"
     },
     {
-      "id": "scripts_eval_review_route",
-      "label": "route()",
+      "id": "scripts_draw_hero_poly",
+      "label": "poly()",
       "_callable": true,
       "_origin": "ast",
-      "community": 8,
-      "community_name": "eval_review.py",
+      "community": 7,
+      "community_name": "draw_hero.py",
       "file_type": "code",
-      "norm_label": "route()",
-      "source_file": "scripts/eval_review.py",
-      "source_location": "L69"
+      "norm_label": "poly()",
+      "source_file": "scripts/draw_hero.py",
+      "source_location": "L22"
     },
     {
-      "id": "scripts_eval_review_writer",
-      "label": "writer()",
+      "id": "scripts_draw_hero_sticker",
+      "label": "sticker()",
       "_callable": true,
       "_origin": "ast",
-      "community": 8,
-      "community_name": "eval_review.py",
+      "community": 7,
+      "community_name": "draw_hero.py",
       "file_type": "code",
-      "norm_label": "writer()",
-      "source_file": "scripts/eval_review.py",
-      "source_location": "L91"
+      "norm_label": "sticker()",
+      "source_file": "scripts/draw_hero.py",
+      "source_location": "L34"
     },
     {
       "id": "scripts_review_cases_big_split",
@@ -1513,7 +1585,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 8,
-      "community_name": "eval_review.py",
+      "community_name": "review_cases_big.py",
       "file_type": "code",
       "norm_label": "split()",
       "source_file": "scripts/review_cases_big.py",
@@ -1648,17 +1720,6 @@
       "source_location": ""
     },
     {
-      "id": "post",
-      "label": "post",
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "app.py",
-      "file_type": "code",
-      "norm_label": "post",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
       "id": "app_app_rationale_1",
       "label": "NFC Idea Finder \u2014 web app (Flask). Run locally: python app/app.py ->\u2026",
       "_origin": "ast",
@@ -1701,39 +1762,6 @@
       "norm_label": "the bank: every idea, searchable, filterable by world, sorted by most used or...",
       "source_file": "app/app.py",
       "source_location": "L391"
-    },
-    {
-      "id": "app_app_rationale_430",
-      "label": "Browser asks for a password. No ADMIN_PASSWORD set = admin is switched off.",
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "app.py",
-      "file_type": "rationale",
-      "norm_label": "browser asks for a password. no admin_password set = admin is switched off.",
-      "source_file": "app/app.py",
-      "source_location": "L430"
-    },
-    {
-      "id": "app_app_rationale_479",
-      "label": "Admin button: (re)run the AI review, e.g. for ideas sent before the AI was\u2026",
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "app.py",
-      "file_type": "rationale",
-      "norm_label": "admin button: (re)run the ai review, e.g. for ideas sent before the ai was...",
-      "source_file": "app/app.py",
-      "source_location": "L479"
-    },
-    {
-      "id": "app_app_rationale_489",
-      "label": "Undo for an idea the AI approved: take it out of the bank again.",
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "app.py",
-      "file_type": "rationale",
-      "norm_label": "undo for an idea the ai approved: take it out of the bank again.",
-      "source_file": "app/app.py",
-      "source_location": "L489"
     },
     {
       "id": "app_app_rationale_86",
@@ -1780,6 +1808,17 @@
       "source_location": ""
     },
     {
+      "id": "post",
+      "label": "post",
+      "_origin": "ast",
+      "community": 1,
+      "community_name": "database.py",
+      "file_type": "code",
+      "norm_label": "post",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
       "id": "app_app_rationale_323",
       "label": "The visitor's own words, published under the rewritten idea only if they ticked\u2026",
       "_origin": "ast",
@@ -1822,6 +1861,39 @@
       "norm_label": "someone says \"i use this\": the idea climbs in the bank and the creator sees it...",
       "source_file": "app/app.py",
       "source_location": "L416"
+    },
+    {
+      "id": "app_app_rationale_430",
+      "label": "Browser asks for a password. No ADMIN_PASSWORD set = admin is switched off.",
+      "_origin": "ast",
+      "community": 1,
+      "community_name": "database.py",
+      "file_type": "rationale",
+      "norm_label": "browser asks for a password. no admin_password set = admin is switched off.",
+      "source_file": "app/app.py",
+      "source_location": "L430"
+    },
+    {
+      "id": "app_app_rationale_479",
+      "label": "Admin button: (re)run the AI review, e.g. for ideas sent before the AI was\u2026",
+      "_origin": "ast",
+      "community": 1,
+      "community_name": "database.py",
+      "file_type": "rationale",
+      "norm_label": "admin button: (re)run the ai review, e.g. for ideas sent before the ai was...",
+      "source_file": "app/app.py",
+      "source_location": "L479"
+    },
+    {
+      "id": "app_app_rationale_489",
+      "label": "Undo for an idea the AI approved: take it out of the bank again.",
+      "_origin": "ast",
+      "community": 1,
+      "community_name": "database.py",
+      "file_type": "rationale",
+      "norm_label": "undo for an idea the ai approved: take it out of the bank again.",
+      "source_file": "app/app.py",
+      "source_location": "L489"
     },
     {
       "id": "app_app_rationale_77",
@@ -1912,17 +1984,6 @@
       "source_location": "L85"
     },
     {
-      "id": "scripts_draw_hero",
-      "label": "draw_hero.py",
-      "_origin": "ast",
-      "community": 10,
-      "community_name": "draw_hero_pixel.py",
-      "file_type": "code",
-      "norm_label": "draw_hero.py",
-      "source_file": "scripts/draw_hero.py",
-      "source_location": "L1"
-    },
-    {
       "id": "scripts_draw_hero_pixel",
       "label": "draw_hero_pixel.py",
       "_origin": "ast",
@@ -1943,28 +2004,6 @@
       "norm_label": "pixel-art version of the home-page illustration -> app/static/hero-pixel.png...",
       "source_file": "scripts/draw_hero_pixel.py",
       "source_location": "L1"
-    },
-    {
-      "id": "scripts_draw_hero_rationale_1",
-      "label": "Draws the home-page illustration (docs/img + app/static/hero.svg). Isometric\u2026",
-      "_origin": "ast",
-      "community": 10,
-      "community_name": "draw_hero_pixel.py",
-      "file_type": "rationale",
-      "norm_label": "draws the home-page illustration (docs/img + app/static/hero.svg). isometric...",
-      "source_file": "scripts/draw_hero.py",
-      "source_location": "L1"
-    },
-    {
-      "id": "scripts_draw_hero_rationale_28",
-      "label": "Axis-aligned box: draws the 3 faces the viewer can see.",
-      "_origin": "ast",
-      "community": 10,
-      "community_name": "draw_hero_pixel.py",
-      "file_type": "rationale",
-      "norm_label": "axis-aligned box: draws the 3 faces the viewer can see.",
-      "source_file": "scripts/draw_hero.py",
-      "source_location": "L28"
     },
     {
       "id": "claude",
@@ -2126,6 +2165,61 @@
       },
       "norm_label": "deploy.sh script",
       "source_file": "scripts/deploy.sh",
+      "source_location": "L1"
+    },
+    {
+      "id": "scripts_jev_lab",
+      "label": "jev_lab.py",
+      "_origin": "ast",
+      "community": 14,
+      "community_name": "jev_lab.py",
+      "file_type": "code",
+      "norm_label": "jev_lab.py",
+      "source_file": "scripts/jev_lab.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "scripts_jev_lab_rationale_1",
+      "label": "Jev lab: record Jev's raw answers for the test ideas once, then try duplicate\u2026",
+      "_origin": "ast",
+      "community": 14,
+      "community_name": "jev_lab.py",
+      "file_type": "rationale",
+      "norm_label": "jev lab: record jev's raw answers for the test ideas once, then try duplicate...",
+      "source_file": "scripts/jev_lab.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "scripts_jev_lab_rationale_103",
+      "label": "Apply one rule to the saved answers. Returns a bank id or None (= new).",
+      "_origin": "ast",
+      "community": 14,
+      "community_name": "jev_lab.py",
+      "file_type": "rationale",
+      "norm_label": "apply one rule to the saved answers. returns a bank id or none (= new).",
+      "source_file": "scripts/jev_lab.py",
+      "source_location": "L103"
+    },
+    {
+      "id": "scripts_render_animation",
+      "label": "render_animation.py",
+      "_origin": "ast",
+      "community": 15,
+      "community_name": "render_animation.py",
+      "file_type": "code",
+      "norm_label": "render_animation.py",
+      "source_file": "scripts/render_animation.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "scripts_render_animation_rationale_1",
+      "label": "Render docs/anim/pipeline.html to docs/img/32-pipeline.gif (800x450, 12 fps,\u2026",
+      "_origin": "ast",
+      "community": 15,
+      "community_name": "render_animation.py",
+      "file_type": "rationale",
+      "norm_label": "render docs/anim/pipeline.html to docs/img/32-pipeline.gif (800x450, 12 fps,...",
+      "source_file": "scripts/render_animation.py",
       "source_location": "L1"
     },
     {
@@ -2429,6 +2523,18 @@
       "source_location": "L594"
     },
     {
+      "id": "project_log_33_an_animation_made_of_real_data",
+      "label": "33. An animation made of real data",
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "Day 1: Saturday 26 September 2026",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "33. an animation made of real data",
+      "source_file": "PROJECT_LOG.md",
+      "source_location": "L602"
+    },
+    {
       "id": "project_log_3_what_the_database_looks_like",
       "label": "3. What the database looks like",
       "_origin": "ast",
@@ -2650,10 +2756,21 @@
       "label": "questions.py",
       "_origin": "ast",
       "community": 4,
-      "community_name": "jev_lab.py",
+      "community_name": "eval_review.py",
       "file_type": "code",
       "norm_label": "questions.py",
       "source_file": "app/questions.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "scripts_anim_cases",
+      "label": "anim_cases.py",
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "eval_review.py",
+      "file_type": "code",
+      "norm_label": "anim_cases.py",
+      "source_file": "scripts/anim_cases.py",
       "source_location": "L1"
     },
     {
@@ -2661,7 +2778,7 @@
       "label": "batch_reddit.py",
       "_origin": "ast",
       "community": 4,
-      "community_name": "jev_lab.py",
+      "community_name": "eval_review.py",
       "file_type": "code",
       "norm_label": "batch_reddit.py",
       "source_file": "scripts/batch_reddit.py",
@@ -2672,40 +2789,85 @@
       "label": "build_db.py",
       "_origin": "ast",
       "community": 4,
-      "community_name": "jev_lab.py",
+      "community_name": "eval_review.py",
       "file_type": "code",
       "norm_label": "build_db.py",
       "source_file": "scripts/build_db.py",
       "source_location": "L1"
     },
     {
-      "id": "scripts_jev_lab",
-      "label": "jev_lab.py",
+      "id": "scripts_eval_review",
+      "label": "eval_review.py",
       "_origin": "ast",
       "community": 4,
-      "community_name": "jev_lab.py",
+      "community_name": "eval_review.py",
       "file_type": "code",
-      "norm_label": "jev_lab.py",
-      "source_file": "scripts/jev_lab.py",
+      "norm_label": "eval_review.py",
+      "source_file": "scripts/eval_review.py",
       "source_location": "L1"
+    },
+    {
+      "id": "scripts_review_cases",
+      "label": "review_cases.py",
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "eval_review.py",
+      "file_type": "code",
+      "norm_label": "review_cases.py",
+      "source_file": "scripts/review_cases.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "readme_why_jev_and_how_we_made_it_work",
+      "label": "Why Jev, and how we made it work",
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "eval_review.py",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "why jev, and how we made it work",
+      "source_file": "README.md",
+      "source_location": "L91"
     },
     {
       "id": "app_questions_rationale_1",
       "label": "The interview: questions about everyday life, NOT about NFC. Visitors don't\u2026",
       "_origin": "ast",
       "community": 4,
-      "community_name": "jev_lab.py",
+      "community_name": "eval_review.py",
       "file_type": "rationale",
       "norm_label": "the interview: questions about everyday life, not about nfc. visitors don't...",
       "source_file": "app/questions.py",
       "source_location": "L1"
     },
     {
+      "id": "scripts_anim_cases_rationale_1",
+      "label": "Build docs/anim/cases.json: the real data behind the README animation\u2026",
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "eval_review.py",
+      "file_type": "rationale",
+      "norm_label": "build docs/anim/cases.json: the real data behind the readme animation...",
+      "source_file": "scripts/anim_cases.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "scripts_anim_cases_rationale_36",
+      "label": "The live rule (ai_review.jev_find_duplicate) applied to recorded answers:\u2026",
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "eval_review.py",
+      "file_type": "rationale",
+      "norm_label": "the live rule (ai_review.jev_find_duplicate) applied to recorded answers:...",
+      "source_file": "scripts/anim_cases.py",
+      "source_location": "L36"
+    },
+    {
       "id": "scripts_batch_reddit_rationale_1",
       "label": "Batch 7-10: Reddit threads (added 2026-09-26 evening). Loaded by build_db.py.\u2026",
       "_origin": "ast",
       "community": 4,
-      "community_name": "jev_lab.py",
+      "community_name": "eval_review.py",
       "file_type": "rationale",
       "norm_label": "batch 7-10: reddit threads (added 2026-09-26 evening). loaded by build_db.py....",
       "source_file": "scripts/batch_reddit.py",
@@ -2716,33 +2878,55 @@
       "label": "Builds the first version of the NFC Idea Finder database from the NotebookLM\u2026",
       "_origin": "ast",
       "community": 4,
-      "community_name": "jev_lab.py",
+      "community_name": "eval_review.py",
       "file_type": "rationale",
       "norm_label": "builds the first version of the nfc idea finder database from the notebooklm...",
       "source_file": "scripts/build_db.py",
       "source_location": "L1"
     },
     {
-      "id": "scripts_jev_lab_rationale_1",
-      "label": "Jev lab: record Jev's raw answers for the test ideas once, then try duplicate\u2026",
+      "id": "scripts_eval_review_rationale_1",
+      "label": "Score the AI review on the made-up ideas in review_cases.py. Nothing is saved;\u2026",
       "_origin": "ast",
       "community": 4,
-      "community_name": "jev_lab.py",
+      "community_name": "eval_review.py",
       "file_type": "rationale",
-      "norm_label": "jev lab: record jev's raw answers for the test ideas once, then try duplicate...",
-      "source_file": "scripts/jev_lab.py",
+      "norm_label": "score the ai review on the made-up ideas in review_cases.py. nothing is saved;...",
+      "source_file": "scripts/eval_review.py",
       "source_location": "L1"
     },
     {
-      "id": "scripts_jev_lab_rationale_103",
-      "label": "Apply one rule to the saved answers. Returns a bank id or None (= new).",
+      "id": "scripts_eval_review_rationale_36",
+      "label": "Jev duplicate check only (no Claude). Cases: (text, expected, ids, [style]);\u2026",
       "_origin": "ast",
       "community": 4,
-      "community_name": "jev_lab.py",
+      "community_name": "eval_review.py",
       "file_type": "rationale",
-      "norm_label": "apply one rule to the saved answers. returns a bank id or none (= new).",
-      "source_file": "scripts/jev_lab.py",
-      "source_location": "L103"
+      "norm_label": "jev duplicate check only (no claude). cases: (text, expected, ids, [style]);...",
+      "source_file": "scripts/eval_review.py",
+      "source_location": "L36"
+    },
+    {
+      "id": "scripts_eval_review_rationale_70",
+      "label": "Jev only (no Claude calls): which ideas Jev files alone, which go to Claude for\u2026",
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "eval_review.py",
+      "file_type": "rationale",
+      "norm_label": "jev only (no claude calls): which ideas jev files alone, which go to claude for...",
+      "source_file": "scripts/eval_review.py",
+      "source_location": "L70"
+    },
+    {
+      "id": "scripts_review_cases_rationale_1",
+      "label": "Made-up visitor ideas for testing the AI review, with the answer a human would\u2026",
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "eval_review.py",
+      "file_type": "rationale",
+      "norm_label": "made-up visitor ideas for testing the ai review, with the answer a human would...",
+      "source_file": "scripts/review_cases.py",
+      "source_location": "L1"
     },
     {
       "id": "app_static_app",
@@ -2793,7 +2977,7 @@
       "label": "PROJECT_LOG.md",
       "_origin": "ast",
       "community": 6,
-      "community_name": "NFC Idea Finder: project log",
+      "community_name": "Tapwise: NFC ideas, reviewed by Jev + Claude",
       "file_type": "document",
       "node_kind": "page",
       "norm_label": "project_log.md",
@@ -2805,31 +2989,31 @@
       "label": "Before going public (checklist)",
       "_origin": "ast",
       "community": 6,
-      "community_name": "NFC Idea Finder: project log",
+      "community_name": "Tapwise: NFC ideas, reviewed by Jev + Claude",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "before going public (checklist)",
       "source_file": "PROJECT_LOG.md",
-      "source_location": "L616"
+      "source_location": "L631"
     },
     {
       "id": "project_log_lessons_so_far",
       "label": "Lessons so far",
       "_origin": "ast",
       "community": 6,
-      "community_name": "NFC Idea Finder: project log",
+      "community_name": "Tapwise: NFC ideas, reviewed by Jev + Claude",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "lessons so far",
       "source_file": "PROJECT_LOG.md",
-      "source_location": "L641"
+      "source_location": "L656"
     },
     {
       "id": "project_log_nfc_idea_finder_project_log",
       "label": "NFC Idea Finder: project log",
       "_origin": "ast",
       "community": 6,
-      "community_name": "NFC Idea Finder: project log",
+      "community_name": "Tapwise: NFC ideas, reviewed by Jev + Claude",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "nfc idea finder: project log",
@@ -2841,31 +3025,31 @@
       "label": "Open to-do list",
       "_origin": "ast",
       "community": 6,
-      "community_name": "NFC Idea Finder: project log",
+      "community_name": "Tapwise: NFC ideas, reviewed by Jev + Claude",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "open to-do list",
       "source_file": "PROJECT_LOG.md",
-      "source_location": "L604"
+      "source_location": "L619"
     },
     {
       "id": "project_log_screenshot_checklist_for_the_readme",
       "label": "Screenshot checklist (for the README)",
       "_origin": "ast",
       "community": 6,
-      "community_name": "NFC Idea Finder: project log",
+      "community_name": "Tapwise: NFC ideas, reviewed by Jev + Claude",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "screenshot checklist (for the readme)",
       "source_file": "PROJECT_LOG.md",
-      "source_location": "L630"
+      "source_location": "L645"
     },
     {
       "id": "project_log_the_idea_in_one_paragraph",
       "label": "The idea in one paragraph",
       "_origin": "ast",
       "community": 6,
-      "community_name": "NFC Idea Finder: project log",
+      "community_name": "Tapwise: NFC ideas, reviewed by Jev + Claude",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "the idea in one paragraph",
@@ -2877,7 +3061,7 @@
       "label": "Timeline",
       "_origin": "ast",
       "community": 6,
-      "community_name": "NFC Idea Finder: project log",
+      "community_name": "Tapwise: NFC ideas, reviewed by Jev + Claude",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "timeline",
@@ -2889,7 +3073,7 @@
       "label": "Who built it, and how",
       "_origin": "ast",
       "community": 6,
-      "community_name": "NFC Idea Finder: project log",
+      "community_name": "Tapwise: NFC ideas, reviewed by Jev + Claude",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "who built it, and how",
@@ -2901,7 +3085,7 @@
       "label": "README.md",
       "_origin": "ast",
       "community": 6,
-      "community_name": "NFC Idea Finder: project log",
+      "community_name": "Tapwise: NFC ideas, reviewed by Jev + Claude",
       "file_type": "document",
       "node_kind": "page",
       "norm_label": "readme.md",
@@ -2913,43 +3097,55 @@
       "label": "A map of the code, for the AI (graphify)",
       "_origin": "ast",
       "community": 6,
-      "community_name": "NFC Idea Finder: project log",
+      "community_name": "Tapwise: NFC ideas, reviewed by Jev + Claude",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "a map of the code, for the ai (graphify)",
       "source_file": "README.md",
-      "source_location": "L158"
+      "source_location": "L162"
     },
     {
       "id": "readme_choosing_the_most_efficient_claude_for_the_writer_job",
       "label": "Choosing the most efficient Claude for the writer job",
       "_origin": "ast",
       "community": 6,
-      "community_name": "NFC Idea Finder: project log",
+      "community_name": "Tapwise: NFC ideas, reviewed by Jev + Claude",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "choosing the most efficient claude for the writer job",
       "source_file": "README.md",
-      "source_location": "L43"
+      "source_location": "L47"
+    },
+    {
+      "id": "readme_how_this_animation_was_made",
+      "label": "How this animation was made",
+      "_origin": "ast",
+      "community": 6,
+      "community_name": "Tapwise: NFC ideas, reviewed by Jev + Claude",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "how this animation was made",
+      "source_file": "README.md",
+      "source_location": "L184"
     },
     {
       "id": "readme_more",
       "label": "More",
       "_origin": "ast",
       "community": 6,
-      "community_name": "NFC Idea Finder: project log",
+      "community_name": "Tapwise: NFC ideas, reviewed by Jev + Claude",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "more",
       "source_file": "README.md",
-      "source_location": "L180"
+      "source_location": "L195"
     },
     {
       "id": "readme_tapwise_nfc_ideas_reviewed_by_jev_claude",
       "label": "Tapwise: NFC ideas, reviewed by Jev + Claude",
       "_origin": "ast",
       "community": 6,
-      "community_name": "NFC Idea Finder: project log",
+      "community_name": "Tapwise: NFC ideas, reviewed by Jev + Claude",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "tapwise: nfc ideas, reviewed by jev + claude",
@@ -2961,55 +3157,55 @@
       "label": "The AI toolbox at a glance",
       "_origin": "ast",
       "community": 6,
-      "community_name": "NFC Idea Finder: project log",
+      "community_name": "Tapwise: NFC ideas, reviewed by Jev + Claude",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "the ai toolbox at a glance",
       "source_file": "README.md",
-      "source_location": "L11"
+      "source_location": "L15"
     },
     {
       "id": "readme_two_ai_models_two_jobs_a_filter_and_a_writer",
       "label": "Two AI models, two jobs: a filter and a writer",
       "_origin": "ast",
       "community": 6,
-      "community_name": "NFC Idea Finder: project log",
+      "community_name": "Tapwise: NFC ideas, reviewed by Jev + Claude",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "two ai models, two jobs: a filter and a writer",
       "source_file": "README.md",
-      "source_location": "L26"
+      "source_location": "L30"
     },
     {
       "id": "readme_what_it_costs_jev_vs_claude",
       "label": "What it costs: Jev vs Claude",
       "_origin": "ast",
       "community": 6,
-      "community_name": "NFC Idea Finder: project log",
+      "community_name": "Tapwise: NFC ideas, reviewed by Jev + Claude",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "what it costs: jev vs claude",
       "source_file": "README.md",
-      "source_location": "L120"
+      "source_location": "L124"
     },
     {
       "id": "readme_which_model_does_what_and_why",
       "label": "Which model does what, and why",
       "_origin": "ast",
       "community": 6,
-      "community_name": "NFC Idea Finder: project log",
+      "community_name": "Tapwise: NFC ideas, reviewed by Jev + Claude",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "which model does what, and why",
       "source_file": "README.md",
-      "source_location": "L55"
+      "source_location": "L59"
     },
     {
       "id": "run",
       "label": "RUN.md",
       "_origin": "ast",
       "community": 6,
-      "community_name": "NFC Idea Finder: project log",
+      "community_name": "Tapwise: NFC ideas, reviewed by Jev + Claude",
       "file_type": "document",
       "node_kind": "page",
       "norm_label": "run.md",
@@ -3021,7 +3217,7 @@
       "label": "Every update after that",
       "_origin": "ast",
       "community": 6,
-      "community_name": "NFC Idea Finder: project log",
+      "community_name": "Tapwise: NFC ideas, reviewed by Jev + Claude",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "every update after that",
@@ -3033,7 +3229,7 @@
       "label": "First time (once)",
       "_origin": "ast",
       "community": 6,
-      "community_name": "NFC Idea Finder: project log",
+      "community_name": "Tapwise: NFC ideas, reviewed by Jev + Claude",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "first time (once)",
@@ -3045,7 +3241,7 @@
       "label": "On any computer, without Docker",
       "_origin": "ast",
       "community": 6,
-      "community_name": "NFC Idea Finder: project log",
+      "community_name": "Tapwise: NFC ideas, reviewed by Jev + Claude",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "on any computer, without docker",
@@ -3057,7 +3253,7 @@
       "label": "On the Raspberry Pi (hwpi), with Docker",
       "_origin": "ast",
       "community": 6,
-      "community_name": "NFC Idea Finder: project log",
+      "community_name": "Tapwise: NFC ideas, reviewed by Jev + Claude",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "on the raspberry pi (hwpi), with docker",
@@ -3069,7 +3265,7 @@
       "label": "Running Tapwise (NFC Idea Finder)",
       "_origin": "ast",
       "community": 6,
-      "community_name": "NFC Idea Finder: project log",
+      "community_name": "Tapwise: NFC ideas, reviewed by Jev + Claude",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "running tapwise (nfc idea finder)",
@@ -3081,10 +3277,21 @@
       "label": "similar.py",
       "_origin": "ast",
       "community": 7,
-      "community_name": "similar.py",
+      "community_name": "draw_hero.py",
       "file_type": "code",
       "norm_label": "similar.py",
       "source_file": "app/similar.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "scripts_draw_hero",
+      "label": "draw_hero.py",
+      "_origin": "ast",
+      "community": 7,
+      "community_name": "draw_hero.py",
+      "file_type": "code",
+      "norm_label": "draw_hero.py",
+      "source_file": "scripts/draw_hero.py",
       "source_location": "L1"
     },
     {
@@ -3092,7 +3299,7 @@
       "label": "Instant \"is this already in the bank?\" hint. Free, local, no AI. TF-IDF word\u2026",
       "_origin": "ast",
       "community": 7,
-      "community_name": "similar.py",
+      "community_name": "draw_hero.py",
       "file_type": "rationale",
       "norm_label": "instant \"is this already in the bank?\" hint. free, local, no ai. tf-idf word...",
       "source_file": "app/similar.py",
@@ -3103,96 +3310,51 @@
       "label": "Built once per catalog load; search() is a few microseconds per idea.",
       "_origin": "ast",
       "community": 7,
-      "community_name": "similar.py",
+      "community_name": "draw_hero.py",
       "file_type": "rationale",
       "norm_label": "built once per catalog load; search() is a few microseconds per idea.",
       "source_file": "app/similar.py",
       "source_location": "L52"
     },
     {
-      "id": "scripts_eval_review",
-      "label": "eval_review.py",
+      "id": "scripts_draw_hero_rationale_1",
+      "label": "Draws the home-page illustration (docs/img + app/static/hero.svg). Isometric\u2026",
       "_origin": "ast",
-      "community": 8,
-      "community_name": "eval_review.py",
-      "file_type": "code",
-      "norm_label": "eval_review.py",
-      "source_file": "scripts/eval_review.py",
+      "community": 7,
+      "community_name": "draw_hero.py",
+      "file_type": "rationale",
+      "norm_label": "draws the home-page illustration (docs/img + app/static/hero.svg). isometric...",
+      "source_file": "scripts/draw_hero.py",
       "source_location": "L1"
     },
     {
-      "id": "scripts_review_cases",
-      "label": "review_cases.py",
+      "id": "scripts_draw_hero_rationale_28",
+      "label": "Axis-aligned box: draws the 3 faces the viewer can see.",
       "_origin": "ast",
-      "community": 8,
-      "community_name": "eval_review.py",
-      "file_type": "code",
-      "norm_label": "review_cases.py",
-      "source_file": "scripts/review_cases.py",
-      "source_location": "L1"
+      "community": 7,
+      "community_name": "draw_hero.py",
+      "file_type": "rationale",
+      "norm_label": "axis-aligned box: draws the 3 faces the viewer can see.",
+      "source_file": "scripts/draw_hero.py",
+      "source_location": "L28"
     },
     {
       "id": "scripts_review_cases_big",
       "label": "review_cases_big.py",
       "_origin": "ast",
       "community": 8,
-      "community_name": "eval_review.py",
+      "community_name": "review_cases_big.py",
       "file_type": "code",
       "norm_label": "review_cases_big.py",
       "source_file": "scripts/review_cases_big.py",
       "source_location": "L1"
     },
     {
-      "id": "readme_why_jev_and_how_we_made_it_work",
-      "label": "Why Jev, and how we made it work",
-      "_origin": "ast",
-      "community": 8,
-      "community_name": "eval_review.py",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "why jev, and how we made it work",
-      "source_file": "README.md",
-      "source_location": "L87"
-    },
-    {
-      "id": "scripts_eval_review_rationale_1",
-      "label": "Score the AI review on the made-up ideas in review_cases.py. Nothing is saved;\u2026",
-      "_origin": "ast",
-      "community": 8,
-      "community_name": "eval_review.py",
-      "file_type": "rationale",
-      "norm_label": "score the ai review on the made-up ideas in review_cases.py. nothing is saved;...",
-      "source_file": "scripts/eval_review.py",
-      "source_location": "L1"
-    },
-    {
-      "id": "scripts_eval_review_rationale_36",
-      "label": "Jev duplicate check only (no Claude). Cases: (text, expected, ids, [style]);\u2026",
-      "_origin": "ast",
-      "community": 8,
-      "community_name": "eval_review.py",
-      "file_type": "rationale",
-      "norm_label": "jev duplicate check only (no claude). cases: (text, expected, ids, [style]);...",
-      "source_file": "scripts/eval_review.py",
-      "source_location": "L36"
-    },
-    {
-      "id": "scripts_eval_review_rationale_70",
-      "label": "Jev only (no Claude calls): which ideas Jev files alone, which go to Claude for\u2026",
-      "_origin": "ast",
-      "community": 8,
-      "community_name": "eval_review.py",
-      "file_type": "rationale",
-      "norm_label": "jev only (no claude calls): which ideas jev files alone, which go to claude for...",
-      "source_file": "scripts/eval_review.py",
-      "source_location": "L70"
-    },
-    {
       "id": "scripts_review_cases_big_rationale_1",
       "label": "The big test set for the Jev duplicate check (written 1 Oct 2026, before any\u2026",
       "_origin": "ast",
       "community": 8,
-      "community_name": "eval_review.py",
+      "community_name": "review_cases_big.py",
       "file_type": "rationale",
       "norm_label": "the big test set for the jev duplicate check (written 1 oct 2026, before any...",
       "source_file": "scripts/review_cases_big.py",
@@ -3203,22 +3365,11 @@
       "label": "TUNE or TEST, decided by a hash of the text: fixed, random-looking, about half\u2026",
       "_origin": "ast",
       "community": 8,
-      "community_name": "eval_review.py",
+      "community_name": "review_cases_big.py",
       "file_type": "rationale",
       "norm_label": "tune or test, decided by a hash of the text: fixed, random-looking, about half...",
       "source_file": "scripts/review_cases_big.py",
       "source_location": "L263"
-    },
-    {
-      "id": "scripts_review_cases_rationale_1",
-      "label": "Made-up visitor ideas for testing the AI review, with the answer a human would\u2026",
-      "_origin": "ast",
-      "community": 8,
-      "community_name": "eval_review.py",
-      "file_type": "rationale",
-      "norm_label": "made-up visitor ideas for testing the ai review, with the answer a human would...",
-      "source_file": "scripts/review_cases.py",
-      "source_location": "L1"
     },
     {
       "id": "app_engines_jev",
@@ -3405,18 +3556,6 @@
       "type": "external"
     },
     {
-      "id": "math",
-      "label": "math",
-      "_origin": "semantic",
-      "community": 10,
-      "community_name": "draw_hero_pixel.py",
-      "external": true,
-      "file_type": "concept",
-      "norm_label": "math",
-      "source_file": "",
-      "type": "external"
-    },
-    {
       "id": "pil",
       "label": "pil",
       "_origin": "semantic",
@@ -3425,6 +3564,30 @@
       "external": true,
       "file_type": "concept",
       "norm_label": "pil",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "concurrent_futures",
+      "label": "concurrent_futures",
+      "_origin": "semantic",
+      "community": 14,
+      "community_name": "jev_lab.py",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "concurrent_futures",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "itertools",
+      "label": "itertools",
+      "_origin": "semantic",
+      "community": 14,
+      "community_name": "jev_lab.py",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "itertools",
       "source_file": "",
       "type": "external"
     },
@@ -3493,34 +3656,10 @@
       "label": "collections",
       "_origin": "semantic",
       "community": 4,
-      "community_name": "jev_lab.py",
+      "community_name": "eval_review.py",
       "external": true,
       "file_type": "concept",
       "norm_label": "collections",
-      "source_file": "",
-      "type": "external"
-    },
-    {
-      "id": "concurrent_futures",
-      "label": "concurrent_futures",
-      "_origin": "semantic",
-      "community": 4,
-      "community_name": "jev_lab.py",
-      "external": true,
-      "file_type": "concept",
-      "norm_label": "concurrent_futures",
-      "source_file": "",
-      "type": "external"
-    },
-    {
-      "id": "itertools",
-      "label": "itertools",
-      "_origin": "semantic",
-      "community": 4,
-      "community_name": "jev_lab.py",
-      "external": true,
-      "file_type": "concept",
-      "norm_label": "itertools",
       "source_file": "",
       "type": "external"
     },
@@ -3529,7 +3668,7 @@
       "label": "json",
       "_origin": "semantic",
       "community": 4,
-      "community_name": "jev_lab.py",
+      "community_name": "eval_review.py",
       "external": true,
       "file_type": "concept",
       "norm_label": "json",
@@ -3541,7 +3680,7 @@
       "label": "os",
       "_origin": "semantic",
       "community": 4,
-      "community_name": "jev_lab.py",
+      "community_name": "eval_review.py",
       "external": true,
       "file_type": "concept",
       "norm_label": "os",
@@ -3553,7 +3692,7 @@
       "label": "pathlib",
       "_origin": "semantic",
       "community": 4,
-      "community_name": "jev_lab.py",
+      "community_name": "eval_review.py",
       "external": true,
       "file_type": "concept",
       "norm_label": "pathlib",
@@ -3565,10 +3704,34 @@
       "label": "sys",
       "_origin": "semantic",
       "community": 4,
-      "community_name": "jev_lab.py",
+      "community_name": "eval_review.py",
       "external": true,
       "file_type": "concept",
       "norm_label": "sys",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "time",
+      "label": "time",
+      "_origin": "semantic",
+      "community": 4,
+      "community_name": "eval_review.py",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "time",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "math",
+      "label": "math",
+      "_origin": "semantic",
+      "community": 7,
+      "community_name": "draw_hero.py",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "math",
       "source_file": "",
       "type": "external"
     },
@@ -3577,22 +3740,10 @@
       "label": "hashlib",
       "_origin": "semantic",
       "community": 8,
-      "community_name": "eval_review.py",
+      "community_name": "review_cases_big.py",
       "external": true,
       "file_type": "concept",
       "norm_label": "hashlib",
-      "source_file": "",
-      "type": "external"
-    },
-    {
-      "id": "time",
-      "label": "time",
-      "_origin": "semantic",
-      "community": 8,
-      "community_name": "eval_review.py",
-      "external": true,
-      "file_type": "concept",
-      "norm_label": "time",
       "source_file": "",
       "type": "external"
     },
@@ -3605,6 +3756,50 @@
       "external": true,
       "file_type": "concept",
       "norm_label": "re",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "argparse",
+      "label": "argparse",
+      "community": 15,
+      "community_name": "render_animation.py",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "argparse",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "shutil",
+      "label": "shutil",
+      "community": 15,
+      "community_name": "render_animation.py",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "shutil",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "subprocess",
+      "label": "subprocess",
+      "community": 15,
+      "community_name": "render_animation.py",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "subprocess",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "tempfile",
+      "label": "tempfile",
+      "community": 15,
+      "community_name": "render_animation.py",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "tempfile",
       "source_file": "",
       "type": "external"
     }
@@ -5207,6 +5402,42 @@
       "weight": 1.0
     },
     {
+      "source": "scripts_anim_cases_jev_decision",
+      "target": "scripts_anim_cases_fail",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "scripts/anim_cases.py",
+      "source_location": "L44",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_anim_cases_main",
+      "target": "scripts_anim_cases_fail",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "scripts/anim_cases.py",
+      "source_location": "L68",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_anim_cases_main",
+      "target": "scripts_anim_cases_jev_decision",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "scripts/anim_cases.py",
+      "source_location": "L69",
+      "weight": 1.0
+    },
+    {
       "source": "scripts_build_db_idea",
       "target": "scripts_build_db_tag",
       "relation": "calls",
@@ -5360,6 +5591,30 @@
       "context": "call",
       "source_file": "scripts/jev_lab.py",
       "source_location": "L126",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_render_animation_main",
+      "target": "scripts_render_animation_embed",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "scripts/render_animation.py",
+      "source_location": "L83",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_render_animation_main",
+      "target": "scripts_render_animation_capture",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "scripts/render_animation.py",
+      "source_location": "L87",
       "weight": 1.0
     },
     {
@@ -6047,6 +6302,78 @@
       "weight": 1.0
     },
     {
+      "source": "scripts_anim_cases",
+      "target": "time",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "scripts/anim_cases.py",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_anim_cases",
+      "target": "app_ai_review",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "scripts/anim_cases.py",
+      "source_location": "L14",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_anim_cases",
+      "target": "app_database",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "scripts/anim_cases.py",
+      "source_location": "L15",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_anim_cases",
+      "target": "json",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "scripts/anim_cases.py",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_anim_cases",
+      "target": "os",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "scripts/anim_cases.py",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_anim_cases",
+      "target": "sys",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "scripts/anim_cases.py",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
       "source": "scripts_build_db",
       "target": "os",
       "relation": "imports",
@@ -6263,6 +6590,90 @@
       "weight": 1.0
     },
     {
+      "source": "scripts_render_animation",
+      "target": "os",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "scripts/render_animation.py",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_render_animation",
+      "target": "re",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "scripts/render_animation.py",
+      "source_location": "L11",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_render_animation",
+      "target": "shutil",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "scripts/render_animation.py",
+      "source_location": "L12",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_render_animation",
+      "target": "subprocess",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "scripts/render_animation.py",
+      "source_location": "L13",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_render_animation",
+      "target": "tempfile",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "scripts/render_animation.py",
+      "source_location": "L14",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_render_animation",
+      "target": "argparse",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "scripts/render_animation.py",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_render_animation",
+      "target": "json",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "scripts/render_animation.py",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
       "source": "scripts_review_cases_big",
       "target": "hashlib",
       "relation": "imports",
@@ -6404,6 +6815,18 @@
       "context": "import",
       "source_file": "app/questions.py",
       "source_location": "L11",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_anim_cases",
+      "target": "app_questions",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "scripts/anim_cases.py",
+      "source_location": "L16",
       "weight": 1.0
     },
     {
@@ -7978,6 +8401,17 @@
     },
     {
       "source": "project_log_day_1_saturday_26_september_2026",
+      "target": "project_log_33_an_animation_made_of_real_data",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "PROJECT_LOG.md",
+      "source_location": "L602",
+      "weight": 1.0
+    },
+    {
+      "source": "project_log_day_1_saturday_26_september_2026",
       "target": "project_log_3_what_the_database_looks_like",
       "relation": "contains",
       "_origin": "ast",
@@ -8039,7 +8473,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "PROJECT_LOG.md",
-      "source_location": "L604",
+      "source_location": "L619",
       "weight": 1.0
     },
     {
@@ -8050,7 +8484,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "PROJECT_LOG.md",
-      "source_location": "L616",
+      "source_location": "L631",
       "weight": 1.0
     },
     {
@@ -8061,7 +8495,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "PROJECT_LOG.md",
-      "source_location": "L630",
+      "source_location": "L645",
       "weight": 1.0
     },
     {
@@ -8072,7 +8506,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "PROJECT_LOG.md",
-      "source_location": "L641",
+      "source_location": "L656",
       "weight": 1.0
     },
     {
@@ -8110,24 +8544,24 @@
     },
     {
       "source": "readme_tapwise_nfc_ideas_reviewed_by_jev_claude",
-      "target": "readme_the_ai_toolbox_at_a_glance",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "README.md",
-      "source_location": "L11",
-      "weight": 1.0
-    },
-    {
-      "source": "readme_tapwise_nfc_ideas_reviewed_by_jev_claude",
       "target": "readme_what_it_costs_jev_vs_claude",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "README.md",
-      "source_location": "L120",
+      "source_location": "L124",
+      "weight": 1.0
+    },
+    {
+      "source": "readme_tapwise_nfc_ideas_reviewed_by_jev_claude",
+      "target": "readme_the_ai_toolbox_at_a_glance",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": "L15",
       "weight": 1.0
     },
     {
@@ -8138,7 +8572,18 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "README.md",
-      "source_location": "L158",
+      "source_location": "L162",
+      "weight": 1.0
+    },
+    {
+      "source": "readme_tapwise_nfc_ideas_reviewed_by_jev_claude",
+      "target": "readme_how_this_animation_was_made",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": "L184",
       "weight": 1.0
     },
     {
@@ -8149,7 +8594,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "README.md",
-      "source_location": "L180",
+      "source_location": "L195",
       "weight": 1.0
     },
     {
@@ -8160,7 +8605,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "README.md",
-      "source_location": "L26",
+      "source_location": "L30",
       "weight": 1.0
     },
     {
@@ -8171,7 +8616,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "README.md",
-      "source_location": "L55",
+      "source_location": "L59",
       "weight": 1.0
     },
     {
@@ -8182,7 +8627,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "README.md",
-      "source_location": "L87",
+      "source_location": "L91",
       "weight": 1.0
     },
     {
@@ -8193,7 +8638,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "README.md",
-      "source_location": "L43",
+      "source_location": "L47",
       "weight": 1.0
     },
     {
@@ -8249,6 +8694,39 @@
       "confidence_score": 1.0,
       "source_file": "RUN.md",
       "source_location": "L59",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_anim_cases",
+      "target": "scripts_anim_cases_fail",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/anim_cases.py",
+      "source_location": "L31",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_anim_cases",
+      "target": "scripts_anim_cases_jev_decision",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/anim_cases.py",
+      "source_location": "L35",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_anim_cases",
+      "target": "scripts_anim_cases_main",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/anim_cases.py",
+      "source_location": "L55",
       "weight": 1.0
     },
     {
@@ -8502,6 +8980,39 @@
       "confidence_score": 1.0,
       "source_file": "scripts/jev_lab.py",
       "source_location": "L49",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_render_animation",
+      "target": "scripts_render_animation_embed",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/render_animation.py",
+      "source_location": "L61",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_render_animation",
+      "target": "scripts_render_animation_capture",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/render_animation.py",
+      "source_location": "L72",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_render_animation",
+      "target": "scripts_render_animation_main",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/render_animation.py",
+      "source_location": "L78",
       "weight": 1.0
     },
     {
@@ -9011,6 +9522,28 @@
       "weight": 1.0
     },
     {
+      "source": "scripts_anim_cases_rationale_1",
+      "target": "scripts_anim_cases",
+      "relation": "rationale_for",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/anim_cases.py",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_anim_cases_rationale_36",
+      "target": "scripts_anim_cases_jev_decision",
+      "relation": "rationale_for",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/anim_cases.py",
+      "source_location": "L36",
+      "weight": 1.0
+    },
+    {
       "source": "scripts_batch_reddit_rationale_1",
       "target": "scripts_batch_reddit",
       "relation": "rationale_for",
@@ -9121,6 +9654,17 @@
       "weight": 1.0
     },
     {
+      "source": "scripts_render_animation_rationale_1",
+      "target": "scripts_render_animation",
+      "relation": "rationale_for",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/render_animation.py",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
       "source": "scripts_review_cases_big_rationale_1",
       "target": "scripts_review_cases_big",
       "relation": "rationale_for",
@@ -9161,7 +9705,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "README.md",
-      "source_location": "L182",
+      "source_location": "L197",
       "weight": 1.0
     },
     {
@@ -9172,7 +9716,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "README.md",
-      "source_location": "L183",
+      "source_location": "L198",
       "weight": 1.0
     },
     {
@@ -9304,7 +9848,7 @@
       "confidence_score": 0.95,
       "context": "dupes",
       "source_file": "README.md",
-      "source_location": "L116",
+      "source_location": "L120",
       "weight": 1.0
     },
     {
@@ -9316,7 +9860,7 @@
       "confidence_score": 0.95,
       "context": "route",
       "source_file": "README.md",
-      "source_location": "L116",
+      "source_location": "L120",
       "weight": 1.0
     },
     {
@@ -9333,5 +9877,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "ee9e7f2f57c2c953a2f4bb78abd567d846e27dbe"
+  "built_at_commit": "a8ccda5bed009e2bacb5119a1f73aa171bcac347"
 }

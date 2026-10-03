@@ -1,0 +1,163 @@
+{
+  "built": "2026-10-03",
+  "rule": {
+    "pick_min": 0.45,
+    "covers_min": 0.55,
+    "sure_pick": 0.95,
+    "sure_covers": 0.8
+  },
+  "bank_size": 102,
+  "ideas": {
+    "i006": "One-tap timer where you need it",
+    "i037": "Hotspot for your laptop in one tap",
+    "i057": "Guard patrol checkpoints",
+    "i092": "Did anyone feed the pet?",
+    "i093": "A care log for someone you look after",
+    "i098": "Send the robot vacuum to one spot",
+    "i105": "The story behind something you made",
+    "i108": "Pre-heat the coffee machine from bed"
+  },
+  "cases": [
+    {
+      "lab": "TUNE",
+      "text": "tag on the kettle that starts a 4 minute tea timer",
+      "expected": "duplicate",
+      "jev": {
+        "shortlist": [
+          {
+            "id": "i006",
+            "pick": 1.0,
+            "covers": 0.97,
+            "title": "One-tap timer where you need it"
+          },
+          {
+            "id": "i105",
+            "pick": 0.0,
+            "covers": null,
+            "title": "The story behind something you made"
+          },
+          {
+            "id": "i037",
+            "pick": 0.0,
+            "covers": null,
+            "title": "Hotspot for your laptop in one tap"
+          }
+        ],
+        "none": 0.0,
+        "match": "i006",
+        "sure": true,
+        "outcome": "duplicate_by_jev"
+      },
+      "claude": null
+    },
+    {
+      "lab": "NEAR",
+      "text": "tag on the shower wall that starts a 5-minute timer to save water",
+      "expected": "duplicate",
+      "jev": {
+        "shortlist": [
+          {
+            "id": "i006",
+            "pick": 0.99,
+            "covers": 0.73,
+            "title": "One-tap timer where you need it"
+          },
+          {
+            "id": "i098",
+            "pick": 0.0,
+            "covers": null,
+            "title": "Send the robot vacuum to one spot"
+          },
+          {
+            "id": "i108",
+            "pick": 0.0,
+            "covers": null,
+            "title": "Pre-heat the coffee machine from bed"
+          }
+        ],
+        "none": 0.01,
+        "match": "i006",
+        "sure": false,
+        "outcome": "unsure_to_claude"
+      },
+      "claude": {
+        "model": "claude-sonnet-5",
+        "verdict": "duplicate",
+        "confidence": "high",
+        "reason": "This is just another specific timer example of the existing one-tap timer idea.",
+        "draft": null,
+        "possible_copy": "i006",
+        "input_tokens": 3311,
+        "output_tokens": 53,
+        "seconds": 1.88,
+        "cost_usd": 0.007152
+      }
+    },
+    {
+      "lab": "TUNE",
+      "text": "tag on the beehive that logs each inspection and honey harvest",
+      "expected": "new",
+      "jev": {
+        "shortlist": [
+          {
+            "id": "i057",
+            "pick": 0.29000000000000004,
+            "covers": null,
+            "title": "Guard patrol checkpoints"
+          },
+          {
+            "id": "i093",
+            "pick": 0.28,
+            "covers": null,
+            "title": "A care log for someone you look after"
+          },
+          {
+            "id": "i092",
+            "pick": 0.11,
+            "covers": null,
+            "title": "Did anyone feed the pet?"
+          }
+        ],
+        "none": 0.09,
+        "match": null,
+        "sure": false,
+        "outcome": "new_to_claude"
+      },
+      "claude": {
+        "model": "claude-sonnet-5",
+        "verdict": "new",
+        "confidence": "medium",
+        "reason": "A niche but clear NFC idea for beekeepers to log hive inspections and harvests.",
+        "draft": {
+          "hook": "The Hive That Keeps Its Own Log",
+          "title": "Log beehive inspections and harvests with a tap",
+          "summary": "Stick a tag on your beehive and tap it each time you inspect it or collect honey, so your phone keeps a timestamped record for you.",
+          "place": "on the beehive",
+          "result": "your phone opens a log where you note the inspection or harvest details",
+          "setup_type": "automation",
+          "difficulty": "easy",
+          "phone_support": "any",
+          "needs": [
+            "h_chores",
+            "y_make"
+          ]
+        },
+        "possible_copy": null,
+        "input_tokens": 3200,
+        "output_tokens": 221,
+        "seconds": 3.03,
+        "cost_usd": 0.00861
+      }
+    }
+  ],
+  "jev_cost": {
+    "usd": 0.0003,
+    "seconds": 0.6,
+    "source": "README 'What it costs': measured average of one Jev duplicate check over the test ideas"
+  },
+  "per_1000": {
+    "opus_alone_usd": 46.0,
+    "jev_plus_sonnet_usd": 4.6,
+    "source": "README 'What it costs': 1,000 visitor ideas, half duplicates; Opus 5 doing everything vs Jev on all 1,000 + Sonnet 5 on the 500 new ones and ~70 unsure duplicates"
+  }
+}

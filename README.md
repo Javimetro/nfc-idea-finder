@@ -8,6 +8,10 @@ Built by the user together with Claude (Anthropic), NotebookLM (Google) and Jev 
 
 ![Home](docs/img/10-app-home.png)
 
+![Three visitor ideas go through the review: Jev files a sure duplicate on its own, hands an unsure one to Claude, and Claude writes up a new one](docs/img/32-pipeline.gif)
+
+*Real numbers: Jev's recorded answers from the lab, Claude Sonnet 5's real reply. ([How this animation was made](#how-this-animation-was-made))*
+
 ### The AI toolbox at a glance
 
 AI here isn't one chat window. It's a team of tools, each with one job, and a human deciding who does what:
@@ -176,6 +180,17 @@ Before Claude reads any code, it asks the map first. Then it only opens the few 
 - **It finds surprises.** The map links docs to code: for example, it connected the project log's "Show the original words" story to the function that powers it.
 
 **The human stays in charge, and doesn't need to learn another tool.** the user asks in plain words ("what would break if I change the duplicate check?"), and Claude decides when to look at the map. Picking the right tool is part of the AI's job too, as long as it's the right one.
+
+## How this animation was made
+
+The animation at the top isn't a video someone filmed, and it isn't a mock-up. **Claude Opus 5.5 drew it frame by frame in code**: a small web page where every robot, card, bar and letter is placed pixel by pixel (even the font is hand-made, 5×7 pixels per letter). the user set the direction: the story, the Tapwise pixel-art style, and one firm rule: *every number on screen has to be real.*
+
+So the animation is driven by data, not drawn by hand:
+- **Jev's bars are its real answers.** The three ideas come from the test sets, and their probabilities are the ones Jev gave in the lab, put through the same decision rule the live site uses. The kettle idea really scored 100% and 97%, and the shower idea really stopped at 73%, under the 80% "sure" bar.
+- **Claude's part is Claude's real reply.** For the two ideas Jev hands over, the live review code called Claude Sonnet 5 once. It said the shower timer is a duplicate ("just another specific timer example") and wrote up the beehive idea as *"The Hive That Keeps Its Own Log"*. Those two calls cost about 1.6 cents in total, and the replies are saved in [`docs/anim/cases.json`](docs/anim/cases.json).
+- **If the data doesn't back something up, nothing gets drawn.** The page checks the data first and refuses to draw anything it can't back up.
+
+Rebuilding it is one command ([`scripts/render_animation.py`](scripts/render_animation.py)). A headless browser on the Raspberry Pi renders all 336 frames, offline, and turns them into the GIF.
 
 ## More
 

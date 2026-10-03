@@ -599,6 +599,21 @@ The README got a new section explaining why the map is worth having, plus a scre
 
 Lesson: a good tool shouldn't need its user to learn it. Let the AI handle the tool, and keep the human on the decisions.
 
+#### 33. An animation made of real data
+
+the user watched a video showing that the newest AI models can now make good animations by *programming* them, frame by frame, instead of generating a video. One example stood out: an animation of a neural network that the AI had actually trained, so every number on screen was true. the user wanted the same for Tapwise: a short, silent, looping animation for the README that explains how Jev and Claude share the work.
+
+He chose the story (three visitor ideas, three different routes) and the style (the site's own pixel art), then wrote a detailed brief. The firm rule: **nothing on screen may be made up.**
+
+- **Jev's numbers** come from its recorded answers in the lab (step 28), put through the exact rule the live site uses. The kettle timer: 100% and 97%, so Jev files it alone. The shower timer: 99%, but only 73% on "does it already cover it?", which is under the 80% bar, so Jev asks Claude. The beehive log: no idea in the bank reached 45%.
+- **Claude's part** is a real call to the live review code, made once and saved: "duplicate" for the shower (high confidence) and a full write-up for the beehive, *"The Hive That Keeps Its Own Log"*. Cost: about 1.6 cents.
+- The animation page checks the data before drawing and **refuses to draw** if anything is missing or doesn't add up.
+- Claude Opus 5.5 drew everything in code: the two characters, the idea shelf, the bars, even a hand-made 5×7 pixel font. A browser in Docker renders the 336 frames offline and turns them into a 1.3 MB GIF.
+
+One small honest detail: the brief expected Jev's "none of these" answer to win for the beehive, but the recorded data says otherwise. Jev's top guess was a 29% match, which is still under the 45% bar. So the animation shows the bar, not a claim the data doesn't support.
+
+Lesson: when you show how an AI system works, show its real evidence. A pretty mock-up proves nothing, while real numbers from the real system are both more honest and more convincing.
+
 ---
 
 ## Open to-do list
