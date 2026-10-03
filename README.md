@@ -8,6 +8,21 @@ Built by the user together with Claude (Anthropic), NotebookLM (Google) and Jev 
 
 ![Home](docs/img/10-app-home.png)
 
+### The AI toolbox at a glance
+
+AI here isn't one chat window. It's a team of tools, each with one job, and a human deciding who does what:
+
+| Tool | Its job in this project | Kind of AI |
+|---|---|---|
+| **Claude Code** (Anthropic) | Plans with the user, writes the code, tests it, deploys it | coding agent |
+| **NotebookLM** (Google) | Read 40+ videos and Reddit threads and pulled out the ideas, with sources | research assistant |
+| **Jev** (TypeSafe) | Decides "is this idea already in the bank?" for a fraction of a cent | decision model (no text at all) |
+| **Claude Sonnet 5** (Anthropic) | Checks new ideas are real and safe, and writes them up | language model |
+| **graphify** | Keeps a map of the whole codebase so Claude can find its way around | code map for the AI (no AI needed to build it) |
+| **plain code** | Quiz matching, the "already in the bank?" hint | no AI, on purpose |
+
+Every choice was tested before it was made, and the numbers are below.
+
 ## Two AI models, two jobs: a filter and a writer
 
 When a visitor adds an idea to the bank, two different AI models handle it, one after the other.
@@ -49,6 +64,7 @@ Sonnet 5 costs about half a cent more per new idea than Haiku 4.5. That's the pr
 | Match quiz answers to ideas | **no AI**: simple rules | Fast, free, offline, predictable. Not every job needs a model. | |
 | "Is this already in the bank?" hint while typing | **no AI**: TF-IDF word matching | Instant and free; a hint, not a decision. | right idea shown for 120 of 145 test duplicates (83%) |
 | Plan the project and write the code | Claude (Claude Code) | the user decides; Claude proposes, explains and builds. | |
+| Help Claude find its way around the code | **graphify** (no AI to build it) | A map of the code is cheaper and safer than reading every file each time. | ~12× fewer tokens per question · rebuilt in ~1 s |
 
 Every visitor idea goes through this pipeline:
 
@@ -138,6 +154,28 @@ What's left of the bill is Claude doing what Jev can't: judging whether an idea 
 **What building and testing this cost** (1 October 2026, all test runs together): about **$2.50 on Claude**, most of it Opus 5 runs used as the comparison baseline, and about **$0.50 on Jev** for roughly 12 million tokens: the whole lab, every tuning run and every test run.
 
 Prices change; check [Anthropic's pricing](https://www.anthropic.com/pricing) and [TypeSafe's models page](https://docs.typesafe.ai/models) for current ones. Costs here are calculated from the token counts our test scripts recorded.
+
+## A map of the code, for the AI (graphify)
+
+Here's a problem nobody mentions when people talk about "coding with AI": **every session, the AI starts with no memory of the project.** It's like a new developer joining the team every morning. To answer "how does a visitor idea get approved?", it has to open files one by one, read them, and guess how they connect. That's slow, it costs money (every word read is paid for), and on a big project it can easily miss something.
+
+So this project gives the AI a map. **[graphify](https://github.com/Graphify-Labs/graphify)** reads the whole repo and turns it into a *knowledge graph*. Every function, file and section of the docs becomes a dot, and the lines between the dots say "this calls that" or "this mentions that". Groups of dots that belong together get their own colour:
+
+![The graphify map of this project: each dot is a function, file or doc section, and each colour is a part of the project](docs/img/31-graphify-map.png)
+
+*The real map of this repo (303 dots, 494 links). Blue in the middle is the web app, orange is the database, the green and teal groups are the test scripts and the AI review, the yellow island is the website's JavaScript, and the red star is the project log. You can click any dot to see what it connects to.*
+
+Before Claude reads any code, it asks the map first. Then it only opens the few files that matter.
+
+**Why it's a good idea:**
+- **Cheaper and faster.** On this repo, answering a question from the map takes about **12× fewer tokens** than reading the files (graphify's own benchmark on sample questions). One question ("where does the app start?") was 64× cheaper.
+- **Fewer blind spots.** Before changing something, Claude can see everything connected to it. The function that runs the AI review, for example, touches 10 other pieces: change it carelessly and something else breaks.
+- **Free and private.** The map of the code is built on the Raspberry Pi in about a second, by reading the code's structure directly. No AI is needed for that, and nothing leaves the Pi.
+- **Honest.** Each line on the map is labelled as either read straight from the code or guessed (with a confidence score). Here, 97% are read straight from the code.
+- **Always up to date.** The map is refreshed every time work is pushed to GitHub, so it never describes old code.
+- **It finds surprises.** The map links docs to code: for example, it connected the project log's "Show the original words" story to the function that powers it.
+
+**The human stays in charge, and doesn't need to learn another tool.** the user asks in plain words ("what would break if I change the duplicate check?"), and Claude decides when to look at the map. Picking the right tool is part of the AI's job too, as long as it's the right one.
 
 ## More
 

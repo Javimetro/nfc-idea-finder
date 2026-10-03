@@ -58,3 +58,6 @@ Rules:
 - If graphify-out/wiki/index.md exists, use it for broad navigation instead of raw source browsing.
 - Read graphify-out/GRAPH_REPORT.md only for broad architecture review or when query/path/explain do not surface enough context.
 - After modifying code, run `graphify update .` to keep the graph current (AST-only, no API cost).
+- **Before every commit that gets pushed, run `graphify update .` and include `graphify-out/graph.json` + `GRAPH_REPORT.md` in the commit**, so the graph on GitHub always matches the code.
+- the user won't type graphify commands. Use graphify on your own whenever it helps answer his questions (how something works, what a change would affect, where something lives), and answer in plain words.
+- If the map changes a lot, refresh the README screenshot `docs/img/31-graphify-map.png` (Playwright in Docker, image `tapwise-ui`, open `graphify-out/graph.html`, wait ~20 s, 1600×1000).

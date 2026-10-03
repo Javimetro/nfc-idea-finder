@@ -591,6 +591,14 @@ The project has grown: Flask app, database, two AI models, test scripts, a long 
 
 Lesson: the AI that writes the code also needs good tools to *read* the code, especially as a project grows.
 
+#### 32. The map goes in the README, and the user stops typing commands
+
+the user tried graphify and decided he didn't want to learn its commands. That's fair: the map is there for the AI, not for him. So the rule is now simple. the user asks questions in plain words, and Claude decides by itself when the map helps answer them. Claude also refreshes the map before every push to GitHub, so the map always matches the code that's online.
+
+The README got a new section explaining why the map is worth having, plus a screenshot of the interactive map (taken with a browser running in Docker on the Pi). graphify's own benchmark measured how much it saves on this repo: about **12× fewer tokens** per question than reading the files.
+
+Lesson: a good tool shouldn't need its user to learn it. Let the AI handle the tool, and keep the human on the decisions.
+
 ---
 
 ## Open to-do list
