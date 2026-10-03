@@ -6,7 +6,7 @@ The headline choice: visitor ideas are checked for duplicates by **[Jev](https:/
 
 Built by the user together with Claude (Anthropic), NotebookLM (Google) and Jev (TypeSafe). Work in progress, private for now.
 
-![Home](docs/img/10-app-home.png)
+![The Tapwise home page](docs/img/33-home.png)
 
 ![Three visitor ideas ride a conveyor belt: Jev drops a sure duplicate in the bin on its own, passes an unsure one to Claude, and Claude writes up a new one for the idea bank](docs/img/32-pipeline.gif)
 
