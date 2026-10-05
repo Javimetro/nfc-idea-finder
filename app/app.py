@@ -1,7 +1,9 @@
 """NFC Idea Finder — web app (Flask).
 
 Run locally:   python app/app.py            -> http://localhost:8000
-On the Pi:     see README (Docker)."""
+On the Pi:     see RUN.md (Docker).
+
+Author: Javi Jorganes (Powered by Claude)"""
 import hmac
 import json
 import os

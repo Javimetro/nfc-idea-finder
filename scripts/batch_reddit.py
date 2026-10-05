@@ -33,7 +33,7 @@ NEW_IDEAS = [
     ("i085", "Sell NFC as a service to local businesses", "Instead of selling a card once, set up the card plus its landing page (reviews, menu, links) and keep it updated for a monthly fee.",
      "You write the tag to point at a page you control and manage that page for the business.", "business", ["nfc_as_business", "business_customers"], ["shop", "restaurant", "events"], ["marketing"], "any",
      "NFC Tools to write tags; any link-page tool for the landing pages.", "easy", "5_to_50_eur", {"form": "card"},
-     {"model": "subscription_or_lease", "who": "cafes, restaurants, salons, local shops", "cost": "low"}, ["Directly related to the user's NFC review-cards leasing idea."]),
+     {"model": "subscription_or_lease", "who": "cafes, restaurants, salons, local shops", "cost": "low"}, ["Directly related to the creator's NFC review-cards leasing idea."]),
     ("i087", "Log blood pressure, oxygen or temperature in one tap", "Tap the device after measuring and your phone opens the right log with today's date ready.",
      "Tag on the blood pressure monitor, oximeter or thermometer opens a shortcut that logs the value in your health app.", "diy", ["personal"], ["home", "health"], ["tracking"], "any",
      "iPhone: Shortcuts app (Apple Health). Android: MacroDroid + your health app.", "easy", "under_5_eur", {}, None, []),

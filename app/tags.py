@@ -1,7 +1,7 @@
 """Tag matcher: turns an idea's needs + the visitor's conditions into ONE tag profile.
 
 Deliberately plain rules, no AI: the recommendation always points to a profile
-the user wrote and checked by hand (db/tag_profiles.json)."""
+written and checked by hand (db/tag_profiles.json)."""
 
 
 def pick_tag(idea, answers, tags_by_id):

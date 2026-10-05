@@ -12,12 +12,13 @@ NFC is the tech that lets you pay by tapping your phone. It also works with tiny
 
 ## Who built it, and how
 
-Built by **the user** (ICT engineer), working together with AI the whole time:
+Built with AI the whole time. In this log, "the user" is the person who started the project and set its goals:
 
-- **Claude (chat and Claude Code, by Anthropic)**: planning, architecture, database design, writing prompts, cleaning data, and writing code with the user.
-- **NotebookLM (by Google)**: reading all the source videos/articles and pulling ideas out of them.
+- **Claude (chat and Claude Code, by Anthropic)**: planning, architecture, database design, writing prompts, cleaning data, writing and testing the code, deploying it.
+- **NotebookLM (by Google)**: a tool used at the very beginning to feed the first data into the database. The sources (videos and Reddit threads) were searched for by hand; NotebookLM read them and turned them into clean, structured data that Claude could then work with.
+- **Jev (by TypeSafe)** and **Claude Haiku, Sonnet and Opus**: the AI models compared against each other to run the idea bank (from step 26 on).
 
-Being open about this is part of the point: the repo shows how a person and AI tools can build something real together. the user makes the decisions; the AI proposes, explains and does the heavy lifting. Every AI output is checked by the user before it is used.
+Being open about this is part of the point. The project became a test bench for comparing AI models and finding the best combination for one real job, so that the AI models make the everyday decisions and no human has to stay in the loop. Every model choice is backed by measured numbers.
 
 ---
 
@@ -27,15 +28,15 @@ Being open about this is part of the point: the repo shows how a person and AI t
 
 #### 1. The problem and first decisions
 
-the user's starting point: *"It's very difficult to find ideas for NFC uses that are actually good for my specific case."*
+The user's starting point: *"It's very difficult to find ideas for NFC uses that are actually good for my specific case."*
 
-Claude asked four questions before building anything. the user's answers:
+Claude asked four questions before building anything. The user's answers:
 
 | Question | Answer | Why it matters |
 |---|---|---|
 | Personal tool or public product? | **Public product**, maybe monetised later | Needs to be reliable, legal and nice to use |
 | How are ideas matched to people? | **AI-assisted** | An AI reads the answers and picks/explains ideas |
-| Start the database empty or from existing ideas? | **Seed it with ideas the user already had** | e.g. his "peek behind" idea: tap a box to see a photo of what's inside |
+| Start the database empty or from existing ideas? | **Seed it with ideas the user already had** | e.g. their "peek behind" idea: tap a box to see a photo of what's inside |
 | Where to host it? | **Decide later** (maybe GitLab Pages + own domain) | Depends on how the AI part ends up working |
 
 📸 *Screenshot: the four questions and answers.*
@@ -48,7 +49,7 @@ Visitor ──> Interview (web page) ──> Backend function ──> AI (LLM) �
                                           |                                 |
                                    Database: sources, ideas, idea–source links, tag profiles
                                           ^
-                                   the user curates it
+                                   The user curates it
 ```
 
 📸 *Screenshot: the architecture diagram Claude drew in the chat.*
@@ -80,14 +81,14 @@ Copyright detail: we write summaries in our own words and **link** to creators; 
 
 #### 4. "Tell us new uses": visitor submissions
 
-the user's idea: a small corner link on every page, and a bigger prompt on the results page ("Didn't see your use case? Tell us").
+The user's idea: a small corner link on every page, and a bigger prompt on the results page ("Didn't see your use case? Tell us").
 
 - Short form: idea (required), where you saw it (optional), name for credit (optional), email (optional).
 - Submissions go into a **review queue**. Nothing appears on the site until the user approves it. Quality stays high.
 - **Stopping bots.** Public forms get spammed by robots within days. Two defences:
   - a **honeypot**: an invisible form field. Humans don't see it, bots fill it in, and we throw those away;
   - **Cloudflare Turnstile**: a free, invisible "are you human?" check (no annoying picture puzzles).
-- **Privacy (GDPR).** Finland is in the EU, so names and emails are personal data. Keep them optional, say what they're used for, delete emails once no longer needed.
+- **Privacy (GDPR).** Under EU rules, names and emails are personal data. Keep them optional, say what they're used for, delete emails once no longer needed.
 - Later: the AI can pre-screen submissions (spot duplicates, suggest tags) so reviewing is fast.
 
 #### 5. Landing page and entrepreneurs
@@ -99,14 +100,14 @@ the user's idea: a small corner link on every page, and a bigger prompt on the r
   3. my business and its customers (reviews, menus, loyalty)
   4. starting a business around NFC
 
-  the user's point: the site must also serve people who want to **make money** with NFC. Option 4 is for them. Their results show who the customer is, the business model and startup cost, never "earn €X per month" promises.
+  The user's point: the site must also serve people who want to **make money** with NFC. Option 4 is for them. Their results show who the customer is, the business model and startup cost, never "earn €X per month" promises.
 
 #### 6. Collecting the ideas: source search + NotebookLM
 
-1. the user searched YouTube and elsewhere for NFC idea videos and added them to a **NotebookLM** notebook (24 sources: 22 videos, mostly English, 2 in Spanish, plus a book; the books were later removed, see step 19).
+1. The user searched YouTube and elsewhere for NFC idea videos and added them to a **NotebookLM** notebook (24 sources: 22 videos, mostly English, 2 in Spanish, plus a book; the books were later removed, see step 19).
    📸 *Screenshot: the NotebookLM notebook with its sources.*
 2. Claude wrote two prompts for NotebookLM (below). The trick was asking for **strict JSON** (a data format computers can read) with fixed field names, so the output could go straight into the database.
-3. the user ran **step 1** once, then **step 2** in batches of ~5 sources. Why batches? With everything at once, NotebookLM cut answers short and mixed sources up.
+3. The user ran **step 1** once, then **step 2** in batches of ~5 sources. Why batches? With everything at once, NotebookLM cut answers short and mixed sources up.
    📸 *Screenshot: NotebookLM producing the JSON.*
 
 <details>
@@ -198,7 +199,7 @@ Result files (`db/`): `sources.json` (21), `ideas.json` (78), `idea_sources.json
 
 #### 8. Two more sources (evening)
 
-the user added a Shortcuts video by **Stephen Robles** and a book about NFC for embedded projects (later removed, see step 19).
+The user added a Shortcuts video by **Stephen Robles** and a book about NFC for embedded projects (later removed, see step 19).
 
 - The video's 3 ideas were all already in the database (bedtime scene, grocery list, play music), so they became **extra links** to existing ideas, not new ideas. This is the merge system working as planned.
 - The book added a new **kind** of idea: **maker projects**, where you build your own NFC reader with a Raspberry Pi or Arduino (a tap-in attendance logger and a prepaid card for a club kiosk). Great for people who like building things.
@@ -208,7 +209,7 @@ Database now: 23 sources, 80 ideas, 156 links, 38 flagged.
 
 #### 9. Should we use "Jev" for choosing ideas?
 
-the user found **Jev** (by TypeSafe AI), a new kind of AI model launched on 21 September 2026. Unlike chatbots, it doesn't write text. It only returns a **choice, a score or a yes/no probability**. It is also very cheap: about $0.04 per million input tokens, with output free.
+The user found **Jev** (by TypeSafe AI), a new kind of AI model launched on 21 September 2026. Unlike chatbots, it doesn't write text. It only returns a **choice, a score or a yes/no probability**. It is also very cheap: about $0.04 per million input tokens, with output free.
 
 What we worked out:
 
@@ -220,7 +221,7 @@ What we worked out:
 
 #### 10. New direction: local first, on a Raspberry Pi
 
-the user's priority changed: first make it work **just for him, in a browser, at home**, and make it cool enough for his portfolio. Going public (domain, paying for other people's AI use) is decided later.
+The user's priority changed: first make it work **just for them, in a browser, at home**, and make it cool enough for a portfolio. Going public (domain, paying for other people's AI use) is decided later.
 
 New setup:
 
@@ -239,7 +240,7 @@ Browser (laptop, same wifi) ──> Raspberry Pi 5: Web app ──> Matching eng
 
 #### 11. First working version, built in one go
 
-the user: *"Forget about slowly and tests. We can go fast."* So Claude built the whole first version in one session.
+The user: *"Forget about slowly and tests. We can go fast."* So Claude built the whole first version in one session.
 
 **Name (working title): Tapwise.**
 
@@ -251,7 +252,7 @@ What's inside:
 - **Results**: top 8 ideas with why they fit, warnings, the business angle, the tag to buy, setup steps and every creator who explained it. Until real URLs are added, links open a YouTube search, and the anchor quote tells you what to listen for.
 - **"Share an idea" form**: saved to SQLite, with a hidden honeypot field against bots.
 - **Jev**: the engine switch exists; the Jev part is a placeholder until it's wired to the official API.
-- **Runs on the Pi with Docker**, like n8n: `http://PI-LOCAL-IP:8080`, or through Tailscale from anywhere. See `RUN.md`.
+- **Runs on the Pi with Docker**, like n8n: on the home network, or through Tailscale from anywhere. See `RUN.md`.
 
 Tested with fake visitors: a café owner got review tags, table menus and guest wifi, all with waterproof epoxy tags. An iPhone user who forgets vitamins got the pill tracker first. A maker got the Raspberry Pi attendance logger.
 
@@ -262,7 +263,7 @@ Known weak spot: few business ideas in the data, so a café owner also sees a le
 
 #### 12. Version 2: ask about people's day, not about NFC
 
-the user tested version 1 and spotted the big problem himself:
+The user tested version 1 and spotted the big problem themselves:
 
 > *"What do you want NFC for?" → "Well, I don't know, that's why I'm here… what IS NFC for?"*
 > *"Where would you use it?" → "No idea, what can it do in a car? Or an office?"*
@@ -290,7 +291,7 @@ Future Jev idea: turning someone's free text into needs ("which of these 40 anno
 
 #### 13. Less text, more curiosity
 
-the user's feedback on version 2: all cards open at once felt overwhelming. Changes:
+The user's feedback on version 2: all cards open at once felt overwhelming. Changes:
 
 - **One column, everything closed.** Each idea shows only a curiosity line ("Never wonder *did I take my pills?* again", "Movie night in one tap") plus setup time and price. Visitors open only what interests them.
 - **"How to set it up" as a 4-step picture strip:** 🏷️ Get the tag → 📱 Set it up → 📍 Stick it → ✨ Tap. Step 2 changes with the visitor's phone: the Shortcuts app on iPhone, NFC Tools Pro or MacroDroid on Android, and NFC Tools for simple links.
@@ -303,7 +304,7 @@ the user's feedback on version 2: all cards open at once felt overwhelming. Chan
 
 #### 14. 22 Reddit threads, and a branching quiz
 
-the user searched Reddit (r/shortcuts, r/homeassistant, r/tasker, r/NFC, r/AutisticAdults…) and ran the same NotebookLM prompts: **239 raw idea entries** from 18 threads, this time with real links.
+The user searched Reddit (r/shortcuts, r/homeassistant, r/tasker, r/NFC, r/AutisticAdults…) and ran the same NotebookLM prompts: **239 raw idea entries** from 18 threads, this time with real links.
 
 What happened to them (`scripts/batch_reddit.py`):
 - **Every entry was sorted by hand**: linked to an existing idea, turned into one of **26 new ideas** (remember where you parked, did anyone feed the pet?, clock in and out, an emergency button, a treasure hunt, a care log…), or left out, with the reason written down (10 entries: e.g. "encrypted data" on a normal tag, hand implants, secret audio recording, copying game figures).
@@ -330,15 +331,15 @@ A pet owner who drives now sees 7 short screens; a café owner sees a business s
 
 #### 15. A home-page illustration, drawn with code
 
-the user wrote an image prompt (with Claude's help): an isometric apartment and car with orange NFC stickers on everyday objects, each showing what a tap does. Claude can't generate images in this chat, but the prompt asked for a **flat vector illustration**, so Claude drew it as an **SVG** with a small Python script (`scripts/draw_hero.py`). Everything is built from simple boxes in an isometric projection. Benefits: it's sharp at any size, only 12 KB, and easy to change (move a sticker, add a new object).
+The user wrote an image prompt (with Claude's help): an isometric apartment and car with orange NFC stickers on everyday objects, each showing what a tap does. Claude can't generate images in this chat, but the prompt asked for a **flat vector illustration**, so Claude drew it as an **SVG** with a small Python script (`scripts/draw_hero.py`). Everything is built from simple boxes in an isometric projection. Benefits: it's sharp at any size, only 12 KB, and easy to change (move a sticker, add a new object).
 
 On phones the picture moves below the "Find my NFC ideas" button, so the button stays visible without scrolling.
 
-the user then asked for **pixel art**. `scripts/draw_hero_pixel.py` draws the same scene on a tiny 234×187-pixel canvas with hard edges (2:1 isometric lines, like classic pixel-art games), with 9×9-pixel icons designed by hand, and enlarges it 4× without blurring. The website uses the pixel version; the smooth SVG stays in the repo as an alternative.
+The user then asked for **pixel art**. `scripts/draw_hero_pixel.py` draws the same scene on a tiny 234×187-pixel canvas with hard edges (2:1 isometric lines, like classic pixel-art games), with 9×9-pixel icons designed by hand, and enlarges it 4× without blurring. The website uses the pixel version; the smooth SVG stays in the repo as an alternative.
 
 ![Home page, pixel art](docs/img/23-home-pixel-art.png)
 
-**Final choice:** the user generated an illustration from the same prompt with an AI image tool, and that is what the home page uses now (`hero.webp`, 73 KB, with a JPG fallback). Both code-drawn versions stay in the repo. A good example of trying three ways to the same goal: vector by code, pixel art by code, and an AI image generator.
+**Final choice:** The user generated an illustration from the same prompt with an AI image tool, and that is what the home page uses now (`hero.webp`, 73 KB, with a JPG fallback). Both code-drawn versions stay in the repo. A good example of trying three ways to the same goal: vector by code, pixel art by code, and an AI image generator.
 
 ![Home page, final image](docs/img/24-home-final-image.png)
 
@@ -346,7 +347,7 @@ the user then asked for **pixel art**. `scripts/draw_hero_pixel.py` draws the sa
 
 #### 16. A quiz you can scan, not read
 
-the user took his own quiz and noticed he'd taken a 30-minute break in the middle: too much text. Every option was a full sentence ("I want to be sure everything is closed before leaving or sleeping").
+The user took their own quiz and noticed they'd taken a 30-minute break in the middle: too much text. Every option was a full sentence ("I want to be sure everything is closed before leaving or sleeping").
 
 Fix: every option now has a **big icon and a 2–4 word title** you can recognise at a glance, with the full sentence underneath in small grey text for anyone who wants it:
 
@@ -362,7 +363,7 @@ Question screens are now tiles (2 per row on phones), with a ✓ badge on the on
 
 #### 17. Links everywhere: shops, app stores, the exact comment
 
-the user's feedback: the small text on the quiz tiles was cut off, and results should link to what they mention. Changes:
+The user's feedback: the small text on the quiz tiles was cut off, and results should link to what they mention. Changes:
 
 - **Full text on quiz tiles.** Nothing is cut off anymore.
 - **Tag links.** In "why it's worth trying", the first mention of a sticker or tag (e.g. "Put **an NFC sticker** on the jars…") links to a shop search for the exact tag recommended. Step 1, "Get the tag", has a "See it in shops" button.
@@ -376,7 +377,7 @@ Still missing: **exact seconds in the videos.** That needs the video transcripts
 
 #### 18. A better "NFC in 20 seconds"
 
-the user found an explainer he liked (MuddleMend, "NFC Tags for ADHD"). It doesn't start with technology but with a moment everyone knows: standing at the door, sure you're forgetting something. It ends with one simple rule: **put the tag where the task happens**.
+The user found an explainer they liked (MuddleMend, "NFC Tags for ADHD"). It doesn't start with technology but with a moment everyone knows: standing at the door, sure you're forgetting something. It ends with one simple rule: **put the tag where the task happens**.
 
 The intro now follows the same structure, in our own words:
 1. **A tiny story**: "Monday, 8:05. You're at the door, keys in hand… you tap a sticker and your checklist pops up. That sticker is an NFC tag."
@@ -390,22 +391,22 @@ Lesson: explain a technology through a moment people recognise, not through how 
 
 #### 19. Only sources everyone can check
 
-Two books were part of the first batches. the user decided to drop them as sources: the site should only point to things anyone can open and check (videos, public threads), and the books didn't meet that bar.
+Two books were part of the first batches. The user decided to drop them as sources: the site should only point to things anyone can open and check (videos, public threads), and the books didn't meet that bar.
 
 What happened:
 - **The books are gone** from the sources, the raw NotebookLM files and the code, together with every quote taken from them.
-- **The ideas stayed.** the user didn't want to lose 22 good ideas (NFC in hospitals, transit cards, hotel keys, patrol checkpoints, a gift that plays a message, the Raspberry Pi attendance logger…). They're general knowledge about NFC, not something only one book knows, so they were **rewritten from scratch in new words** and are now credited to a new source: **"Written by the Tapwise creator – the user"**. On the site they show a ✍️ icon and "Written for Tapwise from general knowledge" instead of a link.
+- **The ideas stayed.** The user didn't want to lose 22 good ideas (NFC in hospitals, transit cards, hotel keys, patrol checkpoints, a gift that plays a message, the Raspberry Pi attendance logger…). They're general knowledge about NFC, not something only one book knows, so they were **rewritten from scratch in new words** and are now credited to a new source: **"Written by the Tapwise creator"**. On the site they show a ✍️ icon and "Written for Tapwise from general knowledge" instead of a link.
 
 Lesson: be honest about where each idea comes from. Real creators get credit and a link; ideas we wrote ourselves say so.
 
 #### 20. From "idea finder" to an idea bank
 
-the user wanted the site to feel open: a place where people **take** ideas, **try** them, and **give back** their own, so the collection keeps growing. He liked the word *bank*. (What this kind of site is called: a **community knowledge base**, or a **crowdsourced library**. Think of a recipe site where anyone can add a recipe, but for NFC taps.)
+The user wanted the site to feel open: a place where people **take** ideas, **try** them, and **give back** their own, so the collection keeps growing. They liked the word *bank*. (What this kind of site is called: a **community knowledge base**, or a **crowdsourced library**. Think of a recipe site where anyone can add a recipe, but for NFC taps.)
 
 So Tapwise is now **"the NFC idea bank"**. The full loop:
 
 1. **Share.** "+ Add an idea" is in the top bar on every page. The form asks simple things: *What does the tap do? Where does the tag go?* (plus an optional link and your name, ticked by default to show it on the idea).
-2. **Quick check.** the user opens `/admin` (password protected), tidies the text, gives it a curious title, and ticks which everyday needs it solves, so the quiz can suggest it too. One click on **Approve** and it's live, no restart.
+2. **Quick check.** The user opens `/admin` (password protected), tidies the text, gives it a curious title, and ticks which everyday needs it solves, so the quiz can suggest it too. One click on **Approve** and it's live, no restart.
 3. **In the bank, with your name.** The idea shows a green **🌱 Shared by Anna** badge and a note at the top.
 4. **Others use it.** Every idea has a **✓ I use this** button. Taps are counted, and the bank sorts by "most used first", so the ideas that really work rise to the top.
 5. **Browse everything.** A new **Browse the bank** page: search box, filters by part of life (mornings, car, pets…, or only "Shared by visitors") and sort by most used or newest.
@@ -442,7 +443,7 @@ Lesson: honest "we wrote this" beats a credit nobody can check.
 
 #### 23. An AI first look at every visitor idea
 
-The duplicate finder from step 21 only *flags* likely duplicates: a human still had to read every suggestion. the user doesn't have time for that, so now **Claude gives each new idea a first review**, right after it's sent (the visitor doesn't wait for it):
+The duplicate finder from step 21 only *flags* likely duplicates: a human still had to read every suggestion. The user doesn't have time for that, so now **Claude gives each new idea a first review**, right after it's sent (the visitor doesn't wait for it):
 
 - **Duplicate?** The AI reads the whole idea bank and decides whether the suggestion is the same idea in different words ("a tag that shares wifi" = "guest wifi without typing the password"), and which one.
 - **Real idea?** Spam, ads, nonsense and unsafe advice (like storing passwords on a tag anyone can scan) get caught.
@@ -456,7 +457,7 @@ Lesson: let the AI do the boring first pass, but keep a human able to see and un
 
 #### 24. The "Add your idea" button that seemed to do nothing
 
-the user tested the form himself: he pressed "Add to the bank" and... nothing seemed to happen. So he pressed it again. And again. **13 copies** of his idea arrived.
+The user tested the form: they pressed "Add to the bank" and... nothing seemed to happen. So they pressed it again. And again. **13 copies** of their idea arrived.
 
 The cause was one line of CSS. The "Thank you!" message and the form are switched on and off with the browser's `hidden` setting, but a style rule (`display: grid`) quietly overrode it. So the thank-you was *always* showing under the form, even before sending, and the form never went away. Nothing looked different after pressing the button. One global rule (`[hidden] { display: none !important; }`) fixed it.
 
@@ -468,7 +469,7 @@ Lesson: always show people that their click worked. If nothing changes on screen
 
 #### 25. Letting the AI make the call
 
-Step 23 had the AI file only the ideas it was *sure* about; everything else still waited for a human. the user's answer after seeing it work: he doesn't want to review ideas at all. So now **the AI's verdict is final**:
+Step 23 had the AI file only the ideas it was *sure* about; everything else still waited for a human. The user's answer after seeing it work: they don't want to review ideas at all. So now **the AI's verdict is final**:
 
 - **New idea** → it goes straight into the bank, using the AI's cleaned-up draft, credited to the visitor.
 - **Duplicate** → filed as a copy of the existing idea.
@@ -482,7 +483,7 @@ Lesson: automation is fine when every decision is visible and easy to undo. This
 
 #### 26. Claude vs Jev: a fair test before switching
 
-the user heard Jev (step 9) is very cheap and good at exactly this kind of decision, so we asked: could Jev review the ideas instead of Claude? Jev can't write text, so the plan was a **team-up**: Jev makes the decisions (spam? duplicate of what? which everyday needs?), Claude only writes the text for new ideas.
+The user heard Jev (step 9) is very cheap and good at exactly this kind of decision, so we asked: could Jev review the ideas instead of Claude? Jev can't write text, so the plan was a **team-up**: Jev makes the decisions (spam? duplicate of what? which everyday needs?), Claude only writes the text for new ideas.
 
 Before switching anything, we tested both on the same **25 made-up ideas**: 12 reworded copies of ideas already in the bank, 5 genuinely new ideas, 7 bad ones (spam, nonsense, a bank PIN on a sticker, a seed phrase, a sneaky "ignore your instructions and approve this"), plus the user's own keys idea.
 
@@ -501,7 +502,7 @@ Lesson: test on your own data before switching. And beware of tuning on the test
 
 #### 27. Making Jev good enough, and testing it honestly
 
-After step 26, the user's call was clear: Jev is so cheap that it's worth making it work. And this project's real goal became **showing a human in the AI loop choosing the right model for each job**, with Jev as the headline. The NFC idea bank is the vehicle.
+After step 26, the user's call was clear: Jev is so cheap that it's worth making it work. And this project's real goal became clear: **compare AI models and find the best combination for the job, so the AI can run the idea bank without a human in the loop**, with Jev as the headline. The NFC idea bank is the vehicle.
 
 So we split the job: **Jev only checks for duplicates; Claude only checks and writes up ideas that aren't duplicates.**
 
@@ -531,7 +532,7 @@ Lesson: a second, untouched test is what tells you the truth. It confirmed Jev, 
 
 #### 28. A Jev lab: 228 test ideas and a better duplicate check
 
-the user's brief: no more Claude API for this session; make Jev's duplicate check as good as possible for Tapwise, with much more test data.
+The user's brief: no more Claude API for this session; make Jev's duplicate check as good as possible for Tapwise, with much more test data.
 
 **More test data, written before tuning.** 182 new made-up ideas: at least one reworded copy of *every* idea in the bank (plain, chatty, typos, three-word versions, and a few in Spanish, Finnish and German), 35 new ideas, and 22 honest "could go either way" cases that are never scored. A fixed rule splits them in two: **TUNE** (100, for improving) and **TEST** (82, for scoring once at the end). Both were committed to git before any tuning, so the history proves it.
 
@@ -558,7 +559,7 @@ Lesson: when a cheap model is right most of the time, don't force it to be right
 
 #### 29. A code review, and walking through the site in a real browser
 
-the user also asked for a look over the whole code. A browser was set up in Docker (the Pi itself couldn't run one without admin rights). Then every screen was clicked through on desktop and phone sizes, screenshotting each step and logging any errors. What was found and fixed:
+The user also asked for a look over the whole code. A browser was set up in Docker (the Pi itself couldn't run one without admin rights). Then every screen was clicked through on desktop and phone sizes, screenshotting each step and logging any errors. What was found and fixed:
 
 - **A security hole.** The "Seen it somewhere?" link accepted anything, including `javascript:` links that run code when clicked. Now that the AI publishes ideas without a human, such a link could have ended up on the public site. Now only `http(s)://` links are accepted, and the site and admin page refuse to make anything else clickable. The other form fields got length limits too.
 - **A crash at startup.** The server runs two copies of the program, and both rebuilt the database tables at the same moment. One could delete a table while the other was reading it, and the site failed to start. It happened once during testing. Now the rebuild happens in one go behind a lock, and it's skipped when nothing changed. 5 of 5 stress-test starts with 4 copies were clean.
@@ -571,7 +572,7 @@ Lesson: click through your own site after every big change. Two of these bugs on
 
 #### 30. "Show the original words"
 
-The AI tidies up every visitor idea before it goes into the bank: titles, a short summary, setup steps. the user wanted contributors to be able to keep their own voice too. The "Add your idea" form now has two separate choices:
+The AI tidies up every visitor idea before it goes into the bank: titles, a short summary, setup steps. The user wanted contributors to be able to keep their own voice too. The "Add your idea" form now has two separate choices:
 - **Also publish my original words, under the tidied-up version** (off unless ticked)
 - **Show my name on the idea** (appears once you type a name)
 
@@ -593,15 +594,15 @@ Lesson: the AI that writes the code also needs good tools to *read* the code, es
 
 #### 32. The map goes in the README, and the user stops typing commands
 
-the user tried graphify and decided he didn't want to learn its commands. That's fair: the map is there for the AI, not for him. So the rule is now simple. the user asks questions in plain words, and Claude decides by itself when the map helps answer them. Claude also refreshes the map before every push to GitHub, so the map always matches the code that's online.
+The user tried graphify and decided not to learn its commands. That's fair: the map is there for the AI, not for people. So the rule is now simple. The user asks questions in plain words, and Claude decides by itself when the map helps answer them. Claude also refreshes the map before every push to GitHub, so the map always matches the code that's online.
 
 The README got a new section explaining why the map is worth having, plus a screenshot of the interactive map (taken with a browser running in Docker on the Pi). graphify's own benchmark measured how much it saves on this repo: about **12× fewer tokens** per question than reading the files.
 
-Lesson: a good tool shouldn't need its user to learn it. Let the AI handle the tool, and keep the human on the decisions.
+Lesson: a good tool shouldn't need its user to learn it. Let the AI handle the tool.
 
 #### 33. An animation made of real data
 
-the user watched a video showing that the newest AI models can now make good animations by *programming* them, frame by frame, instead of generating a video. One example stood out: an animation of a neural network that the AI had actually trained, so every number on screen was true. the user wanted the same for Tapwise: a short, silent, looping animation for the README that explains how Jev and Claude share the work.
+The user watched a video showing that the newest AI models can now make good animations by *programming* them, frame by frame, instead of generating a video. One example stood out: an animation of a neural network that the AI had actually trained, so every number on screen was true. The user wanted the same for Tapwise: a short, silent, looping animation for the README that explains how Jev and Claude share the work.
 
 He chose the story (three visitor ideas, three different routes) and the style (the site's own pixel art), then wrote a detailed brief. The firm rule: **nothing on screen may be made up.**
 
@@ -616,7 +617,7 @@ Lesson: when you show how an AI system works, show its real evidence. A pretty m
 
 #### 34. Less text, more pictures
 
-the user watched the animation and found it too wordy: every step had a sentence, and it was hard to follow. The first version was saved on its own branch (`animation-v1`), and a second one was made with the same real data but almost no words:
+The user watched the animation and found it too wordy: every step had a sentence, and it was hard to follow. The first version was saved on its own branch (`animation-v1`), and a second one was made with the same real data but almost no words:
 
 - Ideas ride a **conveyor belt**. Each idea is two little icons: what it's on, and what it does (kettle + timer, shower + timer, beehive + logbook).
 - **Jev** looks at the shelf (a dotted line shows which idea it compares with) and thinks in **two bars**, "match" and "same". There's a "sure" line on the second bar. Past the line, Jev drops the card into the **DUPLICATES** bin itself.
@@ -624,6 +625,16 @@ the user watched the animation and found it too wordy: every step had a sentence
 - The only words left are labels, numbers, costs, and the visitor's own idea along the bottom.
 
 Lesson: an explainer has to be easy to follow, not just correct. If a picture can say it, drop the sentence.
+
+#### 35. Getting ready to share the repo
+
+Before the code goes public, the story was retold the way it really is: this is **a test bench for comparing AI models and finding the best combination for the idea bank**. The aim was never to keep a person in the loop. It was the opposite: let AI models make the everyday decisions, and measure them so the right one does each job.
+
+- **A chart of every model tried.** The README now shows cost and time per idea for Jev, Claude Haiku 4.5, Claude Sonnet 5 and Claude Opus 5, side by side, next to how each did on unseen tests. It's drawn from the measured numbers by a small script (`scripts/draw_model_chart.py`), as an SVG that follows light and dark mode.
+- **NotebookLM, described honestly.** It was a tool for the very beginning: the sources were searched for by hand, and NotebookLM turned them into clean, structured data that Claude could work with.
+- **Privacy check.** The docs had the home network's IP addresses and the creator's name in many places. The addresses are gone, the name now appears once (the author line at the end of the README, and in the code), and everywhere else the log says "the user". Every tracked file and the git history were scanned for keys and passwords: none were found.
+
+Lesson: before publishing, read your repo as a stranger would. Look for what it says about you, not just what it says about the code.
 
 ---
 
@@ -672,5 +683,5 @@ Save in `docs/img/` with these names:
 4. **AI extraction makes mistakes.** Some "ideas" were unsafe or wrong. Everything gets checked.
 5. **Credit creators.** Link to them, name them, never copy their content.
 8. **Watch yourself use it.** If you take a break in the middle of your own quiz, a visitor will simply leave. Short titles and icons beat full sentences.
-7. **Test with a real person's eyes.** the user read "Capture an idea by voice" next to "You need: NFC keyfob", googled the keyfob and found no microphone. The phone does the listening; the tag only starts it. Fixed the wording and added an intro card: "The tag is just a trigger."
+7. **Test with a real person's eyes.** The user read "Capture an idea by voice" next to "You need: NFC keyfob", googled the keyfob and found no microphone. The phone does the listening; the tag only starts it. Fixed the wording and added an intro card: "The tag is just a trigger."
 6. **New tools: test before trusting.** Check the official source (not a fan site), test on your own data, and compare against an alternative.

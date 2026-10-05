@@ -1,12 +1,11 @@
 # Running Tapwise (NFC Idea Finder)
 
-## On the Raspberry Pi (hwpi), with Docker
+## On a Raspberry Pi, with Docker
 
 ### First time (once)
 
 1. The Pi is logged in to GitHub with the GitHub CLI (`gh auth login` + `gh auth setup-git`),
-   so it can pull and push over HTTPS. All projects live in `~/projects`
-   (the whole Pi setup is explained in `~/projects/SETUP.md`).
+   so it can pull and push over HTTPS. All projects live in `~/projects`.
 
 2. Download the project:
 
@@ -26,8 +25,10 @@
 
 Open in your laptop's browser:
 
-- at home: http://PI-LOCAL-IP:8080
-- anywhere (Tailscale): http://PI-TAILSCALE-IP:8080
+- at home: `http://<the Pi's local IP>:8080`
+- anywhere, over Tailscale: `http://<the Pi's Tailscale IP>:8080`
+
+The site is meant for the home network and Tailscale only; it isn't exposed to the internet.
 
 ### Every update after that
 
@@ -42,7 +43,7 @@ each change. It reads the secrets from `~/tapwise.env` (outside the repo, never 
 Visitor ideas, approved community ideas and "I use this" counts are kept in the `tapwise_data` volume,
 so rebuilding never deletes them.
 
-**Admin page** (approve ideas into the bank): http://PI-LOCAL-IP:8080/admin
+**Admin page** (approve ideas into the bank): `http://<the Pi's IP>:8080/admin`
 The browser asks for a login: any username, and the password you put in `ADMIN_PASSWORD`.
 No `ADMIN_PASSWORD` = the admin page is switched off.
 

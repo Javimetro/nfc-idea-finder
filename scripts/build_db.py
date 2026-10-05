@@ -43,7 +43,7 @@ sources = [{
 } for n, t, ty, p, c, l in S]
 # s00: ideas written by the site's creator from general knowledge (no external source)
 sources.insert(0, {"id": "s00", "notebooklm_no": None, "title": "Written by the Tapwise creator", "url": None,
-                   "type": "editorial", "platform": None, "creator_name": "the user (Tapwise creator)", "creator_url": None,
+                   "type": "editorial", "platform": None, "creator_name": "The Tapwise creator", "creator_url": None,
                    "language": "en", "published_date": None, "date_added": "2026-09-26", "notes": None})
 
 # ---------------------------------------------------------------- ideas
@@ -98,7 +98,7 @@ idea("i003", "See what is inside a box without opening it",
      audience=("personal", "workplace"), settings=("home", "warehouse", "office"), goals=("tracking", "share_info"),
      setup="Text list or photo-album link: NFC Tools (any phone). Notification: Home Assistant.",
      tag_needs=tag(memory="medium"),
-     flags=["Same concept as the user's 'peek behind' seed idea: link these together."])
+     flags=["Same concept as the creator's 'peek behind' seed idea: link these together."])
 idea("i004", "Reset a chore or maintenance reminder",
      "Get reminded to empty the robot vacuum tank, service an appliance or do a chore, and tap the tag when it is done to reset the reminder.",
      "Your smart home keeps a counter or 'last done' date; the tap resets it and clears the notification.",
@@ -433,7 +433,7 @@ idea("i049", "Tap to leave a review",
      kind="business", audience=("business_customers", "nfc_as_business"), settings=("shop", "restaurant"),
      goals=("marketing",), setup="NFC Tools (any phone).",
      business={"model": "subscription_or_lease", "who": "cafes, salons, shops, e-commerce brands", "cost": "low"},
-     flags=["Directly related to the user's NFC review-cards leasing idea."])
+     flags=["Directly related to the creator's NFC review-cards leasing idea."])
 idea("i050", "Digital menu on the table",
      "Guests tap a table sticker or coaster to open the menu on their phone.",
      "Tag links to an online menu; update the menu without reprinting.",
@@ -446,7 +446,7 @@ idea("i051", "Product info inside the packaging",
      "Tag on the product links to an info page you can update.",
      [(21, "esta vela y este sticker lo puedes pegar en la tapa... leer las instrucciones de uso")],
      kind="business", audience=("business_customers",), settings=("shop",), goals=("share_info", "marketing"),
-     flags=["Matches the 'product ingredients' application of the user's 'peek behind' seed idea."])
+     flags=["Matches the 'product ingredients' application of the creator's 'peek behind' seed idea."])
 idea("i052", "Follow us / visit our website sign",
      "A small sign on a market stall, counter or window: tap to follow on social media or open the website.",
      "Tag behind a printed sign links to a profile or site.",
@@ -730,7 +730,7 @@ for i in ideas:
 
 # ---------------------------------------------------------------- status
 # hidden       = never shown (tips, unsafe or misleading entries)
-# needs_review = shown, but the user still has to check a flag
+# needs_review = shown, but a flag still needs checking
 # ok           = no open questions
 for i in ideas:
     unsafe = any(f.startswith(("DO NOT", "LIKELY MISLEADING")) for f in i["review_flags"])

@@ -1,10 +1,10 @@
 # Tapwise: NFC ideas, reviewed by Jev + Claude
 
-**This repo is really about one thing: a human staying in the AI loop and picking the right model for each job, with numbers to back every choice.** The vehicle is a small website, Tapwise, that suggests everyday NFC tag ideas that fit your life and lets visitors add their own.
+**This repo is a test bench for comparing AI models and finding the best combination for one real job: running a community idea bank with no human in the loop.** Visitors send ideas, and AI models decide on their own whether each one is a duplicate, junk or new, and write the new ones up. Several models were tried for each step and measured on accuracy, cost and speed, and the cheapest one that was good enough got the job. The vehicle is a small website, Tapwise, that suggests everyday NFC tag ideas that fit your life and lets visitors add their own.
 
 The headline choice: visitor ideas are checked for duplicates by **[Jev](https://docs.typesafe.ai)**, a new kind of AI model from TypeSafe that doesn't write text at all. It only answers typed questions with calibrated probabilities. On 228 test ideas it decides most duplicates on its own, at **about 1/175th of Claude Opus 5's cost**, and every duplicate it filed alone was right (77/77 on the unseen sets). When it isn't sure, it hands over to Claude. Claude also does what Jev can't: judging whether an idea is real and safe, and writing it up nicely.
 
-Built by the user together with Claude (Anthropic), NotebookLM (Google) and Jev (TypeSafe). Work in progress, private for now.
+Built with Claude (Anthropic), Jev (TypeSafe) and, for the first data, NotebookLM (Google). Work in progress.
 
 ![The Tapwise home page](docs/img/33-home.png)
 
@@ -14,18 +14,24 @@ Built by the user together with Claude (Anthropic), NotebookLM (Google) and Jev 
 
 ### The AI toolbox at a glance
 
-AI here isn't one chat window. It's a team of tools, each with one job, and a human deciding who does what:
+AI here isn't one chat window. It's a team of tools, each with one job, picked by measuring them against each other:
 
 | Tool | Its job in this project | Kind of AI |
 |---|---|---|
-| **Claude Code** (Anthropic) | Plans with the user, writes the code, tests it, deploys it | coding agent |
-| **NotebookLM** (Google) | Read 40+ videos and Reddit threads and pulled out the ideas, with sources | research assistant |
+| **Claude Code** (Anthropic) | Plans, writes the code, tests it, deploys it | coding agent |
+| **NotebookLM** (Google) | Used once, at the start, to fill the database: the sources (40+ videos and Reddit threads) were searched by hand, and NotebookLM turned them into clean, structured data that Claude could work with | research assistant |
 | **Jev** (TypeSafe) | Decides "is this idea already in the bank?" for a fraction of a cent | decision model (no text at all) |
 | **Claude Sonnet 5** (Anthropic) | Checks new ideas are real and safe, and writes them up | language model |
 | **graphify** | Keeps a map of the whole codebase so Claude can find its way around | code map for the AI (no AI needed to build it) |
 | **plain code** | Quiz matching, the "already in the bank?" hint | no AI, on purpose |
 
 Every choice was tested before it was made, and the numbers are below.
+
+### Every model we tried, side by side
+
+![Cost and time per idea for each model tested: Jev 0.03 cents and 0.6 s; Claude Haiku 4.5 0.3 cents and 2.3 s; Claude Sonnet 5 0.8 cents and 3.8 s; Claude Opus 5 4.6 cents and 3.4 s](docs/img/34-models-cost-time.svg)
+
+*Cost and time for one visitor idea, measured on the same test ideas. Blue = in use today. Jev and Claude do different jobs (Jev only checks for duplicates; the Claude writers check and write up new ideas; Opus 5 was tested doing everything in one call), so the right-hand column shows how each did on its own job. Drawn from the measured numbers by [`scripts/draw_model_chart.py`](scripts/draw_model_chart.py).*
 
 ## Two AI models, two jobs: a filter and a writer
 
@@ -64,10 +70,10 @@ Sonnet 5 costs about half a cent more per new idea than Haiku 4.5. That's the pr
 | Jev thinks it's a duplicate but isn't sure (~14% of duplicates) | Claude Sonnet 5 | A second opinion only where it's needed ("confidence routing"). Rescues new ideas that merely *look* like an existing one. | part of the Claude call below |
 | Is a new idea real and safe? Write it up for the site | Claude Sonnet 5 | Needs judgement *and* good writing, which Jev can't do. Haiku 4.5 was cheaper but rejected a good idea in testing. | 15/15 right on unseen ideas · 3.8 s · $0.008 per idea |
 | Fallback if Jev is unavailable: everything in one call | Claude Opus 5 | Does the whole review alone, very accurately, but costs the most. | 23/23 · $0.046 per idea |
-| Pull ideas out of 40+ videos and Reddit threads | NotebookLM | Built for reading many sources at once and citing them. | every idea checked by hand |
+| First data for the bank: turn 40+ hand-picked videos and Reddit threads into clean, structured ideas | NotebookLM | Built for reading many sources at once and citing them. Used only at the start. | merged and checked by Claude in code |
 | Match quiz answers to ideas | **no AI**: simple rules | Fast, free, offline, predictable. Not every job needs a model. | |
 | "Is this already in the bank?" hint while typing | **no AI**: TF-IDF word matching | Instant and free; a hint, not a decision. | right idea shown for 120 of 145 test duplicates (83%) |
-| Plan the project and write the code | Claude (Claude Code) | the user decides; Claude proposes, explains and builds. | |
+| Plan the project and write the code | Claude (Claude Code) | Proposes, explains, builds and tests. | |
 | Help Claude find its way around the code | **graphify** (no AI to build it) | A map of the code is cheaper and safer than reading every file each time. | ~12× fewer tokens per question · rebuilt in ~1 s |
 
 Every visitor idea goes through this pipeline:
@@ -90,7 +96,7 @@ Every decision is listed on the admin page with the reason and an **Undo** butto
 
 ## Why Jev, and how we made it work
 
-Jev is a "System One" model: you send it a *state* (some text) and typed *questions* (choose one option, give a score, or is this true?), and it answers each with probabilities and a confidence. It's built for fast, structured decisions, and the pricing reflects that. the user wanted to try something this new on a real task rather than just read about it.
+Jev is a "System One" model: you send it a *state* (some text) and typed *questions* (choose one option, give a score, or is this true?), and it answers each with probabilities and a confidence. It's built for fast, structured decisions, and the pricing reflects that. The point was to try something this new on a real task rather than just read about it.
 
 **First try: not good enough.** One Jev question per idea ("which existing idea is this the same as?") got **20/24**. It called some genuinely new ideas duplicates ("lending books" matched "cleaning rounds", wine bottles matched "3D printer spools"). With the AI approving ideas automatically, that would quietly throw away good suggestions. Claude Opus 5 got 24/24.
 
@@ -179,11 +185,11 @@ Before Claude reads any code, it asks the map first. Then it only opens the few 
 - **Always up to date.** The map is refreshed every time work is pushed to GitHub, so it never describes old code.
 - **It finds surprises.** The map links docs to code: for example, it connected the project log's "Show the original words" story to the function that powers it.
 
-**The human stays in charge, and doesn't need to learn another tool.** the user asks in plain words ("what would break if I change the duplicate check?"), and Claude decides when to look at the map. Picking the right tool is part of the AI's job too, as long as it's the right one.
+**Nobody needs to learn another tool.** The user asks in plain words ("what would break if I change the duplicate check?"), and Claude decides by itself when to look at the map. Picking the right tool is part of the AI's job too.
 
 ## How this animation was made
 
-The animation at the top isn't a video someone filmed, and it isn't a mock-up. **Claude Opus 5.5 drew it frame by frame in code**: a small web page where every robot, card, bar and letter is placed pixel by pixel (even the font is hand-made, 5×7 pixels per letter). the user set the direction: the story, the Tapwise pixel-art style, and one firm rule: *every number on screen has to be real.*
+The animation at the top isn't a video someone filmed, and it isn't a mock-up. **Claude Opus 5.5 drew it frame by frame in code**: a small web page where every robot, card, bar and letter is placed pixel by pixel (even the font is hand-made, 5×7 pixels per letter). The brief set the direction: the story, the Tapwise pixel-art style, and one firm rule: *every number on screen has to be real.*
 
 So the animation is driven by data, not drawn by hand:
 - **Jev's bars are its real answers.** The three ideas come from the test sets, and their probabilities are the ones Jev gave in the lab, put through the same decision rule the live site uses. The kettle idea really scored 100% and 97%, and the shower idea really stopped at 73%, under the 80% "sure" bar.
@@ -192,7 +198,7 @@ So the animation is driven by data, not drawn by hand:
 
 Rebuilding it is one command ([`scripts/render_animation.py`](scripts/render_animation.py)). A headless browser on the Raspberry Pi renders all 336 frames, offline, and turns them into the GIF.
 
-**Second version, less to read.** The first animation explained every step in words, and the user found it hard to follow. The new one tells the same story with pictures instead: a conveyor belt, a bin for duplicates and a shelf for the idea bank. Jev thinks in two bars, and each idea is drawn as two icons (kettle + timer, beehive + logbook). Words are kept to labels, numbers and the visitor's own sentence. The first version is kept on the [`animation-v1`](../../tree/animation-v1) branch.
+**Second version, less to read.** The first animation explained every step in words, and it was hard to follow. The new one tells the same story with pictures instead: a conveyor belt, a bin for duplicates and a shelf for the idea bank. Jev thinks in two bars, and each idea is drawn as two icons (kettle + timer, beehive + logbook). Words are kept to labels, numbers and the visitor's own sentence. The first version is kept on the [`animation-v1`](../../tree/animation-v1) branch.
 
 ### Why Claude Opus 5.5 for this job
 
@@ -204,10 +210,14 @@ What made Opus 5.5 a good fit, judging by how this animation was actually made:
 - **It looks at its own work and fixes it.** Opus 5.5 can see images, so it rendered still frames from every scene, looked at them, and spotted problems like a human reviewer would: Claude's reply was cut off, a label covered a card, text ran outside a box. It fixed them and checked again.
 - **It keeps the rigour.** It pulled the real numbers from the lab results and checked them against the live code's rules. It also noticed when the brief and the data disagreed (the brief expected "none of these" to win for the beehive idea; the data says otherwise) and followed the data.
 
-**The human part:** the user chose the story and the style, wrote the brief with its "nothing made up" rule, and approved the plan before anything was built. That's the same pattern as the rest of the project: the person decides, and each AI does the job it's best at.
+**The brief:** the story, the style and the "nothing made up" rule were set up front, and the plan was agreed before anything was built. That's the same pattern as the rest of the project: set the goal and the rules once, then let each AI do the job it's best at.
 
 ## More
 
 - **The whole story, step by step** (every decision, mistake and lesson): [PROJECT_LOG.md](PROJECT_LOG.md)
 - **How to run it** (Raspberry Pi + Docker): [RUN.md](RUN.md)
 - **The AI review code:** [`app/ai_review.py`](app/ai_review.py)
+
+---
+
+Author: Javi Jorganes (Powered by Claude)

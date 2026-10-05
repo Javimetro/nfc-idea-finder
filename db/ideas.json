@@ -108,7 +108,7 @@
     "who_pays": null,
     "startup_cost_level": null,
     "review_flags": [
-      "Same concept as the user's 'peek behind' seed idea: link these together."
+      "Same concept as the creator's 'peek behind' seed idea: link these together."
     ],
     "hook": "Know what's inside a box without opening it",
     "place": "on each box or bin",
@@ -1893,7 +1893,7 @@
     "who_pays": "cafes, salons, shops, e-commerce brands",
     "startup_cost_level": "low",
     "review_flags": [
-      "Directly related to the user's NFC review-cards leasing idea."
+      "Directly related to the creator's NFC review-cards leasing idea."
     ],
     "hook": "Get more reviews without asking twice",
     "place": "on the counter or table",
@@ -1971,7 +1971,7 @@
     "who_pays": null,
     "startup_cost_level": null,
     "review_flags": [
-      "Matches the 'product ingredients' application of the user's 'peek behind' seed idea."
+      "Matches the 'product ingredients' application of the creator's 'peek behind' seed idea."
     ],
     "hook": "Products that explain themselves",
     "place": "on the packaging",
@@ -3055,7 +3055,7 @@
     "who_pays": "cafes, restaurants, salons, local shops",
     "startup_cost_level": "low",
     "review_flags": [
-      "Directly related to the user's NFC review-cards leasing idea."
+      "Directly related to the creator's NFC review-cards leasing idea."
     ],
     "hook": "Turn NFC cards into a monthly business",
     "place": "on cards or stands you set up for local businesses",
