@@ -6,6 +6,8 @@ The headline choice: visitor ideas are checked for duplicates by **[Jev](https:/
 
 Built with Claude (Anthropic), Jev (TypeSafe) and, for the first data, NotebookLM (Google). Work in progress.
 
+> **A home setup, not a public website (yet).** Tapwise runs on the author's own Raspberry Pi, in Docker, and is only reachable on the home network and over Tailscale. The code is public so anyone can see how the models were compared. Maybe one day it gets a domain and becomes a real website. If someone else wants to take it there, that's welcome too.
+
 ![The Tapwise home page](docs/img/33-home.png)
 
 ![Three visitor ideas ride a conveyor belt: Jev drops a sure duplicate in the bin on its own, passes an unsure one to Claude, and Claude writes up a new one for the idea bank](docs/img/32-pipeline.gif)
